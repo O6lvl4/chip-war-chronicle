@@ -7,7 +7,7 @@ import { useCanvasInteraction, type Preview } from '../hooks/useCanvasInteractio
 import { makeGeom } from './canvas/geometry';
 import Lanes from './canvas/Lanes';
 import { AxisFrame, AxisTicks } from './canvas/Axis';
-import BoardCanvas, { hitChip, type BoardPaint, type VWindow } from './canvas/BoardCanvas';
+import BoardCanvas, { hitChip, paintBoard, type BoardPaint, type VWindow } from './canvas/BoardCanvas';
 import CrossSectionOverlay from './canvas/CrossSectionOverlay';
 
 interface Props {
@@ -99,7 +99,9 @@ export default function TimelineCanvas(props: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const axisPanRef = useRef<HTMLDivElement>(null);
   const bodyPanRef = useRef<HTMLDivElement>(null);
+  const boardCanvasRef = useRef<HTMLCanvasElement>(null);
   const width = useWidth(containerRef);
+  const [axisPreview, setAxisPreview] = useState<Preview | null>(null);
   const [localCsX, setLocalCsX] = useState(-1);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
@@ -121,24 +123,40 @@ export default function TimelineCanvas(props: Props) {
     return [...board.chips.values()].filter(c => c.x1 >= renderL && c.x0 <= renderR && c.y >= yMin && c.y <= yMax);
   }, [board, renderL, renderR, win]);
 
-  // Gestures only move / stretch the composited layers; the view is committed once when they end.
-  const onPreview = useCallback((p: Preview | null) => {
-    const transform = p ? `translate3d(${p.dx}px,0,0) scaleX(${p.scale})` : '';
-    const origin = p ? `${p.originX - labelW + slack}px 0` : '';
-    for (const el of [axisPanRef.current, bodyPanRef.current]) {
-      if (!el) continue;
-      el.style.transformOrigin = origin;
-      el.style.transform = transform;
-    }
-  }, [labelW, slack]);
-  useLayoutEffect(() => { onPreview(null); }, [viewStart, viewEnd, onPreview]);
-
-  const ia = useCanvasInteraction({ hostRef: containerRef, viewStart, viewEnd, labelW, onViewChange, onPreview });
-
   const emphasis = useMemo(() => ({ focusId: selectedId, related: relatedIds(selectedId, links), query }), [selectedId, links, query]);
   const paint = useMemo<BoardPaint>(() => ({
     geom, board, win, chips, eventsById, links, pal, colorOf, emphasis, hoveredId, fontFamily: FONT, measure, viewStart, viewEnd,
   }), [geom, board, win, chips, eventsById, links, pal, colorOf, emphasis, hoveredId, measure, viewStart, viewEnd]);
+  const paintRef = useRef(paint);
+  paintRef.current = paint;
+
+  // Gestures never re-lay-out. A pan slides the composited layers with a transform; a zoom
+  // re-paints the canvas with every x remapped (rows and glyphs untouched), once per frame.
+  const zoomFrame = useRef(0);
+  const onPreview = useCallback((p: Preview | null) => {
+    const panOnly = !p || p.scale === 1;
+    const transform = p && panOnly ? `translate3d(${p.dx}px,0,0)` : '';
+    for (const el of [axisPanRef.current, bodyPanRef.current]) if (el) el.style.transform = transform;
+    cancelAnimationFrame(zoomFrame.current);
+    if (panOnly) {
+      setAxisPreview(null);
+      if (p === null && boardCanvasRef.current) paintBoard(boardCanvasRef.current, paintRef.current);
+      return;
+    }
+    zoomFrame.current = requestAnimationFrame(() => {
+      const xMap = (x: number) => p.originX + (x - p.originX) * p.scale + p.dx;
+      if (boardCanvasRef.current) paintBoard(boardCanvasRef.current, { ...paintRef.current, xMap });
+      setAxisPreview(p);
+    });
+  }, []);
+  useLayoutEffect(() => { onPreview(null); }, [viewStart, viewEnd, onPreview]);
+  const axisGeom = useMemo(() => {
+    if (!axisPreview) return geom;
+    const p = axisPreview;
+    return { ...geom, xFor: (t: number) => p.originX + (geom.xFor(t) - p.originX) * p.scale + p.dx };
+  }, [geom, axisPreview]);
+
+  const ia = useCanvasInteraction({ hostRef: containerRef, viewStart, viewEnd, labelW, onViewChange, onPreview });
 
   /** Board-space point of a pointer event (x = screen x of the stage, y = board y). */
   const boardPoint = (e: { clientX: number; clientY: number }) => {
@@ -183,7 +201,7 @@ export default function TimelineCanvas(props: Props) {
         <svg className="stage-static" width={width} height={AXIS_H}><AxisFrame geom={geom} pal={pal} /></svg>
         <div className="plot-viewport" style={{ left: labelW, width: width - labelW, height: AXIS_H }}>
           <div ref={axisPanRef} className="plot-pan" style={{ left: -slack, width: innerW, height: AXIS_H }}>
-            <svg width={innerW} height={AXIS_H}><g transform={shift}><AxisTicks geom={geom} pal={pal} viewStart={viewStart} viewEnd={viewEnd} /></g></svg>
+            <svg width={innerW} height={AXIS_H}><g transform={shift}><AxisTicks geom={axisGeom} pal={pal} viewStart={viewStart} viewEnd={viewEnd} /></g></svg>
           </div>
         </div>
       </div>
@@ -194,7 +212,7 @@ export default function TimelineCanvas(props: Props) {
           </svg>
           <div className="plot-viewport" style={{ left: labelW, width: width - labelW, height: board.totalH }}>
             <div ref={bodyPanRef} className="plot-pan" style={{ left: -slack, top: win.top, width: innerW, height: win.height }}>
-              <BoardCanvas paint={paint} />
+              <BoardCanvas paint={paint} canvasRef={boardCanvasRef} />
             </div>
           </div>
           {crossSection.enabled && csX > labelW && (

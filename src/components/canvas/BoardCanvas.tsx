@@ -1,4 +1,4 @@
-import { memo, useEffect, useRef } from 'react';
+import { memo, useEffect } from 'react';
 import type { CanvasGeom } from './geometry';
 import type { Link, TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
@@ -28,6 +28,29 @@ export interface BoardPaint {
   measure: (s: string) => number;
   viewStart: number;
   viewEnd: number;
+  /** In-flight zoom preview: remaps every x without touching rows or glyphs. */
+  xMap?: (x: number) => number;
+}
+
+/** Applies the preview x-map to chips, links and the grid; labeled chips keep their width. */
+function withXMap(p: BoardPaint): BoardPaint {
+  const m = p.xMap;
+  if (!m) return p;
+  const mapChip = (c: Chip): Chip => {
+    const x0 = m(c.x0);
+    const barEnd = m(c.barEnd);
+    const x1 = c.labeled ? Math.max(x0 + (c.x1 - c.x0), barEnd) : m(c.x1);
+    return { ...c, x: m(c.x), x0, x1, barEnd };
+  };
+  const chips = new Map<string, Chip>();
+  for (const [id, c] of p.board.chips) chips.set(id, mapChip(c));
+  return {
+    ...p,
+    xMap: undefined,
+    chips: p.chips.map(mapChip),
+    board: { ...p.board, chips },
+    geom: { ...p.geom, xFor: t => m(p.geom.xFor(t)) },
+  };
 }
 
 type Ctx = CanvasRenderingContext2D;
@@ -192,9 +215,10 @@ function drawChip(ctx: Ctx, p: BoardPaint, c: Chip, ev: TimelineEvent) {
   ctx.globalAlpha = 1;
 }
 
-export function paintBoard(canvas: HTMLCanvasElement, p: BoardPaint) {
+export function paintBoard(canvas: HTMLCanvasElement, raw: BoardPaint) {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
+  const p = withXMap(raw);
   const w = p.geom.renderR - p.geom.renderL;
   const h = p.win.height;
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -223,20 +247,22 @@ export function hitChip(chips: Chip[], eventsById: Map<string, TimelineEvent>, x
   return null;
 }
 
-interface Props { paint: BoardPaint }
+interface Props {
+  paint: BoardPaint;
+  canvasRef: React.RefObject<HTMLCanvasElement | null>;
+}
 
 /** One canvas for grid, links and chips of the materialised window; re-painted only when its inputs change. */
-function BoardCanvas({ paint }: Props) {
-  const ref = useRef<HTMLCanvasElement>(null);
+function BoardCanvas({ paint, canvasRef }: Props) {
   const w = paint.geom.renderR - paint.geom.renderL;
   useEffect(() => {
-    if (ref.current) paintBoard(ref.current, paint);
+    if (canvasRef.current) paintBoard(canvasRef.current, paint);
     // Re-paint once web fonts arrive so titles use the intended face.
     let alive = true;
-    document.fonts?.ready.then(() => { if (alive && ref.current) paintBoard(ref.current, paint); });
+    document.fonts?.ready.then(() => { if (alive && canvasRef.current) paintBoard(canvasRef.current, paint); });
     return () => { alive = false; };
-  }, [paint]);
-  return <canvas ref={ref} style={{ position: 'absolute', left: 0, top: 0, width: w, height: paint.win.height }} />;
+  }, [paint, canvasRef]);
+  return <canvas ref={canvasRef} style={{ position: 'absolute', left: 0, top: 0, width: w, height: paint.win.height }} />;
 }
 
 export default memo(BoardCanvas);
