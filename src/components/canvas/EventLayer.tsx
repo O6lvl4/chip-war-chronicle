@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { CanvasGeom } from './geometry';
 import type { TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
@@ -80,7 +81,7 @@ function PointMarker({ ev, geom, pal, col, op, focused, handlers }: {
 }
 
 /** Period bars, cluster pills and point markers, in that z-order. */
-export default function EventLayer({ geom, pal, singles, clusters, colorOf, emphasis, handlers }: Props) {
+function EventLayer({ geom, pal, singles, clusters, colorOf, emphasis, handlers }: Props) {
   const visible = singles.filter(ev => geom.yFor(ev.threadId) >= 0);
   const periods = visible.filter(ev => ev.endDate);
   const points = visible.filter(ev => !ev.endDate);
@@ -101,3 +102,5 @@ export default function EventLayer({ geom, pal, singles, clusters, colorOf, emph
     </g>
   );
 }
+
+export default memo(EventLayer);

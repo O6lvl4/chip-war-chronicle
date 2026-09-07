@@ -48,6 +48,8 @@ export default function Header({ threads, state, dbReady }: Props) {
         title={dbReady ? 'DuckDB-WASM で SQL を実行' : 'DuckDB-WASM を起動中'}>
         SQL{dbReady ? '' : ' …'}
       </button>
+      <button type="button" className="n-btn zoom-btn" onClick={() => state.zoom(0.7)} aria-label="拡大">＋</button>
+      <button type="button" className="n-btn zoom-btn" onClick={() => state.zoom(1 / 0.7)} aria-label="縮小">－</button>
       <button type="button" className="n-btn" onClick={state.resetView}>全期間</button>
       <button type="button" className="n-btn theme-toggle" onClick={state.toggleDark} style={{ padding: '5px 10px', minWidth: 36 }}
         aria-label="テーマ切替">

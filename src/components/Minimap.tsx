@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { memo, useMemo, useRef } from 'react';
 import type { Thread, TimelineEvent, Weight } from '../types';
 import { threadColor } from '../lib/palette';
 import { ms } from '../lib/time';
@@ -26,13 +26,41 @@ function yearsBetween(start: number, end: number): number[] {
   return out;
 }
 
+interface DotsProps {
+  lanes: Thread[];
+  events: TimelineEvent[];
+  dark: boolean;
+  laneH: number;
+  xFor: (t: number) => number;
+}
+
+/** Event dots per lane; memoized so panning only redraws the brush. */
+const MinimapDots = memo(function MinimapDots({ lanes, events, dark, laneH, xFor }: DotsProps) {
+  return (
+    <g>
+      {lanes.map((th, li) => {
+        const col = threadColor(th, dark);
+        const cy = 4 + li * laneH + laneH / 2;
+        return (
+          <g key={th.id}>
+            <rect x={MM_LW} y={4 + li * laneH} width={NOM_W - MM_LW} height={laneH} fill={col} opacity={li % 2 === 0 ? 0 : 0.04} />
+            {events.filter(ev => ev.threadId === th.id).map(ev => (
+              <circle key={ev.id} cx={xFor(ms(ev.date))} cy={cy} r={DOT_R[ev.weight]} fill={col} opacity={0.75} />
+            ))}
+          </g>
+        );
+      })}
+    </g>
+  );
+});
+
 /** Whole-range overview with the current viewport as a draggable brush. */
 export default function Minimap({ threads, events, activeThreadIds, dataStart, dataEnd, viewStart, viewEnd, dark, onViewChange }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const dragging = useRef(false);
   const totalSpan = dataEnd - dataStart;
 
-  const xFor = (t: number) => MM_LW + ((t - dataStart) / totalSpan) * (NOM_W - MM_LW);
+  const xFor = useRef((t: number) => MM_LW + ((t - dataStart) / totalSpan) * (NOM_W - MM_LW)).current;
   const seek = (clientX: number) => {
     const rect = svgRef.current?.getBoundingClientRect();
     if (!rect) return;
@@ -42,7 +70,7 @@ export default function Minimap({ threads, events, activeThreadIds, dataStart, d
     onViewChange(ct - half, ct + half);
   };
 
-  const lanes = threads.filter(t => activeThreadIds.includes(t.id));
+  const lanes = useMemo(() => threads.filter(t => activeThreadIds.includes(t.id)), [threads, activeThreadIds]);
   const laneH = (MM_H - 4) / Math.max(lanes.length, 1);
   const surf = dark ? '#1E2036' : '#FFFFFF';
   const ink = dark ? 'rgba(240,238,248,0.2)' : '#1A1A2E';
@@ -55,10 +83,10 @@ export default function Minimap({ threads, events, activeThreadIds, dataStart, d
     <div style={{ height: MM_H, flexShrink: 0, borderTop: `2px solid ${dark ? 'rgba(240,238,248,0.1)' : '#1A1A2E'}`, background: surf }}>
       <svg ref={svgRef} width="100%" height={MM_H} viewBox={`0 0 ${NOM_W} ${MM_H}`} preserveAspectRatio="none"
         style={{ display: 'block', cursor: 'crosshair' }}
-        onMouseDown={e => { dragging.current = true; seek(e.clientX); }}
-        onMouseMove={e => { if (dragging.current) seek(e.clientX); }}
-        onMouseUp={() => { dragging.current = false; }}
-        onMouseLeave={() => { dragging.current = false; }}>
+        onPointerDown={e => { dragging.current = true; svgRef.current?.setPointerCapture(e.pointerId); seek(e.clientX); }}
+        onPointerMove={e => { if (dragging.current) seek(e.clientX); }}
+        onPointerUp={() => { dragging.current = false; }}
+        onPointerCancel={() => { dragging.current = false; }}>
         <rect x={0} y={0} width={MM_LW} height={MM_H} fill={surf} />
         <text x={MM_LW - 8} y={MM_H / 2 + 4} textAnchor="end" fontFamily="'DM Mono', monospace" fontSize={8}
           letterSpacing={1.5} fill="var(--text-sub)">
@@ -76,18 +104,7 @@ export default function Minimap({ threads, events, activeThreadIds, dataStart, d
           );
         })}
 
-        {lanes.map((th, li) => {
-          const col = threadColor(th, dark);
-          const cy = 4 + li * laneH + laneH / 2;
-          return (
-            <g key={th.id}>
-              <rect x={MM_LW} y={4 + li * laneH} width={NOM_W - MM_LW} height={laneH} fill={col} opacity={li % 2 === 0 ? 0 : 0.04} />
-              {events.filter(ev => ev.threadId === th.id).map(ev => (
-                <circle key={ev.id} cx={xFor(ms(ev.date))} cy={cy} r={DOT_R[ev.weight]} fill={col} opacity={0.75} />
-              ))}
-            </g>
-          );
-        })}
+        <MinimapDots lanes={lanes} events={events} dark={dark} laneH={laneH} xFor={xFor} />
 
         {todayX >= MM_LW && todayX <= NOM_W && (
           <line x1={todayX} y1={0} x2={todayX} y2={MM_H} stroke={accent} strokeWidth={1.5} opacity={0.7} />

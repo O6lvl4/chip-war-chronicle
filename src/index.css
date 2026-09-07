@@ -193,3 +193,6 @@ button, .n-btn { transition: all 0.08s ease; }
 .n-btn:disabled { opacity: 0.5; cursor: default; }
 
 .timeline-container { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; position: relative; }
+
+.hint { position: absolute; left: 10px; bottom: 60px; font-family: var(--font-mono); font-size: 10px; color: var(--text-sub); background: var(--surface); padding: 2px 6px; border-radius: 4px; pointer-events: none; opacity: 0.85; z-index: 5; }
+.zoom-btn { min-width: 34px; padding: 5px 8px; }

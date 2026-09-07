@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent, type MouseEvent as ReactMouseEvent, type RefObject } from 'react';
+import { useCallback, useEffect, useRef, useState, type PointerEvent as ReactPointerEvent, type MouseEvent as ReactMouseEvent, type RefObject } from 'react';
 import { DAY } from '../lib/time';
 
 interface Params {
@@ -7,18 +7,21 @@ interface Params {
   viewEnd: number;
   labelW: number;
   onViewChange: (s: number, e: number) => void;
+  /** Called with a pixel offset while the user is panning; the canvas moves layers with a transform. */
+  onPanPreview: (dx: number) => void;
 }
 
 interface Gesture {
-  start: number;   // view at gesture start
+  start: number;
   end: number;
-  sx: number;      // single pointer: x at start; pinch: midpoint at start
-  dist: number;    // pinch: distance at start (0 for pan)
+  sx: number;      // one pointer: x at start; pinch: midpoint at start
+  dist: number;    // pinch: distance at start (0 = pan)
 }
 
 const ZOOM_STEP = 1.18;
 const MIN_SPAN = 14 * DAY;
 const DRAG_PX = 4;
+const WHEEL_SETTLE_MS = 120;
 
 function zoomAround(t: number, start: number, end: number, factor: number): [number, number] {
   const ns = t - (t - start) * factor;
@@ -38,35 +41,64 @@ function pinch(g: Gesture, plot: { labelW: number; width: number }, mid: number,
   return [start, start + span];
 }
 
-/** Mouse + touch interaction for the timeline SVG: wheel zoom, drag/one-finger pan, pinch zoom. */
-export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onViewChange }: Params) {
+/**
+ * Mouse + touch interaction for the timeline SVG.
+ * Scroll/drag pans at the current scale (previewed with a transform, committed once at the end);
+ * only pinch, ⌘/Ctrl+wheel and double-click change the scale.
+ */
+export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onViewChange, onPanPreview }: Params) {
   const [isDragging, setIsDragging] = useState(false);
   const pointers = useRef(new Map<number, number>());
   const gesture = useRef<Gesture | null>(null);
   const moved = useRef(false);
+  const wheelPan = useRef({ dx: 0, timer: 0 });
+  const view = useRef({ start: viewStart, end: viewEnd });
+  view.current = { start: viewStart, end: viewEnd };
 
-  const plot = () => ({ labelW, width: svgRef.current?.getBoundingClientRect().width ?? 1000 });
-  const localX = (e: { clientX: number }) => e.clientX - (svgRef.current?.getBoundingClientRect().left ?? 0);
+  const rect = () => svgRef.current?.getBoundingClientRect() ?? new DOMRect(0, 0, 1000, 500);
+  const plot = () => ({ labelW, width: rect().width });
+  const pxPerMs = () => (rect().width - labelW) / (view.current.end - view.current.start);
+  const localX = (e: { clientX: number }) => e.clientX - rect().left;
+
+  const commitPan = useCallback((dx: number) => {
+    const dt = dx / pxPerMs();
+    const { start, end } = view.current;
+    onViewChange(start - dt, end - dt);
+    // The canvas clears the preview when the new view renders; this is a safety net if nothing re-rendered.
+    requestAnimationFrame(() => requestAnimationFrame(() => onPanPreview(0)));
+  }, [onViewChange, onPanPreview]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const el = svgRef.current;
     if (!el) return;
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
-      const mx = e.clientX - el.getBoundingClientRect().left;
-      if (mx < labelW) return;
-      const factor = e.deltaY > 0 ? ZOOM_STEP : 1 / ZOOM_STEP;
-      const pxPerMs = (el.getBoundingClientRect().width - labelW) / (viewEnd - viewStart);
-      onViewChange(...zoomAround(viewStart + (mx - labelW) / pxPerMs, viewStart, viewEnd, factor));
+      if (e.ctrlKey || e.metaKey) {
+        const mx = e.clientX - el.getBoundingClientRect().left;
+        if (mx < labelW) return;
+        const { start, end } = view.current;
+        onViewChange(...zoomAround(start + (mx - labelW) / pxPerMs(), start, end, e.deltaY > 0 ? ZOOM_STEP : 1 / ZOOM_STEP));
+        return;
+      }
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      wheelPan.current.dx -= delta;
+      onPanPreview(wheelPan.current.dx);
+      window.clearTimeout(wheelPan.current.timer);
+      wheelPan.current.timer = window.setTimeout(() => {
+        const dx = wheelPan.current.dx;
+        wheelPan.current.dx = 0;
+        commitPan(dx);
+      }, WHEEL_SETTLE_MS);
     };
     el.addEventListener('wheel', onWheel, { passive: false });
     return () => el.removeEventListener('wheel', onWheel);
-  }, [svgRef, viewStart, viewEnd, labelW, onViewChange]);
+  }, [svgRef, labelW, onViewChange, onPanPreview, commitPan]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const beginGesture = () => {
     const xs = [...pointers.current.values()];
-    if (xs.length >= 2) gesture.current = { start: viewStart, end: viewEnd, sx: (xs[0] + xs[1]) / 2 - (svgRef.current?.getBoundingClientRect().left ?? 0), dist: Math.abs(xs[0] - xs[1]) };
-    else if (xs.length === 1) gesture.current = { start: viewStart, end: viewEnd, sx: xs[0], dist: 0 };
+    const { start, end } = view.current;
+    if (xs.length >= 2) gesture.current = { start, end, sx: (xs[0] + xs[1]) / 2 - rect().left, dist: Math.abs(xs[0] - xs[1]) };
+    else if (xs.length === 1) gesture.current = { start, end, sx: xs[0], dist: 0 };
     else gesture.current = null;
   };
 
@@ -86,31 +118,37 @@ export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onVie
     const xs = [...pointers.current.values()];
     if (xs.length >= 2) {
       moved.current = true;
-      onViewChange(...pinch(g, plot(), (xs[0] + xs[1]) / 2 - (svgRef.current?.getBoundingClientRect().left ?? 0), Math.abs(xs[0] - xs[1])));
+      onViewChange(...pinch(g, plot(), (xs[0] + xs[1]) / 2 - rect().left, Math.abs(xs[0] - xs[1])));
       return;
     }
     const dx = e.clientX - g.sx;
     if (Math.abs(dx) > DRAG_PX) moved.current = true;
-    const pxPerMs = (plot().width - labelW) / (g.end - g.start);
-    onViewChange(g.start - dx / pxPerMs, g.end - dx / pxPerMs);
+    onPanPreview(dx);
   };
 
   const endDrag = (e: ReactPointerEvent<SVGSVGElement>) => {
+    const g = gesture.current;
+    const x = pointers.current.get(e.pointerId);
     pointers.current.delete(e.pointerId);
-    if (pointers.current.size === 0) { gesture.current = null; setIsDragging(false); }
-    else beginGesture();
+    if (pointers.current.size === 0) {
+      if (g && g.dist === 0 && x !== undefined && moved.current) commitPan(x - g.sx);
+      else onPanPreview(0);
+      gesture.current = null;
+      setIsDragging(false);
+      return;
+    }
+    beginGesture();
   };
 
   const onDoubleClick = (e: ReactMouseEvent<SVGSVGElement>) => {
     const mx = localX(e);
     if (mx < labelW) return;
-    const pxPerMs = (plot().width - labelW) / (viewEnd - viewStart);
-    const t = viewStart + (mx - labelW) / pxPerMs;
-    const span = (viewEnd - viewStart) / 3;
+    const { start, end } = view.current;
+    const t = start + (mx - labelW) / pxPerMs();
+    const span = (end - start) / 3;
     onViewChange(t - span, t + span);
   };
 
-  /** True when the pointer travelled far enough that the following click should not select. */
   const wasDrag = () => moved.current;
 
   return { isDragging, localX, wasDrag, onPointerDown, onDragMove, endDrag, onDoubleClick };

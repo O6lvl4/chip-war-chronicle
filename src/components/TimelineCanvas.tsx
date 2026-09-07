@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from 'react';
 import type { CrossSectionState, Link, Thread, TimelineEvent } from '../types';
 import { AXIS_H, clusterEvents, minLabelWeight, placeLabels, relatedIds } from '../lib/layout';
 import { colorLookup, paletteFor } from '../lib/palette';
@@ -6,7 +6,7 @@ import { ms } from '../lib/time';
 import { useCanvasInteraction } from '../hooks/useCanvasInteraction';
 import { makeGeom } from './canvas/geometry';
 import Lanes from './canvas/Lanes';
-import Axis from './canvas/Axis';
+import { AxisFrame, AxisTicks } from './canvas/Axis';
 import LinkLayer from './canvas/LinkLayer';
 import EventLayer from './canvas/EventLayer';
 import LabelLayer from './canvas/LabelLayer';
@@ -48,24 +48,32 @@ export default function TimelineCanvas(props: Props) {
     query, dark, crossSection, onViewChange, onSelect, onHover, onCrossSection, onCluster } = props;
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
+  const plotRef = useRef<SVGGElement>(null);
   const size = useElementSize(containerRef);
   const [localCsX, setLocalCsX] = useState(-1);
 
   const lanes = useMemo(() => threads.filter(t => activeThreadIds.includes(t.id)), [threads, activeThreadIds]);
   const geom = useMemo(() => makeGeom({ width: size.w, height: size.h, lanes, viewStart, viewEnd }), [size, lanes, viewStart, viewEnd]);
+  const LABEL_W = geom.labelW;
   const pal = paletteFor(dark);
   const colorOf = useMemo(() => colorLookup(threads, dark), [threads, dark]);
   const eventsById = useMemo(() => new Map(events.map(e => [e.id, e])), [events]);
 
-  const LABEL_W = geom.labelW;
-  const ia = useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW: LABEL_W, onViewChange });
+  // Panning moves the already-rendered plot with a transform; the view commits once at the end.
+  const onPanPreview = useCallback((dx: number) => {
+    plotRef.current?.setAttribute('transform', dx ? `translate(${dx} 0)` : '');
+  }, []);
+  useLayoutEffect(() => { plotRef.current?.setAttribute('transform', ''); }, [viewStart, viewEnd]);
 
+  const ia = useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW: LABEL_W, onViewChange, onPanPreview });
+
+  // Render one viewport of slack on both sides so a pan reveals content before the commit.
   const visible = useMemo(() => events.filter(ev => {
     if (!activeThreadIds.includes(ev.threadId)) return false;
     const x1 = geom.xFor(ms(ev.date));
     const x2 = geom.xFor(ms(ev.endDate ?? ev.date));
-    return x2 >= LABEL_W && x1 <= size.w;
-  }), [events, activeThreadIds, geom, size.w]);
+    return x2 >= LABEL_W - size.w && x1 <= size.w * 2;
+  }), [events, activeThreadIds, geom, size.w, LABEL_W]);
   const { singles, clusters } = useMemo(() => clusterEvents(visible, geom.xFor), [visible, geom]);
   const placed = useMemo(() => {
     const minW = minLabelWeight(viewEnd - viewStart);
@@ -92,12 +100,12 @@ export default function TimelineCanvas(props: Props) {
     if (crossSection.enabled) onCrossSection(ia.localX(e), true);
     else onSelect(null);
   };
-  const handlers = {
+  const handlers = useMemo(() => ({
     onSelect: (id: string) => onSelect(id === selectedId ? null : id),
     onHover,
     onViewChange,
     onCluster,
-  };
+  }), [onSelect, selectedId, onHover, onViewChange, onCluster]);
 
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
@@ -112,12 +120,15 @@ export default function TimelineCanvas(props: Props) {
           </clipPath>
         </defs>
         <Lanes geom={geom} pal={pal} dark={dark} />
-        <Axis geom={geom} pal={pal} viewStart={viewStart} viewEnd={viewEnd} />
+        <AxisFrame geom={geom} pal={pal} />
         <g clipPath="url(#canvas-clip)">
-          <LinkLayer geom={geom} pal={pal} links={links} eventsById={eventsById} focusId={focusId} />
-          <EventLayer geom={geom} pal={pal} singles={singles} clusters={clusters}
-            colorOf={colorOf} emphasis={emphasis} handlers={handlers} />
-          <LabelLayer pal={pal} placed={placed} eventsById={eventsById} emphasis={emphasis} />
+          <g ref={plotRef}>
+            <AxisTicks geom={geom} pal={pal} viewStart={viewStart} viewEnd={viewEnd} />
+            <LinkLayer geom={geom} pal={pal} links={links} eventsById={eventsById} focusId={focusId} />
+            <EventLayer geom={geom} pal={pal} singles={singles} clusters={clusters}
+              colorOf={colorOf} emphasis={emphasis} handlers={handlers} />
+            <LabelLayer pal={pal} placed={placed} eventsById={eventsById} emphasis={emphasis} />
+          </g>
           {crossSection.enabled && csX > LABEL_W && (
             <CrossSectionOverlay pal={pal} x={csX} date={csDate} fixed={crossSection.fixed} svgH={geom.svgH} />
           )}

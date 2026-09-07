@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { CanvasGeom } from './geometry';
 import type { Palette } from '../../lib/palette';
 import { threadColor } from '../../lib/palette';
@@ -10,7 +11,7 @@ interface Props {
 }
 
 /** Lane backgrounds, dividers and the left-hand lane labels. */
-export default function Lanes({ geom, pal, dark }: Props) {
+function Lanes({ geom, pal, dark }: Props) {
   const { lanes, width, svgH, laneH: LANE_H, labelW: LABEL_W } = geom;
   const compact = LABEL_W < 100;
   const tint = dark ? '08' : '06';
@@ -62,3 +63,5 @@ export default function Lanes({ geom, pal, dark }: Props) {
     </g>
   );
 }
+
+export default memo(Lanes);

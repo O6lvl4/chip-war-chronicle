@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react';
 import type { CanvasGeom } from './geometry';
 import type { Link, TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
@@ -28,7 +29,9 @@ function linkOpacity(isHot: boolean, hasFocus: boolean): number {
 }
 
 /** Causal links as bezier curves; the ones touching the focused event are highlighted. */
-export default function LinkLayer({ geom, pal, links, eventsById, focusId }: Props) {
+function LinkLayer({ geom, pal, links, eventsById, focusId }: Props) {
+  // Paths depend only on geometry; hover/selection just restyles them.
+  const paths = useMemo(() => links.map(lk => ({ lk, d: pathFor(lk, eventsById, geom) })), [links, eventsById, geom]);
   return (
     <g>
       <defs>
@@ -39,8 +42,7 @@ export default function LinkLayer({ geom, pal, links, eventsById, focusId }: Pro
           <path d="M0,1 L0,6 L6,3.5 z" fill={pal.accent} />
         </marker>
       </defs>
-      {links.map(lk => {
-        const d = pathFor(lk, eventsById, geom);
+      {paths.map(({ lk, d }) => {
         if (!d) return null;
         const isHot = focusId !== null && (lk.from === focusId || lk.to === focusId);
         return (
@@ -55,3 +57,5 @@ export default function LinkLayer({ geom, pal, links, eventsById, focusId }: Pro
     </g>
   );
 }
+
+export default memo(LinkLayer);

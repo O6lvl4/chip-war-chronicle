@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { DATA_END, DATA_START, EVENTS, LINKS, THREADS } from './data';
 import { useTimelineState } from './hooks/useTimelineState';
 import { useKeyboardNav } from './hooks/useKeyboardNav';
@@ -25,7 +25,10 @@ function csDateFor(x: number, viewStart: number, viewEnd: number): number | null
 
 export default function App() {
   const st = useTimelineState({ events: EVENTS, threadIds: THREAD_IDS, dataStart: DATA_START, dataEnd: DATA_END });
-  const db = useDuckDB(DATASET);
+  // DuckDB-WASM (~35 MB) is only fetched the first time the SQL console opens.
+  const [dbWanted, setDbWanted] = useState(false);
+  if (st.sqlOpen && !dbWanted) setDbWanted(true);
+  const db = useDuckDB(DATASET, dbWanted);
   const eventsById = useMemo(() => new Map(EVENTS.map(e => [e.id, e])), []);
 
   useKeyboardNav({ clearSelection: st.closeDrawer, resetView: st.resetView, zoom: st.zoom, step: st.step });
@@ -34,7 +37,7 @@ export default function App() {
 
   return (
     <div className={`app${st.dark ? ' dark' : ''}`}>
-      <Header threads={THREADS} state={st} dbReady={db.status === 'ready'} />
+      <Header threads={THREADS} state={st} dbReady={!dbWanted || db.status === 'ready'} />
 
       <div className="timeline-container">
         <div style={{ flex: 1, overflow: 'auto', minHeight: 0 }}>
@@ -49,6 +52,7 @@ export default function App() {
             onCluster={st.openCluster}
           />
         </div>
+        <div className="hint">ホイール / ドラッグで移動 · ⌘/Ctrl+ホイール・ピンチ・ダブルクリックで拡大 · クリックで詳細</div>
         <Minimap threads={THREADS} events={EVENTS} activeThreadIds={st.activeThreadIds}
           dataStart={DATA_START} dataEnd={DATA_END}
           viewStart={st.view.start} viewEnd={st.view.end}

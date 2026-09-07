@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
 import { eventOpacity, type Emphasis, type PlacedLabel } from '../../lib/layout';
@@ -10,7 +11,7 @@ interface Props {
 }
 
 /** Event titles with a surface-coloured halo so they stay legible over links. */
-export default function LabelLayer({ pal, placed, eventsById, emphasis }: Props) {
+function LabelLayer({ pal, placed, eventsById, emphasis }: Props) {
   return (
     <g style={{ pointerEvents: 'none' }}>
       {placed.map(pl => {
@@ -28,3 +29,5 @@ export default function LabelLayer({ pal, placed, eventsById, emphasis }: Props)
     </g>
   );
 }
+
+export default memo(LabelLayer);
