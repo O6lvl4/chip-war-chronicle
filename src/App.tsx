@@ -40,19 +40,18 @@ export default function App() {
       <Header threads={THREADS} state={st} dbReady={!dbWanted || db.status === 'ready'} />
 
       <div className="timeline-container">
-        <div style={{ flex: 1, overflow: 'auto', minHeight: 0 }}>
+        <div style={{ flex: 1, overflow: 'hidden', minHeight: 0 }}>
           <TimelineCanvas
             threads={THREADS} events={EVENTS} links={LINKS}
             activeThreadIds={st.activeThreadIds}
             viewStart={st.view.start} viewEnd={st.view.end}
-            selectedId={st.selectedId} hoveredId={st.hoveredId}
+            selectedId={st.selectedId}
             query={st.query} dark={st.dark} crossSection={st.crossSection}
             onViewChange={st.setRange} onSelect={st.select}
-            onHover={st.setHoveredId} onCrossSection={st.moveCrossSection}
-            onCluster={st.openCluster}
+            onCrossSection={st.moveCrossSection}
           />
         </div>
-        <div className="hint">ホイール / ドラッグで移動 · ⌘/Ctrl+ホイール・ピンチ・ダブルクリックで拡大 · クリックで詳細</div>
+        <div className="hint">横スワイプ / 横ホイール / ドラッグで移動 · 縦はスクロール · ⌘/Ctrl+ホイール・ピンチ・ダブルクリックで拡大</div>
         <Minimap threads={THREADS} events={EVENTS} activeThreadIds={st.activeThreadIds}
           dataStart={DATA_START} dataEnd={DATA_END}
           viewStart={st.view.start} viewEnd={st.view.end}

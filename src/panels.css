@@ -92,8 +92,11 @@
   .chips { order: 10; flex-basis: 100%; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
   .chips::-webkit-scrollbar { display: none; }
   .thread-chip { padding: 3px 8px; font-size: 11px; }
-  .search-wrap input { width: 96px; font-size: 16px; padding: 4px 8px 4px 26px; } /* 16px avoids iOS zoom-on-focus */
-  .n-btn { padding: 4px 9px; font-size: 11px; }
+  .search-wrap input { width: 78px; font-size: 16px; padding: 3px 6px 3px 24px; } /* 16px avoids iOS zoom-on-focus */
+  .search-icon { left: 7px; font-size: 11px; }
+  .n-btn { padding: 4px 7px; font-size: 11px; box-shadow: 1px 1px 0 var(--ink); }
+  .zoom-btn { min-width: 28px; padding: 4px 5px; }
+  .app-header .n-btn:nth-last-child(2) { padding: 4px 6px; } /* 全期間 */
   .theme-toggle { display: none; } /* スマホは OS の配色設定に従う */
   .drawer {
     top: auto; left: 0; right: 0; bottom: 0; width: 100%; height: 62%;

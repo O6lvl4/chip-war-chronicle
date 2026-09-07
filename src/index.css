@@ -121,13 +121,19 @@ body {
 }
 
 /* Timeline stage: static SVG + composited pan layer + overlay */
-.timeline-stage { position: relative; width: 100%; height: 100%; overflow: hidden; cursor: grab; user-select: none; touch-action: none; }
+.timeline-stage { position: relative; display: flex; flex-direction: column; width: 100%; height: 100%; overflow: hidden; cursor: grab; user-select: none; touch-action: pan-y; }
 .timeline-stage.dragging { cursor: grabbing; }
+.axis-row { position: relative; flex-shrink: 0; overflow: hidden; z-index: 2; }
+.board-scroll { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; }
+.board { position: relative; }
 .stage-static { display: block; position: absolute; left: 0; top: 0; }
 .plot-viewport { position: absolute; top: 0; overflow: hidden; }
 .plot-pan { position: absolute; top: 0; will-change: transform; }
 .plot-pan > svg { display: block; }
 .stage-overlay { position: absolute; left: 0; top: 0; pointer-events: none; }
+.chip { cursor: pointer; }
+.chip:hover rect:first-child { stroke-width: 2.5; }
+.evt-hit { cursor: pointer; }
 
 /* Scrollbars */
 ::-webkit-scrollbar { width: 5px; height: 5px; }

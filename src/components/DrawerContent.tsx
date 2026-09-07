@@ -6,7 +6,6 @@ import type { DuckDBHandle } from '../hooks/useDuckDB';
 import EventDetail from './panel/EventDetail';
 import CrossSectionPanel from './panel/CrossSectionPanel';
 import SqlConsole from './panel/SqlConsole';
-import ClusterPanel from './panel/ClusterPanel';
 
 interface Props {
   state: TimelineState;
@@ -30,8 +29,6 @@ export default function DrawerContent({ state: st, db, eventsById, csDate }: Pro
       );
     case 'sql':
       return <SqlConsole db={db} knownIds={knownIds} onSelect={st.select} />;
-    case 'cluster':
-      return st.clusterIds ? <ClusterPanel ids={st.clusterIds} eventsById={eventsById} threads={THREADS} dark={st.dark} onSelect={st.select} /> : null;
     default:
       return null;
   }

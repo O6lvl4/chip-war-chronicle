@@ -2,10 +2,11 @@ import { memo, useEffect, useRef } from 'react';
 import type { CanvasGeom } from './geometry';
 import type { Link, TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
-import { ms } from '../../lib/time';
+import type { Board } from '../../lib/board';
 
 interface Props {
   geom: CanvasGeom;
+  board: Board;
   pal: Palette;
   links: Link[];
   eventsById: Map<string, TimelineEvent>;
@@ -16,24 +17,20 @@ export interface Seg {
   x1: number; y1: number; x2: number; y2: number; sameLane: boolean;
 }
 
-/** Screen-space endpoints of a link, or null when either end is hidden or the link is fully off the rendered range. */
-export function linkSegment(lk: Link, byId: Map<string, TimelineEvent>, geom: CanvasGeom): Seg | null {
-  const a = byId.get(lk.from);
-  const b = byId.get(lk.to);
+/** Screen-space endpoints of a link, or null when an end is not on the board or the link is off the rendered range. */
+export function linkSegment(lk: Link, byId: Map<string, TimelineEvent>, board: Board, geom: CanvasGeom): Seg | null {
+  const a = board.chips.get(lk.from);
+  const b = board.chips.get(lk.to);
   if (!a || !b) return null;
-  const y1 = geom.yFor(a.threadId);
-  const y2 = geom.yFor(b.threadId);
-  if (y1 < 0 || y2 < 0) return null;
-  const x1 = geom.xFor(ms(a.date));
-  const x2 = geom.xFor(ms(b.date));
-  if (Math.max(x1, x2) < geom.renderL || Math.min(x1, x2) > geom.renderR) return null;
-  return { x1, y1, x2, y2, sameLane: a.threadId === b.threadId };
+  if (Math.max(a.x, b.x) < geom.renderL || Math.min(a.x, b.x) > geom.renderR) return null;
+  const sameLane = byId.get(lk.from)?.threadId === byId.get(lk.to)?.threadId;
+  return { x1: a.x, y1: a.y, x2: b.x, y2: b.y, sameLane };
 }
 
 function trace(ctx: CanvasRenderingContext2D, s: Seg) {
   ctx.moveTo(s.x1, s.y1);
   if (s.sameLane) {
-    ctx.bezierCurveTo(s.x1, s.y1 - 38, s.x2, s.y2 - 38, s.x2, s.y2);
+    ctx.bezierCurveTo(s.x1, s.y1 - 30, s.x2, s.y2 - 30, s.x2, s.y2);
     return;
   }
   const cx1 = s.x1 + (s.x2 - s.x1) * 0.42;
@@ -42,9 +39,8 @@ function trace(ctx: CanvasRenderingContext2D, s: Seg) {
 }
 
 function drawArrow(ctx: CanvasRenderingContext2D, s: Seg) {
-  // Approximate tangent at the end of the cubic (from the last control point).
   const cx2 = s.sameLane ? s.x2 : s.x2 - (s.x2 - s.x1) * 0.42;
-  const cy2 = s.sameLane ? s.y2 - 38 : s.y2;
+  const cy2 = s.sameLane ? s.y2 - 30 : s.y2;
   const ang = Math.atan2(s.y2 - cy2, s.x2 - cx2);
   ctx.moveTo(s.x2, s.y2);
   ctx.lineTo(s.x2 - 6 * Math.cos(ang - 0.45), s.y2 - 6 * Math.sin(ang - 0.45));
@@ -53,14 +49,14 @@ function drawArrow(ctx: CanvasRenderingContext2D, s: Seg) {
 }
 
 /**
- * All (non-highlighted) causal links drawn once onto a 2D canvas.
- * Hundreds of dashed SVG curves were the most expensive thing to rasterize; a canvas
- * costs a couple of milliseconds and is re-drawn only when the geometry changes.
+ * All (non-highlighted) causal links drawn once onto a 2D canvas: hundreds of dashed SVG
+ * curves were the most expensive thing to rasterize; a canvas is re-drawn only when the
+ * geometry or the board changes.
  */
-function LinkCanvas({ geom, pal, links, eventsById, dimmed }: Props) {
+function LinkCanvas({ geom, board, pal, links, eventsById, dimmed }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
   const w = geom.renderR - geom.renderL;
-  const h = geom.svgH;
+  const h = board.totalH;
 
   useEffect(() => {
     const canvas = ref.current;
@@ -75,12 +71,12 @@ function LinkCanvas({ geom, pal, links, eventsById, dimmed }: Props) {
     ctx.strokeStyle = pal.ink;
     ctx.fillStyle = pal.ink;
     ctx.lineWidth = 1;
-    ctx.globalAlpha = dimmed ? 0.18 : 0.4;
+    ctx.globalAlpha = dimmed ? 0.15 : 0.35;
     ctx.setLineDash([3, 2]);
     ctx.beginPath();
     const segs: Seg[] = [];
     for (const lk of links) {
-      const s = linkSegment(lk, eventsById, geom);
+      const s = linkSegment(lk, eventsById, board, geom);
       if (s) { segs.push(s); trace(ctx, s); }
     }
     ctx.stroke();
@@ -88,7 +84,7 @@ function LinkCanvas({ geom, pal, links, eventsById, dimmed }: Props) {
     ctx.beginPath();
     for (const s of segs) drawArrow(ctx, s);
     ctx.fill();
-  }, [geom, pal, links, eventsById, dimmed, w, h]);
+  }, [geom, board, pal, links, eventsById, dimmed, w, h]);
 
   return (
     <canvas ref={ref} className="link-canvas"

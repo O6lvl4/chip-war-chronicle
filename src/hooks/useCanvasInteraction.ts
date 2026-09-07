@@ -42,6 +42,15 @@ function pinch(g: Gesture, plot: { labelW: number; width: number }, mid: number,
   return [start, start + span];
 }
 
+type WheelKind = 'scroll' | 'zoom' | 'pan';
+
+/** Plain vertical wheel scrolls the board natively; sideways / shift pans; ⌘ or Ctrl zooms. */
+function classifyWheel(e: WheelEvent): WheelKind {
+  if (e.ctrlKey || e.metaKey) return 'zoom';
+  if (e.shiftKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return 'pan';
+  return 'scroll';
+}
+
 /** Coalesces rapid view updates (pinch, ⌘+wheel) into one per animation frame. */
 function useFrameCoalescer(onViewChange: (s: number, e: number) => void) {
   const pending = useRef<[number, number] | null>(null);
@@ -88,16 +97,18 @@ export function useCanvasInteraction({ hostRef, viewStart, viewEnd, labelW, onVi
   useEffect(() => {
     const el = hostRef.current;
     if (!el) return;
+    const zoomAt = (e: WheelEvent) => {
+      const mx = e.clientX - el.getBoundingClientRect().left;
+      if (mx < labelW) return;
+      const { start, end } = view.current;
+      setViewSoon(...zoomAround(start + (mx - labelW) / pxPerMs(), start, end, e.deltaY > 0 ? ZOOM_STEP : 1 / ZOOM_STEP));
+    };
     const onWheel = (e: WheelEvent) => {
+      const kind = classifyWheel(e);
+      if (kind === 'scroll') return;
       e.preventDefault();
-      if (e.ctrlKey || e.metaKey) {
-        const mx = e.clientX - el.getBoundingClientRect().left;
-        if (mx < labelW) return;
-        const { start, end } = view.current;
-        setViewSoon(...zoomAround(start + (mx - labelW) / pxPerMs(), start, end, e.deltaY > 0 ? ZOOM_STEP : 1 / ZOOM_STEP));
-        return;
-      }
-      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (kind === 'zoom') { zoomAt(e); return; }
+      const delta = e.deltaX === 0 ? e.deltaY : e.deltaX;
       wheelPan.current.dx -= delta;
       onPanPreview(wheelPan.current.dx);
       window.clearTimeout(wheelPan.current.timer);
