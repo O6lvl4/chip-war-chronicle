@@ -75,6 +75,7 @@ function LabeledChip({ ev, c, pal, col, op, selected, handlers }: ChipProps) {
 function DotChip({ ev, c, pal, col, op, selected, handlers }: ChipProps) {
   const r = eventRadius(ev.weight);
   const stroke = strokeOf(selected, pal, pal.outline);
+  const cx = ev.endDate ? c.x0 + r : c.x;
   return (
     <g className="evt-hit" style={{ opacity: op }}
       onClick={e => { e.stopPropagation(); handlers.onSelect(ev.id); }}
@@ -82,7 +83,7 @@ function DotChip({ ev, c, pal, col, op, selected, handlers }: ChipProps) {
       <title>{`${ev.date}  ${ev.title}`}</title>
       {isBar(ev, c, 2 * r + 2)
         ? <rect x={c.x0} y={c.y - r} width={c.barEnd - c.x0} height={2 * r} rx={r} fill={col} {...stroke} />
-        : <circle cx={ev.endDate ? c.x0 + r : c.x} cy={c.y} r={r} fill={col} {...stroke} />}
+        : <circle cx={cx} cy={c.y} r={r} fill={col} {...stroke} />}
     </g>
   );
 }
