@@ -130,6 +130,8 @@ body {
 .plot-viewport { position: absolute; top: 0; overflow: hidden; }
 .plot-pan { position: absolute; top: 0; will-change: transform; }
 .plot-pan > svg { display: block; }
+.board-window { position: absolute; left: 0; }
+.board-window > canvas { display: block; }
 .stage-overlay { position: absolute; left: 0; top: 0; pointer-events: none; }
 .chip { cursor: pointer; }
 .chip:hover rect:first-child { stroke-width: 2.5; }

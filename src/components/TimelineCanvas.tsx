@@ -7,7 +7,7 @@ import { useCanvasInteraction, type Preview } from '../hooks/useCanvasInteractio
 import { makeGeom } from './canvas/geometry';
 import Lanes from './canvas/Lanes';
 import { AxisFrame, AxisTicks } from './canvas/Axis';
-import BoardCanvas, { hitChip, paintBoard, type BoardPaint, type VWindow } from './canvas/BoardCanvas';
+import BoardCanvas, { hitChip, type BoardApi, type BoardPaint, type VWindow } from './canvas/BoardCanvas';
 import CrossSectionOverlay from './canvas/CrossSectionOverlay';
 
 interface Props {
@@ -61,7 +61,8 @@ function useVerticalWindow(ref: React.RefObject<HTMLDivElement | null>, totalH: 
       // The window must always cover what is on screen; beyond that, only move it in half-viewport steps.
       const covered = visTop >= current.top && visBottom <= Math.min(totalH, current.top + current.height);
       const settled = Math.abs(Math.max(0, visTop - margin) - current.top) < margin / 2;
-      if (covered && settled) return;
+      const oversized = current.height > vh + 2 * margin + 8 || current.top + current.height > totalH + 8;
+      if (covered && settled && !oversized) return;
       const wantTop = Math.max(0, visTop - margin);
       current = { top: wantTop, height: Math.min(totalH - wantTop, vh + 2 * margin) };
       setWin(current);
@@ -98,8 +99,7 @@ export default function TimelineCanvas(props: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const axisPanRef = useRef<HTMLDivElement>(null);
-  const bodyPanRef = useRef<HTMLDivElement>(null);
-  const boardCanvasRef = useRef<HTMLCanvasElement>(null);
+  const boardApi = useRef<BoardApi>(null);
   const width = useWidth(containerRef);
   const [axisPreview, setAxisPreview] = useState<Preview | null>(null);
   const [localCsX, setLocalCsX] = useState(-1);
@@ -130,22 +130,17 @@ export default function TimelineCanvas(props: Props) {
   const paintRef = useRef(paint);
   paintRef.current = paint;
 
-  // Gestures never re-lay-out. A pan slides the composited layers with a transform; a zoom
-  // re-paints the canvas with every x remapped (rows and glyphs untouched), once per frame.
-  const zoomFrame = useRef(0);
+  // Gestures never re-lay-out and never touch the DOM: a pan blits the offscreen image shifted,
+  // a zoom re-renders it with every x remapped (rows and glyphs untouched); both once per frame.
+  const frame = useRef(0);
   const onPreview = useCallback((p: Preview | null) => {
-    const panOnly = !p || p.scale === 1;
-    const transform = p && panOnly ? `translate3d(${p.dx}px,0,0)` : '';
-    for (const el of [axisPanRef.current, bodyPanRef.current]) if (el) el.style.transform = transform;
-    cancelAnimationFrame(zoomFrame.current);
-    if (panOnly) {
-      setAxisPreview(null);
-      if (p === null && boardCanvasRef.current) paintBoard(boardCanvasRef.current, paintRef.current);
-      return;
-    }
-    zoomFrame.current = requestAnimationFrame(() => {
+    cancelAnimationFrame(frame.current);
+    if (axisPanRef.current) axisPanRef.current.style.transform = p && p.scale === 1 ? `translate3d(${p.dx}px,0,0)` : '';
+    if (!p) { setAxisPreview(null); boardApi.current?.repaint(paintRef.current); return; }
+    frame.current = requestAnimationFrame(() => {
+      if (p.scale === 1) { boardApi.current?.shift(p.dx); return; }
       const xMap = (x: number) => p.originX + (x - p.originX) * p.scale + p.dx;
-      if (boardCanvasRef.current) paintBoard(boardCanvasRef.current, { ...paintRef.current, xMap });
+      boardApi.current?.repaint({ ...paintRef.current, xMap });
       setAxisPreview(p);
     });
   }, []);
@@ -211,8 +206,8 @@ export default function TimelineCanvas(props: Props) {
             <Lanes threads={threads} board={board} width={width} labelW={labelW} pal={pal} dark={dark} />
           </svg>
           <div className="plot-viewport" style={{ left: labelW, width: width - labelW, height: board.totalH }}>
-            <div ref={bodyPanRef} className="plot-pan" style={{ left: -slack, top: win.top, width: innerW, height: win.height }}>
-              <BoardCanvas paint={paint} canvasRef={boardCanvasRef} />
+            <div className="board-window" style={{ top: win.top, width: width - labelW, height: win.height }}>
+              <BoardCanvas paint={paint} apiRef={boardApi} />
             </div>
           </div>
           {crossSection.enabled && csX > labelW && (
