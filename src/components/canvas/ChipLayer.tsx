@@ -28,15 +28,19 @@ const strokeOf = (selected: boolean, pal: Palette, fallback: string) => ({
 /** Where the title goes: inside a wide enough duration bar (white), else after the marker / bar (ink). */
 function titlePlacement(ev: TimelineEvent, c: Chip): { x: number; fill: string } {
   const r = eventRadius(ev.weight);
-  if (!ev.endDate) return { x: c.x0 + 2 * r + 8, fill: 'var(--text)' };
-  const barW = Math.max(c.barEnd - c.x0, 2 * r);
-  if (barW >= textWidth(ev.title) + 2 * r + 14) return { x: c.x0 + 2 * r + 8, fill: '#fff' };
+  if (!isBar(ev, c, H)) return { x: c.x0 + 2 * r + 8, fill: 'var(--text)' };
+  if (c.barEnd - c.x0 >= textWidth(ev.title) + 2 * r + 14) return { x: c.x0 + 2 * r + 8, fill: '#fff' };
   return { x: c.barEnd + 6, fill: 'var(--text)' };
+}
+
+/** A duration only reads as a bar once it is wider than it is tall; shorter ones fall back to a round marker. */
+function isBar(ev: TimelineEvent, c: Chip, minW: number): boolean {
+  return !!ev.endDate && c.barEnd - c.x0 > minW;
 }
 
 function Marker({ ev, c, col }: { ev: TimelineEvent; c: Chip; col: string }) {
   const r = eventRadius(ev.weight);
-  if (ev.endDate) return <rect x={c.x0} y={c.y - H / 2} width={Math.max(c.barEnd - c.x0, 2 * r)} height={H} rx={H / 2} fill={col} opacity={0.85} />;
+  if (isBar(ev, c, H)) return <rect x={c.x0} y={c.y - H / 2} width={c.barEnd - c.x0} height={H} rx={H / 2} fill={col} opacity={0.85} />;
   return <circle cx={c.x0 + r + 3} cy={c.y} r={r - 0.5} fill={col} />;
 }
 
@@ -76,9 +80,9 @@ function DotChip({ ev, c, pal, col, op, selected, handlers }: ChipProps) {
       onClick={e => { e.stopPropagation(); handlers.onSelect(ev.id); }}
       onMouseEnter={() => handlers.onHover(ev.id)} onMouseLeave={() => handlers.onHover(null)}>
       <title>{`${ev.date}  ${ev.title}`}</title>
-      {ev.endDate
-        ? <rect x={c.x0} y={c.y - r} width={Math.max(c.barEnd - c.x0, 2 * r)} height={2 * r} rx={r} fill={col} {...stroke} />
-        : <circle cx={c.x} cy={c.y} r={r} fill={col} {...stroke} />}
+      {isBar(ev, c, 2 * r + 2)
+        ? <rect x={c.x0} y={c.y - r} width={c.barEnd - c.x0} height={2 * r} rx={r} fill={col} {...stroke} />
+        : <circle cx={ev.endDate ? c.x0 + r : c.x} cy={c.y} r={r} fill={col} {...stroke} />}
     </g>
   );
 }
