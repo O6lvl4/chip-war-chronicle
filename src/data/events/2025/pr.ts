@@ -18,12 +18,28 @@ export const EVENTS_2025_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-66', threadId: 'pr', date: '2025-01-15', weight: 2,
+    title: 'BIS ファウンドリ・デューデリジェンス規則',
+    body: 'BISが先端コンピューティングICに関する追加デューデリジェンス措置の暫定最終規則(IFR)を公表(官報掲載1月16日)。ファウンドリやOSATに対し、承認済み設計者向け以外の先端ロジック製造で許可要件を課し、12月2日のHBM規則も修正。AI拡散規則と対をなす措置。',
+    source: 'Federal Register 2025-00711',
+    sourceUrl: 'https://www.federalregister.gov/documents/2025/01/16/2025-00711/implementation-of-additional-due-diligence-measures-for-advanced-computing-integrated-circuits',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-44', threadId: 'pr', date: '2025-02-27', weight: 1,
     title: '韓国 K-Chips法改正 控除率引き上げ',
     body: '韓国国会が租税特例制限法改正案(K-Chips法)を可決。半導体など国家戦略産業の設備投資税額控除率を大企業15%→20%、中小企業25%→30%に引き上げ、半導体R&D税額控除の適用期限を2031年まで7年延長した。',
     source: 'The Korea Times',
     sourceUrl: 'https://www.koreatimes.co.kr/southkorea/law-crime/20250227/national-assembly-passes-bill-on-expanding-tax-incentives-for-chipmakers',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-67', threadId: 'pr', date: '2025-03-25', weight: 2,
+    title: '米 Inspur子会社など約80社をリスト追加',
+    body: 'BISが2本の最終規則で計約80社をエンティティリストに追加。中国11社・台湾1社を対象とする規則(3月25日施行)にはサーバー大手Inspurの子会社が含まれ、別規則では中国42社を含む70社を追加。第2次トランプ政権初の大規模なリスト拡充となった。',
+    source: 'Federal Register 2025-05427',
+    sourceUrl: 'https://www.federalregister.gov/documents/2025/03/28/2025-05427/additions-to-the-entity-list',
+    sourceTier: 'primary',
   },
   {
     id: 'pr-13', threadId: 'pr', date: '2025-03-31', weight: 2,
@@ -47,6 +63,14 @@ export const EVENTS_2025_PR: TimelineEvent[] = [
     body: '米政府がNVIDIAに対し、中国向けデチューン品H20の輸出にライセンスを要求すると通知。NVIDIAは8-Kで在庫・購入約束に関し約55億ドルの費用計上を開示し、H20の対中販売は事実上停止した。',
     source: 'NVIDIA Form 8-K',
     sourceUrl: 'https://www.sec.gov/Archives/edgar/data/1045810/000104581025000082/nvda-20250409.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-68', threadId: 'pr', date: '2025-05-08', weight: 1,
+    title: '米上院 Chip Security Act 提出',
+    body: 'コットン上院議員が「Chip Security Act」(S.1705)を提出。商務長官に対し、輸出管理対象の先端チップに位置検証などのチップ・セキュリティ機構の基準策定を求める内容で、対中密輸対策としてAI半導体の所在追跡を制度化する試み。銀行委員会に付託された。',
+    source: 'GovInfo S.1705',
+    sourceUrl: 'https://www.govinfo.gov/app/details/BILLS-119s1705is',
     sourceTier: 'primary',
   },
   {
@@ -95,14 +119,6 @@ export const EVENTS_2025_PR: TimelineEvent[] = [
     body: '中国商務部・海関総署が公告2025年第70号で、10月9日発表の第61号・62号など6公告の実施を2026年11月10日まで停止。クアラルンプールでの米中協議で合意した1年間の凍結を実行に移した。',
     source: '中国商務部 公告2025年第70号',
     sourceUrl: 'https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_b1ec77dd3f0d4762952904df7cdaadec.html',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'pr-90', threadId: 'pr', date: '2025-12-26', weight: 1,
-    title: '令和8年度予算政府案 122.3兆円',
-    body: '政府が令和8年度一般会計予算案を閣議決定。一般会計の歳出総額は122兆3,092億円で前年度当初比6.2%増(7兆1,114億円増)となり、2026年4月7日に政府案どおり成立した。',
-    source: '財務省',
-    sourceUrl: 'https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/seifuan2026/03.pdf',
     sourceTier: 'primary',
   },
 ];

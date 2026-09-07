@@ -1,4 +1,4 @@
-// 生成ファイル: scripts/build-events-index.mjs で再生成する。年 × 系列ごとに1ファイル。
+// 生成ファイル: scripts/build-events-index.mjs で再生成する。 年 × 系列ごとに1ファイル。
 import type { TimelineEvent } from '../../types';
 import { EVENTS_2018_SI } from './2018/si';
 import { EVENTS_2018_PR } from './2018/pr';
@@ -25,6 +25,7 @@ import { EVENTS_2022_PR } from './2022/pr';
 import { EVENTS_2022_GP } from './2022/gp';
 import { EVENTS_2022_AI } from './2022/ai';
 import { EVENTS_2022_MM } from './2022/mm';
+import { EVENTS_2022_JP } from './2022/jp';
 import { EVENTS_2023_SI } from './2023/si';
 import { EVENTS_2023_PR } from './2023/pr';
 import { EVENTS_2023_GP } from './2023/gp';
@@ -40,6 +41,7 @@ import { EVENTS_2025_PR } from './2025/pr';
 import { EVENTS_2025_GP } from './2025/gp';
 import { EVENTS_2025_AI } from './2025/ai';
 import { EVENTS_2025_MM } from './2025/mm';
+import { EVENTS_2025_JP } from './2025/jp';
 import { EVENTS_2026_SI } from './2026/si';
 import { EVENTS_2026_PR } from './2026/pr';
 import { EVENTS_2026_GP } from './2026/gp';
@@ -72,6 +74,7 @@ export const EVENTS: TimelineEvent[] = [
   ...EVENTS_2022_GP,
   ...EVENTS_2022_AI,
   ...EVENTS_2022_MM,
+  ...EVENTS_2022_JP,
   ...EVENTS_2023_SI,
   ...EVENTS_2023_PR,
   ...EVENTS_2023_GP,
@@ -87,6 +90,7 @@ export const EVENTS: TimelineEvent[] = [
   ...EVENTS_2025_GP,
   ...EVENTS_2025_AI,
   ...EVENTS_2025_MM,
+  ...EVENTS_2025_JP,
   ...EVENTS_2026_SI,
   ...EVENTS_2026_PR,
   ...EVENTS_2026_GP,

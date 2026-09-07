@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2025_SI: TimelineEvent[] = [
   {
+    id: 'si-52', threadId: 'si', date: '2025-02-24', weight: 2,
+    title: 'TSMCアリゾナ Apple向けチップ量産',
+    body: 'Appleが米国への4年間5000億ドル超の投資計画を発表し、その中でTSMCアリゾナFab 21が2025年1月にApple向けチップの量産を開始したと明かした。Appleは同工場最大の顧客で、2000人超が従事する米国での先端チップ製造が本格化した。',
+    source: 'Apple Newsroom',
+    sourceUrl: 'https://www.apple.com/newsroom/2025/02/apple-will-spend-more-than-500-billion-usd-in-the-us-over-the-next-four-years/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-13', threadId: 'si', date: '2025-03-04', weight: 3,
     title: 'TSMC 米国投資を1650億ドルへ拡大',
     body: 'TSMCがトランプ大統領との会談後、米国への追加投資1000億ドルを発表。アリゾナに新工場3棟、先端パッケージ工場2棟、R&Dセンターを追加し、総投資は1650億ドルと米国史上最大の外国直接投資となった。',
@@ -15,6 +23,22 @@ export const EVENTS_2025_SI: TimelineEvent[] = [
     body: 'IntelがCadence元CEOのLip-Bu Tanを3月18日付でCEOに任命。暫定共同CEO体制を3か月余りで解消し、ファウンドリ事業と製品事業の立て直しを託した。',
     source: 'Intel IR',
     sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1730/intel-appoints-lip-bu-tan-as-chief-executive-officer',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-53', threadId: 'si', date: '2025-06-12', weight: 2,
+    title: 'AMD MI350発表・Heliosラック予告',
+    body: 'AMDが「Advancing AI 2025」でInstinct MI350X/MI355Xを発表。前世代比4倍のAI演算性能をうたい、OpenAIやMeta、Microsoft、Oracleが採用先として登壇。次世代MI400を72基搭載するラック「Helios」も予告した。',
+    source: 'AMD IR',
+    sourceUrl: 'https://ir.amd.com/news-events/press-releases/detail/1255/amd-unveils-vision-for-an-open-ai-ecosystem-detailing-new-silicon-software-and-systems-at-advancing-ai-2025',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-54', threadId: 'si', date: '2025-07-17', weight: 2,
+    title: 'Synopsys、Ansys買収を完了',
+    body: 'EDA最大手Synopsysがシミュレーション大手Ansysの買収を完了。2024年1月に合意した約350億ドル規模の案件で、各国当局の承認を経て成立。チップ設計からシステム解析までを統合し、AI製品開発の設計基盤を一社で提供する体制を狙う。',
+    source: 'Synopsys プレスリリース',
+    sourceUrl: 'https://news.synopsys.com/2025-07-17-Synopsys-Completes-Acquisition-of-Ansys',
     sourceTier: 'primary',
   },
   {
@@ -58,6 +82,14 @@ export const EVENTS_2025_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-55', threadId: 'si', date: '2025-09-18', weight: 3,
+    title: 'Huawei Ascendロードマップと自社HBM',
+    body: 'Huaweiが上海のHUAWEI CONNECTでAI半導体Ascendの3年計画を公表。2026年Q1の950PR/950DTから960（2027年）、970（2028年）へ毎年更新し、自社開発HBM「HiBL 1.0」「HiZQ 2.0」を搭載する方針を示した。',
+    source: 'Huawei 基調講演',
+    sourceUrl: 'https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-17', threadId: 'si', date: '2025-09-30', weight: 3,
     title: 'オランダ政府がNexperiaを管理下に',
     body: 'オランダ経済相が中国Wingtech傘下のNexperiaに対し、ガバナンス上の重大な欠陥を理由に1952年制定の物資供給法(Wbg)を初めて発動。車載向けレガシーチップ供給を巡り中国が対抗措置として輸出制限を課し、欧州自動車産業に波及した。',
@@ -66,11 +98,27 @@ export const EVENTS_2025_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-56', threadId: 'si', date: '2025-10-28', weight: 2,
+    title: 'Qualcomm AI200/AI250でDC参入',
+    body: 'Qualcommがデータセンター向けAI推論アクセラレータAI200とAI250を発表。カード当たり768GBのLPDDRを搭載し、ラック単位160kWの液冷構成で提供。AI200は2026年、AI250は2027年の商用化予定で、スマホ中心からの事業転換を鮮明にした。',
+    source: 'Qualcomm プレスリリース',
+    sourceUrl: 'https://www.qualcomm.com/news/releases/2025/10/qualcomm-unveils-ai200-and-ai250-redefining-rack-scale-data-cent',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-44', threadId: 'si', date: '2025-11-25', weight: 1,
     title: 'SoftBank、Ampere買収を完了',
     body: 'ソフトバンクグループがArmベースのサーバCPU設計企業Ampere Computingの買収(65億ドル)を完了し完全子会社化。ArmやGraphcoreに続き、AI計算基盤の内製化を進めた。',
     source: 'ソフトバンクグループ',
     sourceUrl: 'https://group.softbank/en/news/press/20251126',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-57', threadId: 'si', date: '2025-12-18', weight: 1,
+    title: 'Qualcomm、Alphawave買収を完了',
+    body: 'Qualcommが英国の高速接続IP企業Alphawave Semiの買収を予定より1四半期早く完了。2025年6月に約24億ドルで合意した案件で、SerDesやチップレット技術をOryon CPUやHexagon NPUと組み合わせ、データセンター事業の拡大を狙う。',
+    source: 'Qualcomm プレスリリース',
+    sourceUrl: 'https://www.qualcomm.com/news/releases/2025/12/qualcomm-completes-acquisition-of-alphawave-semi',
     sourceTier: 'primary',
   },
   {

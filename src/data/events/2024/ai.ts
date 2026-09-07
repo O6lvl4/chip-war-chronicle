@@ -2,11 +2,27 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2024_AI: TimelineEvent[] = [
   {
+    id: 'ai-50', threadId: 'ai', date: '2024-03-01', weight: 2,
+    title: 'NVIDIA 時価総額 2兆ドル超で終値',
+    body: 'NVIDIAが米国史上3社目となる時価総額2兆ドル超で取引を終えた。1兆ドルから2兆ドルへの到達はわずか180日で、AppleやMicrosoftが500日以上かけたのに比べ圧倒的に速く、AI需要による評価の急拡大を象徴した。',
+    source: 'Wikipedia (Nvidia)',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Nvidia',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'ai-35', threadId: 'ai', date: '2024-03-04', weight: 2,
     title: 'Anthropic Claude 3 発表',
     body: 'AnthropicがClaude 3ファミリー(Haiku/Sonnet/Opus)を発表。OpusはMMLUやGPQAなど主要評価で競合を上回ると主張し、200Kトークンの文脈と画像入力に対応。最先端モデルの競争が多社化した。',
     source: 'Anthropic 公式',
     sourceUrl: 'https://www.anthropic.com/news/claude-3-family',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-51', threadId: 'ai', date: '2024-04-18', weight: 2,
+    title: 'Meta Llama 3 公開 15兆トークン学習',
+    body: 'MetaがLlama 3の8Bと70Bモデルを公開。Llama 2の7倍となる15兆トークン超で学習し、2基の24K GPUクラスタを使用。クラス最高のオープンモデルを掲げ、4000億超パラメータの大型版も学習中と表明。オープンウェイト競争を加速させた。',
+    source: 'Meta AI Blog',
+    sourceUrl: 'https://ai.meta.com/blog/meta-llama-3/',
     sourceTier: 'primary',
   },
   {
@@ -31,6 +47,14 @@ export const EVENTS_2024_AI: TimelineEvent[] = [
     body: 'Constellationがスリーマイル島1号機を再稼働しMicrosoftと20年の電力購入契約を結ぶと発表。約835MWをデータセンター向けに供給予定で、AI需要が電力制約に直面していることを示した。',
     source: 'Constellation Energy',
     sourceUrl: 'https://www.constellationenergy.com/news/2024/Constellation-to-Launch-Crane-Clean-Energy-Center-Restoring-Jobs-and-Carbon-Free-Power-to-The-Grid.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-52', threadId: 'ai', date: '2024-10-28', weight: 2,
+    title: 'xAI Colossus 10万GPUを122日で構築',
+    body: 'NVIDIAがxAIのメンフィス「Colossus」を紹介。Hopper GPU 10万基を122日で構築し、機材到着から19日で学習を開始した世界最大級のAIスパコンで、Spectrum-X Ethernetを採用。20万基への拡張も進行中とし、GPU集中投資の新基準を示した。',
+    source: 'NVIDIA Newsroom',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/spectrum-x-ethernet-networking-xai-colossus',
     sourceTier: 'primary',
   },
   {

@@ -18,6 +18,14 @@ export const EVENTS_2024_PR: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'pr-63', threadId: 'pr', date: '2024-08-15', weight: 2,
+    title: '中国 アンチモン等を輸出管理対象に',
+    body: '中国商務部・税関総署が公告2024年第33号を発表し、アンチモン鉱・金属・酸化物、金アンチモン精錬分離技術、超硬材料関連物項(六面頂プレス等)を輸出許可制の対象に指定。9月15日施行。ガリウム・ゲルマニウムに続く重要鉱物の管理強化となった。',
+    source: 'MOFCOM 公告2024年第33号',
+    sourceUrl: 'https://www.mofcom.gov.cn/zwgk/zcfb/art/2024/art_a4711acb06364199a3c5a06d7f2be6d8.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-8', threadId: 'pr', date: '2024-09-05', weight: 2,
     title: '量子・GAAFET 多国間輸出規制',
     body: 'BISが量子コンピュータ、GAAFET技術、先端製造装置、金属積層造形を対象とする暫定最終規則を公表。同等の規制を持つ同盟国向けにライセンス例外IECを新設し、多国間協調型の規制モデルへ移行。',
@@ -31,6 +39,14 @@ export const EVENTS_2024_PR: TimelineEvent[] = [
     body: 'オランダ政府が先端半導体製造装置の国内輸出許可制の対象を拡大し、9月7日施行。2023年9月からのDUV露光装置規制に加え、ASMLの1970i/1980i型液浸装置などが新たに許可対象となり、米国の規制との整合が進んだ。',
     source: 'オランダ政府 (Government.nl)',
     sourceUrl: 'https://www.government.nl/latest/news/2024/09/06/the-netherlands-expands-export-control-measure-advanced-semiconductor-manufacturing-equipment',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-64', threadId: 'pr', date: '2024-11-15', weight: 2,
+    title: 'TSMCアリゾナ CHIPS法66億ドル 正式交付',
+    body: '米商務省がTSMC Arizonaに対しCHIPS法の直接補助最大66億ドルの交付を正式決定。4月8日の予備的覚書後のデューデリジェンスを経た初の大型最終合意で、融資枠50億ドルも併せて提示。フェニックス3工場・650億ドル超の投資とA16の米国生産を支援する。',
+    source: 'NIST / CHIPS for America',
+    sourceUrl: 'https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-chips-incentives-award-tsmc-arizona',
     sourceTier: 'primary',
   },
   {
@@ -64,5 +80,13 @@ export const EVENTS_2024_PR: TimelineEvent[] = [
     source: '中国貿促会浙江省委員会 (SAMR公告の転載)',
     sourceUrl: 'https://www.ccpitzj.gov.cn/art/2024/12/11/art_1229557691_46872.html',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-65', threadId: 'pr', date: '2024-12-20', weight: 1,
+    title: 'Samsung CHIPS法 47.45億ドル 正式交付',
+    body: '米商務省がSamsung Electronicsに対しCHIPS法の直接補助最大47億4500万ドルの交付を正式決定。テキサス州テイラーの先端ロジック新工場群とオースティン既存工場の拡張を支援する。政権交代直前に主要各社の最終合意が相次いだ。',
+    source: 'NIST / CHIPS for America',
+    sourceUrl: 'https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-samsung',
+    sourceTier: 'primary',
   },
 ];

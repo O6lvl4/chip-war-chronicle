@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2026_AI: TimelineEvent[] = [
   {
+    id: 'ai-63', threadId: 'ai', date: '2026-02-05', weight: 2,
+    title: 'Amazon 2026年設備投資 2000億ドル',
+    body: 'Amazonが2025年決算で、2025年の設備投資が前年比65%増の1318億ドルだったと公表し、2026年は約2000億ドルに達する見通しを示した。AIインフラが主因で、AWS売上は年1287億ドル(20%増)。ハイパースケーラーの投資規模が一段と切り上がった。',
+    source: 'Amazon IR',
+    sourceUrl: 'https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-16', threadId: 'ai', date: '2026-03-16', weight: 3,
     title: 'NVIDIA Vera Rubin 7チップ量産開始',
     body: 'GTC 2026でNVIDIAがVera Rubinプラットフォームを発表し、Vera CPU・Rubin GPU・NVLink 6・Groq 3 LPXなど7種のチップが量産中と表明。Blackwell比でワット当たり推論最大10倍、2026年後半に提供開始。',
@@ -32,6 +40,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     source: 'Yahoo Finance',
     sourceUrl: 'https://finance.yahoo.com/markets/article/micron-sk-hynix-stocks-sink-as-ai-chip-sell-off-deepens-125622548.html',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-64', threadId: 'ai', date: '2026-07-24', weight: 2,
+    title: 'Anthropic Claude Opus 5 発表',
+    body: 'AnthropicがClaude Opus 5を発表。コーディングでOpus 4.8の2倍の性能をより低コストで実現し、ARC-AGI 3では競合の3倍のスコアを記録。価格は入力100万トークン5ドル・出力25ドルで据え置き、2倍料金の高速モードも提供した。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.anthropic.com/news/claude-opus-5',
+    sourceTier: 'primary',
   },
   {
     id: 'ai-19', threadId: 'ai', date: '2026-08-26', weight: 2,

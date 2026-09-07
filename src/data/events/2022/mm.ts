@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2022_MM: TimelineEvent[] = [
   {
+    id: 'mm-50', threadId: 'mm', date: '2022-03-08', weight: 2,
+    title: 'ブレント原油 133ドル 2008年以来の高値',
+    body: 'ロシアのウクライナ侵攻後の供給不安と米国のロシア産原油禁輸決定で、北海ブレント現物価格は3月8日に1バレル133.18ドル（FRED収録の欧州ブレント現物）まで急騰。世界的なインフレ加速と主要中銀の利上げ圧力を強めた。',
+    source: 'FRED（EIA欧州ブレント現物価格）',
+    sourceUrl: 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU&cosd=2022-03-01&coed=2022-03-15',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-11', threadId: 'mm', date: '2022-03-16', weight: 3,
     title: 'FRB 利上げ開始 0.25%引き上げ',
     body: 'FOMCがFF金利の誘導目標を0.25〜0.50%に引き上げ、2018年以来の利上げサイクルを開始。急速な金融引き締めは高PERの半導体・テック株のバリュエーション圧縮を招いた。',
@@ -15,6 +23,22 @@ export const EVENTS_2022_MM: TimelineEvent[] = [
     body: 'FOMCがFF金利の誘導目標を1.50〜1.75%へ0.75%引き上げ、1994年以来の大幅利上げを決定。インフレ抑制へ追加利上げを示唆し、保有証券の縮小も継続。金利上昇でメモリ・GPU需要の減速と半導体株の下落が続いた。',
     source: 'FRB 声明',
     sourceUrl: 'https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-51', threadId: 'mm', date: '2022-09-15', weight: 2,
+    title: 'Ethereum Merge GPUマイニング終焉',
+    body: 'EthereumがThe Mergeでプルーフ・オブ・ワークからプルーフ・オブ・ステークへ移行し、消費電力を約99.95%削減。GPUを用いたイーサ採掘が終了し、中古GPUの大量放出と暗号資産由来のGPU需要消失がNVIDIA・AMDの在庫調整を深めた。',
+    source: 'ethereum.org The Merge',
+    sourceUrl: 'https://ethereum.org/en/roadmap/merge/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-52', threadId: 'mm', date: '2022-09-22', weight: 2,
+    title: '日本 24年ぶり円買い介入 2.8兆円',
+    body: '財務省がドル売り・円買いの為替介入を実施、規模は2兆8382億円。1998年以来24年ぶりの円買い介入で、日米金利差拡大により1ドル145円台まで進んだ円安に歯止めをかけた。10月21・24日にも計6.3兆円を追加投入した。',
+    source: '財務省 外国為替平衡操作の実施状況',
+    sourceUrl: 'https://www.mof.go.jp/english/policy/international_policy/reference/feio/foreign_exchange_intervention_operations.csv',
     sourceTier: 'primary',
   },
   {

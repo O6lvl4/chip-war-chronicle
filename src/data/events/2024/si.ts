@@ -50,6 +50,14 @@ export const EVENTS_2024_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-51', threadId: 'si', date: '2024-08-01', weight: 1,
+    title: 'ルネサス、Altium買収を完了',
+    body: 'ルネサスエレクトロニクスが豪州の電子設計ソフト大手Altiumの買収を完了。1株68.50豪ドル、総額約91億豪ドル（約8879億円）の現金買収で、半導体とPCB設計ツールを統合したエレクトロニクス設計基盤の構築を狙う。',
+    source: 'ルネサス プレスリリース',
+    sourceUrl: 'https://www.renesas.com/en/about/newsroom/renesas-completes-acquisition-altium',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-39', threadId: 'si', date: '2024-12-02', weight: 3,
     title: 'Intel CEOゲルシンガーが退任',
     body: 'IntelのPat Gelsinger CEOが12月1日付で退任し取締役も辞任。CFOのDavid ZinsnerとMichelle Johnston Holthausが暫定共同CEOに就き、IDM 2.0を主導した体制が終わった。',

@@ -58,6 +58,14 @@ export const EVENTS_2023_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-49', threadId: 'ai', date: '2023-11-13', weight: 2,
+    title: 'NVIDIA H200 発表 HBM3e 141GB',
+    body: 'NVIDIAがHopper世代の強化版H200を発表。HBM3eを141GB搭載し帯域4.8TB/sで、A100比でメモリ容量ほぼ2倍・帯域2.4倍。Llama 2 70B推論はH100比で約2倍に。2024年第2四半期から出荷予定とし、HBM需要を一段と押し上げた。',
+    source: 'NVIDIA Newsroom',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-supercharges-hopper-the-worlds-leading-ai-computing-platform',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-34', threadId: 'ai', date: '2023-12-06', weight: 2,
     title: 'Google Gemini 1.0 発表',
     body: 'GoogleがマルチモーダルモデルGemini 1.0(Ultra/Pro/Nano)を発表。UltraはMMLUで90.0%を記録した。同時に学習用TPU v5pを公開し、自社チップで最先端モデルを開発する体制を示した。',

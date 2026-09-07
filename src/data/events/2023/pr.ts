@@ -42,6 +42,14 @@ export const EVENTS_2023_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-62', threadId: 'pr', date: '2023-06-06', weight: 1,
+    title: '半導体・デジタル産業戦略 改定',
+    body: '経済産業省が2021年策定の「半導体・デジタル産業戦略」を改定。経済安全保障リスクの高まりと生成AIの急速な普及を踏まえ、半導体・蓄電池の取組加速、生成AIを念頭に置いた情報処理基盤の構築、データセンターの分散立地などを包括的に進める方針を示した。',
+    source: 'METI (Wayback archive)',
+    sourceUrl: 'https://web.archive.org/web/20230606050729/https://www.meti.go.jp/press/2023/06/20230606003/20230606003.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-34', threadId: 'pr', date: '2023-06-30', weight: 2,
     title: 'オランダ 先端製造装置の輸出許可制',
     body: 'オランダ政府が先端半導体製造装置の国内輸出管理令を官報公布(9月1日施行)。ASMLの液浸DUV露光装置の一部やALD・エピタキシャル装置などがEU域外への輸出許可対象となり、米国主導の対中規制に歩調を合わせた。',

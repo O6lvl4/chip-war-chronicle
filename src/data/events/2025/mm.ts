@@ -34,6 +34,14 @@ export const EVENTS_2025_MM: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'mm-57', threadId: 'mm', date: '2025-08-13', endDate: '2025-08-18', weight: 2,
+    title: '日経平均 初の43,000円台',
+    body: '日経平均は8月13日に43,274円で終了し、初めて43,000円台に乗せた。18日には43,714円まで上昇し1年ぶりに最高値を更新。日米関税合意による不透明感の後退と半導体・AI関連株の買いが押し上げ、10月の5万円台への助走となった。',
+    source: 'Yahoo Finance ^N225 履歴データ',
+    sourceUrl: 'https://finance.yahoo.com/quote/%5EN225/history/?period1=1754006400&period2=1756684800',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'mm-40', threadId: 'mm', date: '2025-09-17', weight: 2,
     title: 'FRB 2025年初の利下げ',
     body: 'FOMCがFF金利の誘導目標を4.00〜4.25%へ0.25%引き下げ、2024年12月以来9カ月ぶりに利下げを再開。雇用の下振れリスクの高まりを理由に挙げ、インフレはなお幾分高いとした。株式市場ではAI・半導体株の上昇が続いた。',
@@ -72,6 +80,22 @@ export const EVENTS_2025_MM: TimelineEvent[] = [
     source: 'SK hynix ニュースルーム',
     sourceUrl: 'https://news.skhynix.com/en/sk-hynix-announces-3q25-financial-results/',
     sourceTier: 'primary',
+  },
+  {
+    id: 'mm-58', threadId: 'mm', date: '2025-10-29', endDate: '2025-12-10', weight: 2,
+    title: 'FRB 連続利下げ 3.50〜3.75%へ',
+    body: 'FOMCは10月29日に0.25%利下げして3.75〜4.00%とし、12月1日での量的引き締め終了も決定。12月10日にも0.25%下げて3.50〜3.75%とした。雇用の下振れリスクを重視した一方、12月は3人が反対票を投じ意見の割れが鮮明になった。',
+    source: 'FRB FOMC声明',
+    sourceUrl: 'https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-59', threadId: 'mm', date: '2025-11-04', endDate: '2025-11-20', weight: 3,
+    title: 'AIバブル懸念 半導体株が調整',
+    body: 'AI投資の過熱懸念からSOX指数は10月29日の高値7,328から下落し、11月4日に−4%の急落。NVIDIAが19日に売上570億ドル・データセンター512億ドルの好決算を示したが翌20日は逆に売られ、SOXは6,352まで約13%下落した。',
+    source: 'Yahoo Finance ^SOX 履歴データ',
+    sourceUrl: 'https://finance.yahoo.com/quote/%5ESOX/history/?period1=1730678400&period2=1764028800',
+    sourceTier: 'secondary',
   },
   {
     id: 'mm-44', threadId: 'mm', date: '2025-12-19', weight: 2,

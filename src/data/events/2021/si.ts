@@ -25,4 +25,12 @@ export const EVENTS_2021_SI: TimelineEvent[] = [
     sourceUrl: 'https://www.sony-semicon.com/en/news/2021/2021110901.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-49', threadId: 'si', date: '2021-11-24', weight: 2,
+    title: 'Samsung テキサス州テイラーに新工場',
+    body: 'Samsung電子がテキサス州テイラーに170億ドルを投じて先端ロジック半導体の新工場を建設すると発表。同社の米国投資として過去最大で、2022年前半に着工し2024年後半の稼働を目指すとした。後にTesla向けAI6チップの生産拠点となる。',
+    source: 'Samsung Newsroom',
+    sourceUrl: 'https://news.samsung.com/global/samsung-electronics-announces-new-advanced-semiconductor-fab-site-in-taylor-texas',
+    sourceTier: 'primary',
+  },
 ];

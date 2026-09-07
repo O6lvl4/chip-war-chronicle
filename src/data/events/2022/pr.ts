@@ -2,12 +2,12 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2022_PR: TimelineEvent[] = [
   {
-    id: 'pr-31', threadId: 'pr', date: '2022-05-11', weight: 2,
-    title: '経済安全保障推進法 成立',
-    body: '経済安全保障推進法(令和4年法律第43号)が参院本会議で可決・成立、5月18日公布。半導体などの特定重要物資の安定供給確保、基幹インフラの事前審査、先端技術の官民協力、特許非公開の4本柱で構成される。',
-    source: 'Wikipedia 日本語版',
-    sourceUrl: 'https://ja.wikipedia.org/wiki/経済安全保障推進法',
-    sourceTier: 'secondary',
+    id: 'pr-61', threadId: 'pr', date: '2022-02-08', weight: 2,
+    title: '欧州委 European Chips Act を提案',
+    body: '欧州委員会が半導体不足への対応と技術主権の強化を掲げ「欧州半導体法(European Chips Act)」の法案パッケージを提案。官民で430億ユーロ超を動員し、2030年に世界シェア20%を目指す目標を掲げた。法は2023年9月21日に発効した。',
+    source: 'European Commission',
+    sourceUrl: 'https://ec.europa.eu/commission/presscorner/detail/en/ip_22_729',
+    sourceTier: 'primary',
   },
   {
     id: 'pr-4', threadId: 'pr', date: '2022-08-09', weight: 3,

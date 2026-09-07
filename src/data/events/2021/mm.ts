@@ -18,6 +18,14 @@ export const EVENTS_2021_MM: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'mm-49', threadId: 'mm', date: '2021-05-21', weight: 2,
+    title: '中国 ビットコイン採掘取締りを決定',
+    body: '中国国務院金融安定発展委員会が「ビットコインの採掘と取引行為を取り締まる」と明記。世界最大の採掘拠点だった中国からマイニング事業者が撤退し、暗号資産ブームで高騰していたGPU価格の下落を招く転機となった。',
+    source: '中国政府網 国務院金融委第51次会議',
+    sourceUrl: 'https://www.gov.cn/guowuyuan/2021-05/21/content_5610192.htm',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-28', threadId: 'mm', date: '2021-09-23', weight: 2,
     title: '半導体不足 自動車業界に2100億ドル損失',
     body: 'AlixPartnersが半導体不足による2021年の自動車業界の売上損失を2100億ドル、生産減少を770万台と予測し、5月時点の1100億ドル・390万台から大幅に上方修正。樹脂や鋼材、労働力の不足も重なり混乱が長期化した。',

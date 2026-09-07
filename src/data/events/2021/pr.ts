@@ -10,6 +10,14 @@ export const EVENTS_2021_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-60', threadId: 'pr', date: '2021-06-04', weight: 2,
+    title: '経産省「半導体・デジタル産業戦略」策定',
+    body: '経済産業省が3月に設置した半導体・デジタル産業戦略検討会議の議論を踏まえ「半導体・デジタル産業戦略」を取りまとめ公表。先端半導体製造技術の共同開発と生産能力確保、国内産業のレジリエンス強化などを柱とし、TSMC誘致など以後の巨額補助の起点となった。',
+    source: 'METI (NDL/Wayback archive)',
+    sourceUrl: 'https://web.archive.org/web/20210604021626/https://www.meti.go.jp/press/2021/06/20210604008/20210604008.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-3', threadId: 'pr', date: '2021-06-08', weight: 2,
     title: '米上院 USICA 可決',
     body: '米上院が「米国イノベーション競争法(USICA、S.1260)」を68対32で可決。半導体製造・研究への520億ドルの緊急予算を含み、翌年のCHIPS法の前身となる。',

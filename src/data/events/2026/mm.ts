@@ -10,6 +10,22 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'mm-60', threadId: 'mm', date: '2026-01-23', weight: 2,
+    title: '日銀 0.75%据え置き 高田委員が反対',
+    body: '日銀は政策金利を0.75%程度で据え置いた。賛成8・反対1で、高田委員は物価安定目標が概ね達成されたとして1.0%への引き上げを主張。海外経済の回復で物価は上振れリスクと指摘し、6月の1.0%への利上げを先取りする形となった。',
+    source: '日本銀行 Statement on Monetary Policy',
+    sourceUrl: 'https://www.boj.or.jp/en/mopo/mpmdeci/state_2026/k260123a.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-61', threadId: 'mm', date: '2026-01-28', endDate: '2026-07-29', weight: 2,
+    title: 'FRB 2026年据え置き 利上げ論も',
+    body: 'FOMCは1月28日から7月29日まで5会合連続で3.50〜3.75%を維持。1月はミラン・ウォラー両氏が利下げを主張したが、中東情勢によるエネルギー高でインフレが再燃し、7月にはハマック・カシュカリ・ローガンの3人が利上げを求めて反対した。',
+    source: 'FRB FOMC声明',
+    sourceUrl: 'https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-45', threadId: 'mm', date: '2026-01-29', weight: 2,
     title: 'Samsung 営業利益20.1兆ウォン 過去最高',
     body: 'Samsung電子の2025年第4四半期決算は売上高93.8兆ウォン、営業利益20.1兆ウォンでいずれも四半期として過去最高。HBM販売拡大とメモリ価格の急騰が寄与し、2018年第3四半期の記録（17.6兆ウォン）を7年ぶりに更新した。',
@@ -32,6 +48,14 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     source: '日本経済新聞',
     sourceUrl: 'https://www.nikkei.com/article/DGXZQOUB270JP0X20C26A4000000/',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'mm-62', threadId: 'mm', date: '2026-04-30', endDate: '2026-05-06', weight: 2,
+    title: '円買い介入 11.7兆円 四半期最大',
+    body: '財務省は4月30日に6兆2787億円、5月4日に7802億円、5月6日に4兆6759億円のドル売り・円買い介入を実施。4〜6月期合計11兆7349億円は2024年の9.8兆円を上回る過去最大規模で、原油高による円安圧力に対抗した。',
+    source: '財務省 外国為替平衡操作の実施状況 2026年4〜6月',
+    sourceUrl: 'https://www.mof.go.jp/english/policy/international_policy/reference/feio/quarter/2026_2Qe.html',
+    sourceTier: 'primary',
   },
   {
     id: 'mm-48', threadId: 'mm', date: '2026-05-14', weight: 2,
