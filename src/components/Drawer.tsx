@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { DrawerMode } from '../hooks/useTimelineState';
+import type { DrawerMode } from '../hooks/useAppState';
 
 interface Props {
   mode: DrawerMode;
@@ -10,7 +10,6 @@ interface Props {
 const TITLES: Record<DrawerMode, string> = {
   none: '',
   event: 'DETAIL',
-  section: 'CROSS-SECTION',
   sql: 'SQL CONSOLE',
 };
 

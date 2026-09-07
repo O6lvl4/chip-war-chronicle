@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "format": "oxfmt",
-    "quality": "codopsy analyze ./src"
+    "quality": "codopsy analyze ./src",
+    "perf": "node perf/fling.mjs"
   },
   "dependencies": {
     "@duckdb/duckdb-wasm": "1.32.0",
@@ -23,6 +24,7 @@
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^6.0.0",
     "oxfmt": "^0.2.0",
+    "playwright": "1.58.2",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.0",
     "vite": "^8.0.5"

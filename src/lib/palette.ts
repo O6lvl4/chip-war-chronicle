@@ -1,4 +1,5 @@
 import type { Thread } from '../types';
+import type { Theme } from '../engine/protocol';
 
 export interface Palette {
   ink: string;
@@ -42,4 +43,10 @@ export function threadColor(thread: Thread | undefined, dark: boolean): string {
 export function colorLookup(threads: Thread[], dark: boolean): (threadId: string) => string {
   const map = new Map(threads.map(t => [t.id, threadColor(t, dark)]));
   return (threadId: string) => map.get(threadId) ?? '#888';
+}
+
+/** The colours the tile renderer needs, for one theme. */
+export function themeFor(dark: boolean): Theme {
+  const p = paletteFor(dark);
+  return { dark, text: p.text, ink: p.ink, surface: p.surface, accent: p.accent };
 }

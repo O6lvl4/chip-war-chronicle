@@ -1,39 +1,33 @@
-/** Tiny on-device profiler, enabled with `?perf=1`; read by the PerfHud overlay. */
+/** Tiny on-device profiler, enabled with `?perf=1`; read by the PerfHud overlay and the CI fling test. */
 export interface PerfStats {
-  blitMs: number;
-  blitMax: number;
-  paintMs: number;
-  paintMax: number;
-  paints: number;
-  commits: number;
-  commitMs: number;
-  commitMax: number;
-  scrolls: number;
+  tiles: number;
+  tileMs: number;
+  tileMax: number;
+  tileP95: number;
   longFrames: number;
+  levelSwitches: number;
 }
+
+const samples: number[] = [];
 
 export const perf: PerfStats & { enabled: boolean } = {
   enabled: typeof location !== 'undefined' && /[?&]perf=1/.test(location.search),
-  blitMs: 0, blitMax: 0, paintMs: 0, paintMax: 0, paints: 0, commits: 0, commitMs: 0, commitMax: 0, scrolls: 0, longFrames: 0,
+  tiles: 0, tileMs: 0, tileMax: 0, tileP95: 0, longFrames: 0, levelSwitches: 0,
 };
 
-/** Records how long a pan commit took from request to the new image being on screen. */
-export function noteCommit(ms: number) {
+export function noteTile(ms: number) {
   if (!perf.enabled) return;
-  perf.commitMs = ms;
-  perf.commitMax = Math.max(perf.commitMax, ms);
+  perf.tiles++;
+  perf.tileMs = ms;
+  perf.tileMax = Math.max(perf.tileMax, ms);
+  samples.push(ms);
+  if (samples.length > 400) samples.shift();
+  const sorted = [...samples].sort((a, b) => a - b);
+  perf.tileP95 = sorted[Math.floor(sorted.length * 0.95)] ?? 0;
 }
 
-export function timed<T>(key: 'blit' | 'paint', fn: () => T): T {
-  if (!perf.enabled) return fn();
-  const t0 = performance.now();
-  const out = fn();
-  const dt = performance.now() - t0;
-  if (key === 'blit') { perf.blitMs = dt; perf.blitMax = Math.max(perf.blitMax, dt); }
-  else { perf.paintMs = dt; perf.paintMax = Math.max(perf.paintMax, dt); perf.paints++; }
-  return out;
-}
-
-export function count(key: 'commits' | 'scrolls' | 'longFrames') {
+export function count(key: 'longFrames' | 'levelSwitches') {
   if (perf.enabled) perf[key]++;
 }
+
+if (perf.enabled) (window as unknown as { __perf: PerfStats }).__perf = perf;

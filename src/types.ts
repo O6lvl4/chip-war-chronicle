@@ -29,8 +29,3 @@ export interface Link {
   why: string;
 }
 
-export interface CrossSectionState {
-  enabled: boolean;
-  fixed: boolean;
-  x: number;
-}

@@ -120,27 +120,7 @@ body {
   border-color: var(--text);
 }
 
-/* Timeline stage: static SVG + composited pan layer + overlay */
-.timeline-stage { position: relative; display: flex; flex-direction: column; width: 100%; height: 100%; overflow: hidden; cursor: grab; user-select: none; touch-action: pan-x pan-y; }
-.timeline-stage.dragging { cursor: grabbing; }
-.axis-row { position: relative; flex-shrink: 0; overflow: hidden; z-index: 2; }
-.board-scroll { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-.board-scroll::-webkit-scrollbar { display: none; }
-.board { position: relative; }
-/* The frame stays put while the strip around it scrolls; the canvas inside is re-blitted per scroll event. */
-.board-frame { position: sticky; left: 0; top: 0; overflow: hidden; }
-.overlay-pan { position: absolute; left: 0; top: 0; pointer-events: none; will-change: transform; }
 .perf-hud { position: fixed; left: 8px; bottom: 8px; z-index: 50; margin: 0; padding: 6px 8px; font: 11px/1.4 ui-monospace, monospace; color: #fff; background: rgba(0,0,0,0.7); border-radius: 6px; pointer-events: none; }
-.stage-static { display: block; position: absolute; left: 0; top: 0; }
-.plot-viewport { position: absolute; top: 0; overflow: hidden; }
-.plot-pan { position: absolute; top: 0; will-change: transform; }
-.plot-pan > svg { display: block; }
-.board-window { position: absolute; left: 0; }
-.board-window > canvas { display: block; }
-.stage-overlay { position: absolute; left: 0; top: 0; pointer-events: none; }
-.chip { cursor: pointer; }
-.chip:hover rect:first-child { stroke-width: 2.5; }
-.evt-hit { cursor: pointer; }
 
 /* Scrollbars */
 ::-webkit-scrollbar { width: 5px; height: 5px; }
@@ -209,5 +189,4 @@ button, .n-btn { transition: all 0.08s ease; }
 .timeline-container { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; position: relative; }
 
 .hint { position: absolute; left: 10px; bottom: 60px; font-family: var(--font-mono); font-size: 10px; color: var(--text-sub); background: var(--surface); padding: 2px 6px; border-radius: 4px; pointer-events: none; opacity: 0.85; z-index: 5; }
-.zoom-btn { min-width: 34px; padding: 5px 8px; }
-.timeline-stage.over-chip { cursor: pointer; }
+.n-btn.quiet { border-color: var(--border-light); box-shadow: none; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; }
