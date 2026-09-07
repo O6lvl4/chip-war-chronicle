@@ -48,7 +48,7 @@ pnpm build        # 型チェック + Vite ビルド (dist/)
 pnpm quality      # codopsy による品質チェック
 ```
 
-GitHub Pages へのデプロイは `.github/workflows/pages.yml` が `main` への push で行います。ビルド前に [codopsy](https://github.com/O6lvl4/codopsy) を `--fail-on-warning` で走らせ、品質ランク A を割ると失敗します。
+GitHub Pages へのデプロイは `.github/workflows/pages.yml` が `main` への push で行います。ビルド前に [codopsy](https://github.com/O6lvl4/codopsy) を `--fail-on-warning` で走らせ、品質ランク A を割ると失敗します。CI では codopsy を main の固定リビジョンからソースビルドしています(リリース v2.2.0 には TypeScript の型 import を未使用扱いする誤検出があり、修正が未リリースのため)。次のリリースが出たらバイナリ取得に戻せます。
 
 ## 技術
 

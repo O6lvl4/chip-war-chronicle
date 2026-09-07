@@ -14,6 +14,9 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+env:
+  CODOPSY_REV: fabfbdc
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,11 +30,21 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # codopsy v2.2.0 (最新リリース) は TypeScript の型 import を未使用と誤検出する。
+      # 修正 (5626620) は main にのみ入っているので、そのリビジョンをソースからビルドして使う。
+      - name: Restore codopsy
+        id: codopsy-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo/bin/codopsy
+          key: codopsy-${{ env.CODOPSY_REV }}-${{ runner.os }}
+      - uses: dtolnay/rust-toolchain@stable
+        if: steps.codopsy-cache.outputs.cache-hit != 'true'
+      - name: Build codopsy from source
+        if: steps.codopsy-cache.outputs.cache-hit != 'true'
+        run: cargo install --git https://github.com/O6lvl4/codopsy --rev ${{ env.CODOPSY_REV }} --locked codopsy
       - name: Quality gate (codopsy)
-        run: |
-          curl -sSfL https://github.com/O6lvl4/codopsy/releases/latest/download/codopsy-x86_64-unknown-linux-gnu.tar.gz | tar xz
-          sudo mv codopsy /usr/local/bin/
-          codopsy analyze ./src --fail-on-warning
+        run: ~/.cargo/bin/codopsy analyze ./src --fail-on-warning
       - name: Build
         run: pnpm build
         env:
