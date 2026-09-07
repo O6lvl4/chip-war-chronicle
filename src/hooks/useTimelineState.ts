@@ -20,7 +20,7 @@ export function useTimelineState({ events, threadIds, dataStart, dataEnd }: Para
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [activeThreadIds, setActiveThreadIds] = useState<string[]>(threadIds);
   const [query, setQuery] = useState('');
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches);
   const [crossSection, setCrossSection] = useState<CrossSectionState>(CS_OFF);
   const [sqlOpen, setSqlOpen] = useState(false);
   const [clusterIds, setClusterIds] = useState<string[] | null>(null);

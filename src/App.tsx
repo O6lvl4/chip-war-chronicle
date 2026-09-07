@@ -3,7 +3,7 @@ import { DATA_END, DATA_START, EVENTS, LINKS, THREADS } from './data';
 import { useTimelineState } from './hooks/useTimelineState';
 import { useKeyboardNav } from './hooks/useKeyboardNav';
 import { useDuckDB } from './hooks/useDuckDB';
-import { LABEL_W } from './lib/layout';
+import { labelWidthFor } from './components/canvas/geometry';
 import Header from './components/Header';
 import Drawer from './components/Drawer';
 import TimelineCanvas from './components/TimelineCanvas';
@@ -16,9 +16,11 @@ const DATASET = { threads: THREADS, events: EVENTS, links: LINKS };
 /** Cross-section x (px inside the canvas) → date, using the canvas width. */
 function csDateFor(x: number, viewStart: number, viewEnd: number): number | null {
   const el = document.querySelector<HTMLElement>('.timeline-container');
-  if (!el || x <= LABEL_W) return null;
-  const pxPerMs = (el.offsetWidth - LABEL_W) / (viewEnd - viewStart);
-  return viewStart + (x - LABEL_W) / pxPerMs;
+  if (!el) return null;
+  const labelW = labelWidthFor(el.offsetWidth);
+  if (x <= labelW) return null;
+  const pxPerMs = (el.offsetWidth - labelW) / (viewEnd - viewStart);
+  return viewStart + (x - labelW) / pxPerMs;
 }
 
 export default function App() {

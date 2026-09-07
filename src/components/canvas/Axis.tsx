@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import type { CanvasGeom } from './geometry';
 import type { Palette } from '../../lib/palette';
-import { AXIS_H, LABEL_W } from '../../lib/layout';
+import { AXIS_H } from '../../lib/layout';
 import { formatTick, generateTicks } from '../../lib/time';
 
 interface Props {
@@ -14,7 +14,7 @@ interface Props {
 /** Time axis: tick lines, tick labels, the TODAY marker and the corner label. */
 export default function Axis({ geom, pal, viewStart, viewEnd }: Props) {
   const { ticks, unit } = useMemo(() => generateTicks(viewStart, viewEnd), [viewStart, viewEnd]);
-  const { xFor, width, svgH } = geom;
+  const { xFor, width, svgH, labelW: LABEL_W } = geom;
   const todayX = xFor(Date.now());
   const todayVisible = todayX >= LABEL_W && todayX <= width;
   return (
@@ -49,7 +49,7 @@ export default function Axis({ geom, pal, viewStart, viewEnd }: Props) {
       <rect x={0} y={0} width={LABEL_W} height={AXIS_H} fill={pal.surface} />
       <text x={LABEL_W / 2} y={AXIS_H / 2 + 5} textAnchor="middle" fontFamily="'DM Mono', monospace"
         fontSize={9.5} letterSpacing={1.5} fill="var(--text-sub)" opacity={0.7}>
-        TIMELINE
+        {LABEL_W < 100 ? '' : 'TIMELINE'}
       </text>
     </>
   );

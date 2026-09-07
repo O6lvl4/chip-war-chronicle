@@ -1,7 +1,7 @@
 import type { CanvasGeom } from './geometry';
 import type { TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
-import { eventOpacity, eventRadius, LABEL_W, type Cluster, type Emphasis } from '../../lib/layout';
+import { eventOpacity, eventRadius, type Cluster, type Emphasis } from '../../lib/layout';
 import { ms } from '../../lib/time';
 
 export interface EventHandlers {
@@ -24,7 +24,7 @@ interface Props {
 function DurationBar({ ev, geom, pal, col, op, focused, handlers }: {
   ev: TimelineEvent; geom: CanvasGeom; pal: Palette; col: string; op: number; focused: boolean; handlers: EventHandlers;
 }) {
-  const x1 = Math.max(geom.xFor(ms(ev.date)), LABEL_W);
+  const x1 = Math.max(geom.xFor(ms(ev.date)), geom.labelW);
   const x2 = Math.min(geom.xFor(ms(ev.endDate ?? ev.date)), geom.width);
   const cy = geom.yFor(ev.threadId);
   const w = Math.max(x2 - x1, 6);

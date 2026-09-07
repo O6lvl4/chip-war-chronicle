@@ -1,7 +1,7 @@
 import type { CanvasGeom } from './geometry';
 import type { Palette } from '../../lib/palette';
 import { threadColor } from '../../lib/palette';
-import { AXIS_H, LABEL_W } from '../../lib/layout';
+import { AXIS_H } from '../../lib/layout';
 
 interface Props {
   geom: CanvasGeom;
@@ -11,7 +11,8 @@ interface Props {
 
 /** Lane backgrounds, dividers and the left-hand lane labels. */
 export default function Lanes({ geom, pal, dark }: Props) {
-  const { lanes, width, svgH, laneH: LANE_H } = geom;
+  const { lanes, width, svgH, laneH: LANE_H, labelW: LABEL_W } = geom;
+  const compact = LABEL_W < 100;
   const tint = dark ? '08' : '06';
   const bottomY = AXIS_H + lanes.length * LANE_H;
   return (
@@ -37,15 +38,24 @@ export default function Lanes({ geom, pal, dark }: Props) {
         return (
           <g key={t.id}>
             <rect x={0} y={AXIS_H + i * LANE_H + 4} width={4} height={LANE_H - 8} fill={col} rx={2} />
-            <rect x={8} y={cy - 20} width={LABEL_W - 16} height={38} rx={8} fill={col + '12'} />
-            <text x={LABEL_W / 2 + 2} y={cy - 4} textAnchor="middle"
-              fontFamily="'M PLUS Rounded 1c', sans-serif" fontSize={12} fontWeight={700} fill={col}>
-              {t.name}
-            </text>
-            <text x={LABEL_W / 2 + 2} y={cy + 12} textAnchor="middle"
-              fontFamily="'DM Mono', monospace" fontSize={8.5} letterSpacing={1.2} fill={col} opacity={0.7}>
-              {t.en}
-            </text>
+            {compact ? (
+              <text x={LABEL_W / 2 + 4} y={cy} textAnchor="middle" writingMode="tb"
+                fontFamily="'M PLUS Rounded 1c', sans-serif" fontSize={11} fontWeight={700} fill={col}>
+                {t.name}
+              </text>
+            ) : (
+              <>
+                <rect x={8} y={cy - 20} width={LABEL_W - 16} height={38} rx={8} fill={col + '12'} />
+                <text x={LABEL_W / 2 + 2} y={cy - 4} textAnchor="middle"
+                  fontFamily="'M PLUS Rounded 1c', sans-serif" fontSize={12} fontWeight={700} fill={col}>
+                  {t.name}
+                </text>
+                <text x={LABEL_W / 2 + 2} y={cy + 12} textAnchor="middle"
+                  fontFamily="'DM Mono', monospace" fontSize={8.5} letterSpacing={1.2} fill={col} opacity={0.7}>
+                  {t.en}
+                </text>
+              </>
+            )}
           </g>
         );
       })}

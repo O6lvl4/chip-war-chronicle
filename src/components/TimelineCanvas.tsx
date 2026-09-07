@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react';
+import { useEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from 'react';
 import type { CrossSectionState, Link, Thread, TimelineEvent } from '../types';
-import { AXIS_H, clusterEvents, LABEL_W, minLabelWeight, placeLabels, relatedIds } from '../lib/layout';
+import { AXIS_H, clusterEvents, minLabelWeight, placeLabels, relatedIds } from '../lib/layout';
 import { colorLookup, paletteFor } from '../lib/palette';
 import { ms } from '../lib/time';
 import { useCanvasInteraction } from '../hooks/useCanvasInteraction';
@@ -53,12 +53,12 @@ export default function TimelineCanvas(props: Props) {
 
   const lanes = useMemo(() => threads.filter(t => activeThreadIds.includes(t.id)), [threads, activeThreadIds]);
   const geom = useMemo(() => makeGeom({ width: size.w, height: size.h, lanes, viewStart, viewEnd }), [size, lanes, viewStart, viewEnd]);
-  const pxPerMs = (size.w - LABEL_W) / (viewEnd - viewStart);
   const pal = paletteFor(dark);
   const colorOf = useMemo(() => colorLookup(threads, dark), [threads, dark]);
   const eventsById = useMemo(() => new Map(events.map(e => [e.id, e])), [events]);
 
-  const ia = useCanvasInteraction({ svgRef, viewStart, viewEnd, pxPerMs, onViewChange });
+  const LABEL_W = geom.labelW;
+  const ia = useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW: LABEL_W, onViewChange });
 
   const visible = useMemo(() => events.filter(ev => {
     if (!activeThreadIds.includes(ev.threadId)) return false;
@@ -80,7 +80,7 @@ export default function TimelineCanvas(props: Props) {
   const csDate = csX > LABEL_W ? geom.tFor(csX) : null;
   const tracking = crossSection.enabled && !crossSection.fixed;
 
-  const onMouseMove = (e: ReactMouseEvent<SVGSVGElement>) => {
+  const onPointerMove = (e: ReactPointerEvent<SVGSVGElement>) => {
     ia.onDragMove(e);
     if (!tracking) return;
     const x = ia.localX(e);
@@ -88,7 +88,7 @@ export default function TimelineCanvas(props: Props) {
     onCrossSection(x);
   };
   const onClick = (e: ReactMouseEvent<SVGSVGElement>) => {
-    if (ia.isDragging || (e.target as Element).closest('.evt-hit')) return;
+    if (ia.wasDrag() || (e.target as Element).closest('.evt-hit')) return;
     if (crossSection.enabled) onCrossSection(ia.localX(e), true);
     else onSelect(null);
   };
@@ -103,8 +103,8 @@ export default function TimelineCanvas(props: Props) {
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       <svg ref={svgRef} width={size.w} height={geom.svgH}
         className={`timeline-svg${ia.isDragging ? ' dragging' : ''}`}
-        onMouseDown={ia.onMouseDown} onMouseMove={onMouseMove}
-        onMouseUp={ia.endDrag} onMouseLeave={ia.endDrag}
+        onPointerDown={ia.onPointerDown} onPointerMove={onPointerMove}
+        onPointerUp={ia.endDrag} onPointerCancel={ia.endDrag}
         onDoubleClick={ia.onDoubleClick} onClick={onClick}>
         <defs>
           <clipPath id="canvas-clip">

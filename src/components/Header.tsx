@@ -49,7 +49,7 @@ export default function Header({ threads, state, dbReady }: Props) {
         SQL{dbReady ? '' : ' …'}
       </button>
       <button type="button" className="n-btn" onClick={state.resetView}>全期間</button>
-      <button type="button" className="n-btn" onClick={state.toggleDark} style={{ padding: '5px 10px', minWidth: 36 }}
+      <button type="button" className="n-btn theme-toggle" onClick={state.toggleDark} style={{ padding: '5px 10px', minWidth: 36 }}
         aria-label="テーマ切替">
         {state.dark ? '☀' : '☾'}
       </button>
