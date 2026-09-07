@@ -81,6 +81,23 @@ function useVerticalWindow(ref: React.RefObject<HTMLDivElement | null>, totalH: 
   return win;
 }
 
+/**
+ * The view the canvas renders. Mid-fling pan commits stay local (only the canvas re-renders);
+ * the app-level view is updated when the scroll goes idle or a zoom lands. External changes
+ * (minimap, centring on a selection) always win.
+ */
+function useLocalView(propStart: number, propEnd: number, onViewChange: (s: number, e: number) => void) {
+  const [local, setLocal] = useState({ start: propStart, end: propEnd, fromStart: propStart, fromEnd: propEnd });
+  const fresh = local.fromStart === propStart && local.fromEnd === propEnd;
+  if (!fresh) setLocal({ start: propStart, end: propEnd, fromStart: propStart, fromEnd: propEnd });
+  const commitView = useCallback((s: number, e: number, idle: boolean) => {
+    if (idle) onViewChange(s, e);
+    else setLocal(l => ({ ...l, start: s, end: e }));
+  }, [onViewChange]);
+  const v = fresh ? local : { start: propStart, end: propEnd };
+  return { viewStart: v.start, viewEnd: v.end, commitView };
+}
+
 function useWidth(ref: React.RefObject<HTMLDivElement | null>) {
   const [w, setW] = useState(1000);
   useEffect(() => {
@@ -100,8 +117,9 @@ function useWidth(ref: React.RefObject<HTMLDivElement | null>) {
  * re-render that image with every x remapped; the view is committed once per gesture.
  */
 export default function TimelineCanvas(props: Props) {
-  const { threads, events, links, activeThreadIds, viewStart, viewEnd, selectedId,
+  const { threads, events, links, activeThreadIds, selectedId,
     query, dark, crossSection, onViewChange, onSelect, onCrossSection } = props;
+  const { viewStart, viewEnd, commitView } = useLocalView(props.viewStart, props.viewEnd, onViewChange);
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const axisPanRef = useRef<HTMLDivElement>(null);
@@ -148,7 +166,7 @@ export default function TimelineCanvas(props: Props) {
     if (overlayPanRef.current) overlayPanRef.current.style.transform = tf;
     boardApi.current?.shift(d);
   }, []);
-  const pan = usePanScroll({ scrollRef, viewStart, viewEnd, pxPerMs, slack, spacer, onViewChange, onShift: applyShift });
+  const pan = usePanScroll({ scrollRef, viewStart, viewEnd, pxPerMs, slack, spacer, onViewChange: commitView, onShift: applyShift });
   const getShift = pan.dx;
 
   // Zoom previews re-render the offscreen image with every x remapped (rows and glyphs untouched), once per frame.

@@ -21,7 +21,7 @@ export default function PerfHud() {
   const f = (n: number) => n.toFixed(1);
   return (
     <pre className="perf-hud">
-      {`fps ${s.fps}  long ${s.longFrames}\nblit ${f(s.blitMs)} / max ${f(s.blitMax)} ms\npaint ${f(s.paintMs)} / max ${f(s.paintMax)} ms ×${s.paints}\ncommits ${s.commits}  scroll ev ${s.scrolls}\ndpr ${window.devicePixelRatio}  ${window.innerWidth}×${window.innerHeight}`}
+      {`fps ${s.fps}  long ${s.longFrames}\nblit ${f(s.blitMs)} / max ${f(s.blitMax)} ms\npaint ${f(s.paintMs)} / max ${f(s.paintMax)} ms ×${s.paints}\ncommit ${f(s.commitMs)} / max ${f(s.commitMax)} ms ×${s.commits}  scroll ev ${s.scrolls}\ndpr ${window.devicePixelRatio}  ${window.innerWidth}×${window.innerHeight}`}
     </pre>
   );
 }

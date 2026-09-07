@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, type RefObject } from 'react';
-import { count } from '../lib/perf';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, type RefObject } from 'react';
+import { count, noteCommit } from '../lib/perf';
 
 interface Params {
   scrollRef: RefObject<HTMLDivElement | null>;
@@ -10,7 +10,8 @@ interface Params {
   slack: number;
   /** Scroll room on each side of the sticky frame (px). */
   spacer: number;
-  onViewChange: (s: number, e: number) => void;
+  /** `idle` is true when the scroll has stopped; a mid-fling commit may be kept local to the canvas. */
+  onViewChange: (s: number, e: number, idle: boolean) => void;
   onShift: (dx: number) => void;
 }
 
@@ -24,6 +25,8 @@ interface Anchor {
 }
 
 const IDLE_MS = 150;
+/** Commit once the shift has used this fraction of the pre-rendered slack. */
+const COMMIT_AT = 0.4;
 const STALE_MS = 800;
 
 export interface PanApi {
@@ -31,7 +34,7 @@ export interface PanApi {
   dx: () => number;
   /** The view as displayed right now: the committed one shifted by the live pan. */
   effectiveView: () => { start: number; end: number };
-  /** Commits [start, end] as the view, keeping the current scroll position as the new zero. */
+  /** Commits [start, end] as the (app-level) view, keeping the current scroll position as the new zero. */
   commitView: (start: number, end: number) => void;
 }
 
@@ -59,7 +62,7 @@ export function usePanScroll(p: Params): PanApi {
     const el = scrollRef.current;
     pending.current = { left: el ? el.scrollLeft : spacer, start, end, idle: isIdle, at: performance.now() };
     count('commits');
-    cb.current.onViewChange(start, end);
+    cb.current.onViewChange(start, end, isIdle);
   }, [scrollRef, spacer]);
 
   const effectiveView = useCallback(() => {
@@ -82,6 +85,7 @@ export function usePanScroll(p: Params): PanApi {
     pending.current = null;
     if (q && q.start === viewStart && q.end === viewEnd) {
       anchor.current = q;
+      noteCommit(performance.now() - q.at);
       if (q.idle && Math.abs(q.left - spacer) > spacer / 2) {
         const d = q.left - el.scrollLeft;
         el.scrollLeft = spacer;
@@ -104,12 +108,12 @@ export function usePanScroll(p: Params): PanApi {
       window.clearTimeout(idle.current);
       if (pending.current && performance.now() - pending.current.at < STALE_MS) return;
       pending.current = null;
-      if (Math.abs(d) > cb.current.slack * 0.6) { commitPan(false); return; }
+      if (Math.abs(d) > cb.current.slack * COMMIT_AT) { commitPan(false); return; }
       if (d !== 0) idle.current = window.setTimeout(() => commitPan(true), IDLE_MS);
     };
     el.addEventListener('scroll', onScroll, { passive: true });
     return () => { el.removeEventListener('scroll', onScroll); window.clearTimeout(idle.current); };
   }, [scrollRef, commitPan]);
 
-  return { dx, effectiveView, commitView };
+  return useMemo(() => ({ dx, effectiveView, commitView: (s: number, e: number) => commitView(s, e, true) }), [dx, effectiveView, commitView]);
 }
