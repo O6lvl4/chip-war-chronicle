@@ -97,6 +97,25 @@ export function useCanvasInteraction({ hostRef, viewStart, viewEnd, labelW, onVi
     return () => el.removeEventListener('wheel', onWheel);
   }, [hostRef, onPreview, commit]);
 
+  // Mobile Safari ignores touch-action for pinch: block browser zoom while two fingers are on the stage
+  // (and its proprietary gesture events), so the pinch reaches our pointer handlers instead.
+  useEffect(() => {
+    const el = hostRef.current;
+    if (!el) return;
+    const blockMultiTouch = (e: TouchEvent) => { if (e.touches.length > 1) e.preventDefault(); };
+    const blockGesture = (e: Event) => e.preventDefault();
+    el.addEventListener('touchstart', blockMultiTouch, { passive: false });
+    el.addEventListener('touchmove', blockMultiTouch, { passive: false });
+    el.addEventListener('gesturestart', blockGesture);
+    el.addEventListener('gesturechange', blockGesture);
+    return () => {
+      el.removeEventListener('touchstart', blockMultiTouch);
+      el.removeEventListener('touchmove', blockMultiTouch);
+      el.removeEventListener('gesturestart', blockGesture);
+      el.removeEventListener('gesturechange', blockGesture);
+    };
+  }, [hostRef]);
+
   const beginGesture = () => {
     const xs = [...pointers.current.values()];
     const { start, end } = view.current;
