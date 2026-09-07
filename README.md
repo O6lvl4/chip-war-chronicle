@@ -54,7 +54,7 @@ GitHub Pages へのデプロイは `.github/workflows/pages.yml` が `main` へ�
 ## 技術
 
 - React 19 + TypeScript + Vite 8
-- 描画: 静的SVG(レーン・軸)の上に、見える大きさの canvas を1枚。格子・因果リンク・出来事チップは裏の広めのオフスクリーン画像に描き、横移動中はそれをズラして転写(drawImage 1回)、ズーム中は x 座標だけ写像して描き直し、指を離した時点で1回だけ行詰めをやり直す。合成レイヤーや transform は使わない。行詰めのレイアウトは `src/lib/board.ts` の純関数
+- 横パンはブラウザ標準のスクロール(慣性つき)。盤面は幅広の帯の中に sticky で固定し、scroll イベントごとに裏のオフスクリーン画像(格子・因果リンク・チップ)をズラして転写する(drawImage 1回)。行詰めは倍率ごとに1回だけ計算し、パンは平行移動で済ませる。ズーム中は x 座標だけ写像して描き直し、終了時に1回確定。`?perf=1` で端末上のフレーム統計を表示。行詰めのレイアウトは `src/lib/board.ts` の純関数
 - [DuckDB-WASM](https://github.com/duckdb/duckdb-wasm) 1.32 をバンドル同梱(CDN 依存なし)
 
 ## 設計の参照元

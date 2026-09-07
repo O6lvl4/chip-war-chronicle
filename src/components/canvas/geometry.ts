@@ -15,6 +15,7 @@ export interface CanvasGeom {
   width: number;
   labelW: number;
   slack: number;
+  pxPerMs: number;
   renderL: number;
   renderR: number;
   xFor: (t: number) => number;
@@ -24,13 +25,15 @@ export interface CanvasGeom {
 export function makeGeom(width: number, viewStart: number, viewEnd: number): CanvasGeom {
   const labelW = labelWidthFor(width);
   const plotW = Math.max(width - labelW, 1);
-  const pxPerMs = plotW / (viewEnd - viewStart);
-  // Narrow (mobile) screens keep the composited layer small: less pre-render slack.
-  const slack = Math.round(plotW * (width < 640 ? 0.35 : 0.6));
+  // Integer span so a pure pan (same span, new start) keeps the exact same scale and layout.
+  const pxPerMs = plotW / Math.max(1, Math.round(viewEnd - viewStart));
+  // Phones pre-render a full plot width on each side so commits (offscreen repaints) are rare while flinging.
+  const slack = Math.round(plotW * (width < 640 ? 1 : 0.6));
   return {
     width,
     labelW,
     slack,
+    pxPerMs,
     renderL: labelW - slack,
     renderR: width + slack,
     xFor: t => labelW + (t - viewStart) * pxPerMs,

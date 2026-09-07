@@ -8,6 +8,8 @@ import Header from './components/Header';
 import Drawer from './components/Drawer';
 import TimelineCanvas from './components/TimelineCanvas';
 import Minimap from './components/Minimap';
+import PerfHud from './components/PerfHud';
+import { perf } from './lib/perf';
 import DrawerContent from './components/DrawerContent';
 
 const THREAD_IDS = THREADS.map(t => t.id);
@@ -61,6 +63,7 @@ export default function App() {
           <DrawerContent state={st} db={db} eventsById={eventsById} csDate={csDate} />
         </Drawer>
       </div>
+      {perf.enabled && <PerfHud />}
     </div>
   );
 }

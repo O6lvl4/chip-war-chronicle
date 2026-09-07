@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from 'react';
 import type { CrossSectionState, Link, Thread, TimelineEvent } from '../types';
 import { AXIS_H, minLabelWeight, relatedIds } from '../lib/layout';
-import { buildBoard, ROW_H, textWidth } from '../lib/board';
+import { buildBoard, ROW_H, textWidth, translateBoard } from '../lib/board';
 import { colorLookup, paletteFor } from '../lib/palette';
 import { useCanvasInteraction, type Preview } from '../hooks/useCanvasInteraction';
+import { usePanScroll } from '../hooks/usePanScroll';
 import { makeGeom } from './canvas/geometry';
 import Lanes from './canvas/Lanes';
 import { AxisFrame, AxisTicks } from './canvas/Axis';
@@ -27,6 +28,10 @@ interface Props {
 }
 
 const FONT = '"M PLUS Rounded 1c", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif';
+/** Layout is computed relative to this instant so that a pan only translates it. */
+const EPOCH = Date.UTC(2015, 0, 1);
+/** Native scroll room on each side of the sticky frame, in plot widths. */
+const SPACER_PLOTS = 4;
 
 /** Real title widths from a scratch canvas (cached per title); re-created when fonts finish loading. */
 function useMeasure(): (s: string) => number {
@@ -89,9 +94,10 @@ function useWidth(ref: React.RefObject<HTMLDivElement | null>) {
 }
 
 /**
- * Programme-guide layout. A sticky axis row and a vertically scrolling board. Both have a
- * composited, pannable layer moved/stretched with CSS transforms during gestures; the board
- * layer is a single canvas (grid, links, chips) so the DOM stays tiny on phones.
+ * Programme-guide layout inside one native 2-D scroller. The frame (lanes, axis-aligned canvas,
+ * overlay) is sticky inside a much wider strip, so horizontal panning is the browser's own
+ * scroll (inertia included) and each scroll event only re-blits the offscreen render. Zooms
+ * re-render that image with every x remapped; the view is committed once per gesture.
  */
 export default function TimelineCanvas(props: Props) {
   const { threads, events, links, activeThreadIds, viewStart, viewEnd, selectedId,
@@ -99,23 +105,28 @@ export default function TimelineCanvas(props: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const axisPanRef = useRef<HTMLDivElement>(null);
+  const overlayPanRef = useRef<HTMLDivElement>(null);
   const boardApi = useRef<BoardApi>(null);
   const width = useWidth(containerRef);
-  const [axisPreview, setAxisPreview] = useState<Preview | null>(null);
+  const [axisPreview, setAxisPreview] = useState<{ p: Preview; d: number } | null>(null);
   const [localCsX, setLocalCsX] = useState(-1);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   const lanes = useMemo(() => threads.filter(t => activeThreadIds.includes(t.id)), [threads, activeThreadIds]);
   const geom = useMemo(() => makeGeom(width, viewStart, viewEnd), [width, viewStart, viewEnd]);
-  const { labelW, slack, renderL, renderR } = geom;
+  const { labelW, slack, renderL, renderR, pxPerMs } = geom;
+  const spacer = Math.round(SPACER_PLOTS * (width - labelW));
   const pal = paletteFor(dark);
   const colorOf = useMemo(() => colorLookup(threads, dark), [threads, dark]);
   const eventsById = useMemo(() => new Map(events.map(e => [e.id, e])), [events]);
   const measure = useMeasure();
 
-  const board = useMemo(() => buildBoard({
-    lanes, events: events.filter(ev => activeThreadIds.includes(ev.threadId)), xFor: geom.xFor, minWeight: minLabelWeight(viewEnd - viewStart), measure,
-  }), [lanes, events, activeThreadIds, geom, viewStart, viewEnd, measure]);
+  // Rows are packed at the current scale only; a pan just translates the result.
+  const minWeight = minLabelWeight(viewEnd - viewStart);
+  const boardRel = useMemo(() => buildBoard({
+    lanes, events: events.filter(ev => activeThreadIds.includes(ev.threadId)), xFor: t => (t - EPOCH) * pxPerMs, minWeight, measure,
+  }), [lanes, events, activeThreadIds, pxPerMs, minWeight, measure]);
+  const board = useMemo(() => translateBoard(boardRel, labelW - (viewStart - EPOCH) * pxPerMs), [boardRel, labelW, viewStart, pxPerMs]);
   const win = useVerticalWindow(scrollRef, board.totalH);
   const chips = useMemo(() => {
     const yMin = win.top - ROW_H;
@@ -130,34 +141,43 @@ export default function TimelineCanvas(props: Props) {
   const paintRef = useRef(paint);
   paintRef.current = paint;
 
-  // Gestures never re-lay-out and never touch the DOM: a pan blits the offscreen image shifted,
-  // a zoom re-renders it with every x remapped (rows and glyphs untouched); both once per frame.
+  // A pan shift is one blit plus two CSS transforms; never a React render.
+  const applyShift = useCallback((d: number) => {
+    const tf = `translate3d(${d}px,0,0)`;
+    if (axisPanRef.current) axisPanRef.current.style.transform = tf;
+    if (overlayPanRef.current) overlayPanRef.current.style.transform = tf;
+    boardApi.current?.shift(d);
+  }, []);
+  const pan = usePanScroll({ scrollRef, viewStart, viewEnd, pxPerMs, slack, spacer, onViewChange, onShift: applyShift });
+  const getShift = pan.dx;
+
+  // Zoom previews re-render the offscreen image with every x remapped (rows and glyphs untouched), once per frame.
   const frame = useRef(0);
   const onPreview = useCallback((p: Preview | null) => {
     cancelAnimationFrame(frame.current);
-    if (axisPanRef.current) axisPanRef.current.style.transform = p && p.scale === 1 ? `translate3d(${p.dx}px,0,0)` : '';
-    if (!p) { setAxisPreview(null); boardApi.current?.repaint(paintRef.current); return; }
+    if (!p) { setAxisPreview(null); boardApi.current?.repaint(paintRef.current); applyShift(pan.dx()); return; }
     frame.current = requestAnimationFrame(() => {
-      if (p.scale === 1) { boardApi.current?.shift(p.dx); return; }
-      const xMap = (x: number) => p.originX + (x - p.originX) * p.scale + p.dx;
+      const d = pan.dx();
+      const xMap = (x: number) => p.originX + (x + d - p.originX) * p.scale + p.dx;
       boardApi.current?.repaint({ ...paintRef.current, xMap });
-      setAxisPreview(p);
+      if (axisPanRef.current) axisPanRef.current.style.transform = '';
+      setAxisPreview({ p, d });
     });
-  }, []);
-  useLayoutEffect(() => { onPreview(null); }, [viewStart, viewEnd, onPreview]);
+  }, [applyShift, pan]);
+  useLayoutEffect(() => { setAxisPreview(null); }, [viewStart, viewEnd]);
   const axisGeom = useMemo(() => {
     if (!axisPreview) return geom;
-    const p = axisPreview;
-    return { ...geom, xFor: (t: number) => p.originX + (geom.xFor(t) - p.originX) * p.scale + p.dx };
+    const { p, d } = axisPreview;
+    return { ...geom, xFor: (t: number) => p.originX + (geom.xFor(t) + d - p.originX) * p.scale + p.dx };
   }, [geom, axisPreview]);
 
-  const ia = useCanvasInteraction({ hostRef: containerRef, viewStart, viewEnd, labelW, onViewChange, onPreview });
+  const ia = useCanvasInteraction({ hostRef: containerRef, scrollRef, labelW, pan, onPreview });
 
-  /** Board-space point of a pointer event (x = screen x of the stage, y = board y). */
+  /** Board-space point of a pointer event (x in committed-view screen coordinates, y = board y). */
   const boardPoint = (e: { clientX: number; clientY: number }) => {
     const sc = scrollRef.current;
     const top = sc ? sc.getBoundingClientRect().top - sc.scrollTop : 0;
-    return { x: ia.localX(e), y: e.clientY - top };
+    return { x: ia.localX(e) - pan.dx(), y: e.clientY - top };
   };
 
   const csX = crossSection.fixed ? crossSection.x : localCsX;
@@ -172,7 +192,7 @@ export default function TimelineCanvas(props: Props) {
       if (id !== hoveredId) setHoveredId(id);
     }
     if (!tracking) return;
-    const x = ia.localX(e);
+    const x = boardPoint(e).x;
     setLocalCsX(x);
     onCrossSection(x);
   };
@@ -201,20 +221,24 @@ export default function TimelineCanvas(props: Props) {
         </div>
       </div>
       <div ref={scrollRef} className="board-scroll">
-        <div className="board" style={{ height: board.totalH, width }}>
-          <svg className="stage-static" width={width} height={board.totalH}>
-            <Lanes threads={threads} board={board} width={width} labelW={labelW} pal={pal} dark={dark} />
-          </svg>
-          <div className="plot-viewport" style={{ left: labelW, width: width - labelW, height: board.totalH }}>
-            <div className="board-window" style={{ top: win.top, width: width - labelW, height: win.height }}>
-              <BoardCanvas paint={paint} apiRef={boardApi} />
-            </div>
-          </div>
-          {crossSection.enabled && csX > labelW && (
-            <svg className="stage-overlay" width={width} height={board.totalH}>
-              <CrossSectionOverlay pal={pal} x={csX} date={csDate} fixed={crossSection.fixed} height={board.totalH} />
+        <div className="board" style={{ height: board.totalH, width: width + 2 * spacer }}>
+          <div className="board-frame" style={{ width, height: board.totalH }}>
+            <svg className="stage-static" width={width} height={board.totalH}>
+              <Lanes threads={threads} board={boardRel} width={width} labelW={labelW} pal={pal} dark={dark} />
             </svg>
-          )}
+            <div className="plot-viewport" style={{ left: labelW, width: width - labelW, height: board.totalH }}>
+              <div className="board-window" style={{ top: win.top, width: width - labelW, height: win.height }}>
+                <BoardCanvas paint={paint} apiRef={boardApi} getShift={getShift} />
+              </div>
+            </div>
+            {crossSection.enabled && csX > labelW && (
+              <div ref={overlayPanRef} className="overlay-pan" style={{ width, height: board.totalH }}>
+                <svg className="stage-overlay" width={width} height={board.totalH}>
+                  <CrossSectionOverlay pal={pal} x={csX} date={csDate} fixed={crossSection.fixed} height={board.totalH} />
+                </svg>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

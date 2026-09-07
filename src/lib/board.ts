@@ -120,3 +120,10 @@ export function buildBoard({ lanes, events, xFor, minWeight, measure = textWidth
   }
   return { lanes: boxes, totalH: top, chips };
 }
+
+/** The same layout shifted horizontally (a pan never changes rows). */
+export function translateBoard(b: Board, dx: number): Board {
+  const chips = new Map<string, Chip>();
+  for (const [id, c] of b.chips) chips.set(id, { ...c, x: c.x + dx, x0: c.x0 + dx, x1: c.x1 + dx, barEnd: c.barEnd + dx });
+  return { lanes: b.lanes, totalH: b.totalH, chips };
+}

@@ -1,4 +1,4 @@
-import { memo, useEffect, useRef } from 'react';
+import { memo, useLayoutEffect, useRef } from 'react';
 import type { CanvasGeom } from './geometry';
 import type { Link, TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
@@ -6,6 +6,7 @@ import type { Board, Chip } from '../../lib/board';
 import { eventRadius } from '../../lib/board';
 import type { Emphasis } from '../../lib/layout';
 import { drawChip, drawGrid, drawLinks, H } from './boardPaint';
+import { timed } from '../../lib/perf';
 
 /** Vertical window of the board that is currently materialised (px, board coordinates). */
 export interface VWindow {
@@ -117,6 +118,8 @@ export interface BoardApi {
 interface Props {
   paint: BoardPaint;
   apiRef: React.RefObject<BoardApi | null>;
+  /** Live pan shift (px) the visible canvas should show. */
+  getShift: () => number;
 }
 
 /**
@@ -124,18 +127,19 @@ interface Props {
  * drawImage per frame and zoom previews re-render the offscreen image; neither touches the DOM,
  * so no large composited layers exist on phones.
  */
-function BoardCanvas({ paint, apiRef }: Props) {
+function BoardCanvas({ paint, apiRef, getShift }: Props) {
   const visibleRef = useRef<HTMLCanvasElement>(null);
   const offRef = useRef<HTMLCanvasElement | null>(null);
   const lastRef = useRef(paint);
   const w = paint.geom.width - paint.geom.labelW;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     offRef.current ??= document.createElement('canvas');
     const off = offRef.current;
+    const shift = (dx: number) => { const v = visibleRef.current; if (v) timed('blit', () => blitBoard(v, off, lastRef.current, dx)); };
     const api: BoardApi = {
-      repaint: p => { lastRef.current = p; paintBoard(off, p); if (visibleRef.current) blitBoard(visibleRef.current, off, p, 0); },
-      shift: dx => { if (visibleRef.current) blitBoard(visibleRef.current, off, lastRef.current, dx); },
+      repaint: p => { lastRef.current = p; timed('paint', () => paintBoard(off, p)); shift(getShift()); },
+      shift,
     };
     apiRef.current = api;
     api.repaint(paint);
@@ -143,7 +147,7 @@ function BoardCanvas({ paint, apiRef }: Props) {
     let alive = true;
     document.fonts?.ready.then(() => { if (alive) api.repaint(paint); });
     return () => { alive = false; };
-  }, [paint, apiRef]);
+  }, [paint, apiRef, getShift]);
 
   return <canvas ref={visibleRef} style={{ position: 'absolute', left: 0, top: 0, width: w, height: paint.win.height }} />;
 }
