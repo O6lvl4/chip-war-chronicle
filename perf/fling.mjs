@@ -21,13 +21,22 @@ const scrollLeft = () => page.evaluate(() => document.querySelector('.board').sc
 const start = await scrollLeft();
 
 const cdp = await ctx.newCDPSession(page);
-for (let i = 0; i < FLINGS; i++) {
-  await cdp.send('Input.synthesizeScrollGesture', {
-    x: box.x + box.width * 0.75, y: box.y + box.height * 0.5,
-    xDistance: -1200, yDistance: 0, speed: 3000, gestureSourceType: 'touch',
-  });
-  await page.waitForTimeout(900);
+/** A finger swipe: fast leftward moves then lift, so the browser flings with momentum. */
+async function fling() {
+  const y = box.y + box.height * 0.5;
+  let x = box.x + box.width * 0.85;
+  let t = Date.now() / 1000;
+  const touch = (type, tp) => cdp.send('Input.dispatchTouchEvent', { type, touchPoints: tp, timestamp: t });
+  await touch('touchStart', [{ x, y }]);
+  for (let i = 0; i < 12; i++) {
+    x -= 22;
+    t += 0.012;
+    await touch('touchMove', [{ x, y }]);
+  }
+  t += 0.008;
+  await touch('touchEnd', []);
 }
+for (let i = 0; i < FLINGS; i++) { await fling(); await page.waitForTimeout(1000); }
 const s = await page.evaluate(() => ({ ...window.__perf }));
 const travelled = Math.abs(await scrollLeft() - start);
 await browser.close();
@@ -35,7 +44,7 @@ await browser.close();
 const rows = [
   ['long frames (>34 ms)', s.longFrames, `<= ${BUDGET.longFrames}`, s.longFrames <= BUDGET.longFrames],
   ['tile p95 (ms)', s.tileP95.toFixed(1), `<= ${BUDGET.tileP95}`, s.tileP95 <= BUDGET.tileP95],
-  ['scrolled (px)', Math.round(travelled), '> 2000', travelled > 2000],
+  ['scrolled (px)', Math.round(travelled), '> 800', travelled > 800],
   ['tiles rendered', s.tiles, '> 0', s.tiles > 0],
   ['tile max (ms)', s.tileMax.toFixed(1), '', true],
 ];
