@@ -56,10 +56,14 @@ function useVerticalWindow(ref: React.RefObject<HTMLDivElement | null>, totalH: 
     const update = () => {
       const vh = el.clientHeight || 800;
       const margin = vh / 2;
-      const wantTop = Math.max(0, el.scrollTop - margin);
-      const wantH = Math.min(totalH, vh + 2 * margin);
-      if (Math.abs(wantTop - current.top) < margin / 2 && Math.abs(wantH - current.height) < 8) return;
-      current = { top: wantTop, height: wantH };
+      const visTop = el.scrollTop;
+      const visBottom = visTop + vh;
+      // The window must always cover what is on screen; beyond that, only move it in half-viewport steps.
+      const covered = visTop >= current.top && visBottom <= Math.min(totalH, current.top + current.height);
+      const settled = Math.abs(Math.max(0, visTop - margin) - current.top) < margin / 2;
+      if (covered && settled) return;
+      const wantTop = Math.max(0, visTop - margin);
+      current = { top: wantTop, height: Math.min(totalH - wantTop, vh + 2 * margin) };
       setWin(current);
     };
     update();
