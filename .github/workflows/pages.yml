@@ -71,7 +71,7 @@ jobs:
       - run: pnpm build
       - name: Fling budget
         run: |
-          pnpm preview --port 4173 --strictPort &
+          pnpm preview --port 4173 --strictPort --host 127.0.0.1 &
           sleep 3
           pnpm perf
 
