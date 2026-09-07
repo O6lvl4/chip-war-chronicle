@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap') (min-width: 641px);
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap');
 @import 'tailwindcss';
 
@@ -203,3 +203,4 @@ button, .n-btn { transition: all 0.08s ease; }
 
 .hint { position: absolute; left: 10px; bottom: 60px; font-family: var(--font-mono); font-size: 10px; color: var(--text-sub); background: var(--surface); padding: 2px 6px; border-radius: 4px; pointer-events: none; opacity: 0.85; z-index: 5; }
 .zoom-btn { min-width: 34px; padding: 5px 8px; }
+.timeline-stage.over-chip { cursor: pointer; }

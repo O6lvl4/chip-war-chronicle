@@ -1,8 +1,4 @@
-import * as duckdb from '@duckdb/duckdb-wasm';
-import mvpWasm from '@duckdb/duckdb-wasm/dist/duckdb-mvp.wasm?url';
-import mvpWorker from '@duckdb/duckdb-wasm/dist/duckdb-browser-mvp.worker.js?url';
-import ehWasm from '@duckdb/duckdb-wasm/dist/duckdb-eh.wasm?url';
-import ehWorker from '@duckdb/duckdb-wasm/dist/duckdb-browser-eh.worker.js?url';
+import type * as duckdb from '@duckdb/duckdb-wasm';
 import type { Link, Thread, TimelineEvent } from '../types';
 
 export interface QueryResult {
@@ -17,17 +13,29 @@ export interface Dataset {
   links: Link[];
 }
 
-const BUNDLES: duckdb.DuckDBBundles = {
-  mvp: { mainModule: mvpWasm, mainWorker: mvpWorker },
-  eh: { mainModule: ehWasm, mainWorker: ehWorker },
-};
-
 let dbPromise: Promise<duckdb.AsyncDuckDB> | null = null;
 
+/** The DuckDB library and its bundles are loaded on demand so the first paint does not pay for them. */
+async function loadBundles() {
+  const [lib, mvpWasm, mvpWorker, ehWasm, ehWorker] = await Promise.all([
+    import('@duckdb/duckdb-wasm'),
+    import('@duckdb/duckdb-wasm/dist/duckdb-mvp.wasm?url'),
+    import('@duckdb/duckdb-wasm/dist/duckdb-browser-mvp.worker.js?url'),
+    import('@duckdb/duckdb-wasm/dist/duckdb-eh.wasm?url'),
+    import('@duckdb/duckdb-wasm/dist/duckdb-browser-eh.worker.js?url'),
+  ]);
+  const bundles: duckdb.DuckDBBundles = {
+    mvp: { mainModule: mvpWasm.default, mainWorker: mvpWorker.default },
+    eh: { mainModule: ehWasm.default, mainWorker: ehWorker.default },
+  };
+  return { lib, bundles };
+}
+
 async function boot(data: Dataset): Promise<duckdb.AsyncDuckDB> {
-  const bundle = await duckdb.selectBundle(BUNDLES);
+  const { lib, bundles } = await loadBundles();
+  const bundle = await lib.selectBundle(bundles);
   const worker = new Worker(bundle.mainWorker!);
-  const db = new duckdb.AsyncDuckDB(new duckdb.VoidLogger(), worker);
+  const db = new lib.AsyncDuckDB(new lib.VoidLogger(), worker);
   await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
   await loadTables(db, data);
   return db;

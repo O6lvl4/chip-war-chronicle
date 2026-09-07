@@ -2,6 +2,7 @@ import type { Thread } from '../types';
 
 export interface Palette {
   ink: string;
+  text: string;
   surface: string;
   accent: string;
   outline: string;
@@ -11,6 +12,7 @@ export interface Palette {
 
 const LIGHT: Palette = {
   ink: '#1A1A2E',
+  text: '#1A1A2E',
   surface: '#FFFFFF',
   accent: '#E4000F',
   outline: '#1A1A2E',
@@ -20,6 +22,7 @@ const LIGHT: Palette = {
 
 const DARK: Palette = {
   ink: 'rgba(240,238,248,0.5)',
+  text: '#F0EEF8',
   surface: '#1E2036',
   accent: '#FF3B4E',
   outline: 'rgba(240,238,248,0.5)',
