@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2022_AI: TimelineEvent[] = [
   {
+    id: 'ai-87', threadId: 'ai', date: '2022-01-24', weight: 2,
+    title: 'Meta AI研究スパコン RSC',
+    body: 'MetaがAI研究用スパコンRSCを公開。DGX A100を760台(A100 6080基)で稼働を始め、2022年半ばにGPU1万6000基へ拡張して世界最速級を目指すとした。SNS企業がGPU万基級の投資に踏み込んだ。',
+    source: 'Meta AI Blog',
+    sourceUrl: 'https://ai.meta.com/blog/ai-rsc/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-3', threadId: 'ai', date: '2022-03-22', weight: 3,
     title: 'NVIDIA H100 (Hopper) 発表',
     body: 'NVIDIAがH100 GPUを発表。TSMC 4Nプロセスで800億トランジスタ、Transformer Engineを搭載し、前世代A100比で大規模モデルの学習を最大9倍高速化。AIインフラの新標準となる。',
@@ -10,11 +18,35 @@ export const EVENTS_2022_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-88', threadId: 'ai', date: '2022-03-29', weight: 2,
+    title: 'DeepMind Chinchilla 則',
+    body: 'DeepMindが700億パラメータを1.4兆トークンで学習したChinchillaを公開し、同じ計算量なら既存モデルはデータ不足だと示した。パラメータとデータを等比で増やす指針が、学習用計算資源の見積もりを変えた。',
+    source: 'arXiv',
+    sourceUrl: 'https://arxiv.org/abs/2203.15556',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-29', threadId: 'ai', date: '2022-04-05', weight: 2,
     title: 'Google PaLM 5400億パラメータ',
     body: 'Googleが5400億パラメータの言語モデルPaLMの論文を公開。TPU v4を6144基使って学習し、少数例学習で多くのベンチマークを更新。学習規模の拡大競争がさらに加速した。',
     source: 'arXiv',
     sourceUrl: 'https://arxiv.org/abs/2204.02311',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-89', threadId: 'ai', date: '2022-04-06', weight: 2,
+    title: 'OpenAI DALL·E 2 発表',
+    body: 'OpenAIが拡散モデルを使うDALL·E 2を発表。初代の4倍の解像度で写実的な画像を生成し、7月にはベータで100万人に開放。画像生成AIの一般化が加速し、Stable Diffusion登場の前段となった。',
+    source: 'OpenAI',
+    sourceUrl: 'https://openai.com/index/dall-e-2/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-90', threadId: 'ai', date: '2022-05-03', weight: 1,
+    title: 'Meta OPT-175B 研究者に公開',
+    body: 'MetaがGPT-3と同規模の1750億パラメータモデルOPTを研究者向けに重み付きで公開。A100 992基で学習し、GPT-3の約7分の1の計算量で済んだと主張。オープンな大規模モデルの流れがLlamaへ続く。',
+    source: 'arXiv',
+    sourceUrl: 'https://arxiv.org/abs/2205.01068',
     sourceTier: 'primary',
   },
   {

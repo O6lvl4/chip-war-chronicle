@@ -10,6 +10,14 @@ export const EVENTS_2024_GP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'gp-81', threadId: 'gp', date: '2024-04-10', weight: 1,
+    title: '岸田首相 国賓訪米 日米共同声明',
+    body: '岸田首相が国賓待遇で訪米しバイデン大統領と共同声明を発表。次世代半導体・先端パッケージングの共同技術アジェンダを設け、レガシー半導体を含む供給網の強靭化で協力すると明記。同盟を「グローバル・パートナー」と位置づけた。',
+    source: 'ホワイトハウス 日米共同声明',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/04/10/united-states-japan-joint-leaders-statement/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-35', threadId: 'gp', date: '2024-04-13', weight: 2,
     title: 'イラン イスラエルを直接攻撃',
     body: 'イランと代理勢力がドローンと弾道ミサイルでイスラエルを直接攻撃。米軍が事前展開した戦力で迎撃を支援し、バイデン大統領は攻撃を最も強い言葉で非難、G7と対応を協議すると表明した。',
@@ -48,6 +56,14 @@ export const EVENTS_2024_GP: TimelineEvent[] = [
     source: 'PBS NewsHour (AP集計)',
     sourceUrl: 'https://www.pbs.org/newshour/classroom/daily-news-lessons/2024/11/donald-trump-elected-47th-president-of-the-united-states',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'gp-82', threadId: 'gp', date: '2024-11-16', weight: 1,
+    title: 'バイデン・習 リマで最後の会談',
+    body: 'APECリマ会議でバイデン大統領と習近平主席が任期中最後の首脳会談を実施。核兵器使用の判断をAIに委ねないことを確認し、台湾・南シナ海・技術規制で溝を残した。トランプ氏の返り咲き決定直後で、米中関係の再転換を前にした顔合わせとなった。',
+    source: 'ホワイトハウス 会談要旨',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/11/16/readout-of-president-joe-bidens-meeting-with-president-xi-jinping-of-the-peoples-republic-of-china-3/',
+    sourceTier: 'primary',
   },
   {
     id: 'gp-39', threadId: 'gp', date: '2024-12-03', weight: 2,

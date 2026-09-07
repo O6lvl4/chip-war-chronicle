@@ -2,11 +2,27 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2020_SI: TimelineEvent[] = [
   {
+    id: 'si-69', threadId: 'si', date: '2020-03-25', weight: 2,
+    title: 'Samsung EUV DRAMを業界初出荷',
+    body: 'Samsung ElectronicsがEUV露光を用いた1x nm DDR4 DRAMモジュール100万個の出荷完了を発表。DRAMへのEUV適用は業界初で、14nm級DDR5への道を開き、ロジックに続きメモリでもEUV時代の先陣を切った。',
+    source: 'Samsung Newsroom',
+    sourceUrl: 'https://news.samsung.com/global/samsung-announces-industrys-first-euv-dram-with-shipment-of-first-million-modules',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-25', threadId: 'si', date: '2020-05-15', weight: 3,
     title: 'TSMC アリゾナ工場建設を発表',
     body: 'TSMCが米アリゾナ州に5nm工場を建設すると発表。2029年までに約120億ドルを投じ月2万枚規模、2024年稼働を計画。先端製造の米国回帰を求める米政府の要請に応えた形となった。',
     source: 'TSMC プレスリリース',
     sourceUrl: 'https://pr.tsmc.com/english/news/2033',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-70', threadId: 'si', date: '2020-07-23', weight: 3,
+    title: 'Intel 7nm 約半年の遅延を発表',
+    body: 'Intelが第2四半期決算で7nmプロセスの歩留まり問題により製品投入が従来計画から約6か月遅れると発表。翌日株価は16%急落し、外部ファウンドリ活用の検討も表明。Swan CEO退任とIDM 2.0への転換の引き金となった。',
+    source: 'Intel IR',
+    sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1402/intel-reports-second-quarter-2020-financial-results',
     sourceTier: 'primary',
   },
   {

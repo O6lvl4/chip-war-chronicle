@@ -2,11 +2,27 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2020_AI: TimelineEvent[] = [
   {
+    id: 'ai-76', threadId: 'ai', date: '2020-01-23', weight: 2,
+    title: 'OpenAI スケーリング則 論文',
+    body: 'OpenAIが言語モデルの損失がパラメータ数・データ量・計算量のべき乗則で改善するとの論文を公開。性能が投入計算量で予測できることを示し、GPT-3以降の大規模化とGPU投資の理論的根拠となった。',
+    source: 'arXiv',
+    sourceUrl: 'https://arxiv.org/abs/2001.08361',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-25', threadId: 'ai', date: '2020-05-14', weight: 3,
     title: 'NVIDIA A100 (Ampere) 発表',
     body: 'NVIDIAがGTCでA100 GPUを発表。7nmプロセス、540億トランジスタで前世代比最大20倍のAI性能を主張し、即日出荷開始。生成AI黎明期の学習インフラの主力となった。',
     source: 'NVIDIA ニュースルーム',
     sourceUrl: 'https://nvidianews.nvidia.com/news/nvidias-new-ampere-data-center-gpu-in-full-production',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-77', threadId: 'ai', date: '2020-05-19', weight: 2,
+    title: 'MS、OpenAI専用スパコン公開',
+    body: 'MicrosoftがBuildでOpenAI向けにAzure上に構築したスーパーコンピュータを公開。CPU28.5万コア超、GPU1万基でTOP500の上位5位相当とし、単一AI企業のためのGPU大量集約の先駆けとなった。',
+    source: 'Microsoft 公式',
+    sourceUrl: 'https://news.microsoft.com/source/features/innovation/openai-azure-supercomputer/',
     sourceTier: 'primary',
   },
   {
@@ -18,11 +34,35 @@ export const EVENTS_2020_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-78', threadId: 'ai', date: '2020-06-11', weight: 2,
+    title: 'OpenAI API 提供開始',
+    body: 'OpenAIがGPT-3を汎用テキストAPIとして限定提供開始。モデルの重みを公開せず従量課金で能力を売る初の商用サービスで、以後のLLM事業モデルと推論用GPU需要の原型になった。',
+    source: 'TechCrunch',
+    sourceUrl: 'https://techcrunch.com/2020/06/11/openai-makes-an-all-purpose-api-for-its-text-based-ai-capabilities/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-79', threadId: 'ai', date: '2020-09-22', weight: 2,
+    title: 'MS、GPT-3を独占ライセンス',
+    body: 'MicrosoftがOpenAIとGPT-3の独占ライセンス契約を締結。Azureスパコンで学習した1750億パラメータのモデルを自社製品に組み込む権利を得て、2019年の10億ドル出資が具体的な事業提携に発展した。',
+    source: 'Microsoft 公式ブログ',
+    sourceUrl: 'https://blogs.microsoft.com/blog/2020/09/22/microsoft-teams-up-with-openai-to-exclusively-license-gpt-3-language-model/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-26', threadId: 'ai', date: '2020-11-30', weight: 2,
     title: 'AlphaFold 2 CASP14で構造予測を制す',
     body: 'DeepMindのAlphaFold 2がCASP14でGDT中央値92.4を記録し、50年来の課題だったタンパク質構造予測を実験精度に近づけた。深層学習の科学応用を象徴する成果となった。',
     source: 'Google DeepMind',
     sourceUrl: 'https://deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/',
     sourceTier: 'primary',
+  },
+  {
+    id: 'ai-80', threadId: 'ai', date: '2020-12-01', weight: 2,
+    title: 'AWS 学習用チップ Trainium 発表',
+    body: 'AWSがre:Inventで自社設計の学習用チップTrainiumを発表。2021年前半にEC2で提供し、推論用Inferentiaと同じSDKで対応。GPUインスタンス比で低コストをうたい、クラウド自社シリコンが学習領域に拡大した。',
+    source: 'TechCrunch',
+    sourceUrl: 'https://techcrunch.com/2020/12/01/aws-launches-trainium-its-new-custom-ml-training-chip/',
+    sourceTier: 'secondary',
   },
 ];

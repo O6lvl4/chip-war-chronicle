@@ -18,6 +18,14 @@ export const EVENTS_2023_AI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'ai-91', threadId: 'ai', date: '2023-02-24', weight: 2,
+    title: 'Meta LLaMA 研究者向けに公開',
+    body: 'Metaが70億〜650億パラメータのLLaMAを研究者向けに公開。1.4兆トークンをA100 2048基で約21日かけて学習し、130億版でGPT-3を上回ると主張。重み流出を経てオープンLLMの起点となった。',
+    source: 'Meta AI Blog',
+    sourceUrl: 'https://ai.meta.com/blog/large-language-model-llama-meta-ai/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-32', threadId: 'ai', date: '2023-03-15', weight: 3,
     title: 'OpenAI GPT-4 技術報告書',
     body: 'OpenAIが画像とテキストを入力できるGPT-4の技術報告書を公開。模擬司法試験で上位10%相当の成績を示した。企業のAI導入が本格化し、学習・推論向けGPU需要を押し上げた。',
@@ -42,6 +50,14 @@ export const EVENTS_2023_AI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'ai-92', threadId: 'ai', date: '2023-06-29', weight: 1,
+    title: 'Inflection H100 2.2万基',
+    body: 'Inflection AIがMicrosoftとNVIDIA主導で13億ドルを調達し、評価額40億ドルに。H100 2万2000基のクラスターを構築中とし、H100供給が逼迫するなか、新興AI企業の資金調達がGPU確保競争と直結した。',
+    source: 'TechCrunch',
+    sourceUrl: 'https://techcrunch.com/2023/06/29/inflection-ai-lands-1-3b-investment-to-build-more-personal-ai/',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'ai-7', threadId: 'ai', date: '2023-07-05', weight: 2,
     title: 'H100 深刻な供給不足 CoWoSが制約に',
     body: 'H100は2024年第1四半期まで完売状態との分析。ボトルネックはGPUダイではなく、HBMを統合するTSMCのCoWoS先進パッケージ容量にあり、Q1時点で余力を使い切っていた。',
@@ -58,11 +74,27 @@ export const EVENTS_2023_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-93', threadId: 'ai', date: '2023-09-25', weight: 2,
+    title: 'Amazon Anthropicに40億ドル',
+    body: 'AmazonがAnthropicに最大40億ドルを出資し、AWSを主要クラウドとする提携を発表。AnthropicはTrainiumとInferentiaで将来モデルを学習・提供するとし、自社チップの大口顧客を得た。',
+    source: 'Amazon 公式',
+    sourceUrl: 'https://www.aboutamazon.com/news/company-news/amazon-aws-anthropic-ai',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-49', threadId: 'ai', date: '2023-11-13', weight: 2,
     title: 'NVIDIA H200 発表 HBM3e 141GB',
     body: 'NVIDIAがHopper世代の強化版H200を発表。HBM3eを141GB搭載し帯域4.8TB/sで、A100比でメモリ容量ほぼ2倍・帯域2.4倍。Llama 2 70B推論はH100比で約2倍に。2024年第2四半期から出荷予定とし、HBM需要を一段と押し上げた。',
     source: 'NVIDIA Newsroom',
     sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-supercharges-hopper-the-worlds-leading-ai-computing-platform',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-94', threadId: 'ai', date: '2023-11-15', weight: 2,
+    title: 'Microsoft 自社AIチップ Maia',
+    body: 'MicrosoftがIgniteで自社設計のAIアクセラレータMaia 100とArm CPU Cobalt 100を発表。LLMの学習・推論向けに液冷ラックごと設計し、2024年初頭から自社DCに配備。NVIDIA依存を薄める自社シリコン路線が大手全社に揃った。',
+    source: 'Microsoft 公式',
+    sourceUrl: 'https://news.microsoft.com/source/features/ai/in-house-chips-silicon-to-service-to-meet-ai-demand/',
     sourceTier: 'primary',
   },
   {

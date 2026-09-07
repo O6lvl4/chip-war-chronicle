@@ -10,6 +10,14 @@ export const EVENTS_2024_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-80', threadId: 'si', date: '2024-02-26', weight: 1,
+    title: 'Micron HBM3E量産開始 H200へ',
+    body: 'MicronがHBM3E(8層24GB)の量産開始を発表。2024年第2四半期出荷のNVIDIA H200に採用され、競合比で消費電力約30%低いとうたう。SK hynix・Samsungが先行したHBM市場にMicronが本格参入した。',
+    source: 'Micron IR',
+    sourceUrl: 'https://investors.micron.com/news-releases/news-release-details/micron-commences-volume-production-industry-leading-hbm3e',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-12', threadId: 'si', date: '2024-03-18', weight: 3,
     title: 'NVIDIA Blackwell発表',
     body: 'NVIDIAがGTC 2024で次世代GPUアーキテクチャ「Blackwell」を発表。TSMC 4NPで製造した2ダイを10TB/sで接続し2080億トランジスタを集積。AIデータセンター投資の中核となった。',
@@ -40,6 +48,14 @@ export const EVENTS_2024_SI: TimelineEvent[] = [
     source: 'TSMC プレスリリース',
     sourceUrl: 'https://pr.tsmc.com/english/news/3122',
     sourceTier: 'primary',
+  },
+  {
+    id: 'si-81', threadId: 'si', date: '2024-05-23', weight: 2,
+    title: 'Samsung HBM NVIDIA認定難航',
+    body: 'SamsungのHBM3・HBM3EがNVIDIAの認定テストで発熱と消費電力の問題を抱えているとReutersが報道。SK hynixがHBM3Eを独占供給する構図が固まり、Samsungは半導体部門トップを交代してHBM挽回を急ぐことになった。',
+    source: 'Reuters',
+    sourceUrl: 'https://www.reuters.com/technology/samsungs-hbm-chips-failing-nvidia-tests-due-heat-power-consumption-woes-sources-2024-05-23/',
+    sourceTier: 'secondary',
   },
   {
     id: 'si-38', threadId: 'si', date: '2024-08-01', weight: 3,

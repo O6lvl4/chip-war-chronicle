@@ -2,6 +2,22 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2023_SI: TimelineEvent[] = [
   {
+    id: 'si-75', threadId: 'si', date: '2023-05-17', weight: 2,
+    title: 'Micron 広島に5000億円・EUV導入',
+    body: 'Micronが広島工場に数年で最大5000億円を投じ、日本で初めてEUV露光を導入して1γ(ガンマ)DRAMを2025年以降に量産すると発表。経産省の支援を受け、G7広島サミット直前の対日投資として注目された。',
+    source: 'Micron IR',
+    sourceUrl: 'https://investors.micron.com/news-releases/news-release-details/micron-bring-euv-technology-japan-advancing-next-generation',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-76', threadId: 'si', date: '2023-07-20', weight: 2,
+    title: 'TSMC アリゾナ量産を2025年に延期',
+    body: 'TSMCが第2四半期決算説明会で、アリゾナ第1工場のN4量産開始を2024年から2025年に延期すると表明。装置据付に熟練した人材が不足しているとし、台湾から技術者を派遣。米国先端製造の立ち上げの難しさを示した。',
+    source: 'TSMC IR (2Q23 決算説明会)',
+    sourceUrl: 'https://investor.tsmc.com/english/quarterly-results/2023/q2',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-34', threadId: 'si', date: '2023-08-08', weight: 2,
     title: 'TSMC ドレスデンにESMC設立',
     body: 'TSMCがBosch・Infineon・NXPと独ドレスデンに合弁ESMCを設立。TSMC70%出資、総投資100億ユーロ超で月4万枚の300mm工場を建て、2027年末の生産開始を計画した。',
@@ -26,11 +42,35 @@ export const EVENTS_2023_SI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'si-77', threadId: 'si', date: '2023-09-01', weight: 2,
+    title: 'Rapidus 千歳工場IIM-1 起工式',
+    body: 'Rapidusが北海道千歳市で2nm世代の製造拠点IIM-1の起工式を開催。2025年4月の試作ライン稼働、2027年の量産開始を目標とし、経産省の支援を受けた国産先端ロジック復活の実体的な第一歩となった。',
+    source: 'Rapidus プレスリリース',
+    sourceUrl: 'https://www.rapidus.inc/news_topics/news-info/rapidus-held-groundbreaking-ceremony-for-iim-1/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-50', threadId: 'si', date: '2023-12-06', weight: 3,
     title: 'AMD Instinct MI300X 発表',
     body: 'AMDが「Advancing AI」でデータセンター向けAIアクセラレータInstinct MI300XとAPUのMI300Aを発表。CDNA 3と192GBのHBM3を搭載し、MicrosoftやMeta、Oracleが採用を表明。H100の対抗馬と位置づけられた。',
     source: 'AMD プレスリリース',
     sourceUrl: 'https://www.amd.com/en/newsroom/press-releases/2023-12-6-amd-delivers-leadership-portfolio-of-data-center-a.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-78', threadId: 'si', date: '2023-12-14', weight: 2,
+    title: 'Intel 4初製品 Core Ultra',
+    body: 'IntelがEUVを用いる「Intel 4」プロセス初の製品であるCore Ultra(Meteor Lake)を発売。クライアント初のNPUを統合し、Foverosによるタイル構成を採用。同時に第5世代Xeonも投入し、製造ロードマップ回復の初の実証となった。',
+    source: 'Intel IR',
+    sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1663/intel-accelerates-ai-everywhere-with-launch-of-powerful',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-79', threadId: 'si', date: '2023-12-21', weight: 2,
+    title: 'ASML High-NA初号機 Intelへ',
+    body: 'ASMLが開口数0.55のHigh-NA EUV露光装置「EXE:5000」の初号機モジュールをIntelのオレゴン拠点へ出荷。解像度8nm、毎時185枚超を掲げ、1台3億ドル超とされる。次世代微細化競争でIntelが先行導入を選んだ。',
+    source: 'ASML (High NA EUV ストーリー)',
+    sourceUrl: 'https://www.asml.com/en/news/stories/2024/5-things-high-na-euv',
     sourceTier: 'primary',
   },
 ];

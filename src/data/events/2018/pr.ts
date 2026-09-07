@@ -2,12 +2,28 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2018_PR: TimelineEvent[] = [
   {
+    id: 'pr-92', threadId: 'pr', date: '2018-03-12', weight: 2,
+    title: 'Qualcomm買収 大統領令で阻止',
+    body: 'トランプ大統領がCFIUSの勧告を受け、シンガポール籍Broadcomによる約1170億ドルのQualcomm買収提案を国家安全保障上の理由で禁止する大統領令に署名。5G標準化での米国の優位維持が理由とされ、半導体M&Aへの安保審査が本格化した。',
+    source: 'White House (Trump archives)',
+    sourceUrl: 'https://trumpwhitehouse.archives.gov/presidential-actions/presidential-order-regarding-proposed-takeover-qualcomm-incorporated-broadcom-limited/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-23', threadId: 'pr', date: '2018-04-16', weight: 2,
     title: 'ZTE 輸出禁止命令 発動',
     body: '米商務省BISが、2017年の和解合意に反して虚偽報告をしたとしてZTEへの米国製品・技術の輸出を禁じる拒否命令を発動。米国製半導体に依存するZTEは操業停止に追い込まれ、7月に罰金と経営刷新を条件に解除された。',
     source: 'Foley Hoag alert',
     sourceUrl: 'https://foleyhoag.com/news-and-insights/publications/alerts-and-updates/2018/april/bureau-of-industry-and-security-imposes-denial-of-export-privileges-against-zte/',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-93', threadId: 'pr', date: '2018-08-01', weight: 1,
+    title: 'CETC系など中国44者 リスト追加',
+    body: '米商務省BISが中国電子科技集団(CETC)傘下の研究所など8機関と36の関連組織、計44者をエンティティリストに追加。軍用電子機器や航空宇宙分野で米国製品の調達を遮断するもので、ZTE後に対中リスト追加が常態化する端緒となった。',
+    source: 'Federal Register 83 FR 37423',
+    sourceUrl: 'https://www.federalregister.gov/documents/2018/08/01/2018-16474/addition-of-certain-entities-and-modification-of-entry-on-the-entity-list',
+    sourceTier: 'primary',
   },
   {
     id: 'pr-1', threadId: 'pr', date: '2018-08-13', weight: 2,
@@ -18,11 +34,43 @@ export const EVENTS_2018_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-94', threadId: 'pr', date: '2018-10-10', weight: 2,
+    title: 'CFIUS試行 半導体投資に届出義務',
+    body: '財務省がFIRRMAに基づく試行プログラムを公表(11月10日施行)。半導体製造を含む27業種の重要技術に関わる外国投資は、支配権の取得に至らない少数出資でも事前届出を義務づけた。中国資本による米半導体への投資が実質的に封じられた。',
+    source: 'Federal Register (Treasury 31 CFR 801)',
+    sourceUrl: 'https://www.federalregister.gov/documents/2018/10/11/2018-22182/determination-and-temporary-provisions-pertaining-to-a-pilot-program-to-review-certain-transactions',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-24', threadId: 'pr', date: '2018-10-30', weight: 2,
     title: '福建晋華 エンティティリスト追加',
     body: '米商務省が中国DRAM新興企業の福建晋華集成電路(JHICC)をエンティティリストに追加、10月30日発効。米国製装置の供給が止まり、Micronの営業秘密をめぐる係争中だった同社のDRAM量産計画は事実上頓挫した。',
     source: 'Baker McKenzie Global Import Blog',
     sourceUrl: 'https://globalimportblog.bakermckenzie.com/2018/11/02/us-bis-adds-fujian-jinhua-integrated-circuit-company-to-entity-list/',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-95', threadId: 'pr', date: '2018-11-01', weight: 2,
+    title: '米司法省 福建晋華・UMCを起訴',
+    body: '米司法省が福建晋華(JHICC)と台湾UMC、元Micron従業員3人をMicronのDRAM営業秘密を窃取した経済スパイ罪で起訴。セッションズ司法長官は同日「チャイナ・イニシアチブ」を発表し、リスト追加と刑事訴追を組み合わせた対中圧力が強まった。',
+    source: 'US Department of Justice',
+    sourceUrl: 'https://www.justice.gov/archives/opa/pr/prc-state-owned-company-taiwan-company-and-three-individuals-charged-economic-espionage',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-96', threadId: 'pr', date: '2018-11-19', weight: 1,
+    title: 'BIS 新興技術14分野 規制検討を公示',
+    body: 'BISがECRA第1758条に基づき、AI・半導体(SoC等)・量子・ロボティクスなど14分野の「新興技術」を輸出規制対象に指定するための意見公募(ANPRM)を官報に掲載。以後の先端コンピューティング規制やCFIUS審査の技術範囲を定める枠組みとなった。',
+    source: 'Federal Register 83 FR 58201',
+    sourceUrl: 'https://www.federalregister.gov/documents/2018/11/19/2018-25221/review-of-controls-for-certain-emerging-technologies',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-97', threadId: 'pr', date: '2018-12-18', weight: 1,
+    title: 'EU 半導体IPCEI 国家補助を承認',
+    body: '欧州委員会が独・仏・伊・英の4カ国による「欧州共通利益に適合する重要プロジェクト(IPCEI)」を承認。マイクロエレクトロニクス研究開発に最大17.5億ユーロの国家補助を認め、民間投資60億ユーロを誘発する。後のEU Chips Actに至る産業政策の先駆けとなった。',
+    source: 'European Commission',
+    sourceUrl: 'https://ec.europa.eu/commission/presscorner/detail/en/ip_18_6862',
+    sourceTier: 'primary',
   },
 ];

@@ -2,6 +2,38 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2021_AI: TimelineEvent[] = [
   {
+    id: 'ai-81', threadId: 'ai', date: '2021-01-05', weight: 2,
+    title: 'OpenAI DALL·E 発表',
+    body: 'OpenAIがテキストから画像を生成する120億パラメータのDALL·Eを発表。GPT-3と同系のTransformerで画像とテキストを一体で扱い、生成AIが言語以外に広がることを示した。',
+    source: 'OpenAI',
+    sourceUrl: 'https://openai.com/index/dall-e/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-82', threadId: 'ai', date: '2021-01-11', weight: 1,
+    title: 'Google MoEで1.6兆パラメータ',
+    body: 'Googleが混合エキスパート(MoE)で1.6兆パラメータを実現したSwitch Transformerの論文を公開。計算量を抑えつつ規模を拡大する手法で、後のGPT-4系やLlama 4に続くMoE路線の起点となった。',
+    source: 'arXiv',
+    sourceUrl: 'https://arxiv.org/abs/2101.03961',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-83', threadId: 'ai', date: '2021-04-12', weight: 2,
+    title: 'NVIDIA Grace CPU 発表',
+    body: 'NVIDIAがGTCでArmベースの自社データセンターCPU「Grace」を発表。GPUとNVLinkで結び、1兆パラメータ級モデルの学習を10倍速くするとうたった。GPU企業がCPUまで自前化し、x86依存からの脱却を図った。',
+    source: 'NVIDIA ニュースルーム',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-announces-cpu-for-giant-ai-and-high-performance-computing-workloads',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-84', threadId: 'ai', date: '2021-05-28', weight: 2,
+    title: 'Anthropic 設立 1.24億ドル調達',
+    body: 'OpenAI出身のダリオ・アモデイらが設立したAnthropicが1.24億ドルのシリーズAを発表。Skype共同創業者ジャーン・タリンが主導し、計算集約的な大規模AI研究に投じるとした。後にClaudeで主要勢力となる。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-27', threadId: 'ai', date: '2021-06-29', weight: 1,
     title: 'GitHub Copilot 技術プレビュー',
     body: 'GitHubとOpenAIがOpenAI Codexを基盤とするAIペアプログラマー「Copilot」の技術プレビューを開始。コード補完という具体的な業務用途で大規模言語モデルが商用化に向かった。',
@@ -10,11 +42,27 @@ export const EVENTS_2021_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-85', threadId: 'ai', date: '2021-10-11', weight: 2,
+    title: 'MS・NVIDIA MT-NLG 5300億',
+    body: 'MicrosoftとNVIDIAが5300億パラメータのMegatron-Turing NLGを発表。DGX A100を560台(A100 4480基)連結したSeleneで学習し、当時最大の密モデルとなった。GPU数千基規模の学習が常態化した。',
+    source: 'NVIDIA Technical Blog',
+    sourceUrl: 'https://developer.nvidia.com/blog/using-deepspeed-and-megatron-to-train-megatron-turing-nlg-530b-the-worlds-largest-and-most-powerful-generative-language-model/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-28', threadId: 'ai', date: '2021-12-02', weight: 2,
     title: 'Google Cloud TPU v4 Pod 公開',
     body: 'GoogleがTPU v4チップ4096基で1.1エクサFLOPS超のCloud TPU v4 Podを公開し、MLPerf v1.1で4800億パラメータモデルの学習結果を提出。自社設計アクセラレータでGPU依存を減らす路線を示した。',
     source: 'Google Cloud Blog',
     sourceUrl: 'https://cloud.google.com/blog/topics/tpus/google-showcases-cloud-tpu-v4-pods-for-large-model-training',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-86', threadId: 'ai', date: '2021-12-08', weight: 1,
+    title: 'DeepMind Gopher 2800億',
+    body: 'DeepMindが2800億パラメータの言語モデルGopherの論文を公開。TPU v3 4096基で学習し、152タスク中大半で当時の最高性能を更新。Google系でもGPT-3級モデルの学習が進み、TPU需要の裏付けとなった。',
+    source: 'arXiv',
+    sourceUrl: 'https://arxiv.org/abs/2112.11446',
     sourceTier: 'primary',
   },
 ];

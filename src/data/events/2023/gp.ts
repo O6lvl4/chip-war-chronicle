@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2023_GP: TimelineEvent[] = [
   {
+    id: 'gp-76', threadId: 'gp', date: '2023-01-13', weight: 1,
+    title: '日米首脳会談 経済安保で共同声明',
+    body: '岸田首相がワシントンでバイデン大統領と会談し共同声明を発表。半導体を含む重要・新興技術の保護と育成、供給網の強靭化で協力を確認し、台湾海峡の平和と安定の重要性を明記。日本の装置輸出規制(7月)へつながった。',
+    source: 'ホワイトハウス 日米共同声明',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2023/01/13/joint-statement-of-the-united-states-and-japan/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-32', threadId: 'gp', date: '2023-02-04', weight: 1,
     title: '米軍 中国偵察気球を撃墜',
     body: '米本土上空を横断した中国の偵察用とされる気球を、米空軍がサウスカロライナ州沖の大西洋上で撃墜。ブリンケン国務長官の訪中は延期され、バリ会談後に模索されていた米中の緊張緩和は頓挫した。',
@@ -10,12 +18,44 @@ export const EVENTS_2023_GP: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'gp-77', threadId: 'gp', date: '2023-04-05', weight: 2,
+    title: '蔡英文 マッカーシー下院議長と会談',
+    body: '中米歴訪の帰路、蔡英文総統がカリフォルニアのレーガン図書館でマッカーシー米下院議長と超党派議員団に会う。米国内での総統と下院議長の会談は初。中国は反発し、8〜10日に台湾周辺で演習「聯合利剣」を実施した。',
+    source: '台湾総統府 ニュースリリース',
+    sourceUrl: 'https://english.president.gov.tw/News/6487',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-6', threadId: 'gp', date: '2023-05-20', weight: 2,
     title: 'G7広島サミット 経済安保宣言',
     body: 'G7広島首脳コミュニケが「経済的威圧に関する調整プラットフォーム」の創設を明記。重要鉱物・半導体などのサプライチェーン強靱化と、マイクロエレクトロニクス等の輸出管理協力を確認した。',
     source: 'G7広島首脳コミュニケ (G7/G20 Documents Database)',
     sourceUrl: 'https://g7g20-documents.org/database/document/2023-g7-japan-leaders-leaders-language-g7-hiroshima-leaders-communique',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'gp-78', threadId: 'gp', date: '2023-07-11', endDate: '2023-07-12', weight: 1,
+    title: 'NATO ビリニュス首脳会議',
+    body: 'NATOがリトアニアで首脳会議を開き、ウクライナ支援の継続とスウェーデン加盟を確認。共同声明では中国の強圧的政策と重要技術・供給網の支配を「利益と安全への挑戦」と再度明記し、日韓豪NZとの協力深化を打ち出した。',
+    source: 'NATO ビリニュス首脳会議声明',
+    sourceUrl: 'https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/2023/07/11/vilnius-summit-communique',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-79', threadId: 'gp', date: '2023-08-18', weight: 2,
+    title: '日米韓 キャンプデービッド会談',
+    body: 'バイデン・岸田・尹錫悦の3首脳が初の単独3カ国首脳会談を開催し「キャンプデービッドの精神」を発表。半導体と電池の供給網強靭化で協力し、供給網途絶の早期警戒システムを試行することで一致。3カ国協力が制度化された。',
+    source: 'ホワイトハウス 日米韓共同声明',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2023/08/18/the-spirit-of-camp-david-joint-statement-of-japan-the-republic-of-korea-and-the-united-states/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-80', threadId: 'gp', date: '2023-10-07', weight: 2,
+    title: 'ハマス イスラエル奇襲 戦争へ',
+    body: 'ハマスがガザからイスラエルへ大規模な奇襲攻撃を実施し、イスラエルが報復のガザ攻撃を開始。バイデン大統領は同日イスラエル支援を表明した。中東の緊張は紅海の航行危機やイランとの直接衝突へ波及し、物流と原油を通じて半導体供給網を揺らした。',
+    source: 'ホワイトハウス 大統領声明',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2023/10/07/statement-from-president-joe-biden-condemning-terrorist-attacks-in-israel/',
+    sourceTier: 'primary',
   },
   {
     id: 'gp-33', threadId: 'gp', date: '2023-11-15', weight: 2,

@@ -18,11 +18,27 @@ export const EVENTS_2018_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-63', threadId: 'si', date: '2018-07-26', weight: 2,
+    title: 'Intel 10nm量産 2019年後半へ延期',
+    body: 'Intelが第2四半期決算で10nmプロセスのPC向け量産出荷を2019年ホリデーシーズンへ再延期すると表明。2016年予定から3年遅れとなり、その間にTSMC 7nmが先行。Intelの製造リーダーシップ喪失が決定的になった。',
+    source: 'Intel IR',
+    sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1094/intel-reports-second-quarter-2018-financial-results',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-22', threadId: 'si', date: '2018-08-03', weight: 1,
     title: 'TSMC工場がWannaCry亜種に感染',
     body: 'TSMCの台湾各工場で新規装置のソフト導入時のミスからWannaCry亜種が拡散し、製造装置が停止。8月6日までに全面復旧したが、第3四半期売上に約3%の影響が出た。',
     source: 'TSMC プレスリリース',
     sourceUrl: 'https://pr.tsmc.com/english/news/1969',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-64', threadId: 'si', date: '2018-09-18', weight: 1,
+    title: '東芝メモリ・WD 四日市Fab 6を開所',
+    body: '東芝メモリとWestern Digitalが四日市工場の新棟Fab 6と新メモリ開発センターの開所式を開催。96層BiCS FLASHの量産拠点で、Bain主導の買収後も日本のNAND生産基盤への投資が継続されることを示した。',
+    source: 'Western Digital プレスリリース',
+    sourceUrl: 'https://www.westerndigital.com/company/newsroom/press-releases/2018/2018-09-18-toshiba-memory-and-western-digital-celebrate-the-opening-of-fab6/yokkaichi-fab-6',
     sourceTier: 'primary',
   },
   {

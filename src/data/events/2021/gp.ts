@@ -2,6 +2,22 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2021_GP: TimelineEvent[] = [
   {
+    id: 'gp-66', threadId: 'gp', date: '2021-01-20', weight: 2,
+    title: 'バイデン政権 発足',
+    body: 'バイデン氏が第46代大統領に就任。就任演説で同盟の修復を掲げ、翌月には半導体を含む供給網100日レビューの大統領令に署名した。対中輸出規制は継承・強化され、産業政策としての半導体支援が本格化する。',
+    source: 'ホワイトハウス 就任演説',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/speeches-remarks/2021/01/20/inaugural-address-by-president-joseph-r-biden-jr/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-67', threadId: 'gp', date: '2021-03-12', weight: 1,
+    title: 'Quad 初の首脳会合を開催',
+    body: '日米豪印4カ国(Quad)が初の首脳会合をオンラインで開催し「Quadの精神」を発表。重要・新興技術の作業部会を設置し、国際標準や技術供給網で協力する方針を打ち出した。対中を念頭に置いた枠組みが首脳級に格上げされた。',
+    source: 'ホワイトハウス Quad共同声明',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2021/03/12/quad-leaders-joint-statement-the-spirit-of-the-quad/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-28', threadId: 'gp', date: '2021-03-18', weight: 1,
     title: '米中 アンカレッジ会談で応酬',
     body: 'バイデン政権下で初の米中高官対面会談がアラスカ州アンカレッジで開かれ、ブリンケン国務長官と楊潔篪政治局員が冒頭から新疆・香港・台湾などを巡り公然と非難を応酬。米中関係の厳しさが改めて示された。',
@@ -23,6 +39,38 @@ export const EVENTS_2021_GP: TimelineEvent[] = [
     body: '米英豪が新たな安全保障パートナーシップ「AUKUS」を創設。豪州への原子力潜水艦技術移転に加え、AI・量子・サイバーなど先端技術協力を含み、インド太平洋の安保秩序に影響。',
     source: 'ホワイトハウス 共同首脳声明',
     sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2021/09/15/joint-leaders-statement-on-aukus/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-68', threadId: 'gp', date: '2021-09-24', weight: 2,
+    title: 'Quad 半導体供給網イニシアチブ',
+    body: 'ワシントンで初の対面Quad首脳会合が開かれ、半導体とその部材の生産能力を把握し脆弱性を特定する「半導体サプライチェーン・イニシアチブ」を立ち上げた。半導体供給網が4カ国の安全保障協力の正式議題となった。',
+    source: 'ホワイトハウス ファクトシート',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2021/09/24/fact-sheet-quad-leaders-summit/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-69', threadId: 'gp', date: '2021-09-24', weight: 2,
+    title: '孟晩舟 訴追延期合意で釈放',
+    body: 'Huawei CFOの孟晩舟氏が米司法省と訴追延期合意(DPA)を結び、カナダでの約3年の拘束を解かれて中国へ帰国。中国側も拘束していたカナダ人2人を釈放した。米中ハイテク摩擦の象徴だった人質外交が一区切りついた。',
+    source: '米司法省 プレスリリース',
+    sourceUrl: 'https://www.justice.gov/archives/opa/pr/huawei-cfo-wanzhou-meng-admits-misleading-global-financial-institution',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-70', threadId: 'gp', date: '2021-10-21', weight: 1,
+    title: 'バイデン 台湾防衛「約束がある」',
+    body: 'バイデン大統領がCNNタウンホールで中国の台湾攻撃時に防衛するかと問われ「イエス、我々には約束がある」と発言。ホワイトハウスは政策変更を否定したが、「戦略的曖昧さ」の揺らぎが表面化し、台湾有事論議が高まった。',
+    source: 'ホワイトハウス 発言記録',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/speeches-remarks/2021/10/22/remarks-by-president-biden-in-a-cnn-town-hall-with-anderson-cooper-2/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-71', threadId: 'gp', date: '2021-11-15', weight: 2,
+    title: 'バイデン・習 初のオンライン会談',
+    body: 'バイデン大統領と習近平主席が就任後初めて首脳会談をオンラインで実施。競争が衝突に転じないよう「ガードレール」を設ける必要で一致した一方、台湾・人権・不公正な経済慣行で応酬。技術規制は緩和されなかった。',
+    source: 'ホワイトハウス 会談要旨',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2021/11/16/readout-of-president-bidens-virtual-meeting-with-president-xi-jinping-of-the-peoples-republic-of-china/',
     sourceTier: 'primary',
   },
 ];

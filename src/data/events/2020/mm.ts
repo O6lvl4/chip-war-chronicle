@@ -2,6 +2,22 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2020_MM: TimelineEvent[] = [
   {
+    id: 'mm-74', threadId: 'mm', date: '2020-02-03', weight: 2,
+    title: '2019年半導体市場 12.1%減',
+    body: 'SIAは2019年の世界半導体売上高が4121億ドルと前年比12.1%減になったと発表。2001年のITバブル崩壊以来の大幅な落ち込みで、メモリ価格の急落が主因。ただし第4四半期は前四半期比0.9%増と、底打ちの兆しも示した。',
+    source: 'SIA プレスリリース',
+    sourceUrl: 'https://www.semiconductors.org/worldwide-semiconductor-sales-decrease-12-percent-to-412-billion-in-2019/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-75', threadId: 'mm', date: '2020-03-03', weight: 2,
+    title: 'FRB 緊急利下げ0.5% 12年ぶり',
+    body: 'FRBが定例会合を待たずに政策金利を0.5ポイント引き下げ1.00〜1.25%とした。緊急利下げは2008年の金融危機以来。新型コロナの経済リスクを理由としたが市場の不安は収まらず、NYダウは同日785ドル安。3月15日のゼロ金利再開への序章となった。',
+    source: 'FRB FOMC声明',
+    sourceUrl: 'https://www.federalreserve.gov/newsevents/pressreleases/monetary20200303a.htm',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-25', threadId: 'mm', date: '2020-03-15', weight: 3,
     title: 'FRB 緊急利下げでゼロ金利・QE再開',
     body: 'FRBが日曜日に緊急会合を開き、FF金利の誘導目標を0〜0.25%へ1%引き下げ、国債5000億ドル・MBS2000億ドル以上の買入れを決定。パンデミックによる金融市場の混乱に対応し、その後の株価回復と半導体需要急拡大の土台となった。',
@@ -31,6 +47,22 @@ export const EVENTS_2020_MM: TimelineEvent[] = [
     body: 'NVIDIAがSoftBankからArmを400億ドルで買収すると発表。しかし米英EUの規制当局の承認が得られず、2022年2月7日に両社が契約解消を発表。Armは2023年のIPOへ向かう。',
     source: 'NVIDIA ニュースリリース',
     sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-and-softbank-group-announce-termination-of-nvidias-acquisition-of-arm-limited',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-76', threadId: 'mm', date: '2020-09-28', weight: 2,
+    title: 'キオクシア 上場を延期',
+    body: 'キオクシアHDが10月6日予定の東証上場を延期。市場の変動と新型コロナ第2波への懸念を理由としたが、9月15日発効の対Huawei輸出規制で主要顧客向け出荷が止まった影響も指摘された。想定調達額は最大約3300億円で、2020年国内最大のIPOとなるはずだった。',
+    source: 'キオクシアHD プレスリリース',
+    sourceUrl: 'https://www.kioxia-holdings.com/en-jp/news/2020/20200928-1.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-77', threadId: 'mm', date: '2020-10-29', weight: 2,
+    title: 'Samsung 売上高 過去最高67兆ウォン',
+    body: 'Samsung電子の2020年第3四半期は売上高66.96兆ウォンと四半期で過去最高、営業利益は12.35兆ウォン(前年同期比約59%増)。コロナ禍の在宅需要でスマホ・PC向けが伸び、Huaweiが米規制前に駆け込み調達したメモリも寄与。半導体設備投資は6.6兆ウォン。',
+    source: 'Samsung Newsroom',
+    sourceUrl: 'https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2020-results',
     sourceTier: 'primary',
   },
 ];

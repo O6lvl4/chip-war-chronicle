@@ -10,6 +10,14 @@ export const EVENTS_2024_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-122', threadId: 'pr', date: '2024-05-14', weight: 2,
+    title: '対中301条関税 半導体を50%へ引上げ',
+    body: 'バイデン政権が通商法301条関税の4年見直しを受け、中国製半導体の関税率を2025年に25%から50%へ引き上げると発表。EVは100%、太陽電池50%など戦略分野で大幅増税し、中国のレガシー半導体の過剰生産能力に対抗する姿勢を明確にした。',
+    source: 'USTR Press Release',
+    sourceUrl: 'https://ustr.gov/about-us/policy-offices/press-office/press-releases/2024/may/us-trade-representative-katherine-tai-take-further-action-china-tariffs-after-releasing-statutory',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-38', threadId: 'pr', date: '2024-05-24', weight: 2,
     title: '中国 大基金三期 3440億元で設立',
     body: '国家集成電路産業投資基金の第三期(大基金III)が登録資本3440億元(約475億ドル)で設立。財政部と国有銀行などが出資し、過去2期を上回る規模で製造装置やHBMなど輸出規制で入手困難となった分野の国産化を狙う。',
@@ -39,6 +47,14 @@ export const EVENTS_2024_PR: TimelineEvent[] = [
     body: 'オランダ政府が先端半導体製造装置の国内輸出許可制の対象を拡大し、9月7日施行。2023年9月からのDUV露光装置規制に加え、ASMLの1970i/1980i型液浸装置などが新たに許可対象となり、米国の規制との整合が進んだ。',
     source: 'オランダ政府 (Government.nl)',
     sourceUrl: 'https://www.government.nl/latest/news/2024/09/06/the-netherlands-expands-export-control-measure-advanced-semiconductor-manufacturing-equipment',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-123', threadId: 'pr', date: '2024-10-28', weight: 2,
+    title: '対中投資規制 最終規則 2025年1月施行',
+    body: '財務省が大統領令14105を実施する対外投資規制の最終規則を公表(2025年1月2日施行)。半導体・マイクロエレクトロニクス、量子情報技術、AIの3分野で中国(香港・マカオ含む)企業への米国人の投資を禁止または届出義務とし、資本面での技術流出を遮断する。',
+    source: 'US Treasury Press Release',
+    sourceUrl: 'https://home.treasury.gov/news/press-releases/jy2687',
     sourceTier: 'primary',
   },
   {
@@ -87,6 +103,14 @@ export const EVENTS_2024_PR: TimelineEvent[] = [
     body: '米商務省がSamsung Electronicsに対しCHIPS法の直接補助最大47億4500万ドルの交付を正式決定。テキサス州テイラーの先端ロジック新工場群とオースティン既存工場の拡張を支援する。政権交代直前に主要各社の最終合意が相次いだ。',
     source: 'NIST / CHIPS for America',
     sourceUrl: 'https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-samsung',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-124', threadId: 'pr', date: '2024-12-23', weight: 2,
+    title: 'USTR 中国レガシー半導体で301条調査',
+    body: 'USTRが中国の成熟世代(レガシー)半導体を対象に通商法301条に基づく調査を開始。政府補助による過剰生産で世界シェア拡大を図る行為・政策を問題視し、自動車・防衛など下流産業への影響を検証。トランプ第2次政権下で追加関税の根拠となった。',
+    source: 'Federal Register 89 FR 106504 (USTR)',
+    sourceUrl: 'https://www.federalregister.gov/documents/2024/12/30/2024-31306/initiation-of-section-301-investigation-hearing-and-request-for-public-comments-chinas-acts-policies',
     sourceTier: 'primary',
   },
 ];

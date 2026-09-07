@@ -20,4 +20,6 @@ export const LINKS_2026: Link[] = [
   { from: 'si-59', to: 'si-60', why: 'Anthropicとの2GW契約がMI455X/Heliosの需要の裏付けとなった' },
   { from: 'si-45', to: 'si-46', why: 'ファウンドリ成長の一方で大幅な最終赤字を計上したIntelが、設備投資資金として200億ドルの増資に踏み切った。' },
   { from: 'gp-47', to: 'gp-48', why: '中国の海峡での実弾演習など圧力強化を受け、台湾は過去最大規模の漢光演習で対応した。' },
+  { from: 'ai-110', to: 'ai-64', why: 'Opus 4.8の性能を2倍超に引き上げたOpus 5' },
+  { from: 'ai-111', to: 'ai-113', why: '限定提供のMythosに安全策を加えた一般提供版がFable 5.1' },
 ];

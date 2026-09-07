@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2021_SI: TimelineEvent[] = [
   {
+    id: 'si-71', threadId: 'si', date: '2021-01-26', weight: 1,
+    title: 'Micron 1α DRAMを業界初出荷',
+    body: 'Micronが1α(1アルファ)ノードのDRAMの出荷開始を発表。前世代1zより集積度を40%高めモバイル向けで消費電力15%減。広島工場が量産拠点となり、日本がMicronの先端DRAM製造の中核であることを示した。',
+    source: 'Micron IR',
+    sourceUrl: 'https://investors.micron.com/news-releases/news-release-details/micron-delivers-industrys-first-1a-dram-technology',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-28', threadId: 'si', date: '2021-03-19', weight: 2,
     title: 'ルネサス那珂工場で火災',
     body: 'ルネサスの那珂工場N3棟(300mmライン)でめっき装置から出火し生産が停止。車載マイコンの主力拠点であったため、世界的な自動車向けチップ不足を一段と深刻化させた。',

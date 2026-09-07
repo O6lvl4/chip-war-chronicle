@@ -2,6 +2,22 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2020_PR: TimelineEvent[] = [
   {
+    id: 'pr-104', threadId: 'pr', date: '2020-01-17', weight: 1,
+    title: 'FIRRMA最終規則 2月13日施行',
+    body: '財務省がFIRRMAを全面実施する最終規則を官報に公表(2月13日施行)。試行プログラムを恒久化し、半導体など重要技術・重要インフラ・機微個人データ(TID)を扱う米企業への外国の少数出資や不動産取引までCFIUS審査の対象を広げた。',
+    source: 'Federal Register 85 FR 3112',
+    sourceUrl: 'https://www.federalregister.gov/documents/2020/01/17/2020-00188/provisions-pertaining-to-certain-investments-in-the-united-states-by-foreign-persons',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-105', threadId: 'pr', date: '2020-04-28', weight: 2,
+    title: '軍事最終用途規制 拡大・CIV例外廃止',
+    body: 'BISが中国・ロシア・ベネズエラ向けの軍事最終用途・軍事最終需要者(MEU)規制を拡大し、半導体製造装置など対象品目を追加(6月29日施行)。民生用途向けのライセンス例外CIVも廃止し、中国の軍民融合企業への汎用半導体輸出に許可が必要となった。',
+    source: 'Federal Register 85 FR 23459',
+    sourceUrl: 'https://www.federalregister.gov/documents/2020/04/28/2020-07241/expansion-of-export-reexport-and-transfer-in-country-controls-for-military-end-use-or-military-end',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-9', threadId: 'pr', date: '2020-05-15', weight: 3,
     title: '対Huawei FDPR 拡大',
     body: '米商務省BISが外国直接製品ルール(FDPR)を改正し、米国製ソフト・装置で設計・製造された海外製半導体のHuawei向け供給を規制。TSMCなど非米国ファウンドリからの調達路を断つ。',
@@ -10,12 +26,44 @@ export const EVENTS_2020_PR: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'pr-106', threadId: 'pr', date: '2020-08-04', weight: 2,
+    title: '中国 集成電路新政策 28nm以下10年免税',
+    body: '中国国務院が「新時期の集成電路産業・ソフトウェア産業の高品質発展促進政策」を公布。28nm以下かつ操業15年以上のプロジェクトに法人税を10年間免除するなど税制・融資・人材面で優遇し、米規制強化下での半導体自給を国家戦略として加速した。',
+    source: '中国政府網 国発〔2020〕8号',
+    sourceUrl: 'https://www.gov.cn/zhengce/content/2020-08/04/content_5532370.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-107', threadId: 'pr', date: '2020-08-05', weight: 1,
+    title: '米国務省「クリーン・ネットワーク」計画',
+    body: 'ポンペオ国務長官が通信事業者・アプリストア・アプリ・クラウド・海底ケーブルの5分野から中国企業を排除する「クリーン・ネットワーク」構想を発表。5G網からのHuawei排除を同盟国に求める外交キャンペーンで、年末までに50カ国超が参加を表明した。',
+    source: 'US State Department (2017-2021 archive)',
+    sourceUrl: 'https://2017-2021.state.gov/the-clean-network/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-27', threadId: 'pr', date: '2020-08-17', weight: 2,
     title: 'Huawei FDPR 再拡大・38社追加',
     body: 'BISがHuawei向け外国直接製品ルールを再度拡大し、Huaweiが購入者・最終需要者となる全ての外国製品に適用。21カ国の関連会社38社を追加してリスト掲載は計152社となり、汎用半導体の供給路も塞がれた。',
     source: 'Crowell International Trade Insights',
     sourceUrl: 'https://www.internationaltradeinsights.com/2020/08/u-s-adds-38-new-huawei-affiliates-to-entity-list-while-again-expanding-foreign-produced-direct-product-rule/',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-108', threadId: 'pr', date: '2020-11-12', weight: 2,
+    title: '大統領令13959 中国軍事企業への投資禁止',
+    body: 'トランプ大統領が国防総省の「中国共産党軍事企業」リスト掲載企業(SMICやHuaweiなど31社)の証券への米国人の投資を禁じる大統領令13959に署名。2021年1月11日発効。NYSEの中国通信3社の上場廃止など金融面での対中デカップリングが始まった。',
+    source: 'Federal Register 85 FR 73185',
+    sourceUrl: 'https://www.federalregister.gov/documents/2020/11/17/2020-25459/addressing-the-threat-from-securities-investments-that-finance-communist-chinese-military-companies',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-109', threadId: 'pr', date: '2020-12-07', weight: 1,
+    title: 'EU加盟国 半導体技術で共同宣言',
+    body: 'EU加盟17カ国が「プロセッサ・半導体技術に関する共同宣言」に署名。次世代プロセッサと2nm世代への投資を協調し、EUの復興基金(RRF)の20%をデジタル分野に充てる方針を確認。2022年の欧州半導体法提案に向けた政治的な出発点となった。',
+    source: 'European Commission (digital-strategy)',
+    sourceUrl: 'https://digital-strategy.ec.europa.eu/en/library/joint-declaration-processors-and-semiconductor-technologies',
+    sourceTier: 'primary',
   },
   {
     id: 'pr-28', threadId: 'pr', date: '2020-12-18', weight: 3,

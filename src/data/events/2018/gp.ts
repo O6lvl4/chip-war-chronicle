@@ -2,11 +2,35 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2018_GP: TimelineEvent[] = [
   {
+    id: 'gp-49', threadId: 'gp', date: '2018-03-16', weight: 1,
+    title: '米 台湾旅行法が成立',
+    body: 'トランプ大統領が台湾旅行法(公法115-135)に署名し、米台のあらゆるレベルの政府高官の相互訪問を奨励する方針が法制化された。断交以来の自制を緩める内容で、中国は強く反発。以後の閣僚訪台やペロシ訪台の伏線となった。',
+    source: '米政府 GovInfo 公法115-135',
+    sourceUrl: 'https://www.govinfo.gov/app/details/PLAW-115publ135',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-1', threadId: 'gp', date: '2018-03-22', weight: 2,
     title: '米、対中301条 制裁措置を発表',
     body: 'トランプ大統領が中国の技術移転強要・知財侵害を理由に、301条に基づき約500億ドル相当の中国製品への関税賦課をUSTRに指示する大統領覚書に署名。米中貿易戦争が本格化。',
     source: 'USTR プレスリリース',
     sourceUrl: 'https://ustr.gov/about-us/policy-offices/press-office/press-releases/2018/march/president-trump-announces-strong',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-50', threadId: 'gp', date: '2018-05-19', weight: 1,
+    title: '米中 貿易協議で共同声明',
+    body: '劉鶴副首相の訪米を受け、米中が対米貿易赤字を大幅に削減する方針で一致したと共同声明を発表。ムニューシン財務長官は「貿易戦争は保留」と述べたが、6月に米側が関税発動を再確認し休戦はわずか数週間で崩れた。',
+    source: 'ホワイトハウス 共同声明',
+    sourceUrl: 'https://trumpwhitehouse.archives.gov/briefings-statements/joint-statement-united-states-china-regarding-trade-consultations/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-51', threadId: 'gp', date: '2018-06-12', weight: 1,
+    title: '米朝 シンガポール首脳会談',
+    body: 'トランプ大統領と金正恩委員長が史上初の米朝首脳会談をシンガポールで開催し、朝鮮半島の完全な非核化に向けた共同声明に署名。東アジアの安全保障環境が動き、韓国半導体産業の地政学リスク評価にも影響した。',
+    source: 'ホワイトハウス 米朝共同声明',
+    sourceUrl: 'https://trumpwhitehouse.archives.gov/briefings-statements/joint-statement-president-donald-j-trump-united-states-america-chairman-kim-jong-un-democratic-peoples-republic-korea-singapore-summit/',
     sourceTier: 'primary',
   },
   {
@@ -18,6 +42,14 @@ export const EVENTS_2018_GP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'gp-52', threadId: 'gp', date: '2018-08-23', weight: 1,
+    title: '対中関税 第2弾160億ドル発動',
+    body: 'USTRが8月7日に確定した第2弾の対中301条関税(279品目・約160億ドル、税率25%)が8月23日に発効。半導体や電子部品、プラスチック、鉄道車両などが対象で、中国も同額の報復関税を即日発動し応酬が続いた。',
+    source: 'USTR プレスリリース',
+    sourceUrl: 'https://ustr.gov/about-us/policy-offices/press-office/press-releases/2018/august/ustr-finalizes-second-tranche',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-22', threadId: 'gp', date: '2018-09-24', weight: 2,
     title: '対中関税 2000億ドル分を追加',
     body: 'USTRが約2000億ドル相当の中国製品への追加関税(第3弾)を確定し、9月24日に10%で発効。2019年1月1日に25%へ引き上げる予定とされ、電子部品や半導体関連品目も広く対象に含まれた。',
@@ -26,11 +58,27 @@ export const EVENTS_2018_GP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'gp-53', threadId: 'gp', date: '2018-10-04', weight: 2,
+    title: 'ペンス副大統領 対中政策演説',
+    body: 'ペンス副大統領がハドソン研究所で演説し、中国の技術窃取・「中国製造2025」・軍事拡張・選挙介入を包括的に批判。米中対立が関税から体制間競争へ広がる転換点とされ、「新冷戦」演説とも呼ばれた。',
+    source: 'ホワイトハウス 演説記録',
+    sourceUrl: 'https://trumpwhitehouse.archives.gov/briefings-statements/remarks-vice-president-pence-administrations-policy-toward-china/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-2', threadId: 'gp', date: '2018-12-01', weight: 2,
     title: 'Huawei CFO 孟晩舟 カナダで逮捕',
     body: 'Huawei副会長兼CFOの孟晩舟氏がバンクーバー国際空港で米国の仮拘束令状に基づき逮捕。対イラン制裁違反に絡む詐欺容疑で米国が身柄引き渡しを要請し、米中ハイテク摩擦が人身拘束に発展。',
     source: 'カナダ公共安全省 議会資料',
     sourceUrl: 'https://www.publicsafety.gc.ca/cnt/trnsprnc/brfng-mtrls/prlmntry-bndrs/20210625/26-en.aspx?wbdisable=true',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-54', threadId: 'gp', date: '2018-12-01', weight: 2,
+    title: '米中 G20で90日間の関税休戦',
+    body: 'ブエノスアイレスG20でのトランプ・習近平会談で、2000億ドル分の関税を10%に据え置き、90日以内に技術移転・知財などの構造問題を協議することで合意。同日の孟晩舟逮捕が判明し、休戦ムードは直後に冷え込んだ。',
+    source: 'ホワイトハウス 報道官声明',
+    sourceUrl: 'https://trumpwhitehouse.archives.gov/briefings-statements/statement-press-secretary-regarding-presidents-working-dinner-china/',
     sourceTier: 'primary',
   },
 ];
