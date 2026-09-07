@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent } from 'react';
 import type { CrossSectionState, Link, Thread, TimelineEvent } from '../types';
-import { clusterEvents, LABEL_W, placeLabels, relatedIds } from '../lib/layout';
+import { AXIS_H, clusterEvents, LABEL_W, minLabelWeight, placeLabels, relatedIds } from '../lib/layout';
 import { colorLookup, paletteFor } from '../lib/palette';
 import { ms } from '../lib/time';
 import { useCanvasInteraction } from '../hooks/useCanvasInteraction';
@@ -66,7 +66,11 @@ export default function TimelineCanvas(props: Props) {
     return x2 >= LABEL_W && x1 <= size.w;
   }), [events, activeThreadIds, geom, size.w]);
   const { singles, clusters } = useMemo(() => clusterEvents(visible, geom.xFor), [visible, geom]);
-  const placed = useMemo(() => placeLabels(singles, geom, lanes.length), [singles, geom, lanes.length]);
+  const placed = useMemo(() => {
+    const minW = minLabelWeight(viewEnd - viewStart);
+    const bottom = AXIS_H + lanes.length * geom.laneH - 8;
+    return placeLabels(singles.filter(ev => ev.weight >= minW), { xFor: geom.xFor, yFor: geom.yFor, bottom });
+  }, [singles, geom, lanes.length, viewStart, viewEnd]);
 
   const focusId = selectedId ?? hoveredId;
   const emphasis = useMemo(() => ({ focusId, related: relatedIds(focusId, links), query }), [focusId, links, query]);

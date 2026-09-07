@@ -1,0 +1,60 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2026_MM: TimelineEvent[] = [
+  {
+    id: 'mm-18', threadId: 'mm', date: '2026-01-05', weight: 3,
+    title: 'メモリ価格 スーパーサイクル入り',
+    body: 'TrendForceが2026年第1四半期のDRAM契約価格を前四半期比55〜60%上昇、NANDを33〜38%上昇と予測。AIサーバー・HBM向けへの生産集中で汎用メモリの供給が逼迫し、価格が全面高となった。',
+    source: 'TrendForce プレスリリース',
+    sourceUrl: 'https://www.trendforce.com/presscenter/news/20260105-12860.html',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'mm-45', threadId: 'mm', date: '2026-01-29', weight: 2,
+    title: 'Samsung 営業利益20.1兆ウォン 過去最高',
+    body: 'Samsung電子の2025年第4四半期決算は売上高93.8兆ウォン、営業利益20.1兆ウォンでいずれも四半期として過去最高。HBM販売拡大とメモリ価格の急騰が寄与し、2018年第3四半期の記録（17.6兆ウォン）を7年ぶりに更新した。',
+    source: 'Samsung ニュースルーム',
+    sourceUrl: 'https://news.samsung.com/global/samsung-electronics-announces-fourth-quarter-and-fy-2025-results',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-46', threadId: 'mm', date: '2026-03-09', weight: 3,
+    title: '原油100ドル超 日経平均−5.2%',
+    body: '米イスラエルとイランの戦闘が2週目に入りホルムズ海峡経由の輸送が停止、原油が1バレル100ドルを突破。日経平均は5.2%安の5万2729円で終え、アドバンテスト（−11%）やキオクシア（−9.7%）など半導体関連株が下げを主導した。',
+    source: 'Trading Economics, 2026-03-09',
+    sourceUrl: 'https://tradingeconomics.com/japan/stock-market/news/531551',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'mm-47', threadId: 'mm', date: '2026-04-27', weight: 3,
+    title: '日経平均 史上初の6万円台',
+    body: '日経平均が終値6万537円36銭となり、初めて6万円台に乗せた。2025年10月の5万円到達から半年での大台替わりは史上最速。半導体・AI関連株への資金流入が続き、アドバンテスト（+7%）や東京エレクトロンが上場来高値を更新した。',
+    source: '日本経済新聞',
+    sourceUrl: 'https://www.nikkei.com/article/DGXZQOUB270JP0X20C26A4000000/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'mm-48', threadId: 'mm', date: '2026-05-14', weight: 2,
+    title: 'Cerebras NASDAQ上場 55億ドル調達',
+    body: 'AIチップ企業Cerebras SystemsがNASDAQに上場（ティッカーCBRS）。公開価格185ドルで3000万株を売り出し約55.5億ドルを調達し、近年最大級の米テックIPOとなった。UAEのG42出資を巡る安全保障審査で当初計画から遅れての上場。',
+    source: 'Cerebras プレスリリース (GlobeNewswire)',
+    sourceUrl: 'https://www.globenewswire.com/news-release/2026/05/13/3294565/0/en/cerebras-systems-announces-pricing-of-initial-public-offering.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-19', threadId: 'mm', date: '2026-06-05', endDate: '2026-07-17', weight: 3,
+    title: 'SOX指数 −10.3% AI半導体株調整',
+    body: '強い米雇用統計で利上げ観測が浮上し、6月5日にSOX指数が10.3%安と2020年3月以来の下落率を記録。6月22日の最高値から7月17日までに20.2%下落し、弱気相場入りの目安に達した。',
+    source: '三井住友DSアセットマネジメント / 野村證券',
+    sourceUrl: 'https://www.smd-am.co.jp/market/daily/marketreport/2026/06/news260608jp/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'mm-20', threadId: 'mm', date: '2026-06-16', weight: 2,
+    title: '日銀 政策金利1.0%へ引き上げ',
+    body: '日銀が政策金利を0.75%程度から1.0%程度へ引き上げ（賛成7反対1）。中東情勢による原油高を景気下押し要因としつつ、企業収益と雇用・所得環境の改善を根拠に利上げを継続した。',
+    source: '日本銀行 金融市場調節方針の変更',
+    sourceUrl: 'https://www.boj.or.jp/mopo/mpmdeci/mpr_2026/k260616a.pdf',
+    sourceTier: 'primary',
+  },
+];

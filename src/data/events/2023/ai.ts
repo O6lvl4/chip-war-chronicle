@@ -1,0 +1,68 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2023_AI: TimelineEvent[] = [
+  {
+    id: 'ai-31', threadId: 'ai', date: '2023-01-23', weight: 3,
+    title: 'Microsoft OpenAIに追加巨額投資',
+    body: 'MicrosoftがOpenAIとの提携第3段階として複数年・数十億ドル規模の追加投資を発表。Azureを独占クラウドとし、スーパーコンピュータ整備と自社製品への組み込みを進めるとした。',
+    source: 'Microsoft 公式',
+    sourceUrl: 'https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-5', threadId: 'ai', date: '2023-02-02', weight: 2,
+    title: 'ChatGPT 月間ユーザー1億人突破',
+    body: 'UBSの分析でChatGPTが公開2ヶ月後の1月に月間アクティブユーザー1億人に達したと報告。史上最速の普及速度を記録し、AI投資競争とGPU調達競争が一気に加速。',
+    source: 'Reuters (Yahoo Finance 配信)',
+    sourceUrl: 'https://finance.yahoo.com/news/chatgpt-sets-record-fastest-growing-190911828.html',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-32', threadId: 'ai', date: '2023-03-15', weight: 3,
+    title: 'OpenAI GPT-4 技術報告書',
+    body: 'OpenAIが画像とテキストを入力できるGPT-4の技術報告書を公開。模擬司法試験で上位10%相当の成績を示した。企業のAI導入が本格化し、学習・推論向けGPU需要を押し上げた。',
+    source: 'arXiv',
+    sourceUrl: 'https://arxiv.org/abs/2303.08774',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-10', threadId: 'ai', date: '2023-05-24', weight: 3,
+    title: 'NVIDIA ガイダンス・ショック',
+    body: 'NVIDIAが2024年度Q1決算で売上71.9億ドルに対し、Q2見通しを市場予想を5割上回る110億ドルと発表。生成AI向けデータセンター需要の爆発を数字で示し、株価が急騰した。',
+    source: 'NVIDIA ニュースルーム',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2024',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-6', threadId: 'ai', date: '2023-05-30', weight: 3,
+    title: 'NVIDIA 時価総額 1兆ドル超え',
+    body: 'NVIDIAの時価総額が取引中に1兆ドルを突破。AI需要に牽引されたGPU販売急増が評価され、Apple・Microsoft・Alphabet・Amazonに続く「1兆ドルクラブ」入りを果たした。',
+    source: 'Fortune',
+    sourceUrl: 'https://fortune.com/2023/05/30/nvidia-stock-market-cap-trillion-dollars/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-7', threadId: 'ai', date: '2023-07-05', weight: 2,
+    title: 'H100 深刻な供給不足 CoWoSが制約に',
+    body: 'H100は2024年第1四半期まで完売状態との分析。ボトルネックはGPUダイではなく、HBMを統合するTSMCのCoWoS先進パッケージ容量にあり、Q1時点で余力を使い切っていた。',
+    source: 'SemiAnalysis',
+    sourceUrl: 'https://newsletter.semianalysis.com/p/ai-capacity-constraints-cowos-and',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-33', threadId: 'ai', date: '2023-07-18', weight: 2,
+    title: 'Meta Llama 2 商用利用可で公開',
+    body: 'MetaがLlama 2を研究・商用ともに無償で公開し、Microsoftを優先パートナーとしてAzureとWindowsで提供。オープンウェイトモデルが企業の選択肢となり推論需要の裾野が広がった。',
+    source: 'Meta ニュースルーム',
+    sourceUrl: 'https://about.fb.com/news/2023/07/llama-2/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-34', threadId: 'ai', date: '2023-12-06', weight: 2,
+    title: 'Google Gemini 1.0 発表',
+    body: 'GoogleがマルチモーダルモデルGemini 1.0(Ultra/Pro/Nano)を発表。UltraはMMLUで90.0%を記録した。同時に学習用TPU v5pを公開し、自社チップで最先端モデルを開発する体制を示した。',
+    source: 'Google 公式ブログ',
+    sourceUrl: 'https://blog.google/technology/ai/google-gemini-ai/',
+    sourceTier: 'primary',
+  },
+];

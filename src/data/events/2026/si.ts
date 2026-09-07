@@ -1,0 +1,60 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2026_SI: TimelineEvent[] = [
+  {
+    id: 'si-18', threadId: 'si', date: '2026-01-05', weight: 3,
+    title: 'Intel 18A初製品 Core Ultra 3発売',
+    body: 'IntelがCES 2026でIntel 18A初の量産製品「Core Ultra Series 3」(Panther Lake)を発表。米国で開発・製造される最先端プロセスとして200以上の設計を獲得し、1月27日から世界で出荷開始。',
+    source: 'Intel IR プレスリリース',
+    sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1757/ces-2026-intel-core-ultra-series-3-debuts-as-first-built',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-19', threadId: 'si', date: '2026-02-27', weight: 2,
+    title: 'Rapidus 2676億円の資金調達を完了',
+    body: 'Rapidusが政府(IPA経由)1000億円と民間32社1676億円の計2676億円の資金調達を完了。キヤノン・富士通・NTT・ソフトバンク・ソニーなどが参画し、2027年の2nm量産に向けた体制を整えた。',
+    source: 'Rapidus プレスリリース (PR Newswire)',
+    sourceUrl: 'https://www.prnewswire.com/news-releases/rapidus-secures-267-6-billion-yen-in-funding-from-japan-government-and-private-sector-companies-302699690.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-20', threadId: 'si', date: '2026-07-16', weight: 3,
+    title: 'TSMC アリゾナに追加1000億ドル投資',
+    body: 'TSMCが第2四半期決算説明会でアリゾナへの追加投資1000億ドルを発表。2nm以下のロジック工場と先端パッケージ工場を4棟追加し、同州の総投資は2650億ドル、工場10棟・パッケージ2棟の規模となる。',
+    source: 'TrendForce',
+    sourceUrl: 'https://www.trendforce.com/news/2026/07/16/news-tsmc-boosts-arizona-investment-by-us100b-plans-4-more-fabs-for-2nm-and-advanced-packaging/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'si-45', threadId: 'si', date: '2026-07-23', weight: 2,
+    title: 'Intel 18A-P リスク生産入り',
+    body: 'IntelのQ2決算で売上161億ドル(前年比25%増)、ファウンドリ売上58億ドル。18A-Pがリスク生産に入り、Xeon 6+を18Aで投入。一方で評価損により110億ドルの最終赤字となった。',
+    source: 'Intel IR',
+    sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1776/intel-reports-second-quarter-2026-financial-results',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-46', threadId: 'si', date: '2026-08-11', weight: 2,
+    title: 'Intel 200億ドル公募増資',
+    body: 'Intelが当初150億ドルとしていた普通株の公募を200億ドルに増額し、1株95ドルで条件決定。手取り約197億ドルを設備投資などに充て、ファウンドリ拡張の資金を確保した。',
+    source: 'Intel IR',
+    sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1779/intel-announces-upsize-and-pricing-of-20-billion-common',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-47', threadId: 'si', date: '2026-08-11', weight: 2,
+    title: 'ソニーとTSMC 熊本に画像センサー合弁',
+    body: 'ソニーセミコンダクタソリューションズとTSMCが熊本県合志市に次世代イメージセンサーの合弁会社を設立すると正式合意。ソニーが約4650億円、TSMCが約2820億円を拠出し2029年量産を目指す。',
+    source: 'TSMC プレスリリース',
+    sourceUrl: 'https://pr.tsmc.com/english/news/3333',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-48', threadId: 'si', date: '2026-08-28', weight: 2,
+    title: 'SK hynix インディアナHBM工場起工',
+    body: 'SK hynixが米インディアナ州ウェストラファイエットで40億ドル超のHBM後工程工場を起工。2028年10月にクリーンルーム稼働、2029年後半に次世代HBMの量産開始を予定する。',
+    source: 'SK hynix Newsroom',
+    sourceUrl: 'https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/',
+    sourceTier: 'primary',
+  },
+];

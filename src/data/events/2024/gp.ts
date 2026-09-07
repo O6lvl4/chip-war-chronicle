@@ -1,0 +1,60 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2024_GP: TimelineEvent[] = [
+  {
+    id: 'gp-7', threadId: 'gp', date: '2024-01-13', weight: 2,
+    title: '台湾総統選挙 頼清徳当選',
+    body: '台湾総統選挙で民主進歩党の頼清徳(ライ・チンテ)が得票率40.05%で当選。中国との緊張継続が予測され、TSMCの地政学リスクが改めて市場に意識される。',
+    source: '台湾外交部 (Taiwan Today)',
+    sourceUrl: 'https://www.roc-taiwan.org/th_en/post/6425.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-35', threadId: 'gp', date: '2024-04-13', weight: 2,
+    title: 'イラン イスラエルを直接攻撃',
+    body: 'イランと代理勢力がドローンと弾道ミサイルでイスラエルを直接攻撃。米軍が事前展開した戦力で迎撃を支援し、バイデン大統領は攻撃を最も強い言葉で非難、G7と対応を協議すると表明した。',
+    source: 'ホワイトハウス 大統領声明',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/04/13/statement-from-president-joe-biden-on-irans-attacks-against-the-state-of-israel/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-36', threadId: 'gp', date: '2024-05-20', weight: 2,
+    title: '頼清徳 台湾総統に就任',
+    body: '頼清徳が第16代総統に就任し、就任演説で中国に政治的・軍事的威嚇の停止を求めつつ、半導体・AI・宇宙産業を軸にサプライチェーンでの台湾の地位を維持すると表明。中国は演説を「独立の告白」と非難した。',
+    source: '台湾総統府 就任演説',
+    sourceUrl: 'https://english.president.gov.tw/News/6726',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-37', threadId: 'gp', date: '2024-05-23', endDate: '2024-05-24', weight: 2,
+    title: '中国「聯合利剣2024A」台湾演習',
+    body: '頼総統就任の3日後、人民解放軍が台湾周辺9海域で「聯合利剣-2024A」演習を実施。航空機111機・艦艇53隻を投入し、金門・馬祖など離島周辺を初めて演習区域に含めたが、実弾射撃は行わなかった。',
+    source: 'Jamestown Foundation',
+    sourceUrl: 'https://jamestown.org/joint-sword-2024a-blockades-and-gray-zone-tactics/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'gp-38', threadId: 'gp', date: '2024-10-14', weight: 2,
+    title: '中国「聯合利剣2024B」台湾演習',
+    body: '頼総統の国慶日演説への「懲罰」として人民解放軍が1日限りの「聯合利剣-2024B」演習を実施。台湾国防部は25時間で過去最多の軍用機153機を確認し、うち90機が防空識別圏に進入した。',
+    source: 'Al Jazeera',
+    sourceUrl: 'https://www.aljazeera.com/news/2024/10/15/taiwan-reports-surrounded-by-153-chinese-military-aircraft-during-drills',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'gp-11', threadId: 'gp', date: '2024-11-05', weight: 3,
+    title: '米大統領選 トランプ氏が返り咲き',
+    body: '米大統領選挙でドナルド・トランプ前大統領が選挙人270票を超えて勝利し、第47代大統領への返り咲きが決定。対中関税強化とCHIPS法見直しを掲げ、半導体政策の転換が視野に入った。',
+    source: 'PBS NewsHour (AP集計)',
+    sourceUrl: 'https://www.pbs.org/newshour/classroom/daily-news-lessons/2024/11/donald-trump-elected-47th-president-of-the-united-states',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'gp-39', threadId: 'gp', date: '2024-12-03', weight: 2,
+    title: '韓国 尹大統領が非常戒厳を宣言',
+    body: '尹錫悦大統領が民主化後初の非常戒厳を宣言したが、国会が190対0で解除を決議し約6時間で撤回。政治空白は半導体大国・韓国の対米通商交渉と国内政策の停滞を招き、弾劾・大統領選へつながった。',
+    source: 'PBS NewsHour',
+    sourceUrl: 'https://www.pbs.org/newshour/show/south-koreas-president-throws-nation-into-political-chaos-with-martial-law-attempt',
+    sourceTier: 'secondary',
+  },
+];

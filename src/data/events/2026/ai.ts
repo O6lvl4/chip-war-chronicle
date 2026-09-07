@@ -1,0 +1,68 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2026_AI: TimelineEvent[] = [
+  {
+    id: 'ai-16', threadId: 'ai', date: '2026-03-16', weight: 3,
+    title: 'NVIDIA Vera Rubin 7チップ量産開始',
+    body: 'GTC 2026でNVIDIAがVera Rubinプラットフォームを発表し、Vera CPU・Rubin GPU・NVLink 6・Groq 3 LPXなど7種のチップが量産中と表明。Blackwell比でワット当たり推論最大10倍、2026年後半に提供開始。',
+    source: 'NVIDIA ニュースルーム',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-46', threadId: 'ai', date: '2026-05-19', weight: 2,
+    title: 'Google I/O 2026 第8世代TPU発表',
+    body: 'GoogleがI/O 2026で学習用TPU 8tと推論用TPU 8i、Gemini 3.5 Flashを発表。月間処理トークンは3.2京超と前年の7倍、Geminiアプリの月間利用者は9億人超と公表した。',
+    source: 'Google 公式ブログ',
+    sourceUrl: 'https://blog.google/innovation-and-ai/sundar-pichai-io-2026/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-17', threadId: 'ai', date: '2026-06-03', weight: 2,
+    title: '大手4社 2026年設備投資 7250億ドル',
+    body: 'Amazon・Alphabet・Microsoft・Metaの2026年設備投資計画が合計7250億ドルに達し、前年の4100億ドルから77%増と報道。Amazon2000億ドル、Microsoft1900億ドルなど、AIデータセンター投資が過去最大に。',
+    source: 'Yahoo Finance',
+    sourceUrl: 'https://finance.yahoo.com/sectors/technology/article/meta-microsoft-amazon-and-alphabet-are-about-to-spend-a-shocking-amount-of-money-to-dominate-the-ai-era-115359575.html',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-18', threadId: 'ai', date: '2026-07-13', endDate: '2026-07-29', weight: 2,
+    title: '半導体株 急落、AI投資過熱に懸念',
+    body: 'SK hynixの米国上場直後の記録的急落を皮切りに半導体株が6月高値から20%超下落し弱気相場入り。AI投資の循環的資金調達や中国メモリ勢の台頭への警戒から、Micron・Samsungも大幅安となった。',
+    source: 'Yahoo Finance',
+    sourceUrl: 'https://finance.yahoo.com/markets/article/micron-sk-hynix-stocks-sink-as-ai-chip-sell-off-deepens-125622548.html',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-19', threadId: 'ai', date: '2026-08-26', weight: 2,
+    title: 'NVIDIA 四半期売上 962億ドル',
+    body: 'NVIDIAの2027年度Q2決算は売上962億ドル(前年比106%増)、データセンター売上890億ドル(同117%増)。Q3見通しは1080億ドルで、中国向けデータセンター売上をゼロと想定しても需要は衰えず。',
+    source: 'NVIDIA 8-K (SEC EDGAR)',
+    sourceUrl: 'https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-47', threadId: 'ai', date: '2026-08-26', weight: 2,
+    title: 'AWS NVIDIA GPU 200万基追加',
+    body: 'AWSとNVIDIAが2027〜28年にBlackwell Ultra、Rubin、Rubin Ultraを計200万基追加導入すると発表。GTC 2026で示した100万基超の計画を需要が上回ったとし、政府向けにも10万基を配備する。',
+    source: 'NVIDIA ニュースルーム',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/aws-and-nvidia-to-deliver-2-million-additional-gpus-and-next-generation-infrastructure-for-agentic-and-physical-ai',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-20', threadId: 'ai', date: '2026-09-03', weight: 2,
+    title: 'OpenAI GPT-6 Astra 発表',
+    body: 'OpenAIがGPT-6 Astraを限定公開。コンピュータ操作能力を前面に出し、テキサスのStargate拠点で初めて10万基超のGPUを使った同社最大の事前学習を実施したと明かした。',
+    source: 'Fortune',
+    sourceUrl: 'https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-48', threadId: 'ai', date: '2026-09-03', weight: 2,
+    title: 'NVIDIA Hugging Face買収を発表',
+    body: 'NVIDIAがオープンソースAI基盤Hugging Faceを約129.3億ドルで買収すると発表。300万超のモデルを抱える同基盤をオープンに維持し、NVIDIA製品の利用は必須としないと説明した。',
+    source: 'NVIDIA ブログ',
+    sourceUrl: 'https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/',
+    sourceTier: 'primary',
+  },
+];

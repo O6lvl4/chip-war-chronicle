@@ -1,7 +1,7 @@
 import type { CanvasGeom } from './geometry';
 import type { Palette } from '../../lib/palette';
 import { threadColor } from '../../lib/palette';
-import { AXIS_H, LABEL_W, LANE_H } from '../../lib/layout';
+import { AXIS_H, LABEL_W } from '../../lib/layout';
 
 interface Props {
   geom: CanvasGeom;
@@ -11,7 +11,7 @@ interface Props {
 
 /** Lane backgrounds, dividers and the left-hand lane labels. */
 export default function Lanes({ geom, pal, dark }: Props) {
-  const { lanes, width, svgH } = geom;
+  const { lanes, width, svgH, laneH: LANE_H } = geom;
   const tint = dark ? '08' : '06';
   const bottomY = AXIS_H + lanes.length * LANE_H;
   return (

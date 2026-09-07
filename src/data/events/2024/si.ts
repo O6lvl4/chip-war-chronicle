@@ -1,0 +1,68 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2024_SI: TimelineEvent[] = [
+  {
+    id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 3,
+    title: 'TSMC熊本 JASM第1工場 開所式',
+    body: 'TSMC子会社JASMが熊本で開所式を開催し、2024年末までの量産開始を表明。同時にソニー・デンソー・トヨタと第2工場の建設を発表し、総投資は200億ドル超、2027年末の稼働を目指す。',
+    source: 'TSMC プレスリリース',
+    sourceUrl: 'https://pr.tsmc.com/english/news/3113',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-12', threadId: 'si', date: '2024-03-18', weight: 3,
+    title: 'NVIDIA Blackwell発表',
+    body: 'NVIDIAがGTC 2024で次世代GPUアーキテクチャ「Blackwell」を発表。TSMC 4NPで製造した2ダイを10TB/sで接続し2080億トランジスタを集積。AIデータセンター投資の中核となった。',
+    source: 'NVIDIA Newsroom',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-36', threadId: 'si', date: '2024-03-19', weight: 2,
+    title: 'SK hynix HBM3E 量産開始',
+    body: 'SK hynixが業界で初めてHBM3Eの量産を開始し、3月下旬から顧客に供給。開発完了からわずか7か月での量産で、AIアクセラレータ向けHBM市場での先行を固めた。',
+    source: 'SK hynix Newsroom',
+    sourceUrl: 'https://news.skhynix.com/sk-hynix-begins-volume-production-of-industry-first-hbm3e/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-37', threadId: 'si', date: '2024-04-03', weight: 2,
+    title: '台湾東部地震 TSMC工場が一時停止',
+    body: '台湾でM7.2の地震が発生しTSMCは従業員を避難させた。EUV装置など主要設備に損傷はなく、10時間以内に装置の70%超が復旧。ウェーハ廃棄などで第2四半期粗利率を約0.5pt押し下げた。',
+    source: 'TSMC Form 6-K (SEC)',
+    sourceUrl: 'https://www.sec.gov/Archives/edgar/data/1046179/000104617924000038/a20240405.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-8', threadId: 'si', date: '2024-04-08', weight: 3,
+    title: 'TSMC アリゾナ CHIPS法66億ドル・第3工場',
+    body: 'TSMCと米商務省がCHIPS法に基づく最大66億ドルの直接補助の予備覚書に署名。フェニックスに第3工場を追加し、投資総額は650億ドル超へ。米国史上最大の新設外国直接投資となった。',
+    source: 'TSMC プレスリリース',
+    sourceUrl: 'https://pr.tsmc.com/english/news/3122',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-38', threadId: 'si', date: '2024-08-01', weight: 3,
+    title: 'Intel 100億ドル削減・15%人員削減',
+    body: 'Intelが第2四半期決算で売上128億ドル・赤字を計上し、100億ドルのコスト削減計画を発表。15%超の人員削減と第4四半期からの配当停止を決め、経営危機が表面化した。',
+    source: 'Intel IR',
+    sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1704/intel-reports-second-quarter-2024-financial-results',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-39', threadId: 'si', date: '2024-12-02', weight: 3,
+    title: 'Intel CEOゲルシンガーが退任',
+    body: 'IntelのPat Gelsinger CEOが12月1日付で退任し取締役も辞任。CFOのDavid ZinsnerとMichelle Johnston Holthausが暫定共同CEOに就き、IDM 2.0を主導した体制が終わった。',
+    source: 'Intel IR',
+    sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1719/intel-announces-retirement-of-ceo-pat-gelsinger',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-40', threadId: 'si', date: '2024-12-18', weight: 2,
+    title: 'キオクシア 東証プライム上場',
+    body: 'NAND世界2位のキオクシアホールディングスが東証プライム市場に上場。Bain Capital主導の買収から約6年を経た再上場で、AI需要下での3D NAND投資に向けた資金調達手段を得た。',
+    source: 'キオクシアホールディングス',
+    sourceUrl: 'https://www.kioxia-holdings.com/en-jp/news/2024/20241218-1.html',
+    sourceTier: 'primary',
+  },
+];

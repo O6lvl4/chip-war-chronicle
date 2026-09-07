@@ -1,5 +1,5 @@
 import type { Link, TimelineEvent, Weight } from '../types';
-import { ms } from './time';
+import { DAY, ms } from './time';
 
 export const LABEL_W = 140;
 export const AXIS_H = 44;
@@ -73,13 +73,23 @@ function overlaps(placed: PlacedLabel[], lx: number, lw: number, by: number): bo
 export interface Scales {
   xFor: XScale;
   yFor: (threadId: string) => number;
+  /** Bottom edge (px) below which no label may sit. */
+  bottom: number;
 }
 
-export function placeLabels(singles: TimelineEvent[], { xFor, yFor }: Scales, laneCount: number): PlacedLabel[] {
+/** Weight threshold for labels: the wider the view, the fewer labels survive. */
+export function minLabelWeight(spanMs: number): Weight {
+  const years = spanMs / (365.25 * DAY);
+  if (years > 5) return 3;
+  if (years > 2) return 2;
+  return 1;
+}
+
+/** Heavier events are placed first so they keep the best slot when space is tight. */
+export function placeLabels(singles: TimelineEvent[], { xFor, yFor, bottom }: Scales): PlacedLabel[] {
   const placed: PlacedLabel[] = [];
   const top = AXIS_H + 8;
-  const bottom = AXIS_H + laneCount * LANE_H - 8;
-  const sorted = [...singles].sort((a, b) => ms(a.date) - ms(b.date));
+  const sorted = [...singles].sort((a, b) => b.weight - a.weight || ms(a.date) - ms(b.date));
   for (const ev of sorted) {
     const ey = yFor(ev.threadId);
     if (ey < 0) continue;

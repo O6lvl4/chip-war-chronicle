@@ -5,6 +5,7 @@ import { AXIS_H, LABEL_W, LANE_H } from '../../lib/layout';
 export interface CanvasGeom {
   width: number;
   svgH: number;
+  laneH: number;
   lanes: Thread[];
   xFor: (t: number) => number;
   tFor: (x: number) => number;
@@ -21,17 +22,20 @@ export interface GeomInput {
 
 export function makeGeom({ width, height, lanes, viewStart, viewEnd }: GeomInput): CanvasGeom {
   const pxPerMs = (width - LABEL_W) / (viewEnd - viewStart);
-  const totalH = AXIS_H + lanes.length * LANE_H;
+  // Lanes stretch to fill the viewport, never thinner than LANE_H.
+  const laneH = Math.max(LANE_H, Math.floor((height - AXIS_H - 12) / Math.max(lanes.length, 1)));
+  const totalH = AXIS_H + lanes.length * laneH;
   const laneIndex = new Map(lanes.map((t, i) => [t.id, i]));
   return {
     width,
-    svgH: Math.max(totalH + 20, height),
+    svgH: Math.max(totalH + 12, height),
+    laneH,
     lanes,
     xFor: t => LABEL_W + (t - viewStart) * pxPerMs,
     tFor: x => viewStart + (x - LABEL_W) / pxPerMs,
     yFor: threadId => {
       const i = laneIndex.get(threadId);
-      return i === undefined ? -999 : AXIS_H + i * LANE_H + LANE_H / 2;
+      return i === undefined ? -999 : AXIS_H + i * laneH + laneH / 2;
     },
   };
 }

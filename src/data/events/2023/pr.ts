@@ -1,0 +1,60 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2023_PR: TimelineEvent[] = [
+  {
+    id: 'pr-33', threadId: 'pr', date: '2023-05-21', weight: 2,
+    title: '中国 Micron製品の調達停止を命令',
+    body: '中国の網絡安全審査弁公室がMicron製品は審査に不合格と発表し、重要情報インフラ運営者に同社製品の調達停止を求めた。米国主導の半導体規制に対し、中国が外国半導体企業を直接標的にした最初の措置。',
+    source: '新民網 (網信弁公告の報道)',
+    sourceUrl: 'https://news.xinmin.cn/2023/05/21/32387388.html',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-34', threadId: 'pr', date: '2023-06-30', weight: 2,
+    title: 'オランダ 先端製造装置の輸出許可制',
+    body: 'オランダ政府が先端半導体製造装置の国内輸出管理令を官報公布(9月1日施行)。ASMLの液浸DUV露光装置の一部やALD・エピタキシャル装置などがEU域外への輸出許可対象となり、米国主導の対中規制に歩調を合わせた。',
+    source: 'Mayer Brown alert',
+    sourceUrl: 'https://www.mayerbrown.com/en/insights/publications/2023/07/the-netherlands-publishes-new-export-control-rules-for-production-equipment-for-semiconductors',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-10', threadId: 'pr', date: '2023-07-03', weight: 2,
+    title: '中国 ガリウム・ゲルマニウム輸出管理',
+    body: '中国商務部・海関総署が公告2023年第23号でガリウム・ゲルマニウム関連物項の輸出管理を発表(8月1日施行)。化合物半導体材料を対象とした、米国主導の規制に対する最初の資源カード。',
+    source: '中国商務部 公告2023年第23号',
+    sourceUrl: 'http://exportcontrol.mofcom.gov.cn/article/zcfg/gnzcfg/zcfggzqd/202307/847.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-6', threadId: 'pr', date: '2023-07-23', weight: 2,
+    title: '日本 半導体製造装置23品目 規制施行',
+    body: '経産省が外為法省令改正により先端半導体製造装置23品目を輸出規制対象に追加、7月23日施行。友好42カ国・地域以外への輸出は個別許可制となり、米国主導の多国間規制枠組みが実効性を持ち始める。',
+    source: 'マイナビニュース TECH+',
+    sourceUrl: 'https://news.mynavi.jp/techplus/article/20230524-2687072/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-35', threadId: 'pr', date: '2023-08-09', weight: 2,
+    title: '対中投資規制 大統領令14105',
+    body: 'バイデン大統領が対外投資規制の大統領令14105に署名。中国・香港・マカオの半導体、量子、AI分野への米国人による投資を届出制または禁止とするよう財務省に指示し、2024年10月の最終規則を経て2025年1月2日に施行された。',
+    source: 'White House (archives)',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/presidential-actions/2023/08/09/executive-order-on-addressing-united-states-investments-in-certain-national-security-technologies-and-products-in-countries-of-concern/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-36', threadId: 'pr', date: '2023-09-21', weight: 2,
+    title: 'EU Chips Act 発効',
+    body: '欧州半導体法(European Chips Act)とChips共同事業規則が発効。2030年に世界シェア20%を目標に、Chips for Europeイニシアチブ、先端工場への国家補助容認、供給危機時の協調メカニズムの3本柱で域内製造を支援する。',
+    source: 'European Commission (digital-strategy)',
+    sourceUrl: 'https://digital-strategy.ec.europa.eu/en/news/digital-sovereignty-european-chips-act-enters-force',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-7', threadId: 'pr', date: '2023-10-17', weight: 2,
+    title: '米輸出規制アップデート 抜け穴対策',
+    body: 'BISが2022年10月規制を改定。性能パラメータを見直してA800/H800など規制回避品を対象に含め、製造装置規制の対象を武器禁輸21カ国へ拡大。中国のGPU企業など13社をエンティティリストに追加。',
+    source: 'BIS Press Release',
+    sourceUrl: 'https://www.bis.gov/press-release/commerce-strengthens-restrictions-advanced-computing-semiconductors-semiconductor-manufacturing-equipment',
+    sourceTier: 'primary',
+  },
+];

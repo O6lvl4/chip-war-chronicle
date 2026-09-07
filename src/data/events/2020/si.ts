@@ -1,0 +1,44 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2020_SI: TimelineEvent[] = [
+  {
+    id: 'si-25', threadId: 'si', date: '2020-05-15', weight: 3,
+    title: 'TSMC アリゾナ工場建設を発表',
+    body: 'TSMCが米アリゾナ州に5nm工場を建設すると発表。2029年までに約120億ドルを投じ月2万枚規模、2024年稼働を計画。先端製造の米国回帰を求める米政府の要請に応えた形となった。',
+    source: 'TSMC プレスリリース',
+    sourceUrl: 'https://pr.tsmc.com/english/news/2033',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-4', threadId: 'si', date: '2020-09-14', weight: 3,
+    title: 'TSMCがHuawei向け出荷を停止',
+    body: '米商務省の輸出規制強化を受け、TSMCは2020年9月14日を最後にHuawei(HiSilicon)向けウェーハ出荷を停止。5月15日以降は新規受注も受けておらず、Huaweiのスマートフォン事業は在庫枯渇が避けられない状況となった。',
+    source: 'The Register (TSMC 劉徳音会長の決算説明会発言)',
+    sourceUrl: 'https://www.theregister.com/2020/07/16/tsmc_huawei_chips/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'si-26', threadId: 'si', date: '2020-10-20', weight: 2,
+    title: 'SK hynix、Intel NAND事業を買収',
+    body: 'SK hynixがIntelのNANDメモリ・SSD事業と中国大連工場を90億ドルで取得することで合意。Intelはメモリから撤退してAI・5Gに集中し、SK hynixはNANDで世界2位級へ浮上した。',
+    source: 'SK hynix Newsroom',
+    sourceUrl: 'https://news.skhynix.com/sk-hynix-to-acquire-intel-nand-memory-business/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-27', threadId: 'si', date: '2020-10-27', weight: 2,
+    title: 'AMD、Xilinxを350億ドルで買収',
+    body: 'AMDがFPGA最大手Xilinxを全株式交換・総額350億ドルで買収すると発表。CPU・GPUにFPGAを加え、データセンター向け高性能計算のポートフォリオを拡大した。2022年2月に完了。',
+    source: 'AMD IR',
+    sourceUrl: 'https://ir.amd.com/news-events/press-releases/detail/977/amd-to-acquire-xilinx-creating-the-industrys-high-performance',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-5', threadId: 'si', date: '2020-11-10', weight: 3,
+    title: 'Apple M1チップ発表',
+    body: 'AppleがTSMC 5nmで製造した自社設計「M1」を搭載するMacを発表。Arm命令セットのデスクトップ性能がIntel x86を凌駕し、PC向けCPUの勢力図を塗り替えた。',
+    source: 'Apple Newsroom',
+    sourceUrl: 'https://www.apple.com/newsroom/2020/11/apple-unleashes-m1/',
+    sourceTier: 'primary',
+  },
+];

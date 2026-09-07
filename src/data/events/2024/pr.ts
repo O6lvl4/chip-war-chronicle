@@ -1,0 +1,68 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2024_PR: TimelineEvent[] = [
+  {
+    id: 'pr-37', threadId: 'pr', date: '2024-03-20', weight: 2,
+    title: 'Intel CHIPS法 85億ドル暫定合意',
+    body: '米商務省がIntelとCHIPS法に基づく最大85億ドルの直接補助と110億ドルの融資で暫定合意。アリゾナ、オハイオ、ニューメキシコ、オレゴンの拠点が対象で、CHIPS法補助の最大案件となった(11月に78.65億ドルで確定)。',
+    source: 'White House Fact Sheet (archives)',
+    sourceUrl: 'https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/03/20/fact-sheet-president-biden-announces-up-to-8-5-billion-preliminary-agreement-with-intel-under-the-chips-science-act/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-38', threadId: 'pr', date: '2024-05-24', weight: 2,
+    title: '中国 大基金三期 3440億元で設立',
+    body: '国家集成電路産業投資基金の第三期(大基金III)が登録資本3440億元(約475億ドル)で設立。財政部と国有銀行などが出資し、過去2期を上回る規模で製造装置やHBMなど輸出規制で入手困難となった分野の国産化を狙う。',
+    source: 'Global Trade Alert',
+    sourceUrl: 'https://globaltradealert.org/intervention/122819',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-8', threadId: 'pr', date: '2024-09-05', weight: 2,
+    title: '量子・GAAFET 多国間輸出規制',
+    body: 'BISが量子コンピュータ、GAAFET技術、先端製造装置、金属積層造形を対象とする暫定最終規則を公表。同等の規制を持つ同盟国向けにライセンス例外IECを新設し、多国間協調型の規制モデルへ移行。',
+    source: 'BIS Press Release',
+    sourceUrl: 'https://www.bis.gov/press-release/department-commerce-implements-controls-quantum-computing-other-advanced-technologies-alongside',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-39', threadId: 'pr', date: '2024-09-06', weight: 1,
+    title: 'オランダ ASML装置規制を拡大',
+    body: 'オランダ政府が先端半導体製造装置の国内輸出許可制の対象を拡大し、9月7日施行。2023年9月からのDUV露光装置規制に加え、ASMLの1970i/1980i型液浸装置などが新たに許可対象となり、米国の規制との整合が進んだ。',
+    source: 'オランダ政府 (Government.nl)',
+    sourceUrl: 'https://www.government.nl/latest/news/2024/09/06/the-netherlands-expands-export-control-measure-advanced-semiconductor-manufacturing-equipment',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-40', threadId: 'pr', date: '2024-11-22', weight: 2,
+    title: 'AI・半導体産業基盤強化フレーム 10兆円',
+    body: '政府が総合経済対策の閣議決定に合わせ「AI・半導体産業基盤強化フレーム」を策定。2030年度までの7年間に10兆円以上の公的支援を行い、官民合わせ50兆円超の投資と約160兆円の経済波及効果を目指すとした。',
+    source: 'JIPDEC 講演レポート(経産省施策)',
+    sourceUrl: 'https://www.jipdec.or.jp/library/report/20250212-r01.html',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-11', threadId: 'pr', date: '2024-12-02', weight: 3,
+    title: 'HBM 輸出規制と140社リスト追加',
+    body: 'BISが高帯域幅メモリ(HBM)を新たに輸出規制対象とし、海外製造装置にも及ぶFDPRを導入。中国の半導体製造・装置企業など140社をエンティティリストに追加し、12月31日までの遵守を要求。',
+    source: 'BIS Press Release',
+    sourceUrl: 'https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-41', threadId: 'pr', date: '2024-12-03', weight: 2,
+    title: '中国 ガリウム等の対米輸出を禁止',
+    body: '中国商務部が公告2024年第46号で、ガリウム・ゲルマニウム・アンチモン・超硬材料の米国向け輸出を原則不許可とし、黒鉛は最終用途審査を厳格化。米軍事ユーザー向け両用物項も禁止し、前日の米140社追加規制に即応した。',
+    source: '中国商務部 公告2024年第46号',
+    sourceUrl: 'https://www.mofcom.gov.cn/zwgk/zcfb/art/2024/art_3d5e990b43424e60828030f58a547b60.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-42', threadId: 'pr', date: '2024-12-09', weight: 1,
+    title: '中国 NVIDIA 反壟断法違反で立件',
+    body: '中国国家市場監督管理総局がNVIDIAに対し反壟断法違反の疑いで立案調査を開始。2020年のMellanox買収承認時に付した「中国市場への公平な供給継続」などの条件に違反した疑いを理由とし、米規制強化への対抗と受け止められた。',
+    source: '中国貿促会浙江省委員会 (SAMR公告の転載)',
+    sourceUrl: 'https://www.ccpitzj.gov.cn/art/2024/12/11/art_1229557691_46872.html',
+    sourceTier: 'secondary',
+  },
+];

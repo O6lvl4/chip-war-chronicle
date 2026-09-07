@@ -18,10 +18,10 @@
 
 ## データ
 
-`src/data/` 配下の TypeScript がデータの唯一の置き場所です。アプリ起動時に同じ配列を JSON として DuckDB-WASM に登録するので、SQL 側と描画側がずれることはありません。
+`src/data/` 配下の TypeScript がデータの唯一の置き場所です。出来事は `events/<年>/<系列>.ts` に年 × 系列で分けて置き、`events/index.ts` は `node scripts/build-events-index.mjs` で再生成します。アプリ起動時に同じ配列を JSON として DuckDB-WASM に登録するので、SQL 側と描画側がずれることはありません。
 
 ```ts
-// src/data/events-si.ts
+// src/data/events/2024/si.ts
 {
   id: 'si-11', threadId: 'si', date: '2024-02-24', weight: 2,
   title: 'TSMC熊本 JASM第1工場 開所式',
