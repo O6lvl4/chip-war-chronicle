@@ -1,0 +1,60 @@
+import type { TimelineEvent } from '../../../types';
+
+export const EVENTS_2026_JP: TimelineEvent[] = [
+  {
+    id: 'jp-22', threadId: 'jp', date: '2026-05-27', weight: 1,
+    title: '国家情報会議設置法 成立 国家情報局を新設',
+    body: '国家情報会議設置法が参院本会議で可決・成立(6月3日公布、令和8年法律第28号)。首相を議長に重要情報活動と外国情報活動への対処の基本方針を審議する国家情報会議を内閣に置き、内閣官房に国家情報局を新設。経済安保情報を含む秘密保護と情報収集の司令塔を一元化した。',
+    source: '参議院 議案情報',
+    sourceUrl: 'https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221080221024.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'jp-23', threadId: 'jp', date: '2026-05-29', weight: 2,
+    title: '外為法改正 成立 対内投資審査を強化',
+    body: '外国為替及び外国貿易法の一部を改正する法律が参院本会議で可決・成立(6月5日公布、令和8年法律第30号)。海外法人が国内企業の議決権50%以上を取得する行為を対内直接投資に追加し、安全保障上の措置の届出義務や事前届出対象外の投資への報告徴収を新設。公布から1年以内に施行。',
+    source: '参議院 議案情報',
+    sourceUrl: 'https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221080221027.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'jp-24', threadId: 'jp', date: '2026-05-29', weight: 1,
+    title: '産業競争力強化法等改正 成立 投資促進税制',
+    body: '産業競争力強化法等の一部を改正する法律が参院本会議で可決・成立(6月5日公布、令和8年法律第29号)。経産大臣が確認する「特定生産性向上設備等」への投資促進税制を創設し、貿易保険法改正で供給網強靱化のための外国政府との取決めに係る保険業務を「特定引受業務」と位置付けた。',
+    source: '参議院 議案情報',
+    sourceUrl: 'https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221080221015.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'jp-25', threadId: 'jp', date: '2026-06-10', weight: 2,
+    title: '経済安保推進法改正 成立 役務支援・官民協議会',
+    body: '経済安全保障推進法及び国際協力銀行法の一部を改正する法律が参院本会議で可決・成立(6月17日公布、令和8年法律第38号)。特定重要物資の供給に不可欠な役務を指定対象に加え、重要技術の基金設置法人を拡大、官民協議会を組織し、JBICに海外インフラ支援の新勘定を設けた。',
+    source: '参議院 議案情報',
+    sourceUrl: 'https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221080221030.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'jp-26', threadId: 'jp', date: '2026-07-10', weight: 2,
+    title: '個人情報保護法改正 成立 統計利用に同意不要',
+    body: '個人情報の保護に関する法律等の一部を改正する法律が参院本会議で可決・成立(7月17日公布、令和8年法律第56号)。統計等の作成目的で第三者に提供する場合は内容を公表していれば本人同意を不要とし、AI学習を含むデータ利活用を容易にする一方、違法な取扱いへの課徴金制度を導入した。',
+    source: '参議院 議案情報',
+    sourceUrl: 'https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221080221054.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'jp-27', threadId: 'jp', date: '2026-07-10', weight: 1,
+    title: '情報処理促進法等改正 成立 公的データ活用',
+    body: 'デジタル行政推進法及び情報処理の促進に関する法律の一部を改正する法律が参院本会議で可決・成立(7月17日公布、令和8年法律第57号)。公的基礎情報データベースの共同整備と「国等データ活用事業」の認定制度を創設し、認定事業者への行政データ提供とIPAの協力業務を定めた。',
+    source: '参議院 議案情報',
+    sourceUrl: 'https://www.sangiin.go.jp/japanese/joho1/kousei/gian/221/meisai/m221080221053.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'jp-28', threadId: 'jp', date: '2026-07-14', weight: 2,
+    title: '人工知能基本計画(第Ⅱ期) 閣議決定',
+    body: 'AI推進法に基づく人工知能基本計画を改定し「第Ⅱ期」を閣議決定。6月19日の素案公表・意見募集と7月10日の第5回人工知能戦略本部を経て、2025年12月の初回計画から半年余りで更新した。AI・半導体を戦略分野とする官民投資想定と歩調を合わせ、計算資源と人材の施策を拡充した。',
+    source: '内閣府 人工知能基本計画',
+    sourceUrl: 'https://www8.cao.go.jp/cstp/ai/ai_plan/ai_plan.html',
+    sourceTier: 'primary',
+  },
+];
