@@ -2,12 +2,13 @@ import { useCallback, useEffect, useRef, useState, type PointerEvent as ReactPoi
 import { DAY } from '../lib/time';
 
 interface Params {
-  svgRef: RefObject<SVGSVGElement | null>;
+  /** Element whose left edge is screen x = 0 for the canvas, and which receives the wheel listener. */
+  hostRef: RefObject<HTMLElement | null>;
   viewStart: number;
   viewEnd: number;
   labelW: number;
   onViewChange: (s: number, e: number) => void;
-  /** Called with a pixel offset while the user is panning; the canvas moves layers with a transform. */
+  /** Pixel offset while panning; the canvas moves its composited layer with a CSS transform. */
   onPanPreview: (dx: number) => void;
 }
 
@@ -41,12 +42,27 @@ function pinch(g: Gesture, plot: { labelW: number; width: number }, mid: number,
   return [start, start + span];
 }
 
+/** Coalesces rapid view updates (pinch, ⌘+wheel) into one per animation frame. */
+function useFrameCoalescer(onViewChange: (s: number, e: number) => void) {
+  const pending = useRef<[number, number] | null>(null);
+  return useCallback((s: number, e: number) => {
+    const first = pending.current === null;
+    pending.current = [s, e];
+    if (!first) return;
+    requestAnimationFrame(() => {
+      const v = pending.current;
+      pending.current = null;
+      if (v) onViewChange(v[0], v[1]);
+    });
+  }, [onViewChange]);
+}
+
 /**
- * Mouse + touch interaction for the timeline SVG.
+ * Mouse + touch interaction for the timeline.
  * Scroll/drag pans at the current scale (previewed with a transform, committed once at the end);
  * only pinch, ⌘/Ctrl+wheel and double-click change the scale.
  */
-export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onViewChange, onPanPreview }: Params) {
+export function useCanvasInteraction({ hostRef, viewStart, viewEnd, labelW, onViewChange, onPanPreview }: Params) {
   const [isDragging, setIsDragging] = useState(false);
   const pointers = useRef(new Map<number, number>());
   const gesture = useRef<Gesture | null>(null);
@@ -54,8 +70,9 @@ export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onVie
   const wheelPan = useRef({ dx: 0, timer: 0 });
   const view = useRef({ start: viewStart, end: viewEnd });
   view.current = { start: viewStart, end: viewEnd };
+  const setViewSoon = useFrameCoalescer(onViewChange);
 
-  const rect = () => svgRef.current?.getBoundingClientRect() ?? new DOMRect(0, 0, 1000, 500);
+  const rect = () => hostRef.current?.getBoundingClientRect() ?? new DOMRect(0, 0, 1000, 500);
   const plot = () => ({ labelW, width: rect().width });
   const pxPerMs = () => (rect().width - labelW) / (view.current.end - view.current.start);
   const localX = (e: { clientX: number }) => e.clientX - rect().left;
@@ -69,7 +86,7 @@ export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onVie
   }, [onViewChange, onPanPreview]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    const el = svgRef.current;
+    const el = hostRef.current;
     if (!el) return;
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
@@ -77,7 +94,7 @@ export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onVie
         const mx = e.clientX - el.getBoundingClientRect().left;
         if (mx < labelW) return;
         const { start, end } = view.current;
-        onViewChange(...zoomAround(start + (mx - labelW) / pxPerMs(), start, end, e.deltaY > 0 ? ZOOM_STEP : 1 / ZOOM_STEP));
+        setViewSoon(...zoomAround(start + (mx - labelW) / pxPerMs(), start, end, e.deltaY > 0 ? ZOOM_STEP : 1 / ZOOM_STEP));
         return;
       }
       const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
@@ -92,7 +109,7 @@ export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onVie
     };
     el.addEventListener('wheel', onWheel, { passive: false });
     return () => el.removeEventListener('wheel', onWheel);
-  }, [svgRef, labelW, onViewChange, onPanPreview, commitPan]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [hostRef, labelW, setViewSoon, onPanPreview, commitPan]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const beginGesture = () => {
     const xs = [...pointers.current.values()];
@@ -102,23 +119,23 @@ export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onVie
     else gesture.current = null;
   };
 
-  const onPointerDown = (e: ReactPointerEvent<SVGSVGElement>) => {
+  const onPointerDown = (e: ReactPointerEvent<Element>) => {
     if ((e.target as Element).closest('.evt-hit')) return;
     pointers.current.set(e.pointerId, e.clientX);
-    svgRef.current?.setPointerCapture(e.pointerId);
+    (e.currentTarget as Element).setPointerCapture(e.pointerId);
     moved.current = false;
     beginGesture();
     setIsDragging(true);
   };
 
-  const onDragMove = (e: ReactPointerEvent<SVGSVGElement>) => {
+  const onDragMove = (e: ReactPointerEvent<Element>) => {
     const g = gesture.current;
     if (!g || !pointers.current.has(e.pointerId)) return;
     pointers.current.set(e.pointerId, e.clientX);
     const xs = [...pointers.current.values()];
     if (xs.length >= 2) {
       moved.current = true;
-      onViewChange(...pinch(g, plot(), (xs[0] + xs[1]) / 2 - rect().left, Math.abs(xs[0] - xs[1])));
+      setViewSoon(...pinch(g, plot(), (xs[0] + xs[1]) / 2 - rect().left, Math.abs(xs[0] - xs[1])));
       return;
     }
     const dx = e.clientX - g.sx;
@@ -126,7 +143,7 @@ export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onVie
     onPanPreview(dx);
   };
 
-  const endDrag = (e: ReactPointerEvent<SVGSVGElement>) => {
+  const endDrag = (e: ReactPointerEvent<Element>) => {
     const g = gesture.current;
     const x = pointers.current.get(e.pointerId);
     pointers.current.delete(e.pointerId);
@@ -140,7 +157,7 @@ export function useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW, onVie
     beginGesture();
   };
 
-  const onDoubleClick = (e: ReactMouseEvent<SVGSVGElement>) => {
+  const onDoubleClick = (e: ReactMouseEvent<Element>) => {
     const mx = localX(e);
     if (mx < labelW) return;
     const { start, end } = view.current;

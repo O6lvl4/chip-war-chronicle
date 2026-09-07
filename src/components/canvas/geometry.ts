@@ -7,12 +7,20 @@ export function labelWidthFor(width: number): number {
   return width < 640 ? COMPACT_LABEL_W : LABEL_W;
 }
 
-/** Everything a canvas layer needs to place things: scales, sizes, lanes. */
+/**
+ * Everything a canvas layer needs to place things. All x values are screen pixels
+ * (0 = left edge of the component); the pannable layer extends `slack` px beyond the
+ * plot on both sides so that panning reveals content before the view is committed.
+ */
 export interface CanvasGeom {
   width: number;
   svgH: number;
   laneH: number;
   labelW: number;
+  slack: number;
+  /** Left / right screen x of the pre-rendered range. */
+  renderL: number;
+  renderR: number;
   lanes: Thread[];
   xFor: (t: number) => number;
   tFor: (x: number) => number;
@@ -29,16 +37,21 @@ export interface GeomInput {
 
 export function makeGeom({ width, height, lanes, viewStart, viewEnd }: GeomInput): CanvasGeom {
   const labelW = labelWidthFor(width);
-  const pxPerMs = (width - labelW) / (viewEnd - viewStart);
+  const plotW = Math.max(width - labelW, 1);
+  const pxPerMs = plotW / (viewEnd - viewStart);
   // Lanes stretch to fill the viewport, never thinner than LANE_H.
   const laneH = Math.max(LANE_H, Math.floor((height - AXIS_H - 12) / Math.max(lanes.length, 1)));
   const totalH = AXIS_H + lanes.length * laneH;
   const laneIndex = new Map(lanes.map((t, i) => [t.id, i]));
+  const slack = Math.round(plotW * 0.6);
   return {
     width,
     svgH: Math.max(totalH + 12, height),
     laneH,
     labelW,
+    slack,
+    renderL: labelW - slack,
+    renderR: width + slack,
     lanes,
     xFor: t => labelW + (t - viewStart) * pxPerMs,
     tFor: x => viewStart + (x - labelW) / pxPerMs,

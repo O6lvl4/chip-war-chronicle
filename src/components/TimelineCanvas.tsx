@@ -7,6 +7,7 @@ import { useCanvasInteraction } from '../hooks/useCanvasInteraction';
 import { makeGeom } from './canvas/geometry';
 import Lanes from './canvas/Lanes';
 import { AxisFrame, AxisTicks } from './canvas/Axis';
+import LinkCanvas from './canvas/LinkCanvas';
 import LinkLayer from './canvas/LinkLayer';
 import EventLayer from './canvas/EventLayer';
 import LabelLayer from './canvas/LabelLayer';
@@ -43,37 +44,40 @@ function useElementSize(ref: React.RefObject<HTMLDivElement | null>) {
   return size;
 }
 
+/**
+ * Layout: a static SVG (lanes, axis frame) at the back; a composited, pannable layer in the middle
+ * holding a canvas for links plus an SVG for ticks/events/labels, pre-rendered one plot-width beyond
+ * each edge; a static overlay SVG on top for the cross-section rule.
+ */
 export default function TimelineCanvas(props: Props) {
   const { threads, events, links, activeThreadIds, viewStart, viewEnd, selectedId, hoveredId,
     query, dark, crossSection, onViewChange, onSelect, onHover, onCrossSection, onCluster } = props;
   const containerRef = useRef<HTMLDivElement>(null);
-  const svgRef = useRef<SVGSVGElement>(null);
-  const plotRef = useRef<SVGGElement>(null);
+  const panRef = useRef<HTMLDivElement>(null);
   const size = useElementSize(containerRef);
   const [localCsX, setLocalCsX] = useState(-1);
 
   const lanes = useMemo(() => threads.filter(t => activeThreadIds.includes(t.id)), [threads, activeThreadIds]);
   const geom = useMemo(() => makeGeom({ width: size.w, height: size.h, lanes, viewStart, viewEnd }), [size, lanes, viewStart, viewEnd]);
-  const LABEL_W = geom.labelW;
+  const { labelW, slack, renderL, renderR, svgH } = geom;
   const pal = paletteFor(dark);
   const colorOf = useMemo(() => colorLookup(threads, dark), [threads, dark]);
   const eventsById = useMemo(() => new Map(events.map(e => [e.id, e])), [events]);
 
-  // Panning moves the already-rendered plot with a transform; the view commits once at the end.
+  // Panning translates the composited layer only; the view commits once at the end.
   const onPanPreview = useCallback((dx: number) => {
-    plotRef.current?.setAttribute('transform', dx ? `translate(${dx} 0)` : '');
+    if (panRef.current) panRef.current.style.transform = dx ? `translate3d(${dx}px,0,0)` : '';
   }, []);
-  useLayoutEffect(() => { plotRef.current?.setAttribute('transform', ''); }, [viewStart, viewEnd]);
+  useLayoutEffect(() => { if (panRef.current) panRef.current.style.transform = ''; }, [viewStart, viewEnd]);
 
-  const ia = useCanvasInteraction({ svgRef, viewStart, viewEnd, labelW: LABEL_W, onViewChange, onPanPreview });
+  const ia = useCanvasInteraction({ hostRef: containerRef, viewStart, viewEnd, labelW, onViewChange, onPanPreview });
 
-  // Render one viewport of slack on both sides so a pan reveals content before the commit.
   const visible = useMemo(() => events.filter(ev => {
     if (!activeThreadIds.includes(ev.threadId)) return false;
     const x1 = geom.xFor(ms(ev.date));
     const x2 = geom.xFor(ms(ev.endDate ?? ev.date));
-    return x2 >= LABEL_W - size.w && x1 <= size.w * 2;
-  }), [events, activeThreadIds, geom, size.w, LABEL_W]);
+    return x2 >= renderL && x1 <= renderR;
+  }), [events, activeThreadIds, geom, renderL, renderR]);
   const { singles, clusters } = useMemo(() => clusterEvents(visible, geom.xFor), [visible, geom]);
   const placed = useMemo(() => {
     const minW = minLabelWeight(viewEnd - viewStart);
@@ -85,17 +89,17 @@ export default function TimelineCanvas(props: Props) {
   const emphasis = useMemo(() => ({ focusId, related: relatedIds(focusId, links), query }), [focusId, links, query]);
 
   const csX = crossSection.fixed ? crossSection.x : localCsX;
-  const csDate = csX > LABEL_W ? geom.tFor(csX) : null;
+  const csDate = csX > labelW ? geom.tFor(csX) : null;
   const tracking = crossSection.enabled && !crossSection.fixed;
 
-  const onPointerMove = (e: ReactPointerEvent<SVGSVGElement>) => {
+  const onPointerMove = (e: ReactPointerEvent<HTMLDivElement>) => {
     ia.onDragMove(e);
     if (!tracking) return;
     const x = ia.localX(e);
     setLocalCsX(x);
     onCrossSection(x);
   };
-  const onClick = (e: ReactMouseEvent<SVGSVGElement>) => {
+  const onClick = (e: ReactMouseEvent<HTMLDivElement>) => {
     if (ia.wasDrag() || (e.target as Element).closest('.evt-hit')) return;
     if (crossSection.enabled) onCrossSection(ia.localX(e), true);
     else onSelect(null);
@@ -107,33 +111,35 @@ export default function TimelineCanvas(props: Props) {
     onCluster,
   }), [onSelect, selectedId, onHover, onViewChange, onCluster]);
 
+  const innerW = renderR - renderL;
   return (
-    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
-      <svg ref={svgRef} width={size.w} height={geom.svgH}
-        className={`timeline-svg${ia.isDragging ? ' dragging' : ''}`}
-        onPointerDown={ia.onPointerDown} onPointerMove={onPointerMove}
-        onPointerUp={ia.endDrag} onPointerCancel={ia.endDrag}
-        onDoubleClick={ia.onDoubleClick} onClick={onClick}>
-        <defs>
-          <clipPath id="canvas-clip">
-            <rect x={LABEL_W} y={0} width={size.w - LABEL_W} height={geom.svgH} />
-          </clipPath>
-        </defs>
+    <div ref={containerRef} className={`timeline-stage${ia.isDragging ? ' dragging' : ''}`}
+      onPointerDown={ia.onPointerDown} onPointerMove={onPointerMove}
+      onPointerUp={ia.endDrag} onPointerCancel={ia.endDrag}
+      onDoubleClick={ia.onDoubleClick} onClick={onClick}>
+      <svg className="stage-static" width={size.w} height={svgH}>
         <Lanes geom={geom} pal={pal} dark={dark} />
         <AxisFrame geom={geom} pal={pal} />
-        <g clipPath="url(#canvas-clip)">
-          <g ref={plotRef}>
-            <AxisTicks geom={geom} pal={pal} viewStart={viewStart} viewEnd={viewEnd} />
-            <LinkLayer geom={geom} pal={pal} links={links} eventsById={eventsById} focusId={focusId} />
-            <EventLayer geom={geom} pal={pal} singles={singles} clusters={clusters}
-              colorOf={colorOf} emphasis={emphasis} handlers={handlers} />
-            <LabelLayer pal={pal} placed={placed} eventsById={eventsById} emphasis={emphasis} />
-          </g>
-          {crossSection.enabled && csX > LABEL_W && (
-            <CrossSectionOverlay pal={pal} x={csX} date={csDate} fixed={crossSection.fixed} svgH={geom.svgH} />
-          )}
-        </g>
       </svg>
+      <div className="plot-viewport" style={{ left: labelW, width: size.w - labelW, height: svgH }}>
+        <div ref={panRef} className="plot-pan" style={{ left: -slack, width: innerW, height: svgH }}>
+          <LinkCanvas geom={geom} pal={pal} links={links} eventsById={eventsById} dimmed={focusId !== null} />
+          <svg width={innerW} height={svgH} style={{ position: 'absolute', left: 0, top: 0 }}>
+            <g transform={`translate(${-renderL} 0)`}>
+              <AxisTicks geom={geom} pal={pal} viewStart={viewStart} viewEnd={viewEnd} />
+              <LinkLayer geom={geom} pal={pal} links={links} eventsById={eventsById} focusId={focusId} />
+              <EventLayer geom={geom} pal={pal} singles={singles} clusters={clusters}
+                colorOf={colorOf} emphasis={emphasis} handlers={handlers} />
+              <LabelLayer pal={pal} placed={placed} eventsById={eventsById} emphasis={emphasis} />
+            </g>
+          </svg>
+        </div>
+      </div>
+      {crossSection.enabled && csX > labelW && (
+        <svg className="stage-overlay" width={size.w} height={svgH}>
+          <CrossSectionOverlay pal={pal} x={csX} date={csDate} fixed={crossSection.fixed} svgH={svgH} />
+        </svg>
+      )}
     </div>
   );
 }

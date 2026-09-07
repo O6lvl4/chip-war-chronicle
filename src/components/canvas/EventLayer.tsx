@@ -25,8 +25,8 @@ interface Props {
 function DurationBar({ ev, geom, pal, col, op, focused, handlers }: {
   ev: TimelineEvent; geom: CanvasGeom; pal: Palette; col: string; op: number; focused: boolean; handlers: EventHandlers;
 }) {
-  const x1 = Math.max(geom.xFor(ms(ev.date)), geom.labelW);
-  const x2 = Math.min(geom.xFor(ms(ev.endDate ?? ev.date)), geom.width);
+  const x1 = Math.max(geom.xFor(ms(ev.date)), geom.renderL);
+  const x2 = Math.min(geom.xFor(ms(ev.endDate ?? ev.date)), geom.renderR);
   const cy = geom.yFor(ev.threadId);
   const w = Math.max(x2 - x1, 6);
   return (

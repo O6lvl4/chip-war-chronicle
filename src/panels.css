@@ -82,7 +82,6 @@
 .sql-result tr.clickable:hover td { background: color-mix(in srgb, var(--accent) 8%, transparent); }
 
 /* ── Touch ─────────────────────────────────────────────── */
-.timeline-svg { touch-action: none; }
 .mini svg, .minimap { touch-action: none; }
 
 /* ── Phone layout ─────────────────────────────────────── */

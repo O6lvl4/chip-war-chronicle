@@ -35,9 +35,9 @@ export const AxisTicks = memo(function AxisTicks({ geom, pal, viewStart, viewEnd
   // Ticks are generated one viewport wider on each side so panning reveals them before the commit.
   const span = viewEnd - viewStart;
   const { ticks, unit } = useMemo(() => generateTicks(viewStart - span, viewEnd + span), [viewStart, viewEnd, span]);
-  const { xFor, width, svgH, labelW } = geom;
+  const { xFor, svgH, renderL, renderR } = geom;
   const todayX = xFor(Date.now());
-  const todayVisible = todayX >= labelW - width && todayX <= width * 2;
+  const todayVisible = todayX >= renderL && todayX <= renderR;
   return (
     <g>
       {ticks.map(t => {
