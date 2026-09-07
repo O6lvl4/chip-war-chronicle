@@ -1,8 +1,8 @@
 import { useCallback, useMemo, useState } from 'react';
 import type { CrossSectionState, TimelineEvent } from '../types';
-import { ms } from '../lib/time';
+import { DAY, ms } from '../lib/time';
 
-export type DrawerMode = 'none' | 'event' | 'section' | 'sql';
+export type DrawerMode = 'none' | 'event' | 'section' | 'sql' | 'cluster';
 
 interface Params {
   events: TimelineEvent[];
@@ -23,6 +23,7 @@ export function useTimelineState({ events, threadIds, dataStart, dataEnd }: Para
   const [dark, setDark] = useState(false);
   const [crossSection, setCrossSection] = useState<CrossSectionState>(CS_OFF);
   const [sqlOpen, setSqlOpen] = useState(false);
+  const [clusterIds, setClusterIds] = useState<string[] | null>(null);
 
   const setRange = useCallback((start: number, end: number) => setView({ start, end }), []);
 
@@ -44,8 +45,20 @@ export function useTimelineState({ events, threadIds, dataStart, dataEnd }: Para
   const select = useCallback((id: string | null) => {
     setSelectedId(id);
     setSqlOpen(false);
+    setClusterIds(null);
     if (id) centerOn(id);
   }, [centerOn]);
+
+  /** A cluster pill was clicked: list its members, and zoom in when they can still be told apart. */
+  const openCluster = useCallback((ids: string[]) => {
+    const ts = ids.map(id => events.find(e => e.id === id)).filter((e): e is TimelineEvent => !!e).map(e => ms(e.date));
+    const lo = Math.min(...ts);
+    const hi = Math.max(...ts);
+    setSelectedId(null);
+    setSqlOpen(false);
+    setClusterIds(ids);
+    if (hi > lo) setView(v => (hi - lo + 14 * DAY < v.end - v.start ? { start: lo - 7 * DAY, end: hi + 7 * DAY } : v));
+  }, [events]);
 
   const step = useCallback((delta: -1 | 1) => {
     const idx = selectedId ? sortedIds.indexOf(selectedId) : -1;
@@ -80,29 +93,39 @@ export function useTimelineState({ events, threadIds, dataStart, dataEnd }: Para
   const toggleSql = useCallback(() => {
     setSqlOpen(o => !o);
     setSelectedId(null);
+    setClusterIds(null);
     setCrossSection(cs => ({ ...cs, fixed: false, x: -1 }));
   }, []);
 
   const closeDrawer = useCallback(() => {
     setSelectedId(null);
     setSqlOpen(false);
+    setClusterIds(null);
     setCrossSection(cs => ({ ...cs, fixed: false, x: -1 }));
   }, []);
 
-  const drawerMode = drawerModeOf(selectedId, sqlOpen, crossSection);
+  const drawerMode = drawerModeOf({ selectedId, sqlOpen, clusterIds, cs: crossSection });
 
   return {
     view, setRange, selectedId, hoveredId, setHoveredId, activeThreadIds, toggleThread,
     query, setQuery, dark, toggleDark: () => setDark(d => !d),
     crossSection, toggleCrossSection, moveCrossSection,
-    sqlOpen, toggleSql, drawerMode, closeDrawer,
+    sqlOpen, toggleSql, clusterIds, openCluster, drawerMode, closeDrawer,
     select, step, zoom, resetView,
   };
 }
 
-function drawerModeOf(selectedId: string | null, sqlOpen: boolean, cs: CrossSectionState): DrawerMode {
+interface DrawerInputs {
+  selectedId: string | null;
+  sqlOpen: boolean;
+  clusterIds: string[] | null;
+  cs: CrossSectionState;
+}
+
+function drawerModeOf({ selectedId, sqlOpen, clusterIds, cs }: DrawerInputs): DrawerMode {
   if (sqlOpen) return 'sql';
   if (selectedId) return 'event';
+  if (clusterIds) return 'cluster';
   if (cs.enabled && cs.fixed && cs.x > 0) return 'section';
   return 'none';
 }

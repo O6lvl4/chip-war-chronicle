@@ -2,12 +2,13 @@ import type { CanvasGeom } from './geometry';
 import type { TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
 import { eventOpacity, eventRadius, LABEL_W, type Cluster, type Emphasis } from '../../lib/layout';
-import { DAY, ms } from '../../lib/time';
+import { ms } from '../../lib/time';
 
 export interface EventHandlers {
   onSelect: (id: string) => void;
   onHover: (id: string | null) => void;
   onViewChange: (s: number, e: number) => void;
+  onCluster: (ids: string[]) => void;
 }
 
 interface Props {
@@ -43,13 +44,11 @@ function ClusterPill({ cl, geom, pal, col, handlers }: {
   cl: Cluster; geom: CanvasGeom; pal: Palette; col: string; handlers: EventHandlers;
 }) {
   const cy = geom.yFor(cl.threadId);
-  const zoomIn = () => {
-    const ts = cl.events.map(ev => ms(ev.date));
-    handlers.onViewChange(Math.min(...ts) - 7 * DAY, Math.max(...ts) + 7 * DAY);
-  };
+  const tip = cl.events.map(ev => `${ev.date}  ${ev.title}`).join('\n');
   return (
-    <g className="evt-hit cluster-pill" style={{ cursor: 'zoom-in' }}
-      onClick={e => { e.stopPropagation(); zoomIn(); }}>
+    <g className="evt-hit cluster-pill" style={{ cursor: 'pointer' }}
+      onClick={e => { e.stopPropagation(); handlers.onCluster(cl.events.map(ev => ev.id)); }}>
+      <title>{tip}</title>
       <circle cx={cl.cx + 2.5} cy={cy + 2.5} r={12} fill={pal.shadow} />
       <circle cx={cl.cx} cy={cy} r={12} fill={pal.surface} />
       <circle cx={cl.cx} cy={cy} r={12} fill={col + '22'} stroke={col} strokeWidth={2} />

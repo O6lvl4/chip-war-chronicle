@@ -28,6 +28,7 @@ interface Props {
   onSelect: (id: string | null) => void;
   onHover: (id: string | null) => void;
   onCrossSection: (x: number, toggle?: boolean) => void;
+  onCluster: (ids: string[]) => void;
 }
 
 function useElementSize(ref: React.RefObject<HTMLDivElement | null>) {
@@ -44,7 +45,7 @@ function useElementSize(ref: React.RefObject<HTMLDivElement | null>) {
 
 export default function TimelineCanvas(props: Props) {
   const { threads, events, links, activeThreadIds, viewStart, viewEnd, selectedId, hoveredId,
-    query, dark, crossSection, onViewChange, onSelect, onHover, onCrossSection } = props;
+    query, dark, crossSection, onViewChange, onSelect, onHover, onCrossSection, onCluster } = props;
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const size = useElementSize(containerRef);
@@ -95,6 +96,7 @@ export default function TimelineCanvas(props: Props) {
     onSelect: (id: string) => onSelect(id === selectedId ? null : id),
     onHover,
     onViewChange,
+    onCluster,
   };
 
   return (

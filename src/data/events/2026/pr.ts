@@ -34,6 +34,14 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-91', threadId: 'pr', date: '2026-06-24', weight: 2,
+    title: 'AI・半導体 官民投資101.6兆円の想定',
+    body: '第8回経済財政諮問会議の資料で、戦略17分野の官民投資額を提示。AI・半導体分野はフィジカルAI10.5兆円、半導体68.0兆円、バーティカルAI23.1兆円の計101.6兆円を2040年度までの15年間で想定した。',
+    source: '内閣府 経済財政諮問会議',
+    sourceUrl: 'https://www5.cao.go.jp/keizai-shimon/kaigi/minutes/2026/0624_shiryo01.pdf',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-49', threadId: 'pr', date: '2026-06-29', weight: 2,
     title: '中国 日本20団体を輸出管制管控名単に',
     body: '中国商務部が公告2026年第27号で防衛研究所や三菱重工グループなど日本の20団体を輸出管制管控名単に追加し、両用物項の輸出と中国原産品の第三国経由の提供を禁止。1月の対日両用物項規制強化に続く措置。',

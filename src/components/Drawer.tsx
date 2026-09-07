@@ -12,6 +12,7 @@ const TITLES: Record<DrawerMode, string> = {
   event: 'DETAIL',
   section: 'CROSS-SECTION',
   sql: 'SQL CONSOLE',
+  cluster: 'CLUSTER',
 };
 
 /** Right-hand sliding drawer with a backdrop; content is provided by the caller. */

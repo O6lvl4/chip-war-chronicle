@@ -8,9 +8,7 @@ import Header from './components/Header';
 import Drawer from './components/Drawer';
 import TimelineCanvas from './components/TimelineCanvas';
 import Minimap from './components/Minimap';
-import EventDetail from './components/panel/EventDetail';
-import CrossSectionPanel from './components/panel/CrossSectionPanel';
-import SqlConsole from './components/panel/SqlConsole';
+import DrawerContent from './components/DrawerContent';
 
 const THREAD_IDS = THREADS.map(t => t.id);
 const DATASET = { threads: THREADS, events: EVENTS, links: LINKS };
@@ -27,11 +25,9 @@ export default function App() {
   const st = useTimelineState({ events: EVENTS, threadIds: THREAD_IDS, dataStart: DATA_START, dataEnd: DATA_END });
   const db = useDuckDB(DATASET);
   const eventsById = useMemo(() => new Map(EVENTS.map(e => [e.id, e])), []);
-  const knownIds = useMemo(() => new Set(EVENTS.map(e => e.id)), []);
 
   useKeyboardNav({ clearSelection: st.closeDrawer, resetView: st.resetView, zoom: st.zoom, step: st.step });
 
-  const selected = st.selectedId ? eventsById.get(st.selectedId) : undefined;
   const csDate = st.drawerMode === 'section' ? csDateFor(st.crossSection.x, st.view.start, st.view.end) : null;
 
   return (
@@ -48,6 +44,7 @@ export default function App() {
             query={st.query} dark={st.dark} crossSection={st.crossSection}
             onViewChange={st.setRange} onSelect={st.select}
             onHover={st.setHoveredId} onCrossSection={st.moveCrossSection}
+            onCluster={st.openCluster}
           />
         </div>
         <Minimap threads={THREADS} events={EVENTS} activeThreadIds={st.activeThreadIds}
@@ -56,14 +53,7 @@ export default function App() {
           dark={st.dark} onViewChange={st.setRange} />
 
         <Drawer mode={st.drawerMode} onClose={st.closeDrawer}>
-          {st.drawerMode === 'event' && selected && (
-            <EventDetail ev={selected} threads={THREADS} eventsById={eventsById} links={LINKS} dark={st.dark} onSelect={st.select} />
-          )}
-          {st.drawerMode === 'section' && csDate !== null && (
-            <CrossSectionPanel threads={THREADS} events={EVENTS} activeThreadIds={st.activeThreadIds}
-              csDate={csDate} dark={st.dark} onSelect={st.select} />
-          )}
-          {st.drawerMode === 'sql' && <SqlConsole db={db} knownIds={knownIds} onSelect={st.select} />}
+          <DrawerContent state={st} db={db} eventsById={eventsById} csDate={csDate} />
         </Drawer>
       </div>
     </div>
