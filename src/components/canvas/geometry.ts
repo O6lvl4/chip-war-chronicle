@@ -25,7 +25,8 @@ export function makeGeom(width: number, viewStart: number, viewEnd: number): Can
   const labelW = labelWidthFor(width);
   const plotW = Math.max(width - labelW, 1);
   const pxPerMs = plotW / (viewEnd - viewStart);
-  const slack = Math.round(plotW * 0.6);
+  // Narrow (mobile) screens keep the composited layer small: less pre-render slack.
+  const slack = Math.round(plotW * (width < 640 ? 0.35 : 0.6));
   return {
     width,
     labelW,

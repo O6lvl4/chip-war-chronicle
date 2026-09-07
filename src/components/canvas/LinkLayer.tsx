@@ -4,7 +4,7 @@ import type { Link, TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
 import type { Board } from '../../lib/board';
 import { linkPath } from '../../lib/layout';
-import { linkSegment, type Seg } from './LinkCanvas';
+import { linkSegment, outsideWindow, type Seg, type VWindow } from './LinkCanvas';
 
 interface Props {
   geom: CanvasGeom;
@@ -13,6 +13,7 @@ interface Props {
   links: Link[];
   eventsById: Map<string, TimelineEvent>;
   focusId: string | null;
+  win: VWindow;
 }
 
 interface Hot {
@@ -21,17 +22,17 @@ interface Hot {
 }
 
 /** Only the links touching the focused (selected or hovered) event, drawn as crisp SVG on top. */
-function LinkLayer({ geom, board, pal, links, eventsById, focusId }: Props) {
+function LinkLayer({ geom, board, pal, links, eventsById, focusId, win }: Props) {
   const hot = useMemo(() => {
     const out: Hot[] = [];
     if (!focusId) return out;
     for (const lk of links) {
       if (lk.from !== focusId && lk.to !== focusId) continue;
       const s = linkSegment(lk, eventsById, board, geom);
-      if (s) out.push({ lk, s });
+      if (s && !outsideWindow(s, win)) out.push({ lk, s });
     }
     return out;
-  }, [focusId, links, eventsById, board, geom]);
+  }, [focusId, links, eventsById, board, geom, win]);
   if (hot.length === 0) return null;
   return (
     <g>

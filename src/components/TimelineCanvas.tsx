@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent } from 'react';
 import type { CrossSectionState, Link, Thread, TimelineEvent } from '../types';
 import { AXIS_H, minLabelWeight, relatedIds } from '../lib/layout';
-import { buildBoard } from '../lib/board';
+import { buildBoard, ROW_H } from '../lib/board';
 import { colorLookup, paletteFor } from '../lib/palette';
-import { useCanvasInteraction } from '../hooks/useCanvasInteraction';
+import { useCanvasInteraction, type Preview } from '../hooks/useCanvasInteraction';
 import { makeGeom } from './canvas/geometry';
 import Lanes from './canvas/Lanes';
 import { AxisFrame, AxisTicks, GridLines } from './canvas/Axis';
-import LinkCanvas from './canvas/LinkCanvas';
+import LinkCanvas, { type VWindow } from './canvas/LinkCanvas';
 import LinkLayer from './canvas/LinkLayer';
 import ChipLayer from './canvas/ChipLayer';
 import CrossSectionOverlay from './canvas/CrossSectionOverlay';
@@ -26,6 +26,36 @@ interface Props {
   onViewChange: (s: number, e: number) => void;
   onSelect: (id: string | null) => void;
   onCrossSection: (x: number, toggle?: boolean) => void;
+}
+
+/**
+ * Vertical virtualisation: only the visible part of the board (plus one viewport above and below)
+ * is materialised in the composited layer. The window moves in half-viewport steps so that
+ * scrolling rarely triggers a re-render.
+ */
+function useVerticalWindow(ref: React.RefObject<HTMLDivElement | null>, totalH: number): VWindow {
+  const [win, setWin] = useState<VWindow>({ top: 0, height: 2400 });
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let current = win;
+    const update = () => {
+      const vh = el.clientHeight || 800;
+      const margin = vh;
+      const wantTop = Math.max(0, el.scrollTop - margin);
+      const wantH = Math.min(totalH, vh + 2 * margin);
+      const drift = Math.abs(wantTop - current.top);
+      if (drift < margin / 2 && Math.abs(wantH - current.height) < 8) return;
+      current = { top: wantTop, height: wantH };
+      setWin(current);
+    };
+    update();
+    el.addEventListener('scroll', update, { passive: true });
+    const obs = new ResizeObserver(update);
+    obs.observe(el);
+    return () => { el.removeEventListener('scroll', update); obs.disconnect(); };
+  }, [ref, totalH]); // eslint-disable-line react-hooks/exhaustive-deps
+  return win;
 }
 
 function useWidth(ref: React.RefObject<HTMLDivElement | null>) {
@@ -49,6 +79,7 @@ export default function TimelineCanvas(props: Props) {
   const { threads, events, links, activeThreadIds, viewStart, viewEnd, selectedId,
     query, dark, crossSection, onViewChange, onSelect, onCrossSection } = props;
   const containerRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const axisPanRef = useRef<HTMLDivElement>(null);
   const bodyPanRef = useRef<HTMLDivElement>(null);
   const width = useWidth(containerRef);
@@ -65,16 +96,27 @@ export default function TimelineCanvas(props: Props) {
   const board = useMemo(() => buildBoard({
     lanes, events: events.filter(ev => activeThreadIds.includes(ev.threadId)), xFor: geom.xFor, minWeight: minLabelWeight(viewEnd - viewStart),
   }), [lanes, events, activeThreadIds, geom, viewStart, viewEnd]);
-  const chips = useMemo(() => [...board.chips.values()].filter(c => c.x1 >= renderL && c.x0 <= renderR), [board, renderL, renderR]);
+  const win = useVerticalWindow(scrollRef, board.totalH);
+  const chips = useMemo(() => {
+    const yMin = win.top - ROW_H;
+    const yMax = win.top + win.height + ROW_H;
+    return [...board.chips.values()].filter(c => c.x1 >= renderL && c.x0 <= renderR && c.y >= yMin && c.y <= yMax);
+  }, [board, renderL, renderR, win]);
 
-  const onPanPreview = useCallback((dx: number) => {
-    const t = dx ? `translate3d(${dx}px,0,0)` : '';
-    if (axisPanRef.current) axisPanRef.current.style.transform = t;
-    if (bodyPanRef.current) bodyPanRef.current.style.transform = t;
-  }, []);
-  useLayoutEffect(() => { onPanPreview(0); }, [viewStart, viewEnd, onPanPreview]);
+  // Gestures only move / stretch the composited layers; the view is committed once when they end.
+  const onPreview = useCallback((p: Preview | null) => {
+    const transform = p ? `translate3d(${p.dx}px,0,0) scaleX(${p.scale})` : '';
+    // The pan layer starts `slack` px left of the plot, which itself starts at labelW.
+    const origin = p ? `${p.originX - labelW + slack}px 0` : '';
+    for (const el of [axisPanRef.current, bodyPanRef.current]) {
+      if (!el) continue;
+      el.style.transformOrigin = origin;
+      el.style.transform = transform;
+    }
+  }, [labelW, slack]);
+  useLayoutEffect(() => { onPreview(null); }, [viewStart, viewEnd, onPreview]);
 
-  const ia = useCanvasInteraction({ hostRef: containerRef, viewStart, viewEnd, labelW, onViewChange, onPanPreview });
+  const ia = useCanvasInteraction({ hostRef: containerRef, viewStart, viewEnd, labelW, onViewChange, onPreview });
 
   const emphasis = useMemo(() => ({ focusId: selectedId, related: relatedIds(selectedId, links), query }), [selectedId, links, query]);
   const focusId = selectedId ?? hoveredId;
@@ -102,6 +144,7 @@ export default function TimelineCanvas(props: Props) {
 
   const innerW = renderR - renderL;
   const shift = `translate(${-renderL} 0)`;
+  const shiftBody = `translate(${-renderL} ${-win.top})`;
   return (
     <div ref={containerRef} className={`timeline-stage${ia.isDragging ? ' dragging' : ''}`}
       onPointerDown={ia.onPointerDown} onPointerMove={onPointerMove}
@@ -115,18 +158,18 @@ export default function TimelineCanvas(props: Props) {
           </div>
         </div>
       </div>
-      <div className="board-scroll">
+      <div ref={scrollRef} className="board-scroll">
         <div className="board" style={{ height: board.totalH, width }}>
           <svg className="stage-static" width={width} height={board.totalH}>
             <Lanes threads={threads} board={board} width={width} labelW={labelW} pal={pal} dark={dark} />
           </svg>
           <div className="plot-viewport" style={{ left: labelW, width: width - labelW, height: board.totalH }}>
-            <div ref={bodyPanRef} className="plot-pan" style={{ left: -slack, width: innerW, height: board.totalH }}>
-              <LinkCanvas geom={geom} board={board} pal={pal} links={links} eventsById={eventsById} dimmed={selectedId !== null} />
-              <svg width={innerW} height={board.totalH} style={{ position: 'absolute', left: 0, top: 0 }}>
-                <g transform={shift}>
-                  <GridLines geom={geom} pal={pal} viewStart={viewStart} viewEnd={viewEnd} height={board.totalH} />
-                  <LinkLayer geom={geom} board={board} pal={pal} links={links} eventsById={eventsById} focusId={focusId} />
+            <div ref={bodyPanRef} className="plot-pan" style={{ left: -slack, top: win.top, width: innerW, height: win.height }}>
+              <LinkCanvas geom={geom} board={board} win={win} pal={pal} links={links} eventsById={eventsById} dimmed={selectedId !== null} />
+              <svg width={innerW} height={win.height} style={{ position: 'absolute', left: 0, top: 0 }}>
+                <g transform={shiftBody}>
+                  <GridLines geom={geom} pal={pal} viewStart={viewStart} viewEnd={viewEnd} top={win.top} height={win.height} />
+                  <LinkLayer geom={geom} board={board} pal={pal} links={links} eventsById={eventsById} focusId={focusId} win={win} />
                   <ChipLayer chips={chips} eventsById={eventsById} pal={pal} colorOf={colorOf} emphasis={emphasis} handlers={handlers} />
                 </g>
               </svg>

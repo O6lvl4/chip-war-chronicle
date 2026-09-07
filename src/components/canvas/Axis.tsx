@@ -67,22 +67,24 @@ export const AxisTicks = memo(function AxisTicks({ geom, pal, viewStart, viewEnd
 });
 
 interface GridProps extends TickProps {
+  top: number;
   height: number;
 }
 
 /** Vertical gridlines and the TODAY rule across the board; lives inside the body pan layer. */
-export const GridLines = memo(function GridLines({ geom, pal, viewStart, viewEnd, height }: GridProps) {
+export const GridLines = memo(function GridLines({ geom, pal, viewStart, viewEnd, top, height }: GridProps) {
   const { ticks } = useTicks(viewStart, viewEnd);
   const { xFor, renderL, renderR } = geom;
   const todayX = xFor(Date.now());
+  const bottom = top + height;
   return (
     <g>
       {ticks.map(t => {
         const tx = xFor(t);
-        return <line key={t} x1={tx} y1={0} x2={tx} y2={height} stroke={pal.ink} strokeWidth={0.5} opacity={0.08} />;
+        return <line key={t} x1={tx} y1={top} x2={tx} y2={bottom} stroke={pal.ink} strokeWidth={0.5} opacity={0.08} />;
       })}
       {todayX >= renderL && todayX <= renderR && (
-        <line x1={todayX} y1={0} x2={todayX} y2={height} stroke={pal.accent} strokeWidth={1.5} strokeDasharray="5 3.5" opacity={0.8} />
+        <line x1={todayX} y1={top} x2={todayX} y2={bottom} stroke={pal.accent} strokeWidth={1.5} strokeDasharray="5 3.5" opacity={0.8} />
       )}
     </g>
   );

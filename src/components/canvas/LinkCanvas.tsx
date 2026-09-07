@@ -4,13 +4,26 @@ import type { Link, TimelineEvent } from '../../types';
 import type { Palette } from '../../lib/palette';
 import type { Board } from '../../lib/board';
 
+/** Vertical window of the board that is currently materialised (px, board coordinates). */
+export interface VWindow {
+  top: number;
+  height: number;
+}
+
 interface Props {
   geom: CanvasGeom;
   board: Board;
+  win: VWindow;
   pal: Palette;
   links: Link[];
   eventsById: Map<string, TimelineEvent>;
   dimmed: boolean;
+}
+
+/** True when a link cannot cross the vertical window at all. */
+export function outsideWindow(s: Seg, win: VWindow): boolean {
+  const bottom = win.top + win.height;
+  return (s.y1 < win.top && s.y2 < win.top) || (s.y1 > bottom && s.y2 > bottom);
 }
 
 export interface Seg {
@@ -53,21 +66,21 @@ function drawArrow(ctx: CanvasRenderingContext2D, s: Seg) {
  * curves were the most expensive thing to rasterize; a canvas is re-drawn only when the
  * geometry or the board changes.
  */
-function LinkCanvas({ geom, board, pal, links, eventsById, dimmed }: Props) {
+function LinkCanvas({ geom, board, win, pal, links, eventsById, dimmed }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
   const w = geom.renderR - geom.renderL;
-  const h = board.totalH;
+  const h = win.height;
 
   useEffect(() => {
     const canvas = ref.current;
     const ctx = canvas?.getContext('2d');
     if (!canvas || !ctx) return;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const dpr = Math.min(window.devicePixelRatio || 1, geom.width < 640 ? 1.5 : 2);
     canvas.width = Math.ceil(w * dpr);
     canvas.height = Math.ceil(h * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, w, h);
-    ctx.translate(-geom.renderL, 0);
+    ctx.translate(-geom.renderL, -win.top);
     ctx.strokeStyle = pal.ink;
     ctx.fillStyle = pal.ink;
     ctx.lineWidth = 1;
@@ -77,14 +90,14 @@ function LinkCanvas({ geom, board, pal, links, eventsById, dimmed }: Props) {
     const segs: Seg[] = [];
     for (const lk of links) {
       const s = linkSegment(lk, eventsById, board, geom);
-      if (s) { segs.push(s); trace(ctx, s); }
+      if (s && !outsideWindow(s, win)) { segs.push(s); trace(ctx, s); }
     }
     ctx.stroke();
     ctx.setLineDash([]);
     ctx.beginPath();
     for (const s of segs) drawArrow(ctx, s);
     ctx.fill();
-  }, [geom, board, pal, links, eventsById, dimmed, w, h]);
+  }, [geom, board, win, pal, links, eventsById, dimmed, w, h]);
 
   return (
     <canvas ref={ref} className="link-canvas"
