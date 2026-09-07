@@ -5,7 +5,8 @@ import type { Palette } from '../../lib/palette';
 import type { Board, Chip } from '../../lib/board';
 import { eventRadius } from '../../lib/board';
 import type { Emphasis } from '../../lib/layout';
-import { drawChip, drawGrid, drawLinks, H } from './boardPaint';
+import { H } from './boardPaint';
+import { dprFor, makeOffscreen, paintOffscreen, type Offscreen } from './offscreen';
 import { timed } from '../../lib/perf';
 
 /** Vertical window of the board that is currently materialised (px, board coordinates). */
@@ -33,53 +34,6 @@ export interface BoardPaint {
   xMap?: (x: number) => number;
 }
 
-/** Applies the preview x-map to chips, links and the grid; labeled chips keep their width. */
-function withXMap(p: BoardPaint): BoardPaint {
-  const m = p.xMap;
-  if (!m) return p;
-  const mapChip = (c: Chip): Chip => {
-    const x0 = m(c.x0);
-    const barEnd = m(c.barEnd);
-    const x1 = c.labeled ? Math.max(x0 + (c.x1 - c.x0), barEnd) : m(c.x1);
-    return { ...c, x: m(c.x), x0, x1, barEnd };
-  };
-  const chips = new Map<string, Chip>();
-  for (const [id, c] of p.board.chips) chips.set(id, mapChip(c));
-  return {
-    ...p,
-    xMap: undefined,
-    chips: p.chips.map(mapChip),
-    board: { ...p.board, chips },
-    geom: { ...p.geom, xFor: t => m(p.geom.xFor(t)) },
-  };
-}
-
-function dprFor(p: BoardPaint): number {
-  return Math.min(window.devicePixelRatio || 1, p.geom.width < 640 ? 1.5 : 2);
-}
-
-/** Renders the wide (pre-render range) board into the offscreen canvas. */
-export function paintBoard(canvas: HTMLCanvasElement, raw: BoardPaint) {
-  const ctx = canvas.getContext('2d');
-  if (!ctx) return;
-  const p = withXMap(raw);
-  const w = p.geom.renderR - p.geom.renderL;
-  const h = p.win.height;
-  const dpr = dprFor(p);
-  const pw = Math.ceil(w * dpr);
-  const ph = Math.ceil(h * dpr);
-  if (canvas.width !== pw || canvas.height !== ph) { canvas.width = pw; canvas.height = ph; }
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  ctx.clearRect(0, 0, w, h);
-  ctx.translate(-p.geom.renderL, -p.win.top);
-  drawGrid(ctx, p);
-  drawLinks(ctx, p);
-  for (const c of p.chips) {
-    const ev = p.eventsById.get(c.id);
-    if (ev) drawChip(ctx, p, c, ev);
-  }
-}
-
 /** Topmost chip under a board-space point, or null. */
 export function hitChip(chips: Chip[], eventsById: Map<string, TimelineEvent>, x: number, y: number): Chip | null {
   for (let i = chips.length - 1; i >= 0; i--) {
@@ -92,7 +46,7 @@ export function hitChip(chips: Chip[], eventsById: Map<string, TimelineEvent>, x
 }
 
 /** Copies the offscreen render onto the visible, viewport-sized canvas, shifted by `dx` px. */
-export function blitBoard(visible: HTMLCanvasElement, off: HTMLCanvasElement, p: BoardPaint, dx: number) {
+export function blitBoard(visible: HTMLCanvasElement, off: Offscreen, p: BoardPaint, dx: number) {
   const ctx = visible.getContext('2d');
   if (!ctx) return;
   const dpr = dprFor(p);
@@ -104,7 +58,7 @@ export function blitBoard(visible: HTMLCanvasElement, off: HTMLCanvasElement, p:
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.clearRect(0, 0, pw, ph);
   // The offscreen image starts `slack` px left of the plot.
-  ctx.drawImage(off, Math.round((dx - p.geom.slack) * dpr), 0);
+  ctx.drawImage(off.canvas, Math.round((dx - p.geom.slack) * dpr), 0);
 }
 
 /** Imperative handle so gestures can redraw without going through React. */
@@ -129,16 +83,16 @@ interface Props {
  */
 function BoardCanvas({ paint, apiRef, getShift }: Props) {
   const visibleRef = useRef<HTMLCanvasElement>(null);
-  const offRef = useRef<HTMLCanvasElement | null>(null);
+  const offRef = useRef<Offscreen | null>(null);
   const lastRef = useRef(paint);
   const w = paint.geom.width - paint.geom.labelW;
 
   useLayoutEffect(() => {
-    offRef.current ??= document.createElement('canvas');
+    offRef.current ??= makeOffscreen();
     const off = offRef.current;
     const shift = (dx: number) => { const v = visibleRef.current; if (v) timed('blit', () => blitBoard(v, off, lastRef.current, dx)); };
     const api: BoardApi = {
-      repaint: p => { lastRef.current = p; timed('paint', () => paintBoard(off, p)); shift(getShift()); },
+      repaint: p => { lastRef.current = p; timed('paint', () => paintOffscreen(off, p)); shift(getShift()); },
       shift,
     };
     apiRef.current = api;

@@ -6,7 +6,6 @@ import { spanLabel } from '../lib/time';
 interface Props {
   threads: Thread[];
   state: TimelineState;
-  dbReady: boolean;
 }
 
 function ThreadChip({ thread, on, dark, onToggle }: { thread: Thread; on: boolean; dark: boolean; onToggle: () => void }) {
@@ -20,7 +19,7 @@ function ThreadChip({ thread, on, dark, onToggle }: { thread: Thread; on: boolea
   );
 }
 
-export default function Header({ threads, state, dbReady }: Props) {
+export default function Header({ threads, state }: Props) {
   return (
     <header className="app-header">
       <div className="brand">
@@ -41,15 +40,6 @@ export default function Header({ threads, state, dbReady }: Props) {
         <input value={state.query} onChange={e => state.setQuery(e.target.value)} placeholder="検索…" aria-label="出来事を検索" />
         <span className="search-icon">🔍</span>
       </div>
-      <button type="button" className={`n-btn${state.crossSection.enabled ? ' active' : ''}`} onClick={state.toggleCrossSection}>
-        断面
-      </button>
-      <button type="button" className={`n-btn${state.sqlOpen ? ' active' : ''}`} onClick={state.toggleSql}
-        title={dbReady ? 'DuckDB-WASM で SQL を実行' : 'DuckDB-WASM を起動中'}>
-        SQL{dbReady ? '' : ' …'}
-      </button>
-      <button type="button" className="n-btn zoom-btn" onClick={() => state.zoom(0.7)} aria-label="拡大">＋</button>
-      <button type="button" className="n-btn zoom-btn" onClick={() => state.zoom(1 / 0.7)} aria-label="縮小">－</button>
       <button type="button" className="n-btn" onClick={state.resetView}>全期間</button>
       <button type="button" className="n-btn theme-toggle" onClick={state.toggleDark} style={{ padding: '5px 10px', minWidth: 36 }}
         aria-label="テーマ切替">

@@ -39,7 +39,7 @@ export default function App() {
 
   return (
     <div className={`app${st.dark ? ' dark' : ''}`}>
-      <Header threads={THREADS} state={st} dbReady={!dbWanted || db.status === 'ready'} />
+      <Header threads={THREADS} state={st} />
 
       <div className="timeline-container">
         <div style={{ flex: 1, overflow: 'hidden', minHeight: 0 }}>
