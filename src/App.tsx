@@ -1,0 +1,71 @@
+import { useMemo } from 'react';
+import { DATA_END, DATA_START, EVENTS, LINKS, THREADS } from './data';
+import { useTimelineState } from './hooks/useTimelineState';
+import { useKeyboardNav } from './hooks/useKeyboardNav';
+import { useDuckDB } from './hooks/useDuckDB';
+import { LABEL_W } from './lib/layout';
+import Header from './components/Header';
+import Drawer from './components/Drawer';
+import TimelineCanvas from './components/TimelineCanvas';
+import Minimap from './components/Minimap';
+import EventDetail from './components/panel/EventDetail';
+import CrossSectionPanel from './components/panel/CrossSectionPanel';
+import SqlConsole from './components/panel/SqlConsole';
+
+const THREAD_IDS = THREADS.map(t => t.id);
+const DATASET = { threads: THREADS, events: EVENTS, links: LINKS };
+
+/** Cross-section x (px inside the canvas) → date, using the canvas width. */
+function csDateFor(x: number, viewStart: number, viewEnd: number): number | null {
+  const el = document.querySelector<HTMLElement>('.timeline-container');
+  if (!el || x <= LABEL_W) return null;
+  const pxPerMs = (el.offsetWidth - LABEL_W) / (viewEnd - viewStart);
+  return viewStart + (x - LABEL_W) / pxPerMs;
+}
+
+export default function App() {
+  const st = useTimelineState({ events: EVENTS, threadIds: THREAD_IDS, dataStart: DATA_START, dataEnd: DATA_END });
+  const db = useDuckDB(DATASET);
+  const eventsById = useMemo(() => new Map(EVENTS.map(e => [e.id, e])), []);
+  const knownIds = useMemo(() => new Set(EVENTS.map(e => e.id)), []);
+
+  useKeyboardNav({ clearSelection: st.closeDrawer, resetView: st.resetView, zoom: st.zoom, step: st.step });
+
+  const selected = st.selectedId ? eventsById.get(st.selectedId) : undefined;
+  const csDate = st.drawerMode === 'section' ? csDateFor(st.crossSection.x, st.view.start, st.view.end) : null;
+
+  return (
+    <div className={`app${st.dark ? ' dark' : ''}`}>
+      <Header threads={THREADS} state={st} dbReady={db.status === 'ready'} />
+
+      <div className="timeline-container">
+        <div style={{ flex: 1, overflow: 'auto', minHeight: 0 }}>
+          <TimelineCanvas
+            threads={THREADS} events={EVENTS} links={LINKS}
+            activeThreadIds={st.activeThreadIds}
+            viewStart={st.view.start} viewEnd={st.view.end}
+            selectedId={st.selectedId} hoveredId={st.hoveredId}
+            query={st.query} dark={st.dark} crossSection={st.crossSection}
+            onViewChange={st.setRange} onSelect={st.select}
+            onHover={st.setHoveredId} onCrossSection={st.moveCrossSection}
+          />
+        </div>
+        <Minimap threads={THREADS} events={EVENTS} activeThreadIds={st.activeThreadIds}
+          dataStart={DATA_START} dataEnd={DATA_END}
+          viewStart={st.view.start} viewEnd={st.view.end}
+          dark={st.dark} onViewChange={st.setRange} />
+
+        <Drawer mode={st.drawerMode} onClose={st.closeDrawer}>
+          {st.drawerMode === 'event' && selected && (
+            <EventDetail ev={selected} threads={THREADS} eventsById={eventsById} links={LINKS} dark={st.dark} onSelect={st.select} />
+          )}
+          {st.drawerMode === 'section' && csDate !== null && (
+            <CrossSectionPanel threads={THREADS} events={EVENTS} activeThreadIds={st.activeThreadIds}
+              csDate={csDate} dark={st.dark} onSelect={st.select} />
+          )}
+          {st.drawerMode === 'sql' && <SqlConsole db={db} knownIds={knownIds} onSelect={st.select} />}
+        </Drawer>
+      </div>
+    </div>
+  );
+}
