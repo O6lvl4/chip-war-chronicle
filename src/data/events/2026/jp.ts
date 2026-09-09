@@ -57,4 +57,20 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www8.cao.go.jp/cstp/ai/ai_plan/ai_plan.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'jp-58', threadId: 'jp', date: '2026-07-14', weight: 2,
+    title: 'タワーセミコンダクターの計画を認定 最大1600億円',
+    body: '経済安保推進法の安定供給確保計画としてイスラエルのタワーセミコンダクターの計画を認定。新潟県妙高市(2027年5月供給開始)と富山県魚津市(2028年後半)で光通信用半導体を量産し、約6000億円の投資に最大約1600億円を助成する。半導体計画への補助額としては過去最大。',
+    source: '赤澤経済産業大臣 記者会見',
+    sourceUrl: 'https://www.meti.go.jp/speeches/kaiken/2026/20260714001.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'jp-59', threadId: 'jp', date: '2026-07-30', weight: 2,
+    title: '令和9年度概算要求基準を閣議了解',
+    body: '「強く豊かな日本」投資枠を新設し、成長・危機管理投資は要求額に上限を設けないとした。経済産業省の令和9年度概算要求は総額7兆7859億円で、AI・半導体産業基盤強化フレームに5272億円を計上した。',
+    source: '財務省 令和9年度予算の概算要求に当たっての基本的な方針について',
+    sourceUrl: 'https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2027/sy260730a.pdf',
+    sourceTier: 'primary',
+  },
 ];

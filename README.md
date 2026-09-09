@@ -40,6 +40,20 @@
 
 出典URLはすべて取得して内容と日付を確認したものですが、リンク切れや事実の誤りに気づいたら Issue か PR をください。
 
+### データの更新
+
+年ファイルを手で編集せず、`scripts/` のツールに流します。
+
+```bash
+node scripts/data-status.mjs          # 系列ごとの最終更新日・次のid・直近の出来事・整合性
+node scripts/insert-events.mjs si < events.json   # 年ファイルへ振り分けて日付順に並べ直す
+node scripts/add-links.mjs < links.json           # 両端のidと日付順を検証して起点の年のファイルへ
+node scripts/build-events-index.mjs               # 各 index.ts を再生成
+node scripts/remove-events.mjs si-88              # 出来事とそれを参照するリンクを削除
+```
+
+`data-status.mjs` は重複 id・年フォルダと日付の不一致・出典URLの欠落・未来の日付・リンクの参照切れ・時間をさかのぼるリンクを見て、問題があれば終了コード 1 を返します。何をどう調べて足すかの手順は `.claude/skills/chronicle-update/SKILL.md` にあります。
+
 ## 開発
 
 ```bash

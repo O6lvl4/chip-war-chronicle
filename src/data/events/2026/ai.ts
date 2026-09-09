@@ -34,6 +34,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-114', threadId: 'ai', date: '2026-06-01', weight: 3,
+    title: 'Anthropic SECにS-1を秘密提出',
+    body: 'AnthropicがIPOに向けForm S-1の登録届出書ドラフトをSECに秘密提出したと公表。株数と価格は未定で、実施は市場環境次第とした。主要AIラボで最初の株式公開に向けた動きとなる。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.anthropic.com/news/confidential-draft-s1-sec',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-17', threadId: 'ai', date: '2026-06-03', weight: 2,
     title: '大手4社 2026年設備投資 7250億ドル',
     body: 'Amazon・Alphabet・Microsoft・Metaの2026年設備投資計画が合計7250億ドルに達し、前年の4100億ドルから77%増と報道。Amazon2000億ドル、Microsoft1900億ドルなど、AIデータセンター投資が過去最大に。',

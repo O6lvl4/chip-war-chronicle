@@ -81,4 +81,20 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.mofcom.gov.cn/zcfb/blgg/gg/2026/art/2026/art_e715aef77348447fb40cea835cdd8015.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-125', threadId: 'pr', date: '2026-07-10', weight: 3,
+    title: '米、UAE向け輸出管理を緩和 AIチップ許可不要に',
+    body: '商務省がUAEをカントリーグループA:5に格上げしD:3・D:4から除外。UAE政府と一部企業は先端計算アイテム(AIチップ・サーバ)を許可なしで受領できる。2025年5月の米UAE AI協力枠組みに沿った措置で、UAE側の対米AIインフラ投資が前提。',
+    source: '米商務省BIS',
+    sourceUrl: 'https://www.bis.gov/press-release/department-commerce-eases-export-controls-uae',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-126', threadId: 'pr', date: '2026-08-06', weight: 2,
+    title: '232条 ポリシリコン関税15%と最低輸入価格',
+    body: 'トランプ大統領が布告に署名。12月4日発効で誘導品に15%の従価税を課し、ポリシリコン21ドル/kg、インゴット・ウェーハ100ドル/kg、太陽電池0.22ドル/W、モジュール0.38ドル/Wの最低輸入価格を設ける。日本・EU・韓国・台湾等は合計15%に調整。米国の生産シェアは2005年の50%から2024年に2%未満へ落ちていた。',
+    source: 'ホワイトハウス ファクトシート',
+    sourceUrl: 'https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-bolsters-national-security-and-strengthens-u-s-supply-chains-by-imposing-tariffs-on-polysilicon-and-its-derivatives/',
+    sourceTier: 'primary',
+  },
 ];
