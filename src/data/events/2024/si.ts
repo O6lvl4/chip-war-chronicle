@@ -81,12 +81,4 @@ export const EVENTS_2024_SI: TimelineEvent[] = [
     sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1719/intel-announces-retirement-of-ceo-pat-gelsinger',
     sourceTier: 'primary',
   },
-  {
-    id: 'si-40', threadId: 'si', date: '2024-12-18', weight: 2,
-    title: 'キオクシア 東証プライム上場',
-    body: 'NAND世界2位のキオクシアホールディングスが東証プライム市場に上場。Bain Capital主導の買収から約6年を経た再上場で、AI需要下での3D NAND投資に向けた資金調達手段を得た。',
-    source: 'キオクシアホールディングス',
-    sourceUrl: 'https://www.kioxia-holdings.com/en-jp/news/2024/20241218-1.html',
-    sourceTier: 'primary',
-  },
 ];

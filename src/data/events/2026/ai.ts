@@ -98,14 +98,6 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'ai-18', threadId: 'ai', date: '2026-07-13', endDate: '2026-07-29', weight: 2,
-    title: '半導体株 急落、AI投資過熱に懸念',
-    body: 'SK hynixの米国上場直後の記録的急落を皮切りに半導体株が6月高値から20%超下落し弱気相場入り。AI投資の循環的資金調達や中国メモリ勢の台頭への警戒から、Micron・Samsungも大幅安となった。',
-    source: 'Yahoo Finance',
-    sourceUrl: 'https://finance.yahoo.com/markets/article/micron-sk-hynix-stocks-sink-as-ai-chip-sell-off-deepens-125622548.html',
-    sourceTier: 'secondary',
-  },
-  {
     id: 'ai-120', threadId: 'ai', date: '2026-07-16', weight: 3,
     title: '日本政府・NVIDIA・Noetra 国家AIインフラを始動',
     body: '世界初の国家規模AIインフラとして「Vera Rubin AIファクトリー」を始動。Vera CPU 1万3750基とRubin GPU 2万7500基をDSXプラットフォーム上に置き、140MWのデータセンター容量を持つ。経産省が支援しFRONTiaプロジェクトの計算基盤となる。モデル開発を担うNoetraにはソニー、ソフトバンク、NEC、ホンダなど44社が参画した。',
@@ -119,14 +111,6 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     body: 'AnthropicがClaude Opus 5を発表。コーディングでOpus 4.8の2倍の性能をより低コストで実現し、ARC-AGI 3では競合の3倍のスコアを記録。価格は入力100万トークン5ドル・出力25ドルで据え置き、2倍料金の高速モードも提供した。',
     source: 'Anthropic',
     sourceUrl: 'https://www.anthropic.com/news/claude-opus-5',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'ai-19', threadId: 'ai', date: '2026-08-26', weight: 2,
-    title: 'NVIDIA 四半期売上 962億ドル',
-    body: 'NVIDIAの2027年度Q2決算は売上962億ドル(前年比106%増)、データセンター売上890億ドル(同117%増)。Q3見通しは1080億ドルで、中国向けデータセンター売上をゼロと想定しても需要は衰えず。',
-    source: 'NVIDIA 8-K (SEC EDGAR)',
-    sourceUrl: 'https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm',
     sourceTier: 'primary',
   },
   {

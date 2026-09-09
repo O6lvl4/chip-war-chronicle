@@ -26,6 +26,14 @@ export const EVENTS_2020_PR: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'pr-132', threadId: 'pr', date: '2020-07-14', weight: 2,
+    title: '英国 5G網からHuawei排除を決定',
+    body: '英政府が2021年以降のHuawei製5G機器の新規購入を禁止し、2027年末までに既設機器を全面撤去すると発表。米国の半導体制裁でHuaweiの供給網の安全性を保証できなくなったことを理由に挙げた。',
+    source: '英国政府 (GOV.UK)',
+    sourceUrl: 'https://www.gov.uk/government/news/huawei-to-be-removed-from-uk-5g-networks-by-2027',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-106', threadId: 'pr', date: '2020-08-04', weight: 2,
     title: '中国 集成電路新政策 28nm以下10年免税',
     body: '中国国務院が「新時期の集成電路産業・ソフトウェア産業の高品質発展促進政策」を公布。28nm以下かつ操業15年以上のプロジェクトに法人税を10年間免除するなど税制・融資・人材面で優遇し、米規制強化下での半導体自給を国家戦略として加速した。',

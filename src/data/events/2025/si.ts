@@ -82,6 +82,14 @@ export const EVENTS_2025_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-95', threadId: 'si', date: '2025-09-12', weight: 2,
+    title: 'SK hynix HBM4 開発完了・量産準備',
+    body: 'SK hynixが世界初となるHBM4の開発完了と量産体制の整備を発表。2048本のI/Oで帯域を2倍、電力効率を40%以上改善し、10Gbps超で動作。NVIDIA次世代Rubin向け供給を見据える。',
+    source: 'SK hynix ニュースルーム',
+    sourceUrl: 'https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-16', threadId: 'si', date: '2025-09-18', weight: 2,
     title: 'NVIDIAがIntelに50億ドル出資',
     body: 'NVIDIAとIntelがAIインフラとPC向け製品の共同開発で提携し、NVIDIAがIntel普通株を1株23.28ドルで50億ドル分取得すると発表。x86とNVLinkを組み合わせたカスタムCPUを開発する。',
@@ -95,14 +103,6 @@ export const EVENTS_2025_SI: TimelineEvent[] = [
     body: 'Huaweiが上海のHUAWEI CONNECTでAI半導体Ascendの3年計画を公表。2026年Q1の950PR/950DTから960（2027年）、970（2028年）へ毎年更新し、自社開発HBM「HiBL 1.0」「HiZQ 2.0」を搭載する方針を示した。',
     source: 'Huawei 基調講演',
     sourceUrl: 'https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'si-17', threadId: 'si', date: '2025-09-30', weight: 3,
-    title: 'オランダ政府がNexperiaを管理下に',
-    body: 'オランダ経済相が中国Wingtech傘下のNexperiaに対し、ガバナンス上の重大な欠陥を理由に1952年制定の物資供給法(Wbg)を初めて発動。車載向けレガシーチップ供給を巡り中国が対抗措置として輸出制限を課し、欧州自動車産業に波及した。',
-    source: 'オランダ政府 (Government.nl)',
-    sourceUrl: 'https://www.government.nl/latest/news/2025/10/12/minister-of-economic-affairs-invokes-goods-availability-act',
     sourceTier: 'primary',
   },
   {

@@ -10,6 +10,14 @@ export const EVENTS_2023_PR: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'pr-133', threadId: 'pr', date: '2023-04-25', weight: 2,
+    title: 'Rapidus 2600億円追加支援 承認',
+    body: '経産省がポスト5G基金事業のステージゲート審査を経て、Rapidusの2nm世代ロジック半導体製造技術開発への予算増額を承認。2022年11月採択時の700億円に2600億円を加え、2022・2023年度の支援上限は3300億円となった。北海道千歳市での工場建設と2025年試作ライン稼働に向けた資金の柱となる。',
+    source: '経済産業省 ポスト5G基金事業 テーマ概要',
+    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/post5g/pdf/240402_theme_01.pdf',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-52', threadId: 'pr', date: '2023-05-11', weight: 1,
     title: 'AI戦略会議 初会合',
     body: '政府のAI戦略会議が首相官邸で第1回会合を開催。生成AIの急速な普及を受け、「AIをめぐる主な論点」を議題に、リスクへの対応と利活用促進の両面から政府としての検討を開始した。',

@@ -26,6 +26,14 @@ export const EVENTS_2020_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-93', threadId: 'si', date: '2020-09-13', endDate: '2022-02-07', weight: 2,
+    title: 'NVIDIA Arm買収 合意〜断念',
+    body: 'NVIDIAがSoftBankからArmを400億ドルで買収すると発表。しかし米英EUの規制当局の承認が得られず、2022年2月7日に両社が契約解消を発表。Armは2023年のIPOへ向かう。',
+    source: 'NVIDIA ニュースリリース',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-and-softbank-group-announce-termination-of-nvidias-acquisition-of-arm-limited',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-4', threadId: 'si', date: '2020-09-14', weight: 3,
     title: 'TSMCがHuawei向け出荷を停止',
     body: '米商務省の輸出規制強化を受け、TSMCは2020年9月14日を最後にHuawei(HiSilicon)向けウェーハ出荷を停止。5月15日以降は新規受注も受けておらず、Huaweiのスマートフォン事業は在庫枯渇が避けられない状況となった。',

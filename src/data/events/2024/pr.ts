@@ -10,6 +10,14 @@ export const EVENTS_2024_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-134', threadId: 'pr', date: '2024-04-02', weight: 2,
+    title: 'Rapidus 追加支援5900億円 承認',
+    body: '経産省がポスト5G基金事業のステージゲート審査でRapidusの2024年度計画を承認し、2nmロジック製造技術に5365億円、新規採択の2nm世代チップレット・パッケージ技術に535億円の計最大5900億円の支援を決定。累計支援は最大9200億円となり、千歳工場の装置搬入と2025年4月の試作ライン稼働を後押しした。',
+    source: '経済産業省 ポスト5G基金事業',
+    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/post5g/20240402.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-122', threadId: 'pr', date: '2024-05-14', weight: 2,
     title: '対中301条関税 半導体を50%へ引上げ',
     body: 'バイデン政権が通商法301条関税の4年見直しを受け、中国製半導体の関税率を2025年に25%から50%へ引き上げると発表。EVは100%、太陽電池50%など戦略分野で大幅増税し、中国のレガシー半導体の過剰生産能力に対抗する姿勢を明確にした。',
@@ -24,6 +32,14 @@ export const EVENTS_2024_PR: TimelineEvent[] = [
     source: 'Global Trade Alert',
     sourceUrl: 'https://globaltradealert.org/intervention/122819',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'pr-135', threadId: 'pr', date: '2024-08-01', weight: 2,
+    title: 'EU AI法 発効',
+    body: 'EUのAI法が8月1日に発効。リスク別に義務を課し、汎用AIモデルへの規定は12か月後に適用開始。AI提供者に透明性やデータ品質の要件を課す世界初の包括規制となった。',
+    source: '欧州委員会',
+    sourceUrl: 'https://commission.europa.eu/news/ai-act-enters-force-2024-08-01_en',
+    sourceTier: 'primary',
   },
   {
     id: 'pr-63', threadId: 'pr', date: '2024-08-15', weight: 2,

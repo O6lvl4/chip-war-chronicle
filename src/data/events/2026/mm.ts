@@ -98,6 +98,14 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'mm-98', threadId: 'mm', date: '2026-07-13', endDate: '2026-07-29', weight: 2,
+    title: '半導体株 急落、AI投資過熱に懸念',
+    body: 'SK hynixの米国上場直後の記録的急落を皮切りに半導体株が6月高値から20%超下落し弱気相場入り。AI投資の循環的資金調達や中国メモリ勢の台頭への警戒から、Micron・Samsungも大幅安となった。',
+    source: 'Yahoo Finance',
+    sourceUrl: 'https://finance.yahoo.com/markets/article/micron-sk-hynix-stocks-sink-as-ai-chip-sell-off-deepens-125622548.html',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'mm-87', threadId: 'mm', date: '2026-07-29', weight: 3,
     title: 'FRB 3人の利上げ反対を抱えて据え置き',
     body: '9対3でFF金利誘導目標を3.50〜3.75%に据え置き。ハマック(クリーブランド)、カシュカリ(ミネアポリス)、ローガン(ダラス)の3総裁が0.25%利上げを主張して反対した。インフレが5年以上2%目標を上回り、利上げ方向の反対3票は2016年9月以来。',
@@ -111,6 +119,14 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     body: '6月の1.0%への引き上げ後、初の会合で無担保コールレートの誘導水準を据え置き。高田委員が1.25%への引き上げを提案したが反対多数で否決された。2026年度のコアCPI見通しは政府の電気・ガス支援を織り込み+2.8%から+2.5%へ下方修正。',
     source: '日本銀行 当面の金融政策運営について',
     sourceUrl: 'https://www.boj.or.jp/mopo/mpmdeci/mpr_2026/k260731a.pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-99', threadId: 'mm', date: '2026-08-26', weight: 2,
+    title: 'NVIDIA 四半期売上 962億ドル',
+    body: 'NVIDIAの2027年度Q2決算は売上962億ドル(前年比106%増)、データセンター売上890億ドル(同117%増)。Q3見通しは1080億ドルで、中国向けデータセンター売上をゼロと想定しても需要は衰えず。',
+    source: 'NVIDIA 8-K (SEC EDGAR)',
+    sourceUrl: 'https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm',
     sourceTier: 'primary',
   },
   {

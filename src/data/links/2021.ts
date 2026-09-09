@@ -38,7 +38,7 @@ export const LINKS_2021: Link[] = [
   { from: 'jp-8', to: 'jp-44', why: '特定半導体基金の第1号認定がJASM熊本' },
   { from: 'jp-9', to: 'jp-44', why: '補正6170億円が4760億円助成の原資' },
   { from: 'jp-43', to: 'jp-1', why: '土地規制法が経済安保法制の先駆けとなった' },
-  { from: 'mm-78', to: 'mm-4', why: 'Austin工場停止が自動車向け半導体不足をさらに悪化' },
+  { from: 'si-94', to: 'mm-4', why: 'Austin工場停止が自動車向け半導体不足をさらに悪化' },
   { from: 'mm-4', to: 'mm-79', why: '半導体不足で受託製造の需給逼迫、TSMCが大幅値上げ' },
   { from: 'mm-79', to: 'mm-28', why: 'ファウンドリ値上げと供給制約で自動車業界損失2100億ドル' },
   { from: 'mm-4', to: 'mm-80', why: '半導体不足で成熟プロセス需要が高まりGlobalFoundries上場が成功' },

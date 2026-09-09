@@ -34,6 +34,14 @@ export const EVENTS_2019_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-131', threadId: 'pr', date: '2019-07-01', weight: 2,
+    title: '対韓輸出管理見直し 3品目を個別許可へ',
+    body: '経産省が外為法に基づく韓国向け輸出管理の運用見直しを発表。7月4日からフッ化水素・フッ化ポリイミド・レジストの3品目とその関連技術を包括許可の対象から外し、契約ごとの個別許可審査に切り替えた。半導体材料を国家間の安全保障貿易管理の手段として用いた日本初の事例で、韓国メモリ産業の供給網を揺さぶった。',
+    source: '経済産業省 安全保障貿易管理',
+    sourceUrl: 'https://www.meti.go.jp/policy/external_economy/export_control_korea/index.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-99', threadId: 'pr', date: '2019-08-13', weight: 2,
     title: 'NDAA889条 連邦調達から排除',
     body: '2019年度国防権限法889条(a)に基づく暫定FAR規則が施行。Huawei・ZTE・Hikvision・Dahua・Hyteraの通信・監視機器を連邦政府が調達することを禁止した。2020年8月には同機器を使う企業との契約自体を禁じるパートBに拡大した。',

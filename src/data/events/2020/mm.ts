@@ -42,14 +42,6 @@ export const EVENTS_2020_MM: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'mm-3', threadId: 'mm', date: '2020-09-13', endDate: '2022-02-07', weight: 2,
-    title: 'NVIDIA Arm買収 合意〜断念',
-    body: 'NVIDIAがSoftBankからArmを400億ドルで買収すると発表。しかし米英EUの規制当局の承認が得られず、2022年2月7日に両社が契約解消を発表。Armは2023年のIPOへ向かう。',
-    source: 'NVIDIA ニュースリリース',
-    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-and-softbank-group-announce-termination-of-nvidias-acquisition-of-arm-limited',
-    sourceTier: 'primary',
-  },
-  {
     id: 'mm-76', threadId: 'mm', date: '2020-09-28', weight: 2,
     title: 'キオクシア 上場を延期',
     body: 'キオクシアHDが10月6日予定の東証上場を延期。市場の変動と新型コロナ第2波への懸念を理由としたが、9月15日発効の対Huawei輸出規制で主要顧客向け出荷が止まった影響も指摘された。想定調達額は最大約3300億円で、2020年国内最大のIPOとなるはずだった。',

@@ -10,14 +10,6 @@ export const EVENTS_2021_MM: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
-    id: 'mm-78', threadId: 'mm', date: '2021-02-16', weight: 2,
-    title: 'テキサス寒波 Austin半導体工場停止',
-    body: '記録的寒波による電力危機でAustin Energyが大口需要家に操業停止を要請し、SamsungのAustin工場のほかNXP、Infineonの工場も2月16日から停止。復旧に1カ月超を要し、自動車向け半導体不足が深刻化する中で供給を一段と逼迫させた。',
-    source: 'The Verge, 2021-02-17',
-    sourceUrl: 'https://www.theverge.com/2021/2/17/22287054/samsung-chip-production-halted-austin-winter-storm-uri-power-blackouts',
-    sourceTier: 'secondary',
-  },
-  {
     id: 'mm-4', threadId: 'mm', date: '2021-04-08', weight: 2,
     title: '自動車業界 チップ不足で減産拡大',
     body: 'GMが北米7工場、Fordがシカゴなど3工場の生産停止を発表。COVID後の需要回復にマイコン・パワー半導体の供給が追いつかず、GMは年間最大20億ドルの利益減を見込んだ。',

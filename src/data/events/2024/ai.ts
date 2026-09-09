@@ -26,14 +26,6 @@ export const EVENTS_2024_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'ai-50', threadId: 'ai', date: '2024-03-01', weight: 2,
-    title: 'NVIDIA 時価総額 2兆ドル超で終値',
-    body: 'NVIDIAが米国史上3社目となる時価総額2兆ドル超で取引を終えた。1兆ドルから2兆ドルへの到達はわずか180日で、AppleやMicrosoftが500日以上かけたのに比べ圧倒的に速く、AI需要による評価の急拡大を象徴した。',
-    source: 'Wikipedia (Nvidia)',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Nvidia',
-    sourceTier: 'secondary',
-  },
-  {
     id: 'ai-35', threadId: 'ai', date: '2024-03-04', weight: 2,
     title: 'Anthropic Claude 3 発表',
     body: 'AnthropicがClaude 3ファミリー(Haiku/Sonnet/Opus)を発表。OpusはMMLUやGPQAなど主要評価で競合を上回ると主張し、200Kトークンの文脈と画像入力に対応。最先端モデルの競争が多社化した。',
@@ -79,14 +71,6 @@ export const EVENTS_2024_AI: TimelineEvent[] = [
     body: 'Metaが4050億パラメータのLlama 3.1を公開。15兆トークン超をH100 1万6000基超で学習した初のフロンティア級オープンモデルで、出力を他モデルの改良に使える条件に緩和。オープン勢の計算規模が最前線に並んだ。',
     source: 'Meta AI',
     sourceUrl: 'https://ai.meta.com/blog/meta-llama-3-1/',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'ai-36', threadId: 'ai', date: '2024-08-01', weight: 2,
-    title: 'EU AI法 発効',
-    body: 'EUのAI法が8月1日に発効。リスク別に義務を課し、汎用AIモデルへの規定は12か月後に適用開始。AI提供者に透明性やデータ品質の要件を課す世界初の包括規制となった。',
-    source: '欧州委員会',
-    sourceUrl: 'https://commission.europa.eu/news/ai-act-enters-force-2024-08-01_en',
     sourceTier: 'primary',
   },
   {

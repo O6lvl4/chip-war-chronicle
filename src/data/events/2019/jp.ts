@@ -26,14 +26,6 @@ export const EVENTS_2019_JP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'jp-36', threadId: 'jp', date: '2019-07-01', weight: 2,
-    title: '対韓輸出管理見直し 3品目を個別許可へ',
-    body: '経産省が外為法に基づく韓国向け輸出管理の運用見直しを発表。7月4日からフッ化水素・フッ化ポリイミド・レジストの3品目とその関連技術を包括許可の対象から外し、契約ごとの個別許可審査に切り替えた。半導体材料を国家間の安全保障貿易管理の手段として用いた日本初の事例で、韓国メモリ産業の供給網を揺さぶった。',
-    source: '経済産業省 安全保障貿易管理',
-    sourceUrl: 'https://www.meti.go.jp/policy/external_economy/export_control_korea/index.html',
-    sourceTier: 'primary',
-  },
-  {
     id: 'jp-37', threadId: 'jp', date: '2019-08-02', weight: 1,
     title: '輸出貿易管理令改正 閣議決定 韓国除外',
     body: '輸出貿易管理令の一部を改正する政令を閣議決定。包括許可の優遇を受けるグループA(旧ホワイト国)から韓国を削除し、8月28日に施行した。3品目に限らずリスト規制品目全般で個別審査が可能となり、韓国側はWTO提訴とGSOMIA破棄通告で応じた。措置は2023年7月に解除された。',

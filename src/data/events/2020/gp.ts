@@ -50,14 +50,6 @@ export const EVENTS_2020_GP: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
-    id: 'gp-27', threadId: 'gp', date: '2020-07-14', weight: 2,
-    title: '英国 5G網からHuawei排除を決定',
-    body: '英政府が2021年以降のHuawei製5G機器の新規購入を禁止し、2027年末までに既設機器を全面撤去すると発表。米国の半導体制裁でHuaweiの供給網の安全性を保証できなくなったことを理由に挙げた。',
-    source: '英国政府 (GOV.UK)',
-    sourceUrl: 'https://www.gov.uk/government/news/huawei-to-be-removed-from-uk-5g-networks-by-2027',
-    sourceTier: 'primary',
-  },
-  {
     id: 'gp-64', threadId: 'gp', date: '2020-07-23', weight: 1,
     title: 'ポンペオ ニクソン図書館で対中演説',
     body: 'ポンペオ国務長官が「共産中国と自由世界の未来」と題し、ニクソン以来の関与政策の失敗を宣言。前日には在ヒューストン中国総領事館の閉鎖を命じており、米中関係は国交正常化以来の最悪期に入った。',

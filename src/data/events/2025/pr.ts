@@ -130,6 +130,14 @@ export const EVENTS_2025_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-136', threadId: 'pr', date: '2025-09-30', weight: 3,
+    title: 'オランダ政府がNexperiaを管理下に',
+    body: 'オランダ経済相が中国Wingtech傘下のNexperiaに対し、ガバナンス上の重大な欠陥を理由に1952年制定の物資供給法(Wbg)を初めて発動。車載向けレガシーチップ供給を巡り中国が対抗措置として輸出制限を課し、欧州自動車産業に波及した。',
+    source: 'オランダ政府 (Government.nl)',
+    sourceUrl: 'https://www.government.nl/latest/news/2025/10/12/minister-of-economic-affairs-invokes-goods-availability-act',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-18', threadId: 'pr', date: '2025-10-09', weight: 3,
     title: '中国 レアアース規制 域外適用へ',
     body: '中国商務部が公告2025年第61号で、中国原産レアアースを0.1%以上含む海外製品の輸出にも許可を義務付ける域外規制を発表。14nm以下ロジックや256層以上メモリ、軍事転用可能なAI向けは個別審査とした。',

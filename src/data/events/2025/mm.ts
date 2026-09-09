@@ -10,6 +10,14 @@ export const EVENTS_2025_MM: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'mm-95', threadId: 'mm', date: '2025-01-27', weight: 3,
+    title: 'DeepSeekショック NVIDIA株17%安',
+    body: 'DeepSeek R1の低コスト開発報道を受けNVIDIA株が一時18%下落し、時価総額約5900億ドルを失う。米株式史上最大の1日減少額となり、AI投資の過剰さへの懸念が一気に広がった。',
+    source: 'NBC News',
+    sourceUrl: 'https://www.nbcnews.com/business/business-news/nvidia-loses-market-value-chinese-ai-startup-deepseek-debut-rcna189431',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'mm-38', threadId: 'mm', date: '2025-03-28', weight: 2,
     title: 'CoreWeave NASDAQ上場 AI IPO',
     body: 'NVIDIA GPUクラウドのCoreWeaveがNASDAQに上場（ティッカーCRWV）。公開価格は当初想定を下回る40ドルで、3750万株を売り出し約15億ドルを調達。AIインフラ企業として2025年最大級の上場となり、AI投資の資本市場への波及を示した。',
@@ -23,6 +31,14 @@ export const EVENTS_2025_MM: TimelineEvent[] = [
     body: '米国の相互関税発動と中国の34%報復関税を受け、日経平均は2644円安（−7.83%）の3万1136円58銭で終了。世界景気減速への警戒から構成225銘柄すべてが下落した。',
     source: '日本経済新聞',
     sourceUrl: 'https://www.nikkei.com/article/DGXZQOFL070M20X00C25A4000000/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'mm-96', threadId: 'mm', date: '2025-07-10', weight: 2,
+    title: 'NVIDIA 史上初の時価総額4兆ドル',
+    body: 'NVIDIAが史上初めて時価総額4兆ドル超で取引を終えた(前日9日に取引時間中で一時到達)。英国上場企業の合計時価総額を上回る規模で、DeepSeekショックからの回復とBlackwell需要が評価を押し上げた。',
+    source: 'Wikipedia (Nvidia)',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Nvidia',
     sourceTier: 'secondary',
   },
   {
@@ -88,6 +104,14 @@ export const EVENTS_2025_MM: TimelineEvent[] = [
     source: 'FRB FOMC声明',
     sourceUrl: 'https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm',
     sourceTier: 'primary',
+  },
+  {
+    id: 'mm-97', threadId: 'mm', date: '2025-10-29', weight: 2,
+    title: 'NVIDIA 時価総額 5兆ドル到達',
+    body: 'NVIDIAが上場企業として初めて時価総額5兆ドルを突破。4兆ドル到達からわずか3ヶ月で、Huang CEOはAIチップ受注5000億ドルの見通しを示した。米中首脳会談でのBlackwell協議観測も追い風に。',
+    source: 'TechCrunch',
+    sourceUrl: 'https://techcrunch.com/2025/10/29/nvidia-becomes-first-public-company-worth-5-trillion/',
+    sourceTier: 'secondary',
   },
   {
     id: 'mm-59', threadId: 'mm', date: '2025-11-04', endDate: '2025-11-20', weight: 3,

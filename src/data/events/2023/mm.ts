@@ -42,6 +42,22 @@ export const EVENTS_2023_MM: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'mm-91', threadId: 'mm', date: '2023-05-24', weight: 3,
+    title: 'NVIDIA ガイダンス・ショック',
+    body: 'NVIDIAが2024年度Q1決算で売上71.9億ドルに対し、Q2見通しを市場予想を5割上回る110億ドルと発表。生成AI向けデータセンター需要の爆発を数字で示し、株価が急騰した。',
+    source: 'NVIDIA ニュースルーム',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2024',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-92', threadId: 'mm', date: '2023-05-30', weight: 3,
+    title: 'NVIDIA 時価総額 1兆ドル超え',
+    body: 'NVIDIAの時価総額が取引中に1兆ドルを突破。AI需要に牽引されたGPU販売急増が評価され、Apple・Microsoft・Alphabet・Amazonに続く「1兆ドルクラブ」入りを果たした。',
+    source: 'Fortune',
+    sourceUrl: 'https://fortune.com/2023/05/30/nvidia-stock-market-cap-trillion-dollars/',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'mm-32', threadId: 'mm', date: '2023-07-26', weight: 2,
     title: 'FRB 利上げ最終 5.25〜5.50%',
     body: 'FOMCがFF金利の誘導目標を5.25〜5.50%へ0.25%引き上げ、2001年以来の高水準に。これが2022年3月から続いた利上げサイクル最後の引き上げとなり、その後は据え置きを経て2024年9月の利下げへ転じた。',

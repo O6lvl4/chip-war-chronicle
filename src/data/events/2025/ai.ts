@@ -26,14 +26,6 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'ai-12', threadId: 'ai', date: '2025-01-27', weight: 3,
-    title: 'DeepSeekショック NVIDIA株17%安',
-    body: 'DeepSeek R1の低コスト開発報道を受けNVIDIA株が一時18%下落し、時価総額約5900億ドルを失う。米株式史上最大の1日減少額となり、AI投資の過剰さへの懸念が一気に広がった。',
-    source: 'NBC News',
-    sourceUrl: 'https://www.nbcnews.com/business/business-news/nvidia-loses-market-value-chinese-ai-startup-deepseek-debut-rcna189431',
-    sourceTier: 'secondary',
-  },
-  {
     id: 'ai-104', threadId: 'ai', date: '2025-02-19', weight: 2,
     title: 'xAI Grok 3 発表 Colossusで学習',
     body: 'xAIがGrok 3を公開。従来モデルの10倍の計算量をColossusで投入し、Chatbot Arenaで1402、AIME 2025で93.3%を主張。20万GPUクラスタでの次期学習も予告し、GPU集積の規模競争を加速させた。',
@@ -130,14 +122,6 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
-    id: 'ai-59', threadId: 'ai', date: '2025-07-10', weight: 2,
-    title: 'NVIDIA 史上初の時価総額4兆ドル',
-    body: 'NVIDIAが史上初めて時価総額4兆ドル超で取引を終えた(前日9日に取引時間中で一時到達)。英国上場企業の合計時価総額を上回る規模で、DeepSeekショックからの回復とBlackwell需要が評価を押し上げた。',
-    source: 'Wikipedia (Nvidia)',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Nvidia',
-    sourceTier: 'secondary',
-  },
-  {
     id: 'ai-106', threadId: 'ai', date: '2025-08-05', weight: 1,
     title: 'Anthropic Claude Opus 4.1 発表',
     body: 'AnthropicがClaude Opus 4.1を公開。SWE-bench Verifiedで74.5%と実コード修正の最高水準を更新し、価格はOpus 4と同じ。API・Bedrock・Vertex AIで同日提供され、上位モデルの更新周期が数か月単位に縮まった。',
@@ -160,14 +144,6 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     source: 'TechCrunch',
     sourceUrl: 'https://techcrunch.com/2025/09/10/openai-and-oracle-reportedly-ink-historic-cloud-computing-deal/',
     sourceTier: 'secondary',
-  },
-  {
-    id: 'ai-13', threadId: 'ai', date: '2025-09-12', weight: 2,
-    title: 'SK hynix HBM4 開発完了・量産準備',
-    body: 'SK hynixが世界初となるHBM4の開発完了と量産体制の整備を発表。2048本のI/Oで帯域を2倍、電力効率を40%以上改善し、10Gbps超で動作。NVIDIA次世代Rubin向け供給を見据える。',
-    source: 'SK hynix ニュースルーム',
-    sourceUrl: 'https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/',
-    sourceTier: 'primary',
   },
   {
     id: 'ai-14', threadId: 'ai', date: '2025-09-22', weight: 3,
@@ -208,14 +184,6 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     source: 'Anthropic',
     sourceUrl: 'https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services',
     sourceTier: 'primary',
-  },
-  {
-    id: 'ai-15', threadId: 'ai', date: '2025-10-29', weight: 2,
-    title: 'NVIDIA 時価総額 5兆ドル到達',
-    body: 'NVIDIAが上場企業として初めて時価総額5兆ドルを突破。4兆ドル到達からわずか3ヶ月で、Huang CEOはAIチップ受注5000億ドルの見通しを示した。米中首脳会談でのBlackwell協議観測も追い風に。',
-    source: 'TechCrunch',
-    sourceUrl: 'https://techcrunch.com/2025/10/29/nvidia-becomes-first-public-company-worth-5-trillion/',
-    sourceTier: 'secondary',
   },
   {
     id: 'ai-45', threadId: 'ai', date: '2025-11-18', weight: 2,

@@ -2,14 +2,6 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2018_MM: TimelineEvent[] = [
   {
-    id: 'mm-64', threadId: 'mm', date: '2018-07-26', weight: 2,
-    title: 'Qualcomm NXP買収を断念',
-    body: 'Qualcommは中国当局(SAMR)の承認が期限までに得られず約440億ドルのNXP買収を断念。20億ドルの解約金を支払い最大300億ドルの自社株買いに転換した。米中貿易摩擦が半導体の大型M&Aを頓挫させた初の事例となった。',
-    source: 'Nikkei Asia, 2018-07-27',
-    sourceUrl: 'https://asia.nikkei.com/Business/Business-Deals/China-shifts-blame-to-Qualcomm-for-collapse-of-NXP-deal',
-    sourceTier: 'secondary',
-  },
-  {
     id: 'mm-21', threadId: 'mm', date: '2018-08-16', weight: 2,
     title: 'DRAM価格 9四半期ぶり下落へ',
     body: 'TrendForceが2018年第4四半期のDRAM価格について、9四半期連続の上昇を経て弱含むと予測。供給ビット数の増加に対し需要の伸びが限られ、グラフィックスDRAMは既に下落を開始。2019年は前年比15〜25%安と見込んだ。',

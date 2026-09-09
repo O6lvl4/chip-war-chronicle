@@ -10,6 +10,14 @@ export const EVENTS_2024_MM: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'mm-93', threadId: 'mm', date: '2024-03-01', weight: 2,
+    title: 'NVIDIA 時価総額 2兆ドル超で終値',
+    body: 'NVIDIAが米国史上3社目となる時価総額2兆ドル超で取引を終えた。1兆ドルから2兆ドルへの到達はわずか180日で、AppleやMicrosoftが500日以上かけたのに比べ圧倒的に速く、AI需要による評価の急拡大を象徴した。',
+    source: 'Wikipedia (Nvidia)',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Nvidia',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'mm-33', threadId: 'mm', date: '2024-03-04', weight: 2,
     title: '日経平均 史上初の4万円台',
     body: '日経平均が終値4万109円23銭となり、初めて4万円の大台に乗せた。前週の米ハイテク株高と生成AIへの期待からアドバンテストや東京エレクトロンなど半導体関連株に買いが集中する一方、プライム市場の約7割の銘柄は下落した。',
@@ -79,6 +87,14 @@ export const EVENTS_2024_MM: TimelineEvent[] = [
     body: 'Micronの2024年度（8月期）売上高は251.1億ドルで前年比61%増、第4四半期は77.5億ドル。「堅調なAI需要がデータセンター向けDRAMとHBMの急拡大を牽引」とし、次四半期は87億ドル前後を見込むと発表した。',
     source: 'Micron 8-K Exhibit 99.1（SEC EDGAR）',
     sourceUrl: 'https://www.sec.gov/Archives/edgar/data/723125/000072312524000023/a2024q4ex991-pressrelease.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-94', threadId: 'mm', date: '2024-12-18', weight: 2,
+    title: 'キオクシア 東証プライム上場',
+    body: 'NAND世界2位のキオクシアホールディングスが東証プライム市場に上場。Bain Capital主導の買収から約6年を経た再上場で、AI需要下での3D NAND投資に向けた資金調達手段を得た。',
+    source: 'キオクシアホールディングス',
+    sourceUrl: 'https://www.kioxia-holdings.com/en-jp/news/2024/20241218-1.html',
     sourceTier: 'primary',
   },
 ];

@@ -2,14 +2,6 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2023_JP: TimelineEvent[] = [
   {
-    id: 'jp-47', threadId: 'jp', date: '2023-04-25', weight: 2,
-    title: 'Rapidus 2600億円追加支援 承認',
-    body: '経産省がポスト5G基金事業のステージゲート審査を経て、Rapidusの2nm世代ロジック半導体製造技術開発への予算増額を承認。2022年11月採択時の700億円に2600億円を加え、2022・2023年度の支援上限は3300億円となった。北海道千歳市での工場建設と2025年試作ライン稼働に向けた資金の柱となる。',
-    source: '経済産業省 ポスト5G基金事業 テーマ概要',
-    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/post5g/pdf/240402_theme_01.pdf',
-    sourceTier: 'primary',
-  },
-  {
     id: 'jp-48', threadId: 'jp', date: '2023-04-28', weight: 1,
     title: '基幹インフラ・特許非公開 基本指針 閣議決定',
     body: '経済安全保障推進法の残る2制度、基幹インフラ役務の安定的提供確保と特許出願非公開に関する基本指針を閣議決定。電気・通信・金融など14分野の事業者に重要設備導入の事前届出・審査を課す基準と、安全保障上機微な発明の出願を非公開とする保全審査の考え方を定め、法の4本柱すべての運用準備が整った。',

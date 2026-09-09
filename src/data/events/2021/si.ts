@@ -10,6 +10,14 @@ export const EVENTS_2021_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-94', threadId: 'si', date: '2021-02-16', weight: 2,
+    title: 'テキサス寒波 Austin半導体工場停止',
+    body: '記録的寒波による電力危機でAustin Energyが大口需要家に操業停止を要請し、SamsungのAustin工場のほかNXP、Infineonの工場も2月16日から停止。復旧に1カ月超を要し、自動車向け半導体不足が深刻化する中で供給を一段と逼迫させた。',
+    source: 'The Verge, 2021-02-17',
+    sourceUrl: 'https://www.theverge.com/2021/2/17/22287054/samsung-chip-production-halted-austin-winter-storm-uri-power-blackouts',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'si-28', threadId: 'si', date: '2021-03-19', weight: 2,
     title: 'ルネサス那珂工場で火災',
     body: 'ルネサスの那珂工場N3棟(300mmライン)でめっき装置から出火し生産が停止。車載マイコンの主力拠点であったため、世界的な自動車向けチップ不足を一段と深刻化させた。',

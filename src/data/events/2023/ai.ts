@@ -34,22 +34,6 @@ export const EVENTS_2023_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'ai-10', threadId: 'ai', date: '2023-05-24', weight: 3,
-    title: 'NVIDIA ガイダンス・ショック',
-    body: 'NVIDIAが2024年度Q1決算で売上71.9億ドルに対し、Q2見通しを市場予想を5割上回る110億ドルと発表。生成AI向けデータセンター需要の爆発を数字で示し、株価が急騰した。',
-    source: 'NVIDIA ニュースルーム',
-    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2024',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'ai-6', threadId: 'ai', date: '2023-05-30', weight: 3,
-    title: 'NVIDIA 時価総額 1兆ドル超え',
-    body: 'NVIDIAの時価総額が取引中に1兆ドルを突破。AI需要に牽引されたGPU販売急増が評価され、Apple・Microsoft・Alphabet・Amazonに続く「1兆ドルクラブ」入りを果たした。',
-    source: 'Fortune',
-    sourceUrl: 'https://fortune.com/2023/05/30/nvidia-stock-market-cap-trillion-dollars/',
-    sourceTier: 'secondary',
-  },
-  {
     id: 'ai-92', threadId: 'ai', date: '2023-06-29', weight: 1,
     title: 'Inflection H100 2.2万基',
     body: 'Inflection AIがMicrosoftとNVIDIA主導で13億ドルを調達し、評価額40億ドルに。H100 2万2000基のクラスターを構築中とし、H100供給が逼迫するなか、新興AI企業の資金調達がGPU確保競争と直結した。',

@@ -26,6 +26,14 @@ export const EVENTS_2018_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-92', threadId: 'si', date: '2018-07-26', weight: 2,
+    title: 'Qualcomm NXP買収を断念',
+    body: 'Qualcommは中国当局(SAMR)の承認が期限までに得られず約440億ドルのNXP買収を断念。20億ドルの解約金を支払い最大300億ドルの自社株買いに転換した。米中貿易摩擦が半導体の大型M&Aを頓挫させた初の事例となった。',
+    source: 'Nikkei Asia, 2018-07-27',
+    sourceUrl: 'https://asia.nikkei.com/Business/Business-Deals/China-shifts-blame-to-Qualcomm-for-collapse-of-NXP-deal',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'si-22', threadId: 'si', date: '2018-08-03', weight: 1,
     title: 'TSMC工場がWannaCry亜種に感染',
     body: 'TSMCの台湾各工場で新規装置のソフト導入時のミスからWannaCry亜種が拡散し、製造装置が停止。8月6日までに全面復旧したが、第3四半期売上に約3%の影響が出た。',

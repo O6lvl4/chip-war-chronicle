@@ -18,14 +18,6 @@ export const EVENTS_2024_JP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'jp-53', threadId: 'jp', date: '2024-04-02', weight: 2,
-    title: 'Rapidus 追加支援5900億円 承認',
-    body: '経産省がポスト5G基金事業のステージゲート審査でRapidusの2024年度計画を承認し、2nmロジック製造技術に5365億円、新規採択の2nm世代チップレット・パッケージ技術に535億円の計最大5900億円の支援を決定。累計支援は最大9200億円となり、千歳工場の装置搬入と2025年4月の試作ライン稼働を後押しした。',
-    source: '経済産業省 ポスト5G基金事業',
-    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/post5g/20240402.html',
-    sourceTier: 'primary',
-  },
-  {
     id: 'jp-54', threadId: 'jp', date: '2024-04-19', weight: 2,
     title: 'AI事業者ガイドライン 第1.0版 策定',
     body: '経産省と総務省が「AI事業者ガイドライン(第1.0版)」を取りまとめた。人間中心のAI社会原則を土台に既存3ガイドラインを統合し、AI開発者・提供者・利用者の3主体ごとに安全性・公平性・透明性など10の指針と、生成AI特有のリスクへの対応を示した。法的拘束力のないソフトローによる日本型AIガバナンスの中核文書となった。',
