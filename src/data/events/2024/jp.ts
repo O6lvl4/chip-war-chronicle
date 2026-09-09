@@ -2,14 +2,6 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2024_JP: TimelineEvent[] = [
   {
-    id: 'jp-51', threadId: 'jp', date: '2024-02-24', weight: 2,
-    title: 'JASM第2工場 認定 最大7320億円助成',
-    body: '経産省がJASM(TSMC・ソニー・デンソー・トヨタ出資)の熊本第2工場に係る特定半導体生産施設整備等計画を認定し、最大7320億円の助成を決定。6/7nm世代を含むロジック半導体を生産し、第1工場と合わせた月産能力は10万枚超となる見込み。第1工場開所式と同日で、国内先端ロジック生産の定着を示した。',
-    source: '経済産業省 認定特定半導体生産施設整備等計画',
-    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/laws/semiconductor/semiconductor_plan.html',
-    sourceTier: 'primary',
-  },
-  {
     id: 'jp-52', threadId: 'jp', date: '2024-03-15', weight: 2,
     title: '文化庁「AIと著作権に関する考え方」',
     body: '文化審議会著作権分科会法制度小委員会が「AIと著作権に関する考え方について」を取りまとめた。著作権法30条の4の下で学習目的の複製は原則許諾不要としつつ、特定作家の作風を狙った学習や、海賊版と知りつつ用いる収集は「権利者の利益を不当に害する」場合に当たり得ると整理。生成AI開発の日本ルールの解釈基準となった。',

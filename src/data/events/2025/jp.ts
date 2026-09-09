@@ -34,14 +34,6 @@ export const EVENTS_2025_JP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'jp-19', threadId: 'jp', date: '2025-11-21', weight: 2,
-    title: 'Rapidus 情報処理促進法の事業者に選定',
-    body: '経済産業省が改正情報処理促進法に基づく公募(9月3日〜10月2日)の結果、指定高速情報処理用半導体の安定生産に取り組む事業者にRapidusを選定。2025年度にIPAから1000億円の政府出資を受ける資格を得て、民間資金調達と2027年の2nm量産に向けた体制整備が本格化した。',
-    source: 'Rapidus プレスリリース',
-    sourceUrl: 'https://www.rapidus.inc/news_topics/news-info/rapidus-selected-as-official-business-operator-by-japan-government/',
-    sourceTier: 'primary',
-  },
-  {
     id: 'jp-20', threadId: 'jp', date: '2025-12-16', weight: 1,
     title: '令和7年度補正予算 成立 高市政権の成長投資',
     body: '令和7年度一般会計補正予算(第1号)が参院本会議で可決・成立(11月28日閣議決定)。高市政権初の補正で、物価高対策と並び「危機管理投資・成長投資」としてAI・半導体を戦略分野に位置付け、10兆円フレームに沿った先端半導体・AI計算資源の支援経費を措置した。',

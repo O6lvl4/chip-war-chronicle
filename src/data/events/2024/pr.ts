@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2024_PR: TimelineEvent[] = [
   {
+    id: 'pr-139', threadId: 'pr', date: '2024-02-24', weight: 2,
+    title: 'JASM第2工場 認定 最大7320億円助成',
+    body: '経産省がJASM(TSMC・ソニー・デンソー・トヨタ出資)の熊本第2工場に係る特定半導体生産施設整備等計画を認定し、最大7320億円の助成を決定。6/7nm世代を含むロジック半導体を生産し、第1工場と合わせた月産能力は10万枚超となる見込み。第1工場開所式と同日で、国内先端ロジック生産の定着を示した。',
+    source: '経済産業省 認定特定半導体生産施設整備等計画',
+    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/laws/semiconductor/semiconductor_plan.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-37', threadId: 'pr', date: '2024-03-20', weight: 2,
     title: 'Intel CHIPS法 85億ドル暫定合意',
     body: '米商務省がIntelとCHIPS法に基づく最大85億ドルの直接補助と110億ドルの融資で暫定合意。アリゾナ、オハイオ、ニューメキシコ、オレゴンの拠点が対象で、CHIPS法補助の最大案件となった(11月に78.65億ドルで確定)。',

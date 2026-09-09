@@ -18,14 +18,6 @@ export const EVENTS_2023_JP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'jp-50', threadId: 'jp', date: '2023-10-03', weight: 2,
-    title: 'Micron広島 計画認定 最大1670億円',
-    body: '経産省がマイクロンメモリジャパンの特定半導体生産施設整備等計画を認定し、最大1670億円を助成。広島工場に国内初のEUV露光装置を導入して次世代DRAM(1γ世代)を生産する計画で、AIサーバー向けHBMの供給基盤にもつながる。外資メモリ大手の国内投資を国費で支える構図が固まった。',
-    source: '経済産業省 認定特定半導体生産施設整備等計画',
-    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/laws/semiconductor/semiconductor_plan.html',
-    sourceTier: 'primary',
-  },
-  {
     id: 'jp-12', threadId: 'jp', date: '2023-11-29', weight: 2,
     title: '令和5年度補正 成立 半導体・AI約2兆円',
     body: '令和5年度一般会計補正予算(第1号)が参院本会議で可決・成立。半導体・生成AI関連で約2兆円を措置し、Rapidusの2nm開発、TSMC熊本第2工場、国産生成AI基盤モデル向け計算資源整備などに充てた。半導体支援の累計は3年間で約4兆円規模に達した。',

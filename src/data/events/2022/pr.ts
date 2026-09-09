@@ -18,6 +18,14 @@ export const EVENTS_2022_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-137', threadId: 'pr', date: '2022-06-17', weight: 2,
+    title: 'JASM熊本計画 認定 最大4760億円助成',
+    body: '経産省が改正5G促進法に基づき、TSMC子会社JASM(ソニー・デンソー出資)の特定半導体生産施設整備等計画を第1号として認定。熊本県菊陽町で12〜28nmロジック半導体を月5.5万枚生産する計画に対し、特定半導体基金から最大4760億円を助成する。国の半導体補助が初めて具体化した案件。',
+    source: '経済産業省 認定特定半導体生産施設整備等計画',
+    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/laws/semiconductor/semiconductor_plan.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-4', threadId: 'pr', date: '2022-08-09', weight: 3,
     title: 'CHIPS and Science Act 署名',
     body: 'バイデン大統領がCHIPS法に署名。半導体製造・研究への527億ドルの連邦資金(うち製造補助390億ドル)と25%の投資税額控除を創設。TSMCやIntelの米国投資が加速。',

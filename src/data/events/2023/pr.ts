@@ -114,6 +114,14 @@ export const EVENTS_2023_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-138', threadId: 'pr', date: '2023-10-03', weight: 2,
+    title: 'Micron広島 計画認定 最大1670億円',
+    body: '経産省がマイクロンメモリジャパンの特定半導体生産施設整備等計画を認定し、最大1670億円を助成。広島工場に国内初のEUV露光装置を導入して次世代DRAM(1γ世代)を生産する計画で、AIサーバー向けHBMの供給基盤にもつながる。外資メモリ大手の国内投資を国費で支える構図が固まった。',
+    source: '経済産業省 認定特定半導体生産施設整備等計画',
+    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/laws/semiconductor/semiconductor_plan.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-7', threadId: 'pr', date: '2023-10-17', weight: 2,
     title: '米輸出規制アップデート 抜け穴対策',
     body: 'BISが2022年10月規制を改定。性能パラメータを見直してA800/H800など規制回避品を対象に含め、製造装置規制の対象を武器禁輸21カ国へ拡大。中国のGPU企業など13社をエンティティリストに追加。',

@@ -153,4 +153,12 @@ export const EVENTS_2025_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.mofcom.gov.cn/zwgk/zcfb/art/2025/art_b1ec77dd3f0d4762952904df7cdaadec.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-140', threadId: 'pr', date: '2025-11-21', weight: 2,
+    title: 'Rapidus 情報処理促進法の事業者に選定',
+    body: '経済産業省が改正情報処理促進法に基づく公募(9月3日〜10月2日)の結果、指定高速情報処理用半導体の安定生産に取り組む事業者にRapidusを選定。2025年度にIPAから1000億円の政府出資を受ける資格を得て、民間資金調達と2027年の2nm量産に向けた体制整備が本格化した。',
+    source: 'Rapidus プレスリリース',
+    sourceUrl: 'https://www.rapidus.inc/news_topics/news-info/rapidus-selected-as-official-business-operator-by-japan-government/',
+    sourceTier: 'primary',
+  },
 ];

@@ -60,7 +60,7 @@ export const LINKS_2022: Link[] = [
   { from: 'jp-45', to: 'jp-48', why: '残る2制度の基本指針を翌年に閣議決定' },
   { from: 'jp-46', to: 'jp-13', why: '安保戦略が情報保全強化を明記しSC法へ' },
   { from: 'jp-10', to: 'pr-133', why: '2次補正のポスト5G積み増しでRapidus増額承認' },
-  { from: 'jp-44', to: 'jp-51', why: '第1工場認定に続き第2工場を認定' },
+  { from: 'pr-137', to: 'pr-139', why: '第1工場認定に続き第2工場を認定' },
   { from: 'si-73', to: 'si-42', why: '330億ユーロ計画が2025年に撤回' },
   { from: 'pr-4', to: 'si-74', why: 'CHIPS法成立直後の米国メモリ最大投資' },
   { from: 'si-33', to: 'si-77', why: 'IBM提携でプロセス確保後に工場建設へ' },

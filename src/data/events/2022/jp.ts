@@ -10,14 +10,6 @@ export const EVENTS_2022_JP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'jp-44', threadId: 'jp', date: '2022-06-17', weight: 2,
-    title: 'JASM熊本計画 認定 最大4760億円助成',
-    body: '経産省が改正5G促進法に基づき、TSMC子会社JASM(ソニー・デンソー出資)の特定半導体生産施設整備等計画を第1号として認定。熊本県菊陽町で12〜28nmロジック半導体を月5.5万枚生産する計画に対し、特定半導体基金から最大4760億円を助成する。国の半導体補助が初めて具体化した案件。',
-    source: '経済産業省 認定特定半導体生産施設整備等計画',
-    sourceUrl: 'https://www.meti.go.jp/policy/mono_info_service/joho/laws/semiconductor/semiconductor_plan.html',
-    sourceTier: 'primary',
-  },
-  {
     id: 'jp-45', threadId: 'jp', date: '2022-09-30', weight: 2,
     title: '経済安保推進法 基本方針 閣議決定',
     body: '経済安全保障推進法に基づく全体の「基本方針」と、特定重要物資の安定供給確保および特定重要技術の研究開発に関する2つの基本指針を閣議決定。物資指定の要件(国民の生存・国民生活への不可欠性、外部依存、供給途絶の蓋然性)を定め、半導体などの政令指定と経済安保重要技術育成プログラムの運用が動き出した。',
