@@ -41,4 +41,7 @@ export const LINKS_2026: Link[] = [
   { from: 'si-83', to: 'si-86', why: '対米長期供給を約したSamsungとSK hynixが、Hot ChipsでHBMの次世代ロードマップを競って示した。' },
   { from: 'si-91', to: 'si-20', why: 'Tesla AI5のアリゾナ生産など米国内の受注積み上がりが、TSMCの追加投資を後押しした。' },
   { from: 'ai-116', to: 'ai-117', why: '200億ドルの調達がGPU55万基規模のクラスタ建設を支えた。' },
+  { from: 'ai-116', to: 'ai-119', why: '2300億ドル評価のシリーズEの1か月後に、2500億ドルの評価でSpaceXに取り込まれた。' },
+  { from: 'ai-119', to: 'mm-90', why: 'xAIを取り込んで1.25兆ドルとなったSpaceXが、史上最大のIPOに踏み切った。' },
+  { from: 'mm-90', to: 'ai-18', why: '上場直後の急騰と高値からの半減が、AIインフラ投資の過熱感を市場に意識させた。' },
 ];

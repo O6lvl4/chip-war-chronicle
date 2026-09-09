@@ -18,6 +18,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'ai-119', threadId: 'ai', date: '2026-02-02', weight: 3,
+    title: 'SpaceX が xAI を買収 合算1.25兆ドル',
+    body: '全株式交換でSpaceXがxAIを傘下に収めた。SpaceXを1兆ドル、xAIを2500億ドルと評価した合算1.25兆ドルで、未公開企業の合併として史上最大。マスク氏は宇宙のデータセンターと宇宙でのAI処理を狙いに挙げ、垂直統合を進めるとした。',
+    source: 'xAI',
+    sourceUrl: 'https://x.ai/news/xai-joins-spacex',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-63', threadId: 'ai', date: '2026-02-05', weight: 2,
     title: 'Amazon 2026年設備投資 2000億ドル',
     body: 'Amazonが2025年決算で、2025年の設備投資が前年比65%増の1318億ドルだったと公表し、2026年は約2000億ドルに達する見通しを示した。AIインフラが主因で、AWS売上は年1287億ドル(20%増)。ハイパースケーラーの投資規模が一段と切り上がった。',

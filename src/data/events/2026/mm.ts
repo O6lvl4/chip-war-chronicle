@@ -74,6 +74,14 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'mm-90', threadId: 'mm', date: '2026-06-12', weight: 3,
+    title: 'SpaceX 上場 史上最大のIPO',
+    body: 'NasdaqにSPCXとして上場。5億5555万株を1株135ドルで売り出して750億ドルを調達し、追加売り出しを含めた調達額は857億ドルと過去最大となった。初日は19%高の160.95ドルで時価総額は約2.1兆ドル。6月16日に225.64ドルの高値をつけたあと、7月末までに高値から約5割下げた。',
+    source: 'CNBC',
+    sourceUrl: 'https://www.cnbc.com/2026/06/12/spacex-stock-jumps-2-trillion.html',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'mm-20', threadId: 'mm', date: '2026-06-16', weight: 2,
     title: '日銀 政策金利1.0%へ引き上げ',
     body: '日銀が政策金利を0.75%程度から1.0%程度へ引き上げ（賛成7反対1）。中東情勢による原油高を景気下押し要因としつつ、企業収益と雇用・所得環境の改善を根拠に利上げを継続した。',
