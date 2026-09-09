@@ -10,14 +10,6 @@ export const EVENTS_2025_GP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'gp-87', threadId: 'gp', date: '2025-01-20', weight: 2,
-    title: '政府効率化省(DOGE)を設置する大統領令',
-    body: '就任初日の大統領令で米国デジタルサービスを米国DOGEサービスに改組し、規制・支出・組織の見直しを担わせた。マスク氏は特別政府職員として関与し、連邦職員の削減は商務省の半導体補助を執行する部署にも及んだ。',
-    source: 'ホワイトハウス 大統領令',
-    sourceUrl: 'https://www.whitehouse.gov/presidential-actions/2025/01/establishing-and-implementing-the-presidents-department-of-government-efficiency/',
-    sourceTier: 'primary',
-  },
-  {
     id: 'gp-12', threadId: 'gp', date: '2025-04-02', weight: 3,
     title: 'トランプ「相互関税」を発表',
     body: 'トランプ大統領がIEEPAに基づく国家非常事態を宣言し、全世界に10%の基本関税と貿易赤字相手国への上乗せ関税を発表。半導体・銅・医薬品は対象外とされたが、世界の株式市場は急落した。',
@@ -39,14 +31,6 @@ export const EVENTS_2025_GP: TimelineEvent[] = [
     body: '戒厳令騒動による尹前大統領の罷免を受けた大統領選で、共に民主党の李在明候補が得票率49.3%で当選。投票率は約80%と高く、半年間の政治空白を経て米韓関税交渉と半導体政策の体制が整った。',
     source: 'Euronews (AP配信)',
     sourceUrl: 'https://www.euronews.com/2025/06/03/liberal-lee-jae-myung-wins-south-koreas-presidential-election-ending-months-of-political-t',
-    sourceTier: 'secondary',
-  },
-  {
-    id: 'gp-88', threadId: 'gp', date: '2025-06-05', weight: 2,
-    title: 'マスク氏が政権を離れトランプ氏と決裂',
-    body: '5月30日に特別政府職員の任期満了で政権を離れた直後、マスク氏が「一つの大きな美しい法案」は財政赤字を膨らませDOGEの削減を帳消しにすると批判し、公然の応酬に発展した。6月11日に一部投稿を撤回したが、断続的な対立は9月まで続いた。',
-    source: 'NPR',
-    sourceUrl: 'https://www.npr.org/2025/06/05/nx-s1-5424686/donald-trump-elon-musk-bromance-breakup',
     sourceTier: 'secondary',
   },
   {

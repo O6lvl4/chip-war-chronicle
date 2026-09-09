@@ -97,4 +97,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-bolsters-national-security-and-strengthens-u-s-supply-chains-by-imposing-tariffs-on-polysilicon-and-its-derivatives/',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-130', threadId: 'pr', date: '2026-08-31', weight: 2,
+    title: '経産省 令和9年度概算要求 7兆7859億円',
+    body: '経済産業省関係の令和9年度概算要求は総額7兆7859億円で、令和8年度当初予算の3兆693億円から約2.5倍に膨らんだ。「強く豊かな日本」投資枠でAI・半導体・ロボット分野に約1兆4000億円を求め、AI・半導体産業基盤強化フレームには5272億円を計上した。',
+    source: '経済産業省 令和9年度概算要求・税制改正要望について',
+    sourceUrl: 'https://www.meti.go.jp/main/yosangaisan/fy2027/index.html',
+    sourceTier: 'primary',
+  },
 ];

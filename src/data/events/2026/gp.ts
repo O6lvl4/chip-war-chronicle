@@ -75,7 +75,7 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
   },
   {
     id: 'gp-86', threadId: 'gp', date: '2026-09-08', weight: 3,
-    title: '中国8月 貿易黒字1191億ドル 半導体輸出129.8%増',
+    title: '中国の半導体輸出 129.8%増 規制下で最大の黒字',
     body: '税関総署が発表。輸出は前年同月比25%増、貿易黒字は7月の1125億ドルから1191億ドルへ拡大し過去最大。半導体輸出は前年同月比129.8%増と米国の輸出規制導入後で最大の伸びとなり、自動車輸出も43%増。輸入も28.2%増えた。',
     source: 'NBC News',
     sourceUrl: 'https://www.nbcnews.com/world/asia/china-exports-august-jump-25-percent-trade-surplus-widens-rcna596541',

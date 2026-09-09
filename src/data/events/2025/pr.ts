@@ -26,6 +26,14 @@ export const EVENTS_2025_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-128', threadId: 'pr', date: '2025-01-20', weight: 2,
+    title: '政府効率化省(DOGE)を設置する大統領令',
+    body: '就任初日の大統領令で米国デジタルサービスを米国DOGEサービスに改組し、規制・支出・組織の見直しを担わせた。マスク氏は特別政府職員として関与し、連邦職員の削減は商務省の半導体補助を執行する部署にも及んだ。',
+    source: 'ホワイトハウス 大統領令',
+    sourceUrl: 'https://www.whitehouse.gov/presidential-actions/2025/01/establishing-and-implementing-the-presidents-department-of-government-efficiency/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-44', threadId: 'pr', date: '2025-02-27', weight: 1,
     title: '韓国 K-Chips法改正 控除率引き上げ',
     body: '韓国国会が租税特例制限法改正案(K-Chips法)を可決。半導体など国家戦略産業の設備投資税額控除率を大企業15%→20%、中小企業25%→30%に引き上げ、半導体R&D税額控除の適用期限を2031年まで7年延長した。',
@@ -88,6 +96,14 @@ export const EVENTS_2025_PR: TimelineEvent[] = [
     source: 'BIS Press Release',
     sourceUrl: 'https://www.bis.gov/press-release/department-commerce-announces-rescission-biden-era-artificial-intelligence-diffusion-rule-strengthens',
     sourceTier: 'primary',
+  },
+  {
+    id: 'pr-129', threadId: 'pr', date: '2025-06-05', weight: 2,
+    title: 'DOGEを主導したマスク氏が政権を離脱',
+    body: '5月30日に特別政府職員の任期満了で政権を離れた直後、マスク氏が「一つの大きな美しい法案」は財政赤字を膨らませDOGEの削減を帳消しにすると批判し、大統領と公然の応酬に発展した。半導体補助の実施部署を含む人員削減を主導した推進役が政権から抜けた。',
+    source: 'NPR',
+    sourceUrl: 'https://www.npr.org/2025/06/05/nx-s1-5424686/donald-trump-elon-musk-bromance-breakup',
+    sourceTier: 'secondary',
   },
   {
     id: 'pr-46', threadId: 'pr', date: '2025-06-10', weight: 2,
