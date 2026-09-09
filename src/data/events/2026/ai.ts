@@ -106,6 +106,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'ai-120', threadId: 'ai', date: '2026-07-16', weight: 3,
+    title: '日本政府・NVIDIA・Noetra 国家AIインフラを始動',
+    body: '世界初の国家規模AIインフラとして「Vera Rubin AIファクトリー」を始動。Vera CPU 1万3750基とRubin GPU 2万7500基をDSXプラットフォーム上に置き、140MWのデータセンター容量を持つ。経産省が支援しFRONTiaプロジェクトの計算基盤となる。モデル開発を担うNoetraにはソニー、ソフトバンク、NEC、ホンダなど44社が参画した。',
+    source: 'NVIDIA Newsroom',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/japan-government-industrial-leaders-and-nvidia-launch-the-worlds-first-national-ai-infrastructure',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-64', threadId: 'ai', date: '2026-07-24', weight: 2,
     title: 'Anthropic Claude Opus 5 発表',
     body: 'AnthropicがClaude Opus 5を発表。コーディングでOpus 4.8の2倍の性能をより低コストで実現し、ARC-AGI 3では競合の3倍のスコアを記録。価格は入力100万トークン5ドル・出力25ドルで据え置き、2倍料金の高速モードも提供した。',

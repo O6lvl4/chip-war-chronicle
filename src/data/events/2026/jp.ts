@@ -68,9 +68,25 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
   {
     id: 'jp-59', threadId: 'jp', date: '2026-07-30', weight: 2,
     title: '令和9年度概算要求基準を閣議了解',
-    body: '「強く豊かな日本」投資枠を新設し、成長・危機管理投資は要求額に上限を設けないとした。経済産業省の令和9年度概算要求は総額7兆7859億円で、AI・半導体産業基盤強化フレームに5272億円を計上した。',
+    body: '「強く豊かな日本」投資枠を新設し、成長戦略・地域未来戦略に基づく成長投資と危機管理投資については要求額に上限を設けないとした。AI・半導体はこの枠を使い、AI・半導体産業基盤強化フレームを踏まえて特別会計でも要求できるようになった。',
     source: '財務省 令和9年度予算の概算要求に当たっての基本的な方針について',
     sourceUrl: 'https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2027/sy260730a.pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'jp-60', threadId: 'jp', date: '2026-08-05', weight: 1,
+    title: '経産省 AI・ロボット政策を一元化',
+    body: '7月31日に閣議決定した政令改正が公布・施行され、製造産業局のロボット関連事務が商務情報政策局へ移り、「情報処理システム開発・ロボット課」(通称 AI産業戦略課)が新設された。情報処理システムの開発とロボットを同じ課で扱い、人工知能基本計画(第Ⅱ期)の実行体制を整えた。',
+    source: '事業構想オンライン',
+    sourceUrl: 'https://www.projectdesign.jp/articles/news/cf53764e-dda0-4b83-a0f8-5edd590b86b1',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'jp-61', threadId: 'jp', date: '2026-08-31', weight: 2,
+    title: '経産省 令和9年度概算要求 7兆7859億円',
+    body: '経済産業省関係の令和9年度概算要求は総額7兆7859億円で、令和8年度当初予算の3兆693億円から約2.5倍に膨らんだ。「強く豊かな日本」投資枠でAI・半導体・ロボット分野に約1兆4000億円を求め、AI・半導体産業基盤強化フレームには5272億円を計上した。',
+    source: '経済産業省 令和9年度概算要求・税制改正要望について',
+    sourceUrl: 'https://www.meti.go.jp/main/yosangaisan/fy2027/index.html',
     sourceTier: 'primary',
   },
 ];
