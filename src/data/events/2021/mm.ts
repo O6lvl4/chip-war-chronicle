@@ -18,14 +18,6 @@ export const EVENTS_2021_MM: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
-    id: 'mm-49', threadId: 'mm', date: '2021-05-21', weight: 2,
-    title: '中国 ビットコイン採掘取締りを決定',
-    body: '中国国務院金融安定発展委員会が「ビットコインの採掘と取引行為を取り締まる」と明記。世界最大の採掘拠点だった中国からマイニング事業者が撤退し、暗号資産ブームで高騰していたGPU価格の下落を招く転機となった。',
-    source: '中国政府網 国務院金融委第51次会議',
-    sourceUrl: 'https://www.gov.cn/guowuyuan/2021-05/21/content_5610192.htm',
-    sourceTier: 'primary',
-  },
-  {
     id: 'mm-79', threadId: 'mm', date: '2021-08-26', weight: 2,
     title: 'TSMC 最大20%の値上げ通知',
     body: 'TSMCが顧客に対し先端プロセス(7nm/5nm)で7〜9%、成熟プロセスで約20%の値上げを通知したと台湾中央社が報道。世界的な半導体不足で受託製造の需給が逼迫する中での創業以来最大級の値上げで、ファブレス各社は製品価格への転嫁を迫られた。',

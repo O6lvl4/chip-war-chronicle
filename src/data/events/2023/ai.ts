@@ -89,4 +89,12 @@ export const EVENTS_2023_AI: TimelineEvent[] = [
     sourceUrl: 'https://blog.google/technology/ai/google-gemini-ai/',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-122', threadId: 'ai', date: '2023-12-06', weight: 3,
+    title: 'AMD Instinct MI300X 発表',
+    body: 'AMDが「Advancing AI」でデータセンター向けAIアクセラレータInstinct MI300XとAPUのMI300Aを発表。CDNA 3と192GBのHBM3を搭載し、MicrosoftやMeta、Oracleが採用を表明。H100の対抗馬と位置づけられた。',
+    source: 'AMD プレスリリース',
+    sourceUrl: 'https://www.amd.com/en/newsroom/press-releases/2023-12-6-amd-delivers-leadership-portfolio-of-data-center-a.html',
+    sourceTier: 'primary',
+  },
 ];

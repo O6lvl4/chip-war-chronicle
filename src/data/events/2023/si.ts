@@ -50,14 +50,6 @@ export const EVENTS_2023_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'si-50', threadId: 'si', date: '2023-12-06', weight: 3,
-    title: 'AMD Instinct MI300X 発表',
-    body: 'AMDが「Advancing AI」でデータセンター向けAIアクセラレータInstinct MI300XとAPUのMI300Aを発表。CDNA 3と192GBのHBM3を搭載し、MicrosoftやMeta、Oracleが採用を表明。H100の対抗馬と位置づけられた。',
-    source: 'AMD プレスリリース',
-    sourceUrl: 'https://www.amd.com/en/newsroom/press-releases/2023-12-6-amd-delivers-leadership-portfolio-of-data-center-a.html',
-    sourceTier: 'primary',
-  },
-  {
     id: 'si-78', threadId: 'si', date: '2023-12-14', weight: 2,
     title: 'Intel 4初製品 Core Ultra',
     body: 'IntelがEUVを用いる「Intel 4」プロセス初の製品であるCore Ultra(Meteor Lake)を発売。クライアント初のNPUを統合し、Foverosによるタイル構成を採用。同時に第5世代Xeonも投入し、製造ロードマップ回復の初の実証となった。',

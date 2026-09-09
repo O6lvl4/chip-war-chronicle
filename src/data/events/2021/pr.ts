@@ -26,6 +26,14 @@ export const EVENTS_2021_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-142', threadId: 'pr', date: '2021-05-21', weight: 2,
+    title: '中国 ビットコイン採掘取締りを決定',
+    body: '中国国務院金融安定発展委員会が「ビットコインの採掘と取引行為を取り締まる」と明記。世界最大の採掘拠点だった中国からマイニング事業者が撤退し、暗号資産ブームで高騰していたGPU価格の下落を招く転機となった。',
+    source: '中国政府網 国務院金融委第51次会議',
+    sourceUrl: 'https://www.gov.cn/guowuyuan/2021-05/21/content_5610192.htm',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-112', threadId: 'pr', date: '2021-06-03', weight: 1,
     title: '大統領令14032 投資禁止を59社に拡大',
     body: 'バイデン大統領が大統領令13959を改正する大統領令14032に署名。中国の軍事・監視技術企業59社の証券への米国人の投資を禁じ、対象の指定権限を財務省OFACに移管した。HuaweiやSMIC、Hikvisionなどが含まれ、投資規制が政権を超えて継続された。',

@@ -122,6 +122,14 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'ai-124', threadId: 'ai', date: '2025-06-12', weight: 2,
+    title: 'AMD MI350発表・Heliosラック予告',
+    body: 'AMDが「Advancing AI 2025」でInstinct MI350X/MI355Xを発表。前世代比4倍のAI演算性能をうたい、OpenAIやMeta、Microsoft、Oracleが採用先として登壇。次世代MI400を72基搭載するラック「Helios」も予告した。',
+    source: 'AMD IR',
+    sourceUrl: 'https://ir.amd.com/news-events/press-releases/detail/1255/amd-unveils-vision-for-an-open-ai-ecosystem-detailing-new-silicon-software-and-systems-at-advancing-ai-2025',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-106', threadId: 'ai', date: '2025-08-05', weight: 1,
     title: 'Anthropic Claude Opus 4.1 発表',
     body: 'AnthropicがClaude Opus 4.1を公開。SWE-bench Verifiedで74.5%と実コード修正の最高水準を更新し、価格はOpus 4と同じ。API・Bedrock・Vertex AIで同日提供され、上位モデルの更新周期が数か月単位に縮まった。',
@@ -144,6 +152,14 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     source: 'TechCrunch',
     sourceUrl: 'https://techcrunch.com/2025/09/10/openai-and-oracle-reportedly-ink-historic-cloud-computing-deal/',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-125', threadId: 'ai', date: '2025-09-18', weight: 3,
+    title: 'Huawei Ascendロードマップと自社HBM',
+    body: 'Huaweiが上海のHUAWEI CONNECTでAI半導体Ascendの3年計画を公表。2026年Q1の950PR/950DTから960（2027年）、970（2028年）へ毎年更新し、自社開発HBM「HiBL 1.0」「HiZQ 2.0」を搭載する方針を示した。',
+    source: 'Huawei 基調講演',
+    sourceUrl: 'https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech',
+    sourceTier: 'primary',
   },
   {
     id: 'ai-14', threadId: 'ai', date: '2025-09-22', weight: 3,
@@ -183,6 +199,14 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     body: 'AnthropicがGoogle Cloudの利用を大幅拡大し、最大100万基のTPUを導入すると発表。契約は数百億ドル規模で、2026年に1GW超の容量が稼働予定。TPU・Trainium・NVIDIA GPUを併用するマルチチップ戦略を明確化した。',
     source: 'Anthropic',
     sourceUrl: 'https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-126', threadId: 'ai', date: '2025-10-28', weight: 2,
+    title: 'Qualcomm AI200/AI250でDC参入',
+    body: 'Qualcommがデータセンター向けAI推論アクセラレータAI200とAI250を発表。カード当たり768GBのLPDDRを搭載し、ラック単位160kWの液冷構成で提供。AI200は2026年、AI250は2027年の商用化予定で、スマホ中心からの事業転換を鮮明にした。',
+    source: 'Qualcomm プレスリリース',
+    sourceUrl: 'https://www.qualcomm.com/news/releases/2025/10/qualcomm-unveils-ai200-and-ai250-redefining-rack-scale-data-cent',
     sourceTier: 'primary',
   },
   {

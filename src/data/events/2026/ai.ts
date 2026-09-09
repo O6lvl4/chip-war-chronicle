@@ -42,6 +42,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-127', threadId: 'ai', date: '2026-04-15', weight: 2,
+    title: 'Tesla AI5 テープアウト',
+    body: 'マスク氏がXでAI5のテープアウトを公表し、パッケージされたシリコンの写真とともにTSMCとSamsungに謝辞を述べ「史上最も出荷量の多いAIチップの一つになる」とした。Samsungテイラー工場とTSMCアリゾナ工場で並行生産し、量産は2027年の見込みで、当初計画から約2年遅れた。',
+    source: 'Electrek',
+    sourceUrl: 'https://electrek.co/2026/04/15/tesla-ai5-chip-taped-out-musk-ai6-dojo3/',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'ai-118', threadId: 'ai', date: '2026-05-18', weight: 2,
     title: 'Musk 対 Altman 陪審が全請求を棄却',
     body: 'オークランド連邦地裁で4月27日に開廷した裁判で、陪審が2時間弱の評議の末、提訴が出訴期限の3年を過ぎているとの評決を出し、判事が即座に採用した。2024年の26請求のうち残っていた慈善信託違反と不当利得も退けられ、OpenAIの営利化の是非自体は判断されなかった。マスク氏は第9巡回区控訴裁への上訴を表明。',
@@ -103,6 +111,22 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     body: '世界初の国家規模AIインフラとして「Vera Rubin AIファクトリー」を始動。Vera CPU 1万3750基とRubin GPU 2万7500基をDSXプラットフォーム上に置き、140MWのデータセンター容量を持つ。経産省が支援しFRONTiaプロジェクトの計算基盤となる。モデル開発を担うNoetraにはソニー、ソフトバンク、NEC、ホンダなど44社が参画した。',
     source: 'NVIDIA Newsroom',
     sourceUrl: 'https://nvidianews.nvidia.com/news/japan-government-industrial-leaders-and-nvidia-launch-the-worlds-first-national-ai-infrastructure',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-128', threadId: 'ai', date: '2026-07-22', weight: 2,
+    title: 'AMD、Anthropicと2GW契約・50億ドル出資',
+    body: 'AMDとAnthropicがInstinct MI450シリーズGPUを最大2GW分導入する戦略提携を発表。AMDはAnthropicに最大50億ドルを出資し、最初の1GWは2027年前半に稼働予定。GPUベンダーが顧客に出資して供給枠を確保する構図が広がった。',
+    source: 'AMD IR',
+    sourceUrl: 'https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-129', threadId: 'ai', date: '2026-07-23', weight: 2,
+    title: 'AMD MI455X・Heliosラック量産へ',
+    body: 'AMDが「Advancing AI 2026」でInstinct MI455Xと第6世代EPYC「Venice」、両者を72基・18基搭載するHeliosラックを発表。Heliosは量産段階に入り2026年Q4から展開。OpenAIやAnthropic、Metaが導入先に並んだ。',
+    source: 'AMD IR',
+    sourceUrl: 'https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era',
     sourceTier: 'primary',
   },
   {

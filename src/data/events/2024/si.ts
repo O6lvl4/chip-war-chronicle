@@ -18,14 +18,6 @@ export const EVENTS_2024_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'si-12', threadId: 'si', date: '2024-03-18', weight: 3,
-    title: 'NVIDIA Blackwell発表',
-    body: 'NVIDIAがGTC 2024で次世代GPUアーキテクチャ「Blackwell」を発表。TSMC 4NPで製造した2ダイを10TB/sで接続し2080億トランジスタを集積。AIデータセンター投資の中核となった。',
-    source: 'NVIDIA Newsroom',
-    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing',
-    sourceTier: 'primary',
-  },
-  {
     id: 'si-36', threadId: 'si', date: '2024-03-19', weight: 2,
     title: 'SK hynix HBM3E 量産開始',
     body: 'SK hynixが業界で初めてHBM3Eの量産を開始し、3月下旬から顧客に供給。開発完了からわずか7か月での量産で、AIアクセラレータ向けHBM市場での先行を固めた。',

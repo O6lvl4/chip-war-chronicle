@@ -34,14 +34,6 @@ export const EVENTS_2021_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'si-89', threadId: 'si', date: '2021-08-19', weight: 2,
-    title: 'Tesla AI Day で学習チップ Dojo D1 を発表',
-    body: 'Teslaが自社設計の学習チップD1を公開。7nmで645mm²、500億トランジスタ、BF16で362TFLOPS。25個で1タイル、120タイルのExaPodで1.1エクサFLOPSとした。FSDチップに続く2つ目の自社シリコンで、マスク氏は「来年には稼働する」と述べた。',
-    source: 'CNBC',
-    sourceUrl: 'https://www.cnbc.com/2021/08/19/tesla-unveils-dojo-d1-chip-at-ai-day.html',
-    sourceTier: 'secondary',
-  },
-  {
     id: 'si-30', threadId: 'si', date: '2021-11-09', weight: 3,
     title: 'TSMC 熊本工場(JASM)設立を発表',
     body: 'TSMCとソニーセミコンダクタソリューションズが熊本に製造子会社JASMを設立すると発表。投資額約70億ドル、2024年末までの生産開始を計画し、日本の半導体政策の中核案件となった。',

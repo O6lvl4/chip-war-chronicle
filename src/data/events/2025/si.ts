@@ -26,14 +26,6 @@ export const EVENTS_2025_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'si-53', threadId: 'si', date: '2025-06-12', weight: 2,
-    title: 'AMD MI350発表・Heliosラック予告',
-    body: 'AMDが「Advancing AI 2025」でInstinct MI350X/MI355Xを発表。前世代比4倍のAI演算性能をうたい、OpenAIやMeta、Microsoft、Oracleが採用先として登壇。次世代MI400を72基搭載するラック「Helios」も予告した。',
-    source: 'AMD IR',
-    sourceUrl: 'https://ir.amd.com/news-events/press-releases/detail/1255/amd-unveils-vision-for-an-open-ai-ecosystem-detailing-new-silicon-software-and-systems-at-advancing-ai-2025',
-    sourceTier: 'primary',
-  },
-  {
     id: 'si-54', threadId: 'si', date: '2025-07-17', weight: 2,
     title: 'Synopsys、Ansys買収を完了',
     body: 'EDA最大手Synopsysがシミュレーション大手Ansysの買収を完了。2024年1月に合意した約350億ドル規模の案件で、各国当局の承認を経て成立。チップ設計からシステム解析までを統合し、AI製品開発の設計基盤を一社で提供する体制を狙う。',
@@ -95,22 +87,6 @@ export const EVENTS_2025_SI: TimelineEvent[] = [
     body: 'NVIDIAとIntelがAIインフラとPC向け製品の共同開発で提携し、NVIDIAがIntel普通株を1株23.28ドルで50億ドル分取得すると発表。x86とNVLinkを組み合わせたカスタムCPUを開発する。',
     source: 'NVIDIA Newsroom',
     sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-and-intel-to-develop-ai-infrastructure-and-personal-computing-products',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'si-55', threadId: 'si', date: '2025-09-18', weight: 3,
-    title: 'Huawei Ascendロードマップと自社HBM',
-    body: 'Huaweiが上海のHUAWEI CONNECTでAI半導体Ascendの3年計画を公表。2026年Q1の950PR/950DTから960（2027年）、970（2028年）へ毎年更新し、自社開発HBM「HiBL 1.0」「HiZQ 2.0」を搭載する方針を示した。',
-    source: 'Huawei 基調講演',
-    sourceUrl: 'https://www.huawei.com/en/news/2025/9/hc-xu-keynote-speech',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'si-56', threadId: 'si', date: '2025-10-28', weight: 2,
-    title: 'Qualcomm AI200/AI250でDC参入',
-    body: 'Qualcommがデータセンター向けAI推論アクセラレータAI200とAI250を発表。カード当たり768GBのLPDDRを搭載し、ラック単位160kWの液冷構成で提供。AI200は2026年、AI250は2027年の商用化予定で、スマホ中心からの事業転換を鮮明にした。',
-    source: 'Qualcomm プレスリリース',
-    sourceUrl: 'https://www.qualcomm.com/news/releases/2025/10/qualcomm-unveils-ai200-and-ai250-redefining-rack-scale-data-cent',
     sourceTier: 'primary',
   },
   {

@@ -34,6 +34,14 @@ export const EVENTS_2024_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-123', threadId: 'ai', date: '2024-03-18', weight: 3,
+    title: 'NVIDIA Blackwell発表',
+    body: 'NVIDIAがGTC 2024で次世代GPUアーキテクチャ「Blackwell」を発表。TSMC 4NPで製造した2ダイを10TB/sで接続し2080億トランジスタを集積。AIデータセンター投資の中核となった。',
+    source: 'NVIDIA Newsroom',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-51', threadId: 'ai', date: '2024-04-18', weight: 2,
     title: 'Meta Llama 3 公開 15兆トークン学習',
     body: 'MetaがLlama 3の8Bと70Bモデルを公開。Llama 2の7倍となる15兆トークン超で学習し、2基の24K GPUクラスタを使用。クラス最高のオープンモデルを掲げ、4000億超パラメータの大型版も学習中と表明。オープンウェイト競争を加速させた。',

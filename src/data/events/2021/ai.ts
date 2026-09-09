@@ -42,6 +42,14 @@ export const EVENTS_2021_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-121', threadId: 'ai', date: '2021-08-19', weight: 2,
+    title: 'Tesla AI Day で学習チップ Dojo D1 を発表',
+    body: 'Teslaが自社設計の学習チップD1を公開。7nmで645mm²、500億トランジスタ、BF16で362TFLOPS。25個で1タイル、120タイルのExaPodで1.1エクサFLOPSとした。FSDチップに続く2つ目の自社シリコンで、マスク氏は「来年には稼働する」と述べた。',
+    source: 'CNBC',
+    sourceUrl: 'https://www.cnbc.com/2021/08/19/tesla-unveils-dojo-d1-chip-at-ai-day.html',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'ai-85', threadId: 'ai', date: '2021-10-11', weight: 2,
     title: 'MS・NVIDIA MT-NLG 5300億',
     body: 'MicrosoftとNVIDIAが5300億パラメータのMegatron-Turing NLGを発表。DGX A100を560台(A100 4480基)連結したSeleneで学習し、当時最大の密モデルとなった。GPU数千基規模の学習が常態化した。',
