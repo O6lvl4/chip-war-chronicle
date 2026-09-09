@@ -2,6 +2,22 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2026_AI: TimelineEvent[] = [
   {
+    id: 'ai-116', threadId: 'ai', date: '2026-01-06', weight: 3,
+    title: 'xAI シリーズEで200億ドル調達',
+    body: '当初目標の150億ドルを上回る200億ドルを調達し、評価額は2300億ドル。Valor、StepStone、Fidelity、カタール投資庁、MGX、NVIDIA、Cisco が参加し、Teslaも規制当局の承認を条件に約20億ドルを出資。サウジのHUMAINは30億ドルを投じて少数株主となった。',
+    source: 'xAI',
+    sourceUrl: 'https://x.ai/news/series-e',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-117', threadId: 'ai', date: '2026-01-17', weight: 3,
+    title: 'xAI Colossus 2 稼働 世界初のギガワット級と主張',
+    body: 'マスク氏がXで「Colossus 2が稼働した。世界初のギガワット級学習クラスタで、4月に1.5GWへ増強する」と表明。メンフィス一帯は3棟目を含めて最終的に2GW、NVIDIA GPU 55万5000基・180億ドル規模とされる。ただしEpoch AIは衛星画像から冷却能力は350MWにとどまり1GWには程遠いと指摘した。',
+    source: 'Tom\'s Hardware',
+    sourceUrl: 'https://www.tomshardware.com/tech-industry/artificial-intelligence/elon-musks-xai-colossus-2-is-nowhere-near-1-gigawatt-capacity-satellite-imagery-suggests-despite-claims-site-only-has-350-megawatts-of-cooling-capacity',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'ai-63', threadId: 'ai', date: '2026-02-05', weight: 2,
     title: 'Amazon 2026年設備投資 2000億ドル',
     body: 'Amazonが2025年決算で、2025年の設備投資が前年比65%増の1318億ドルだったと公表し、2026年は約2000億ドルに達する見通しを示した。AIインフラが主因で、AWS売上は年1287億ドル(20%増)。ハイパースケーラーの投資規模が一段と切り上がった。',
@@ -16,6 +32,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     source: 'NVIDIA ニュースルーム',
     sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform',
     sourceTier: 'primary',
+  },
+  {
+    id: 'ai-118', threadId: 'ai', date: '2026-05-18', weight: 2,
+    title: 'Musk 対 Altman 陪審が全請求を棄却',
+    body: 'オークランド連邦地裁で4月27日に開廷した裁判で、陪審が2時間弱の評議の末、提訴が出訴期限の3年を過ぎているとの評決を出し、判事が即座に採用した。2024年の26請求のうち残っていた慈善信託違反と不当利得も退けられ、OpenAIの営利化の是非自体は判断されなかった。マスク氏は第9巡回区控訴裁への上訴を表明。',
+    source: 'NPR',
+    sourceUrl: 'https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed',
+    sourceTier: 'secondary',
   },
   {
     id: 'ai-46', threadId: 'ai', date: '2026-05-19', weight: 2,

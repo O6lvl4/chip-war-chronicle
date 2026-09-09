@@ -39,4 +39,6 @@ export const LINKS_2026: Link[] = [
   { from: 'pr-91', to: 'jp-59', why: '官民投資101.6兆円の想定が、令和9年度概算要求のAI・半導体フレーム5272億円として予算要求に落ちた。' },
   { from: 'ai-47', to: 'si-88', why: 'AWSがNVIDIA GPUの大量調達に加え、Qualcommとも複数世代のカスタムシリコンで組んで調達先を広げた。' },
   { from: 'si-83', to: 'si-86', why: '対米長期供給を約したSamsungとSK hynixが、Hot ChipsでHBMの次世代ロードマップを競って示した。' },
+  { from: 'si-91', to: 'si-20', why: 'Tesla AI5のアリゾナ生産など米国内の受注積み上がりが、TSMCの追加投資を後押しした。' },
+  { from: 'ai-116', to: 'ai-117', why: '200億ドルの調達がGPU55万基規模のクラスタ建設を支えた。' },
 ];

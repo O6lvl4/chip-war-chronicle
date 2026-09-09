@@ -34,6 +34,14 @@ export const EVENTS_2025_PR: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'pr-127', threadId: 'pr', date: '2025-03-04', weight: 2,
+    title: 'CHIPS法の実施部署が人員の3分の1を解雇',
+    body: '390億ドルの製造補助を所管する商務省CHIPSプログラム室で、試用期間中の約40人が同日に解雇され、前週にも約20人が早期退職に応じた。マスク氏が率いる政府効率化省(DOGE)主導の削減で、4月までに約150人の8割が去ったと報じられた。',
+    source: 'CNBC',
+    sourceUrl: 'https://www.cnbc.com/2025/03/04/chips-act-office-lays-off-about-a-third-of-its-staff-sources-say.html',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'pr-67', threadId: 'pr', date: '2025-03-25', weight: 2,
     title: '米 Inspur子会社など約80社をリスト追加',
     body: 'BISが2本の最終規則で計約80社をエンティティリストに追加。中国11社・台湾1社を対象とする規則(3月25日施行)にはサーバー大手Inspurの子会社が含まれ、別規則では中国42社を含む70社を追加。第2次トランプ政権初の大規模なリスト拡充となった。',

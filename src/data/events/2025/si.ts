@@ -66,6 +66,14 @@ export const EVENTS_2025_SI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'si-90', threadId: 'si', date: '2025-08-11', weight: 3,
+    title: 'Tesla Dojo チームを解散',
+    body: 'マスク氏がDojoの打ち切りを認め「すべての道がAI6に収束すると分かった時点でDojoを止めるほかなく、Dojo 2は進化の袋小路だった」と述べた。責任者のPeter Bannon氏が退社し、約20人が新会社DensityAIへ移り、残るメンバーは他の計算基盤に再配置された。',
+    source: 'TechCrunch',
+    sourceUrl: 'https://techcrunch.com/2025/08/11/elon-musk-confirms-shutdown-of-tesla-dojo-an-evolutionary-dead-end',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'si-15', threadId: 'si', date: '2025-08-22', weight: 3,
     title: '米政府がIntel株9.9%を取得',
     body: 'Intelと米政権が合意し、米政府が89億ドルで普通株4億3330万株(1株20.47ドル、9.9%)を取得。CHIPS法の未払い補助金57億ドルとSecure Enclave分32億ドルを株式に転換する異例の措置となった。',

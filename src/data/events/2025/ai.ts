@@ -66,6 +66,14 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-115', threadId: 'ai', date: '2025-03-28', weight: 2,
+    title: 'xAI が X を買収し統合',
+    body: 'マスク氏が全株式交換によるxAIのX買収を発表。xAIを800億ドル、Xを330億ドル(負債120億ドルを除く)と評価し、合算1130億ドルの持株会社となった。データ・モデル・計算基盤・配信・人材を1つに束ねるとした。',
+    source: 'CNBC',
+    sourceUrl: 'https://www.cnbc.com/2025/03/28/elon-musk-says-xai-has-acquired-x-in-deal-that-values-social-media-site-at-33-billion.html',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'ai-54', threadId: 'ai', date: '2025-04-05', weight: 2,
     title: 'Meta Llama 4 MoEでマルチモーダル化',
     body: 'MetaがLlama 4 ScoutとMaverickを公開。いずれもアクティブ17BのMoEで、Scoutは総109B・1000万トークン文脈、Maverickは総400B。約2兆パラメータの教師モデルBehemothも学習中と発表。30兆トークン超で学習した。',

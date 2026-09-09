@@ -63,4 +63,5 @@ export const LINKS_2024: Link[] = [
   { from: 'jp-53', to: 'pr-13', why: '累計9200億円に続く追加支援' },
   { from: 'si-36', to: 'si-81', why: 'SK hynix先行に対しSamsungが認定で遅れる構図' },
   { from: 'si-80', to: 'si-81', why: 'MicronのH200向けHBM3E参入の一方でSamsungは認定に苦戦' },
+  { from: 'ai-52', to: 'ai-117', why: '122日で10万GPUを立ち上げた建設手法を、そのままギガワット級のColossus 2に拡大した。' },
 ];

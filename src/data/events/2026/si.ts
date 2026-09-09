@@ -18,6 +18,14 @@ export const EVENTS_2026_SI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-91', threadId: 'si', date: '2026-04-15', weight: 2,
+    title: 'Tesla AI5 テープアウト',
+    body: 'マスク氏がXでAI5のテープアウトを公表し、パッケージされたシリコンの写真とともにTSMCとSamsungに謝辞を述べ「史上最も出荷量の多いAIチップの一つになる」とした。Samsungテイラー工場とTSMCアリゾナ工場で並行生産し、量産は2027年の見込みで、当初計画から約2年遅れた。',
+    source: 'Electrek',
+    sourceUrl: 'https://electrek.co/2026/04/15/tesla-ai5-chip-taped-out-musk-ai6-dojo3/',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'si-61', threadId: 'si', date: '2026-07-04', weight: 2,
     title: 'Micron 広島 HBM向けクリーンルーム着工',
     body: 'Micronが広島工場で先端DRAM・HBM向けの新クリーンルームに着工。第1期で約28万平方メートルと、2013年のエルピーダ買収以来最大の拡張で、2028年後半に装置搬入を開始する。経済産業省が2025年9月に最大5360億円の支援を決定していた。',
