@@ -146,6 +146,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-147', threadId: 'ai', date: '2026-06-16', endDate: '2026-08-14', weight: 3,
+    title: 'SpaceX、Cursor を600億ドルで買収',
+    body: 'SpaceXがAIコーディングのCursor(Anysphere)を600億ドルの全株式交換で買収すると発表し、8月14日に完了した。スタートアップの買収として過去最大で、Cursor株はSpaceXのクラスA株に転換され、新設のSpaceXAI部門に統合された。上場からわずか4日後の発表だった。',
+    source: 'CNBC',
+    sourceUrl: 'https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'ai-112', threadId: 'ai', date: '2026-06-30', weight: 2,
     title: 'Anthropic Claude Sonnet 5 発表',
     body: 'AnthropicがClaude Sonnet 5を公開。推論・ツール利用・コーディングでSonnet 4.6から大きく改善し、Opus 4.8に迫る性能を入力2ドル・出力10ドル(100万トークン)で提供。中位モデルの価格性能比がエージェント利用の裾野を広げた。',
