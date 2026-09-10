@@ -42,12 +42,28 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-142', threadId: 'ai', date: '2026-03-18', weight: 2,
+    title: 'MiniMax M2.7 エージェント向けを重み公開',
+    body: 'MiniMaxが総2290億・活性100億のスパースMoE「M2.7」を公開。62層で256のローカルエキスパートから8つを選び、コンテキストは20万トークン。修正MITライセンスでHugging FaceとModelScopeに重みを置き、クラウド専用だった同社が自前実行に道を開いた。SWE-bench Proは56.2。',
+    source: 'MiniMax (Hugging Face)',
+    sourceUrl: 'https://huggingface.co/MiniMaxAI/MiniMax-M2.7',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-127', threadId: 'ai', date: '2026-04-15', weight: 2,
     title: 'Tesla AI5 テープアウト',
     body: 'マスク氏がXでAI5のテープアウトを公表し、パッケージされたシリコンの写真とともにTSMCとSamsungに謝辞を述べ「史上最も出荷量の多いAIチップの一つになる」とした。Samsungテイラー工場とTSMCアリゾナ工場で並行生産し、量産は2027年の見込みで、当初計画から約2年遅れた。',
     source: 'Electrek',
     sourceUrl: 'https://electrek.co/2026/04/15/tesla-ai5-chip-taped-out-musk-ai6-dojo3/',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-143', threadId: 'ai', date: '2026-04-22', weight: 2,
+    title: 'Qwen3.6 を Apache 2.0 で公開',
+    body: 'AlibabaのQwenチームが密なQwen3.6-27Bを公開。16日に出したMoE版のQwen3.6-35B-A3B(活性30億)に続くもので、いずれもApache 2.0。単一の高性能GPUで自己ホストでき、小さく緩いライセンスという性格からQwenは世界で最も広く使われるオープンモデル系列となった。同月のQwen3.6-Plusは非公開に留めた。',
+    source: 'Alibaba Qwen (Hugging Face)',
+    sourceUrl: 'https://huggingface.co/Qwen/Qwen3.6-27B',
+    sourceTier: 'primary',
   },
   {
     id: 'ai-138', threadId: 'ai', date: '2026-04-24', weight: 3,
@@ -111,6 +127,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     body: 'AnthropicがMythos Previewの更新版Claude Mythos 5を発表。サイバーセキュリティ・生物学・医療の評価で性能が伸びたため、審査済みの少数パートナーに限定し30日間のデータ保持を条件とした。最先端モデルの段階的提供が定着した。',
     source: 'Anthropic',
     sourceUrl: 'https://www.anthropic.com/claude/mythos',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-144', threadId: 'ai', date: '2026-06-16', weight: 3,
+    title: 'GLM-5.2 公開 GPT-5.5を6分の1の価格で上回る',
+    body: 'Z.aiが6月13日にコーディングプラン向けへ出したGLM-5.2の重みを16日にMITで公開。総7530億・活性400億で、コンテキストは前世代の20万から100万トークンへ広げた。Artificial Analysis Intelligence Index で首位に立ち、価格は100万トークンあたり入力1.40ドル・出力4.40ドルとGPT-5.5の5ドル・30ドルを大きく下回った。',
+    source: 'Z.ai (Hugging Face)',
+    sourceUrl: 'https://huggingface.co/zai-org/GLM-5.2',
     sourceTier: 'primary',
   },
   {

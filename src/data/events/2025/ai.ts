@@ -138,6 +138,22 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-140', threadId: 'ai', date: '2025-07-11', weight: 3,
+    title: 'Kimi K2 1兆パラメータの重みを公開',
+    body: 'Moonshot AIが総1兆パラメータのMoE「Kimi K2」を公開。384のエキスパートからトークンごとに8つを選び、活性は320億にとどまる。15.5兆トークンをMuonClipで学習し、修正MITライセンスで重みを出した。フロンティア級のエージェント能力を借りずに持てるようになり、オープンウェイト版のDeepSeekモーメントと呼ばれた。',
+    source: 'Moonshot AI (Hugging Face)',
+    sourceUrl: 'https://huggingface.co/moonshotai/Kimi-K2-Instruct',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-141', threadId: 'ai', date: '2025-07-28', weight: 2,
+    title: 'Z.ai GLM-4.5 公開 エージェント特化',
+    body: '北京の智譜AI(Z.ai)がGLM-4.5を公開。総3550億・活性320億の本体と、総1060億・活性120億のGLM-4.5-Airの2本立てで、推論とコードとエージェントを1つのモデルに統合した。MIT系のライセンスで重みを開示し、中国のオープンウェイト勢にDeepSeek以外の柱ができた。',
+    source: 'Z.ai (Hugging Face)',
+    sourceUrl: 'https://huggingface.co/zai-org/GLM-4.5',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-106', threadId: 'ai', date: '2025-08-05', weight: 1,
     title: 'Anthropic Claude Opus 4.1 発表',
     body: 'AnthropicがClaude Opus 4.1を公開。SWE-bench Verifiedで74.5%と実コード修正の最高水準を更新し、価格はOpus 4と同じ。API・Bedrock・Vertex AIで同日提供され、上位モデルの更新周期が数か月単位に縮まった。',
