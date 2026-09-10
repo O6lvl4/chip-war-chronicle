@@ -122,6 +122,14 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'mm-100', threadId: 'mm', date: '2026-08-19', weight: 2,
+    title: '日経平均 2134円安 AI・半導体株が総崩れ',
+    body: '前日の米半導体株安を受け、日経平均は2134円31銭(3.16%)安の6万5326円42銭で終了。下げ幅は一時2300円を超えた。ソフトバンクグループやアドバンテストが売られ、中東情勢への警戒と個人消費の弱さも重なってリスクを取りにくい地合いとなった。',
+    source: '日本経済新聞',
+    sourceUrl: 'https://www.nikkei.com/article/DGXZQOFL191GETZ10C26A8000000/',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'mm-99', threadId: 'mm', date: '2026-08-26', weight: 2,
     title: 'NVIDIA 四半期売上 962億ドル',
     body: 'NVIDIAの2027年度Q2決算は売上962億ドル(前年比106%増)、データセンター売上890億ドル(同117%増)。Q3見通しは1080億ドルで、中国向けデータセンター売上をゼロと想定しても需要は衰えず。',
@@ -135,6 +143,14 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     body: '前週末比1378円90銭(2.12%)高の6万6399円84銭で終了。マイクロンが先端メモリを増産するとの報道を手がかりに、キオクシアなど半導体株が買われた。AI関連産業の成長が続くとの期待が相場を支えた。',
     source: '日本経済新聞',
     sourceUrl: 'https://www.nikkei.com/article/DGXZQOUB062EPTW6A900C2000000/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'mm-101', threadId: 'mm', date: '2026-09-09', weight: 2,
+    title: '原油が再び100ドル超 ブレント100.72ドル',
+    body: '中東での攻撃再燃で北海ブレントが約3%高の1バレル100.72ドル、WTIも2.4%高の95.25ドルとなり、7月以来の100ドル台に戻した。米国の軽油小売価格は1ガロン5.94ドルと過去最高を記録し、エネルギーコストの上昇が製造業全体に及んだ。',
+    source: 'Global News',
+    sourceUrl: 'https://globalnews.ca/news/12052326/oil-prices-iran-middle-east-war/',
     sourceTier: 'secondary',
   },
 ];

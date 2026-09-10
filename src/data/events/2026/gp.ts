@@ -81,4 +81,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.nbcnews.com/world/asia/china-exports-august-jump-25-percent-trade-surplus-widens-rcna596541',
     sourceTier: 'secondary',
   },
+  {
+    id: 'gp-87', threadId: 'gp', date: '2026-09-09', weight: 3,
+    title: '米イラン 海上で相互攻撃 ホルムズ通航が停止',
+    body: 'イランの弾道ミサイルによる米艦攻撃への報復として、米軍がイランの石油タンカーを攻撃。フーシ派もサウジの石油施設を炎上させた。ホルムズ海峡の通航はほぼ止まり、開戦前は世界の石油の5分の1が通っていた。海峡の管理権と通航料をめぐり米イランの予備交渉は決裂した。',
+    source: 'Global News',
+    sourceUrl: 'https://globalnews.ca/news/12052326/oil-prices-iran-middle-east-war/',
+    sourceTier: 'secondary',
+  },
 ];

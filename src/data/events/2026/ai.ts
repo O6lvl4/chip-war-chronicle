@@ -74,6 +74,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-130', threadId: 'ai', date: '2026-05-28', weight: 3,
+    title: 'Anthropic シリーズHで650億ドル調達 評価額9650億ドル',
+    body: 'Altimeter、Dragoneer、Greenoaks、Sequoiaが共同リードし、ポストマネー評価額は9650億ドル。ハイパースケーラーから既に約束されていた150億ドル(うちAmazonが50億ドル)を含む。3月時点で8520億ドルだったOpenAIを評価額で上回った。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.anthropic.com/news/series-h',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-114', threadId: 'ai', date: '2026-06-01', weight: 3,
     title: 'Anthropic SECにS-1を秘密提出',
     body: 'AnthropicがIPOに向けForm S-1の登録届出書ドラフトをSECに秘密提出したと公表。株数と価格は未定で、実施は市場環境次第とした。主要AIラボで最初の株式公開に向けた動きとなる。',
@@ -138,6 +146,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-131', threadId: 'ai', date: '2026-08-17', weight: 3,
+    title: 'NVIDIA、OpenAIのオハイオDCに最大1050億ドル融資',
+    body: 'オハイオ州パイク郡のPORTS-Pike技術キャンパスにSB Energyが建設しOpenAIが20年リースするデータセンターに、NVIDIAが最大1050億ドルの融資枠を提供。まず4.25GW、追加で3.75GWの選択権を持ち、GPU約150万基を投じて2028年から段階稼働する。NVIDIAはSB Energyにも15億ドルを出資した。',
+    source: 'CNBC',
+    sourceUrl: 'https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'ai-47', threadId: 'ai', date: '2026-08-26', weight: 2,
     title: 'AWS NVIDIA GPU 200万基追加',
     body: 'AWSとNVIDIAが2027〜28年にBlackwell Ultra、Rubin、Rubin Ultraを計200万基追加導入すると発表。GTC 2026で示した100万基超の計画を需要が上回ったとし、政府向けにも10万基を配備する。',
@@ -152,6 +168,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     source: 'Anthropic',
     sourceUrl: 'https://www.anthropic.com/claude/fable',
     sourceTier: 'primary',
+  },
+  {
+    id: 'ai-132', threadId: 'ai', date: '2026-09-02', weight: 1,
+    title: 'Gemini 3.8 Flash と Muse Spark 1.3 が同日投入',
+    body: 'GoogleがGemini 3.8 Flashをサイバーセキュリティ版とあわせて公開し、同じ日にMetaがMuse Spark 1.3を出した。GoogleにとってFlash系の更新は6週間で3度目、Gemini 3.7 Flashの3週間後にあたる。フロンティア級の性能が安価な小型モデルへ降りてきた。',
+    source: 'Unite.AI',
+    sourceUrl: 'https://www.unite.ai/google-launches-gemini-3-8-flash-with-cybersecurity-variant/',
+    sourceTier: 'secondary',
   },
   {
     id: 'ai-20', threadId: 'ai', date: '2026-09-03', weight: 2,
