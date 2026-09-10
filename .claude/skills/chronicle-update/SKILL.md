@@ -58,9 +58,18 @@ node scripts/data-status.mjs
 - 推論の効率で桁を変えた（FLOPsやKVキャッシュの削減率）
 - 出し手の路線が変わった（クローズドだったラボが公開に転じた）
 
-点リリース（3.7→3.8 のような小刻みな更新）は入れない。ただし更新の速さ自体が話題になっているときは、その事実を1件にまとめる（ai-132 が例）。
+小数点の更新でも、上の基準に当たれば入れる。**「点リリースだから」で切り捨てない。** オープンウェイトの先頭集団は2か月おきに出しており、その一回一回が能力の段を上げている（GLM は 4.5 → 5 → 5.2 → 5.3 で毎回入れた）。逆に、基準のどれにも当たらない小刻みな更新は1件にまとめる（ai-132 が例）。
 
-openai.com は curl も WebFetch も 403 を返す。gpt-oss のように GitHub か Hugging Face に公式の置き場があるものはそちらを出典にする。
+**重みが本当に公開されたかは Hugging Face の API で確かめる。** 発表と重みの公開は数週間ずれることがあり、記事は「2週間後に公開予定」と書いたまま更新されない。日付はここで取る。
+
+```bash
+curl -s "https://huggingface.co/api/models?author=zai-org&sort=createdAt&direction=-1&limit=15" \
+  | python3 -c "import sys,json;[print(m['createdAt'][:10], m['id']) for m in json.load(sys.stdin)]"
+```
+
+`author` を `moonshotai` `deepseek-ai` `Qwen` `MiniMaxAI` `openai` `mistralai` `google` `meta-llama` に替えれば各社の公開履歴が日付順に出る。系列の抜けもこれで一目で分かる。
+
+出典URLも Hugging Face のモデルページ（`https://huggingface.co/<author>/<model>`）にする。オープンウェイトはそこが重みの置き場所そのもので、解説記事より一次情報に近い。openai.com は curl も WebFetch も 403 を返すので、gpt-oss は GitHub の公式リポジトリを使った。
 
 ## 3. 採否と書き方
 

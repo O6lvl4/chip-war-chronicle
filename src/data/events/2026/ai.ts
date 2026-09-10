@@ -34,6 +34,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-145', threadId: 'ai', date: '2026-02-11', weight: 3,
+    title: 'GLM-5 公開 オープンウェイトで首位へ',
+    body: 'Z.aiが総7440億・活性400億のGLM-5をMITで公開。GLM-4.5の約2倍の規模で、事前学習は23兆から28.5兆トークンへ。長文脈のためにDeepSeek Sparse Attentionへ切り替え20万トークンに対応した。Artificial Analysisでオープンウェイト首位、LMArenaでもオープン勢首位(1452、総合11位)となった。',
+    source: 'Z.ai (Hugging Face)',
+    sourceUrl: 'https://huggingface.co/zai-org/GLM-5',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-16', threadId: 'ai', date: '2026-03-16', weight: 3,
     title: 'NVIDIA Vera Rubin 7チップ量産開始',
     body: 'GTC 2026でNVIDIAがVera Rubinプラットフォームを発表し、Vera CPU・Rubin GPU・NVLink 6・Groq 3 LPXなど7種のチップが量産中と表明。Blackwell比でワット当たり推論最大10倍、2026年後半に提供開始。',
@@ -192,6 +200,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     source: 'CNBC',
     sourceUrl: 'https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'ai-146', threadId: 'ai', date: '2026-08-25', weight: 3,
+    title: 'GLM-5.3 重み公開 サイバー防御に特化',
+    body: '8月14日に発表したGLM-5.3の重みをMITで公開。GLM-5.2のベースはそのままに事後学習だけを長期のエージェント環境で積み増し、Terminal-Bench 3.0を4.6から28.3へ、DeepSWE v1.1を46.2から66.9へ引き上げた。脆弱性発見のCyberGymは84.5%、ExploitBenchは24.4%から54.4%へ倍増した。',
+    source: 'Z.ai (Hugging Face)',
+    sourceUrl: 'https://huggingface.co/zai-org/GLM-5.3',
+    sourceTier: 'primary',
   },
   {
     id: 'ai-47', threadId: 'ai', date: '2026-08-26', weight: 2,

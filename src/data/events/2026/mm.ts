@@ -10,6 +10,14 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'mm-102', threadId: 'mm', date: '2026-01-08', weight: 3,
+    title: 'Z.ai 香港上場 世界初の上場LLM企業',
+    body: '智譜AI改めZ.aiが香港証券取引所に02513で上場。公開価格116.20香港ドルに対し初値120.00香港ドルで、時価総額は528.3億香港ドル、調達額は43.5億香港ドル(約5.6億ドル)。大規模言語モデルの開発企業として世界で初めて株式を公開した。株価は6月初旬に1600香港ドルを超え時価総額8800億香港ドル超へ膨らんだ。',
+    source: 'PR Newswire',
+    sourceUrl: 'https://www.prnewswire.com/news-releases/chinas-agi-pioneer-and-leader-zai-listed-on-hong-kong-stock-exchange-302656265.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-60', threadId: 'mm', date: '2026-01-23', weight: 2,
     title: '日銀 0.75%据え置き 高田委員が反対',
     body: '日銀は政策金利を0.75%程度で据え置いた。賛成8・反対1で、高田委員は物価安定目標が概ね達成されたとして1.0%への引き上げを主張。海外経済の回復で物価は上振れリスクと指摘し、6月の1.0%への利上げを先取りする形となった。',
