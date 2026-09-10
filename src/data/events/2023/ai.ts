@@ -66,6 +66,14 @@ export const EVENTS_2023_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-133', threadId: 'ai', date: '2023-09-27', weight: 2,
+    title: 'Mistral 7B 公開 Apache 2.0',
+    body: '設立4か月のMistral AIが73億パラメータのMistral 7BをApache 2.0で公開。Llama 2 13Bを全ベンチマークで上回るとし、単一のコンシューマGPUで動く規模で商用利用も自由とした。米国勢以外から初のオープンウェイト有力モデルが出た。',
+    source: 'Mistral AI',
+    sourceUrl: 'https://mistral.ai/news/announcing-mistral-7b',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-49', threadId: 'ai', date: '2023-11-13', weight: 2,
     title: 'NVIDIA H200 発表 HBM3e 141GB',
     body: 'NVIDIAがHopper世代の強化版H200を発表。HBM3eを141GB搭載し帯域4.8TB/sで、A100比でメモリ容量ほぼ2倍・帯域2.4倍。Llama 2 70B推論はH100比で約2倍に。2024年第2四半期から出荷予定とし、HBM需要を一段と押し上げた。',
@@ -95,6 +103,14 @@ export const EVENTS_2023_AI: TimelineEvent[] = [
     body: 'AMDが「Advancing AI」でデータセンター向けAIアクセラレータInstinct MI300XとAPUのMI300Aを発表。CDNA 3と192GBのHBM3を搭載し、MicrosoftやMeta、Oracleが採用を表明。H100の対抗馬と位置づけられた。',
     source: 'AMD プレスリリース',
     sourceUrl: 'https://www.amd.com/en/newsroom/press-releases/2023-12-6-amd-delivers-leadership-portfolio-of-data-center-a.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-134', threadId: 'ai', date: '2023-12-11', weight: 2,
+    title: 'Mixtral 8x7B 公開 オープンなMoE',
+    body: 'Mistral AIがスパースMoEのMixtral 8x7BをApache 2.0で公開。トークンごとに8つのエキスパートから2つを選び、467億の総パラメータのうち129億だけを使う。ほとんどのベンチマークでLlama 2 70Bを上回り推論は6倍速いとした。MoEの重みが公開された最初の主要例。',
+    source: 'Mistral AI',
+    sourceUrl: 'https://mistral.ai/news/mixtral-of-experts',
     sourceTier: 'primary',
   },
 ];

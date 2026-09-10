@@ -64,4 +64,5 @@ export const LINKS_2024: Link[] = [
   { from: 'si-36', to: 'si-81', why: 'SK hynix先行に対しSamsungが認定で遅れる構図' },
   { from: 'si-80', to: 'si-81', why: 'MicronのH200向けHBM3E参入の一方でSamsungは認定に苦戦' },
   { from: 'ai-52', to: 'ai-117', why: '122日で10万GPUを立ち上げた建設手法を、そのままギガワット級のColossus 2に拡大した。' },
+  { from: 'ai-135', to: 'ai-136', why: 'Gemma の系列が Gemini 2.0 の技術を取り込み、単一GPUで動く水準まで能力を上げた。' },
 ];

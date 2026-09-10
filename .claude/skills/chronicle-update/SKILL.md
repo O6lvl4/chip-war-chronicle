@@ -26,7 +26,7 @@ node scripts/data-status.mjs
 | `si` 半導体産業 | TSMC・Samsung・SK hynix・Intel・Micron・AMD・NVIDIA・ASML の量産開始、工場投資、買収、供給契約、月次売上。TSMC の月次売上は毎月10日前後 |
 | `pr` 政策・規制 | BIS の規則・エンティティリスト、232条と関税の布告、EU Chips Act、中国商務部の輸出管制、日本の産業政策文書 |
 | `gp` 地政学 | 米中首脳・貿易統計（中国税関は毎月7〜8日前後）、台湾海峡、中東とエネルギー、レアアース |
-| `ai` AI・需要 | モデル発表、計算契約・データセンター投資、大手の設備投資計画、四半期決算 |
+| `ai` AI・需要 | モデル発表、計算契約・データセンター投資、大手の設備投資計画、AIラボの資金調達。**オープンウェイトモデルの公開も必ず見る**（下記） |
 | `mm` 市場・マクロ | FOMC・日銀の決定、日経平均と SOX の節目、メモリ契約価格（TrendForce）、為替 |
 | `jp` 日本の法制 | 成立した法律・改正法、閣議決定・閣議了解、経済安保推進法に基づく認定、予算 |
 
@@ -40,6 +40,27 @@ node scripts/data-status.mjs
 - https://www.whitehouse.gov/fact-sheets/
 - https://www.anthropic.com/news ・ https://nvidianews.nvidia.com ・ https://ir.amd.com ・ https://www.intc.com
 - https://www.trendforce.com/presscenter/news (メモリ価格・ノード別売上)
+
+### オープンウェイトモデル
+
+重みが公開されるモデルは、推論がどのハードウェアで走るかを変えるので、この年表では閉じたモデルと同じ重みで追う。中国勢の公開モデルは輸出規制の効き目を測る指標にもなる。
+
+定点で見る出し手:
+
+- 米欧: Meta (Llama)、Google (Gemma)、OpenAI (gpt-oss)、Mistral AI、NVIDIA (Nemotron)、AI2 (OLMo)
+- 中国: DeepSeek、Alibaba (Qwen)、Moonshot (Kimi)、Z.ai (GLM)、MiniMax、Xiaomi (MiMo)
+- 一覧: https://huggingface.co/models?sort=trending ・ https://openrouter.ai/rankings ・ https://mistral.ai/news ・ https://blog.google/technology/developers/
+
+**入れる基準**は、重みが実際に公開されていて、次のどれかで水準を動かしたもの。
+
+- 規模かライセンスで前例を作った（初のMoE公開、Apache 2.0/MIT での商用可、最大規模）
+- 動かせるハードウェアの水準を下げた（単一GPUで動く、量子化で16GBに収まる）
+- 推論の効率で桁を変えた（FLOPsやKVキャッシュの削減率）
+- 出し手の路線が変わった（クローズドだったラボが公開に転じた）
+
+点リリース（3.7→3.8 のような小刻みな更新）は入れない。ただし更新の速さ自体が話題になっているときは、その事実を1件にまとめる（ai-132 が例）。
+
+openai.com は curl も WebFetch も 403 を返す。gpt-oss のように GitHub か Hugging Face に公式の置き場があるものはそちらを出典にする。
 
 ## 3. 採否と書き方
 

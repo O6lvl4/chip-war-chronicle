@@ -26,6 +26,14 @@ export const EVENTS_2024_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-135', threadId: 'ai', date: '2024-02-21', weight: 2,
+    title: 'Google Gemma 公開 2B・7B',
+    body: 'GoogleがGeminiと同じ研究・技術を基にした軽量オープンモデルGemmaを2Bと7Bで公開。各サイズに事前学習版と指示調整版を用意し、ノートPCやワークステーションでの実行を想定した。クローズド路線だったGoogleがオープンウェイトに参入した。',
+    source: 'Google Blog',
+    sourceUrl: 'https://blog.google/technology/developers/gemma-open-models/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-35', threadId: 'ai', date: '2024-03-04', weight: 2,
     title: 'Anthropic Claude 3 発表',
     body: 'AnthropicがClaude 3ファミリー(Haiku/Sonnet/Opus)を発表。OpusはMMLUやGPQAなど主要評価で競合を上回ると主張し、200Kトークンの文脈と画像入力に対応。最先端モデルの競争が多社化した。',

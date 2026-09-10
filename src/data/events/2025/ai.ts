@@ -42,6 +42,14 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-136', threadId: 'ai', date: '2025-03-10', weight: 1,
+    title: 'Gemma 3 公開 単一GPUで動く小型モデル',
+    body: 'GoogleがGemini 2.0を基にしたGemma 3を1B・4B・12B・27Bで公開。コンテキストは12万8000トークンへ拡張し140言語超に対応、画像と文章の推論を単一のGPUやTPUで動かせるとした。フロンティア級の能力が手元のハードウェアへ降りてきた。',
+    source: 'Google Blog',
+    sourceUrl: 'https://blog.google/technology/developers/gemma-3/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-41', threadId: 'ai', date: '2025-03-18', weight: 2,
     title: 'NVIDIA Blackwell Ultra GB300',
     body: 'NVIDIAがGTCでBlackwell Ultra(GB300 NVL72、HGX B300)を発表。GB200 NVL72比1.5倍のAI性能を掲げ、2025年後半に主要クラウドとサーバー各社から提供開始とした。',
@@ -135,6 +143,14 @@ export const EVENTS_2025_AI: TimelineEvent[] = [
     body: 'AnthropicがClaude Opus 4.1を公開。SWE-bench Verifiedで74.5%と実コード修正の最高水準を更新し、価格はOpus 4と同じ。API・Bedrock・Vertex AIで同日提供され、上位モデルの更新周期が数か月単位に縮まった。',
     source: 'Anthropic',
     sourceUrl: 'https://www.anthropic.com/news/claude-opus-4-1',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-137', threadId: 'ai', date: '2025-08-05', weight: 3,
+    title: 'OpenAI gpt-oss を公開 GPT-2以来のオープンウェイト',
+    body: 'OpenAIがgpt-oss-120bとgpt-oss-20bをApache 2.0で公開。2019年のGPT-2以来初のオープンウェイトモデルで、いずれもMoE(総1168億/活性51億、総209億/活性36億)、コンテキストは13万1072トークン。120bは80GBのGPU1枚、20bは16GBで動き、o4-miniに近い推論性能とした。',
+    source: 'OpenAI gpt-oss (GitHub)',
+    sourceUrl: 'https://github.com/openai/gpt-oss',
     sourceTier: 'primary',
   },
   {

@@ -50,6 +50,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'ai-138', threadId: 'ai', date: '2026-04-24', weight: 3,
+    title: 'DeepSeek V4 公開 推論FLOPsを73%削減',
+    body: 'DeepSeekがV4をMITライセンスで公開。V4 Proは1.6兆(活性490億)、V4 Flashは2840億(活性130億)で、いずれも100万トークンのコンテキストを持つ。圧縮スパース注意を重ねた設計でトークンあたりの推論FLOPsを73%、KVキャッシュを90%削減したとする。汎用系と推論系の系統を1つに統合しR2を出さなかった。',
+    source: 'WinBuzzer',
+    sourceUrl: 'https://winbuzzer.com/2026/04/27/deepseek-v4-open-weights-launch-xcxwbn/',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'ai-118', threadId: 'ai', date: '2026-05-18', weight: 2,
     title: 'Musk 対 Altman 陪審が全請求を棄却',
     body: 'オークランド連邦地裁で4月27日に開廷した裁判で、陪審が2時間弱の評議の末、提訴が出訴期限の3年を過ぎているとの評決を出し、判事が即座に採用した。2024年の26請求のうち残っていた慈善信託違反と不当利得も退けられ、OpenAIの営利化の是非自体は判断されなかった。マスク氏は第9巡回区控訴裁への上訴を表明。',
@@ -120,6 +128,14 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     source: 'NVIDIA Newsroom',
     sourceUrl: 'https://nvidianews.nvidia.com/news/japan-government-industrial-leaders-and-nvidia-launch-the-worlds-first-national-ai-infrastructure',
     sourceTier: 'primary',
+  },
+  {
+    id: 'ai-139', threadId: 'ai', date: '2026-07-16', weight: 3,
+    title: 'Kimi K3 2.8兆 世界最大のオープンウェイト',
+    body: 'Moonshot AIが2.8兆パラメータ(活性1040億)のKimi K3を発表し、7月27日に完全な重みを公開した。896のルーテッド・エキスパートから16を選ぶMoEで、100万トークンのコンテキストとネイティブのマルチモーダル入力を持つ。米国の計算資源制限の下で中国勢が公開したモデルとして過去最大となった。',
+    source: 'Tom\'s Hardware',
+    sourceUrl: 'https://www.tomshardware.com/tech-industry/artificial-intelligence/moonshot-releases-2-8-trillion-parameter-kimi-k3',
+    sourceTier: 'secondary',
   },
   {
     id: 'ai-128', threadId: 'ai', date: '2026-07-22', weight: 2,
