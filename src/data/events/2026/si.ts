@@ -129,4 +129,12 @@ export const EVENTS_2026_SI: TimelineEvent[] = [
     sourceUrl: 'https://www.prnewswire.com/news-releases/qualcomm-announces-multi-generational-product-collaboration-with-amazon-to-build-next-generation-ai-data-center-infrastructure-302871895.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-96', threadId: 'si', date: '2026-09-10', weight: 2,
+    title: 'TSMC 8月売上 前年同月比53.3%増',
+    body: '8月の月次売上はNT$5148.1億で前月比10.1%増、前年同月比53.3%増。7月の44.7%増から伸びがさらに加速した。1〜8月の累計はNT$3兆3868.7億。AIサーバ向けの先端ロジックとパッケージが牽引し、単月として過去最高を更新した。',
+    source: 'TSMC 月次売上',
+    sourceUrl: 'https://investor.tsmc.com/english/monthly-revenue/2026',
+    sourceTier: 'primary',
+  },
 ];

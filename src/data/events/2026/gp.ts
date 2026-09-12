@@ -89,4 +89,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://globalnews.ca/news/12052326/oil-prices-iran-middle-east-war/',
     sourceTier: 'secondary',
   },
+  {
+    id: 'gp-88', threadId: 'gp', date: '2026-09-10', weight: 3,
+    title: 'フーシ派が紅海のモカを掌握',
+    body: 'イラン支援のフーシ派がイエメンの紅海沿岸都市モカを掌握し、ロケット弾と舟艇による上陸でズカル島も押さえた。翌日にはペリム島に進出したと複数のイエメン政府筋が伝えた。アジアと欧州を結ぶ石油と燃料の要路であるバブ・エル・マンデブ海峡が脅かされ、ホルムズに続く第2の海上要衝が争点になった。',
+    source: 'Al Jazeera',
+    sourceUrl: 'https://www.aljazeera.com/news/2026/9/10/yemens-houthis-seize-strategic-red-sea-city-of-mocha',
+    sourceTier: 'secondary',
+  },
 ];

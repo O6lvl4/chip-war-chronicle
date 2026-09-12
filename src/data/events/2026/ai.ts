@@ -257,4 +257,20 @@ export const EVENTS_2026_AI: TimelineEvent[] = [
     sourceUrl: 'https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-148', threadId: 'ai', date: '2026-09-10', weight: 3,
+    title: 'DeepSeek V4.1-Flash 公開 旗艦を小型版が上回る',
+    body: '総5520億のマルチモーダルMoEをMITで公開。新しいCausal Encoder-Decoder構成で入力時80億・出力時160億だけを活性化し、100万トークンのコンテキストと画像理解を持つ。価格は100万トークンあたり入力0.15ドル・出力0.60ドル。旗艦のV4-Proを性能・コスト・速度で上回るとし、9月14日からv4-proの呼び出しもこちらへ振り替える。',
+    source: 'DeepSeek (Hugging Face)',
+    sourceUrl: 'https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-149', threadId: 'ai', date: '2026-09-10', weight: 3,
+    title: 'Oracle クラウドインフラ売上121%増 850MWを稼働',
+    body: '2027会計年度第1四半期のクラウドインフラ売上が前年同期比121%増の74億ドル。全社売上は約30%増の193.5億ドル。850MWの新規データセンター容量を稼働させ、受注残は6640億ドルに膨らんだ。AIインフラの稼働率は97.9%で、遊休設備がほぼない状態を示した。',
+    source: 'SiliconANGLE',
+    sourceUrl: 'https://siliconangle.com/2026/09/10/oracles-stock-moves-higher-on-surging-cloud-infrastructure-revenue-growth/',
+    sourceTier: 'secondary',
+  },
 ];

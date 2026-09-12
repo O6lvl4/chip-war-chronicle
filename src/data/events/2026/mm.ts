@@ -161,4 +161,20 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceUrl: 'https://globalnews.ca/news/12052326/oil-prices-iran-middle-east-war/',
     sourceTier: 'secondary',
   },
+  {
+    id: 'mm-103', threadId: 'mm', date: '2026-09-10', weight: 3,
+    title: '中国のAIアクセラレータが20〜50%値上げ HBM高が直撃',
+    body: 'HuaweiがAscend 950DTの提示価格を25万元(約3万7000ドル)超へ引き上げ、2か月前から20〜50%高となった。950PRは年初の6万元から8万元超、旧世代の910Cも9万元から11万元超へ。Cambriconの次世代690も20〜30%高で、MetaXとIluvatar CoreXも追随した。メモリが製造原価の大半を占めるため、世界的なHBM高がそのままカード価格に出た。',
+    source: 'Reuters (Free Malaysia Today)',
+    sourceUrl: 'https://www.freemalaysiatoday.com/category/business/2026/09/10/china-s-ai-chipmakers-raise-prices-as-high-bandwidth-memory-shortage-bites',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'mm-104', threadId: 'mm', date: '2026-09-11', weight: 2,
+    title: '日経平均 1259円安 原油高と金利上昇が重荷',
+    body: '前日比1259円61銭安の6万4011円34銭で終え、1カ月ぶりの安値となった。下げ幅は一時2000円を超えた。ニューヨーク原油先物が一時1バレル104ドル台半ばと5月中旬以来の高値をつけ、世界的な金利上昇と合わせて景気と企業業績の下振れ懸念を強めた。',
+    source: '日本経済新聞',
+    sourceUrl: 'https://www.nikkei.com/article/DGXZQOFL115480R10C26A9000000/',
+    sourceTier: 'secondary',
+  },
 ];
