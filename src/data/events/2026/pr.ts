@@ -106,11 +106,27 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-143', threadId: 'pr', date: '2026-08-24', weight: 2,
+    title: '台湾 AIサーバ密輸で9人起訴 NVIDIA・Supermicroの社員含む',
+    body: '基隆地検がNVIDIA台湾法人の管理職1人とSuper Micro台湾法人の社員2人を含む9人を背任・文書偽造などで起訴。Super Microに発注したB300搭載サーバ130台のうち74台がインドネシア・日本・香港経由や直送で中国の顧客に届き、56台は台湾税関が差し止めた。偽サイトと虚偽の書類で輸出規制をすり抜けたとし、7人に最長5年の求刑を求めた。',
+    source: 'PBS NewsHour (AP)',
+    sourceUrl: 'https://www.pbs.org/newshour/world/taiwan-charges-9-over-illegal-ai-server-exports-to-china-including-nvidia-and-super-micro-staffers',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'pr-130', threadId: 'pr', date: '2026-08-31', weight: 2,
     title: '経産省 令和9年度概算要求 7兆7859億円',
     body: '経済産業省関係の令和9年度概算要求は総額7兆7859億円で、令和8年度当初予算の3兆693億円から約2.5倍に膨らんだ。「強く豊かな日本」投資枠でAI・半導体・ロボット分野に約1兆4000億円を求め、AI・半導体産業基盤強化フレームには5272億円を計上した。',
     source: '経済産業省 令和9年度概算要求・税制改正要望について',
     sourceUrl: 'https://www.meti.go.jp/main/yosangaisan/fy2027/index.html',
     sourceTier: 'primary',
+  },
+  {
+    id: 'pr-144', threadId: 'pr', date: '2026-09-02', weight: 1,
+    title: 'ラトニック商務長官 半導体関税の第2弾を予告 米国で作れば免除',
+    body: 'ラトニック商務長官がCNBCで、232条に基づく半導体関税の拡大を準備中と述べ、「米国で作れば払わず、作らなければ払う」と関税減免を国内製造投資に連動させる方針を示した。医薬品関税と同じ構造で、税率と時期は示さなかった。台湾は米台通商協定で生産の40%を米国に移すことに同意したとした。',
+    source: 'The Korea Herald (Yonhap)',
+    sourceUrl: 'https://www.koreaherald.com/article/10861036',
+    sourceTier: 'secondary',
   },
 ];

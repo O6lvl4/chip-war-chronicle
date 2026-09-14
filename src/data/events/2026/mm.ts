@@ -177,4 +177,20 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceUrl: 'https://www.nikkei.com/article/DGXZQOFL115480R10C26A9000000/',
     sourceTier: 'secondary',
   },
+  {
+    id: 'mm-105', threadId: 'mm', date: '2026-09-11', weight: 2,
+    title: '米CPI 8月 前年比3.4% ガソリン27%高がFOMC前に重荷',
+    body: '労働統計局が発表した8月の消費者物価指数は前月比0.4%上昇、前年同月比3.4%。コアは前月比0.3%、前年比2.4%。エネルギーは前年比16.3%高で、ガソリンが27.4%高、燃料油が52.0%高と中東の戦闘による原油高を映した。ガソリンだけで月間上昇の3分の1超を占め、翌週のFOMCを前に利上げ観測が強まった。',
+    source: '米労働統計局',
+    sourceUrl: 'https://www.bls.gov/news.release/cpi.nr0.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-106', threadId: 'mm', date: '2026-09-14', weight: 1,
+    title: '日経平均 518円安 OpenAI上場見送りでSBG一時13%安',
+    body: '前週末比518円35銭安の6万3492円99銭で続落。OpenAIのAltmanが2026年中の上場見送りを表明し、出資するソフトバンクグループが一時13%安と7月17日以来の下げ幅となった。AI関連株が軒並み下げ、下げ幅は一時1200円を超えた。米国の利上げ懸念と中東情勢の悪化が重なった。',
+    source: '日本経済新聞',
+    sourceUrl: 'https://www.nikkei.com/article/DGXZQOFL140KPTU6A910C2000000/',
+    sourceTier: 'secondary',
+  },
 ];

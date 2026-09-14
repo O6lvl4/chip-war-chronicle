@@ -73,4 +73,20 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www.projectdesign.jp/articles/news/cf53764e-dda0-4b83-a0f8-5edd590b86b1',
     sourceTier: 'secondary',
   },
+  {
+    id: 'jp-61', threadId: 'jp', date: '2026-09-11', weight: 2,
+    title: '経済安保推進法改正 基本指針を閣議決定 海外事業支援(OESA)が始動',
+    body: '6月に成立した改正経済安保推進法・JBIC法の施行期日を定める政令と、基本方針の一部変更、新設の「特定海外事業促進基本指針」「調査研究基本指針」、安定供給確保基本指針など3指針の変更を閣議決定。国際輸送網の強靱化、重要サービス用施設、重要技術の海外展開を特定海外事業とし、内閣総理大臣と財務大臣が計画を認定、JBICが新勘定から劣後出資する。',
+    source: '内閣府 経済安全保障推進法 基本方針',
+    sourceUrl: 'https://www.cao.go.jp/keizai_anzen_hosho/suishinhou/kihonhoshin.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'jp-62', threadId: 'jp', date: '2026-09-11', weight: 1,
+    title: '改正外為法の施行政令を閣議決定 対内投資審査の細目',
+    body: '5月に成立した改正外為法(令和8年法律第30号)の施行期日を定める政令と、対内直接投資等に関する政令など関係政令の整備政令を閣議決定。海外法人の議決権50%以上の取得を通じた間接投資、外国政府の影響下にあるみなし外国投資家、輸出管理のリスト規制技術を持つ法人への投資を事前届出の対象に加え、非指定業種への投資には実行後5年間の報告徴収と勧告・命令を設ける。',
+    source: '首相官邸 閣議案件',
+    sourceUrl: 'https://www.kantei.go.jp/jp/kakugi/2026/kakugi-2026091101.html',
+    sourceTier: 'primary',
+  },
 ];

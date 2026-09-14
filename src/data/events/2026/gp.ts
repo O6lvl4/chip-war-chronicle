@@ -97,4 +97,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.aljazeera.com/news/2026/9/10/yemens-houthis-seize-strategic-red-sea-city-of-mocha',
     sourceTier: 'secondary',
   },
+  {
+    id: 'gp-89', threadId: 'gp', date: '2026-09-13', weight: 1,
+    title: 'ホルムズでイラン貨物船が被弾 湾岸外相会合は延期',
+    body: '13日早朝、ゲシュム島沖でイランの貨物船が攻撃を受け1人が死亡、4人が負傷したとIRNAが伝えた。UKMTOは海峡を通航中の船が飛翔体で被弾し火災が起きたと報告。トランプ大統領は米軍の関与を問われ「言いたくない」と答えた。イランとオマーンの航路管理合意を説明する翌日の湾岸諸国外相会合は、サウジが修正案を出しバーレーンが不参加を表明したため延期された。',
+    source: 'KSAT (AP)',
+    sourceUrl: 'https://www.ksat.com/news/world/2026/09/13/an-iranian-commercial-ship-is-struck-near-strait-of-hormuz-with-1-dead-iranian-media-say/',
+    sourceTier: 'secondary',
+  },
 ];
