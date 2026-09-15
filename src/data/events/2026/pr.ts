@@ -129,4 +129,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.koreaherald.com/article/10861036',
     sourceTier: 'secondary',
   },
+  {
+    id: 'pr-145', threadId: 'pr', date: '2026-09-08', weight: 2,
+    title: '商務省 量子4社とCHIPS研究開発を最終合意 計7.75億ドル',
+    body: '商務省がCHIPS法に基づく研究開発の最終合意をGlobalFoundriesと最大3.75億ドル、PsiQuantum・Rigetti・D-Wave・Quantinuumと各最大1億ドルで結んだ。GFは複数方式に対応する国産の量子ファウンドリ、極低温CMOSのPDK、先端パッケージと異種集積に充てる。Rigetti・D-Wave・Quantinuumの3社分は政府が少数株式を取得する形で、Quantinuumは236万9528株を政府に発行する。',
+    source: 'NIST (CHIPS for America)',
+    sourceUrl: 'https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-globalfoundries',
+    sourceTier: 'primary',
+  },
 ];
