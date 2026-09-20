@@ -201,4 +201,28 @@ export const EVENTS_2026_SI: TimelineEvent[] = [
     sourceUrl: 'https://www.lightwaveonline.com/home/news/55404308/ayar-labs-scales-funding-to-650m',
     sourceTier: 'secondary',
   },
+  {
+    id: 'si-105', threadId: 'si', date: '2026-09-16', weight: 2,
+    title: 'SK hynix、Intelと米国でのメモリ生産を協議',
+    body: 'SK hynixがIntelと米国でメモリを生産する案を協議していると報じられた。長く建設が進まないIntelのオハイオ工場の一部を引き受ける案と、メモリ確保を急ぐ大手クラウドを交えた合弁の案が挙がる。実現すればSK hynixにとって初の米国内メモリ生産となる。報道でIntel株は時間外で5.2%、SK hynix株はソウルで4.1%上昇した。HBMやDRAMの先端技術が絡めば韓国の産業技術保護法の審査対象になりうる。',
+    source: 'CNBC',
+    sourceUrl: 'https://www.cnbc.com/2026/09/16/intel-sk-hynix-us-memory-chips.html',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'si-106', threadId: 'si', date: '2026-09-17', weight: 1,
+    title: 'Applied Materials インドに10年で50億ドル',
+    body: 'ニューデリーのSEMICON Indiaで、Applied Materialsが今後10年でインドに50億ドルを投じると発表。「India Vision 2035」として140エーカーの先端研究パークを設け、インドの供給網の規模を10倍にする。同じ会合でTata Electronicsが装置・インフラ・ガス・人材で16件の覚書を結び、インドのSemicon 2.0は110〜120億ドルの投資約束を集めたとIT相が述べた。',
+    source: 'TechNode Global',
+    sourceUrl: 'https://technode.global/2026/09/18/applied-materials-5b-india-semiconductor-investment/',
+    sourceTier: 'secondary',
+  },
+  {
+    id: 'si-107', threadId: 'si', date: '2026-09-20', weight: 3,
+    title: 'CXMT 第5世代DRAMを量産 11.95nmで24Gb LPDDR5X',
+    body: '合肥の世界製造業大会でCXMTが第5世代(G5)プラットフォームの量産を発表した。メモリアレイのハーフピッチは11.95nmで、EUVを使えないため四重パターニングで作る。8Gb換算のウェハあたり取得数は前世代比50%以上増え、24GbのLPDDR5Xを2製品量産に入れた。CXMTは第2四半期のDRAM売上で世界シェア9.5%とSamsung・SK hynix・Micronに次ぐ4位につけた。',
+    source: 'Seoul Economic Daily',
+    sourceUrl: 'https://en.sedaily.com/international/2026/09/20/chinas-cxmt-starts-mass-production-on-5th-generation-dram',
+    sourceTier: 'secondary',
+  },
 ];
