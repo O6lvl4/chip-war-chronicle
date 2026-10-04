@@ -54,17 +54,20 @@ node scripts/remove-events.mjs si-88              # 出来事とそれを参照�
 
 `data-status.mjs` は重複 id・年フォルダと日付の不一致・出典URLの欠落・未来の日付・リンクの参照切れ・時間をさかのぼるリンクを見て、問題があれば終了コード 1 を返します。何をどう調べて足すかの手順は `.claude/skills/chronicle-update/SKILL.md` にあります。
 
+出来事が増えて1ファイルが300行を超える場合、`insert-events.mjs` は同じ年・系列の `ai-part-2.ts` のような続きのファイルへ自動分割します。イベントの内容・順序・id は変わりません。既存の大きなファイルは `node scripts/split-events.mjs` で分割し、`node scripts/build-events-index.mjs` で index を再生成します。各ツールは分割後の全ファイルを読みます。
+
 ## 開発
 
 ```bash
 pnpm install
 pnpm dev          # http://localhost:5173
 pnpm build        # 型チェック + Vite ビルド (dist/)
+pnpm test         # データ分割と更新ツールの回帰テスト
 pnpm quality      # codopsy による品質チェック
 pnpm perf         # 性能予算 (別ターミナルで pnpm preview --port 4173 を起動しておく)
 ```
 
-GitHub Pages へのデプロイは `.github/workflows/pages.yml` が `main` への push で行います。ビルド前に [codopsy](https://github.com/O6lvl4/codopsy) を `--fail-on-warning` で走らせ、品質ランク A を割ると失敗します。CI では codopsy を main の固定リビジョンからソースビルドしています(リリース v2.2.0 には TypeScript の型 import を未使用扱いする誤検出があり、修正が未リリースのため)。次のリリースが出たらバイナリ取得に戻せます。
+GitHub Pages へのデプロイは `.github/workflows/pages.yml` が `main` への push で行います。ビルド前に [codopsy](https://github.com/O6lvl4/codopsy) を `--fail-on-warning` で走らせ、警告が1件でもあれば失敗します。`--verbose` で対象ファイルと警告の内容もログに残します。CI では codopsy を main の固定リビジョンからソースビルドしています(リリース v2.2.0 には TypeScript の型 import を未使用扱いする誤検出があり、修正が未リリースのため)。次のリリースが出たらバイナリ取得に戻せます。
 
 ## 技術
 

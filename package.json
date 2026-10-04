@@ -8,6 +8,7 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
+    "test": "node --test scripts/*.test.mjs",
     "format": "oxfmt",
     "quality": "codopsy analyze ./src",
     "perf": "node perf/fling.mjs"

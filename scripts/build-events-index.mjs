@@ -2,24 +2,24 @@
 import { readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { LANES, eventFiles, eventName } from './event-files.mjs';
 
 const data = join(dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data');
-const LANES = ['si', 'pr', 'gp', 'ai', 'mm', 'jp'];
 const HEADER = '// 生成ファイル: scripts/build-events-index.mjs で再生成する。';
 
 const evRoot = join(data, 'events');
 const evImports = [];
 const evSpread = [];
 for (const year of readdirSync(evRoot, { withFileTypes: true }).filter(d => d.isDirectory()).map(d => d.name).sort()) {
-  const files = new Set(readdirSync(join(evRoot, year)));
   for (const lane of LANES) {
-    if (!files.has(`${lane}.ts`)) continue;
-    const name = `EVENTS_${year}_${lane.toUpperCase()}`;
-    evImports.push(`import { ${name} } from './${year}/${lane}';`);
-    evSpread.push(`  ...${name},`);
+    for (const file of eventFiles(evRoot, year, lane)) {
+      const name = eventName(year, file);
+      evImports.push(`import { ${name} } from './${year}/${file.slice(0, -3)}';`);
+      evSpread.push(`  ...${name},`);
+    }
   }
 }
-writeFileSync(join(evRoot, 'index.ts'), `${HEADER} 年 × 系列ごとに1ファイル。
+writeFileSync(join(evRoot, 'index.ts'), `${HEADER} 年 × 系列ごと (大きな系列は part に分割)。
 import type { TimelineEvent } from '../../types';
 ${evImports.join('\n')}
 

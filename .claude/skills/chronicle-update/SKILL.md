@@ -114,7 +114,17 @@ curl -s "https://huggingface.co/api/models?author=zai-org&sort=createdAt&directi
 判断に迷ったら、その系列の既存の出来事を10件ほど眺めて、並べて違和感がないかで決める。`node scripts/data-status.mjs` の直近一覧と、下のコマンドで系列全体を一覧できる。
 
 ```bash
-node -e 'const fs=require("fs"),R="src/data/events";for(const y of fs.readdirSync(R).filter(d=>/^\d{4}$/.test(d)).sort()){const p=`${R}/${y}/${process.argv[1]}.ts`;if(!fs.existsSync(p))continue;for(const b of fs.readFileSync(p,"utf8").split(/\n(?=  \{)/)){const g=r=>(b.match(r)||[])[1];if(!g(/id: .([a-z-\d]+)./))continue;console.log(g(/ date: .([0-9-]+)./),g(/id: .([a-z-\d]+)./),g(/title: .(.*).,\n/));}}' pr
+node --input-type=module - pr <<'JS'
+import { readdirSync } from 'node:fs';
+import { readEventBlocks } from './scripts/event-files.mjs';
+const root = 'src/data/events';
+for (const year of readdirSync(root).filter(d => /^\d{4}$/.test(d)).sort()) {
+  for (const block of readEventBlocks(root, year, process.argv[2])) {
+    const get = re => (block.match(re) || [])[1];
+    console.log(get(/ date: '([^']+)'/), get(/id: '([^']+)'/), get(/title: '(.*)',\n/));
+  }
+}
+JS
 ```
 
 出来事を別の系列へ移すときは、id が系列名を含むので振り直しとリンクの張り替えが要る。手でやらず、`scripts/remove-events.mjs` で消して `insert-events.mjs` で入れ直し、`add-links.mjs` でリンクを張り直す。
@@ -133,6 +143,8 @@ node scripts/build-events-index.mjs                 # events/index.ts と links/
 
 `insert-events.mjs` は `date` の年から置き場所を決めるので、年をまたいでも1回で流せる。`add-links.mjs` は id が存在しない・時間をさかのぼる・既に同じペアがあるリンクを飛ばして最後に報告する（飛ばされたものは必ず読む）。
 
+`insert-events.mjs` は300行の上限に合わせて `<系列>-part-2.ts` 以降へ自動分割する。年・系列・id・内容は変えない。既存の大きなファイルは `node scripts/split-events.mjs` で分割し、続けて index を再生成する。調査時も `<系列>.ts` だけでなく part ファイルを含めて読み、整合性は `data-status.mjs` で確認する。
+
 ## 5. 因果リンクを張る
 
 新しい出来事は既存の何かの結果か原因になっているはず。**1件あたり0〜2本**を目安に張る。
@@ -145,6 +157,7 @@ node scripts/build-events-index.mjs                 # events/index.ts と links/
 
 ```bash
 node scripts/data-status.mjs          # 整合性に問題があれば終了コード 1
+pnpm test                            # データ分割と更新ツールの回帰テスト
 ./node_modules/.bin/tsc --noEmit      # 型チェック
 pnpm quality                          # codopsy (CI が --fail-on-warning で走らせる)
 ```

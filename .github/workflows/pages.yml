@@ -3,15 +3,15 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 env:
@@ -20,6 +20,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
     steps:
       - uses: actions/checkout@v7
       - uses: pnpm/action-setup@v6
@@ -30,6 +33,8 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: node scripts/data-status.mjs
       # codopsy v2.2.0 (最新リリース) は TypeScript の型 import を未使用と誤検出する。
       # 修正 (5626620) は main にのみ入っているので、そのリビジョンをソースからビルドして使う。
       - name: Restore codopsy
@@ -44,7 +49,7 @@ jobs:
         if: steps.codopsy-cache.outputs.cache-hit != 'true'
         run: cargo install --git https://github.com/O6lvl4/codopsy --rev ${{ env.CODOPSY_REV }} --locked codopsy
       - name: Quality gate (codopsy)
-        run: ~/.cargo/bin/codopsy analyze ./src --fail-on-warning
+        run: ~/.cargo/bin/codopsy analyze ./src --fail-on-warning --verbose
       - name: Build
         run: pnpm build
         env:
@@ -76,8 +81,12 @@ jobs:
           pnpm perf
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     needs: [build, perf]
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
