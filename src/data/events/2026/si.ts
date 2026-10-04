@@ -226,6 +226,14 @@ export const EVENTS_2026_SI: TimelineEvent[] = [
     sourceTier: 'secondary',
   },
   {
+    id: 'si-110', threadId: 'si', date: '2026-09-23', weight: 1,
+    title: 'SynopsysとTSMC A14向け設計フロー認証を公表',
+    body: 'SynopsysはTSMCのA14向けデジタル・アナログ設計フローの認証取得を発表した。認証は実装からサインオフまでを対象とする。N3P試験チップとCoWoS-Sを用いたUCIe-A 32G・40Gのシリコン実証も報告した。',
+    source: 'Synopsys プレスリリース',
+    sourceUrl: 'https://investor.synopsys.com/news/news-details/2026/Synopsys-and-TSMC-Partner-to-Accelerate-AI-Systems-Innovation-with-Agentic-AI-and-Advanced-Design/default.aspx',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-108', threadId: 'si', date: '2026-09-28', weight: 2,
     title: 'AMD、World Labsの82億ドル買収を発表',
     body: 'AMDはFei-Fei Liが率いるWorld Labsを約82億ドルの株式対価で買収する最終契約を発表した。契約締結は9月26日。規制承認などを条件に年内完了を予定し、完了後にLiはAMDのEVP兼チーフサイエンティストへ就任するとした。',
