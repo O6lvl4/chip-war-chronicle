@@ -225,4 +225,12 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceUrl: 'https://www.pymnts.com/news/investment-tracker/ipo/2026/anthropic-targets-november-ipo-revenue-surges/',
     sourceTier: 'secondary',
   },
+  {
+    id: 'mm-111', threadId: 'mm', date: '2026-09-30', weight: 2,
+    title: 'Micron 四半期売上542億ドル、年間売上1332億ドル',
+    body: 'Micronの2026年度第4四半期売上は542.3億ドルで、前年同期の113.2億ドルから拡大した。GAAP純利益は377.0億ドル。通期売上は1331.9億ドル、純利益は849.7億ドルとなり、年間設備投資額は純額273.7億ドルだった。',
+    source: 'Micron 決算発表',
+    sourceUrl: 'https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx',
+    sourceTier: 'primary',
+  },
 ];

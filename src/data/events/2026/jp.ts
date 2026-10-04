@@ -89,4 +89,12 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www.kantei.go.jp/jp/kakugi/2026/kakugi-2026091101.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'jp-63', threadId: 'jp', date: '2026-10-01', weight: 2,
+    title: 'サイバー対処能力強化法を一部施行 官民連携と無害化措置',
+    body: 'サイバー対処能力強化法と同整備法の一部が施行。基幹インフラ15分野258事業者の資産届出・インシデント報告、官民協議会、攻撃サーバーへのアクセス・無害化措置の規定が適用された。通信情報の利用は別段階で、2027年秋からの施行とされる。',
+    source: '内閣府・国家サイバー統括室 施行説明資料',
+    sourceUrl: 'https://www.cao.go.jp/cybersecurity/pdf/sekousetsumei.pdf',
+    sourceTier: 'primary',
+  },
 ];
