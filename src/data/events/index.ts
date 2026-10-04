@@ -1,4 +1,4 @@
-// 生成ファイル: scripts/build-events-index.mjs で再生成する。 年 × 系列ごとに1ファイル。
+// 生成ファイル: scripts/build-events-index.mjs で再生成する。 年 × 系列ごと (大きな系列は part に分割)。
 import type { TimelineEvent } from '../../types';
 import { EVENTS_2018_SI } from './2018/si';
 import { EVENTS_2018_PR } from './2018/pr';
@@ -52,6 +52,7 @@ import { EVENTS_2026_SI } from './2026/si';
 import { EVENTS_2026_PR } from './2026/pr';
 import { EVENTS_2026_GP } from './2026/gp';
 import { EVENTS_2026_AI } from './2026/ai';
+import { EVENTS_2026_AI_PART_2 } from './2026/ai-part-2';
 import { EVENTS_2026_MM } from './2026/mm';
 import { EVENTS_2026_JP } from './2026/jp';
 
@@ -108,6 +109,7 @@ export const EVENTS: TimelineEvent[] = [
   ...EVENTS_2026_PR,
   ...EVENTS_2026_GP,
   ...EVENTS_2026_AI,
+  ...EVENTS_2026_AI_PART_2,
   ...EVENTS_2026_MM,
   ...EVENTS_2026_JP,
 ];

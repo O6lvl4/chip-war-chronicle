@@ -4,22 +4,16 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { LANES, readEventBlocks } from './event-files.mjs';
 
 const data = join(dirname(fileURLToPath(import.meta.url)), '..', 'src', 'data');
-const LANES = ['si', 'pr', 'gp', 'ai', 'mm', 'jp'];
 const today = new Date().toISOString().slice(0, 10);
 
 const events = [];
 const years = readdirSync(join(data, 'events')).filter(d => /^\d{4}$/.test(d)).sort();
 for (const year of years) {
   for (const lane of LANES) {
-    let src;
-    try {
-      src = readFileSync(join(data, 'events', year, `${lane}.ts`), 'utf8');
-    } catch {
-      continue;
-    }
-    for (const block of src.split(/\n(?=  \{\n)/).slice(1)) {
+    for (const block of readEventBlocks(join(data, 'events'), year, lane)) {
       const get = re => (block.match(re) ?? [])[1];
       const id = get(/id: '([^']+)'/);
       if (!id) continue;

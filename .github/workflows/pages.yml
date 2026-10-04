@@ -30,6 +30,8 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: node scripts/data-status.mjs
       # codopsy v2.2.0 (最新リリース) は TypeScript の型 import を未使用と誤検出する。
       # 修正 (5626620) は main にのみ入っているので、そのリビジョンをソースからビルドして使う。
       - name: Restore codopsy
@@ -44,7 +46,7 @@ jobs:
         if: steps.codopsy-cache.outputs.cache-hit != 'true'
         run: cargo install --git https://github.com/O6lvl4/codopsy --rev ${{ env.CODOPSY_REV }} --locked codopsy
       - name: Quality gate (codopsy)
-        run: ~/.cargo/bin/codopsy analyze ./src --fail-on-warning
+        run: ~/.cargo/bin/codopsy analyze ./src --fail-on-warning --verbose
       - name: Build
         run: pnpm build
         env:
