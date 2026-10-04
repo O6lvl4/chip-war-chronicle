@@ -145,4 +145,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-95', threadId: 'gp', date: '2026-10-02', weight: 2,
+    title: '台湾 F-16 Block 70の初の2機が台東に到着',
+    body: '台湾空軍は米国から初の単座F-16 Block 70戦闘機2機が台東の志航基地に到着したと発表。受領整備と機種転換訓練を順次進める。米国の生産ラインには同型機63機があり、一部は引き渡し段階に達したと説明。後続機は米側の計画に沿って台湾へ移送する。',
+    source: '台湾国防部・空軍司令部',
+    sourceUrl: 'https://www.mnd.gov.tw/news/clarification/87899',
+    sourceTier: 'primary',
+  },
 ];

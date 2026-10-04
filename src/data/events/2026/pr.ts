@@ -153,4 +153,20 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.govinfo.gov/content/pkg/FR-2026-09-24/html/2026-19537.htm',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-148', threadId: 'pr', date: '2026-09-29', weight: 1,
+    title: '米大統領令 行政府のAI呼称をSuper Intelligenceに変更',
+    body: 'トランプ大統領が大統領令14434号に署名。行政府の公文書、広報、ウェブサイト等で「AI」を「Super Intelligence（SI）」に置き換えるよう指示した。既発行の規則や契約の変更は求めず、科学技術担当補佐官に60日以内の新たな連邦定義の立法案提出を命じた。',
+    source: 'White House Executive Order 14434',
+    sourceUrl: 'https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-149', threadId: 'pr', date: '2026-09-29', weight: 1,
+    title: '米大統領令 対話型AIのAmerica.govへ行政サービス統合を指示',
+    body: 'トランプ大統領が大統領令14432号に署名し、対話型AIを用いる連邦窓口America.govの設置と各省庁の接続を指示。年間利用者10万人超のオンライン行政サービスが対象で、税務申告や国防・情報機関は除外。Login.govによる認証と90日以内のOMB実施指針を定めた。',
+    source: 'White House Executive Order 14432',
+    sourceUrl: 'https://www.whitehouse.gov/presidential-actions/2026/09/streamlining-access-to-government-services-through-america-gov/',
+    sourceTier: 'primary',
+  },
 ];

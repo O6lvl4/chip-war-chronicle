@@ -233,4 +233,20 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceUrl: 'https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-112', threadId: 'mm', date: '2026-10-01', weight: 2,
+    title: '日経平均2203円高 技術セクターが1762円押し上げ',
+    body: '日経平均株価は前日比2203円00銭(3.30%)高の6万8956円72銭で取引を終えた。技術セクターの上昇寄与は1762円26銭、情報通信は255円07銭。構成銘柄では108銘柄が上昇し、115銘柄が下落、2銘柄が横ばいだった。',
+    source: '日本経済新聞社 日経平均プロフィル',
+    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261001&idx=nk225',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-113', threadId: 'mm', date: '2026-10-02', weight: 1,
+    title: '米9月雇用 2.9万人増、7・8月は計6万人下方修正',
+    body: '米労働統計局が9月の雇用統計を公表し、非農業部門の雇用者数は前月比2万9000人増、失業率は4.2%となった。7・8月の雇用者数は合計6万人下方修正。民間部門の平均時給は前月比0.1%増の37.81ドル、前年同月比では3.0%増だった。',
+    source: '米労働統計局',
+    sourceUrl: 'https://www.bls.gov/news.release/archives/empsit_10022026.htm',
+    sourceTier: 'primary',
+  },
 ];

@@ -50,6 +50,14 @@ export const EVENTS_2026_AI_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-161', threadId: 'ai', date: '2026-09-28', weight: 2,
+    title: 'Anthropic Claude Sonnet 5.5を発表 生成速度30%超向上',
+    body: 'AnthropicがClaude Sonnet 5.5を発表。入力100万トークン2ドル、出力10ドルはSonnet 5と同額で、キャッシュ読込は0.20ドル。同社測定では必要トークンの削減により処理費用が最大30%下がり、生成速度は30%超向上した。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.anthropic.com/claude-sonnet-5-5',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-158', threadId: 'ai', date: '2026-09-29', weight: 2,
     title: 'Samsung6社 HelixのAIインフラに計10億ドル投資を発表',
     body: 'Samsung Electronicsなどグループ6社が、KKR設立のAIインフラ企業Helixに計10億ドルを投資すると発表。うち電子が5億ドルを拠出する。Helixはデータセンター、発電、送配電、光回線を統合し、NVIDIAやVistraも創設投資家として参加する。',
@@ -66,11 +74,27 @@ export const EVENTS_2026_AI_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-162', threadId: 'ai', date: '2026-09-30', weight: 2,
+    title: 'CoreWeave Vera Rubin NVL72のクラウド提供開始を発表',
+    body: 'CoreWeaveがVera Rubin NVL72のクラウド提供開始を発表。Cognitionが初の顧客として本番処理を稼働し、同社のSWE-2推論テストでGB200 NVL72比最大4.8倍の総トークン処理量を記録した。対象は早期アクセス顧客となる。',
+    source: 'NVIDIA Blog',
+    sourceUrl: 'https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-160', threadId: 'ai', date: '2026-10-01', weight: 2,
     title: 'GPT-6 Astra Ultrafast提供開始 Blackwellで最大8倍の生成速度',
     body: 'NVIDIAがBlackwell GPU上で動くGPT-6 Astra Ultrafastの提供開始を公表。OpenAI APIと対象のChatGPT Work・Codex利用者に提供する。推論ソフトの最適化により、Astra標準モード比で最大8倍のトークン生成速度を実現したと説明した。',
     source: 'NVIDIA Blog',
     sourceUrl: 'https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-163', threadId: 'ai', date: '2026-10-02', weight: 1,
+    title: 'NVIDIA DGX Sparkの64GB版を発表 10月23日発売へ',
+    body: 'NVIDIAがGB10 Grace Blackwellと64GB統合メモリを搭載するDGX Sparkを発表。Acerなど6社が10月23日に4999ドルから発売する予定で、最大1000億パラメータのモデルに対応する。2台接続時はメモリ128GB、最大2000億パラメータまで拡張できる。',
+    source: 'NVIDIA Blog',
+    sourceUrl: 'https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/',
     sourceTier: 'primary',
   },
 ];
