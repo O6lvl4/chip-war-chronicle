@@ -225,4 +225,20 @@ export const EVENTS_2026_SI: TimelineEvent[] = [
     sourceUrl: 'https://en.sedaily.com/international/2026/09/20/chinas-cxmt-starts-mass-production-on-5th-generation-dram',
     sourceTier: 'secondary',
   },
+  {
+    id: 'si-108', threadId: 'si', date: '2026-09-28', weight: 2,
+    title: 'AMD、World Labsの82億ドル買収を発表',
+    body: 'AMDはFei-Fei Liが率いるWorld Labsを約82億ドルの株式対価で買収する最終契約を発表した。契約締結は9月26日。規制承認などを条件に年内完了を予定し、完了後にLiはAMDのEVP兼チーフサイエンティストへ就任するとした。',
+    source: 'AMD プレスリリース・8-K',
+    sourceUrl: 'https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-109', threadId: 'si', date: '2026-09-28', weight: 2,
+    title: 'NVIDIA 自社株買い枠を1500億ドル追加承認',
+    body: 'NVIDIAは取締役会が既存の自社株買い計画に1500億ドルを追加承認したと発表した。未実施の承認済み総額は2350億ドルとなり、同社は2028年度までの実行を予定すると説明。今回の追加承認額を自社株買い承認枠の増額として史上最大とした。',
+    source: 'NVIDIA プレスリリース',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-announces-a-150-billion-share-repurchase-authorization-increase',
+    sourceTier: 'primary',
+  },
 ];

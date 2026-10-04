@@ -137,4 +137,20 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.nist.gov/news-events/news/2026/09/department-commerce-announces-finalization-chips-rd-award-globalfoundries',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-146', threadId: 'pr', date: '2026-09-15', weight: 2,
+    title: '中国 出入境管理規定が施行 輸出管制違反者の出国禁止を明記',
+    body: '中国の「出境入境管理規定」(国務院令第841号)が施行。輸出管制・技術輸出入管理に違反し、国家の産業・技術安全を害するおそれのある中国公民について、商務部などが出国禁止を決定できると規定。原則として理由・根拠・救済手段を本人に書面通知する。',
+    source: '中国司法部 国家行政法規庫',
+    sourceUrl: 'https://xzfg.moj.gov.cn/front/law/detail?LawID=1820',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-147', threadId: 'pr', date: '2026-09-22', endDate: '2026-12-03', weight: 1,
+    title: 'BIS ポリシリコンの関税前買いだめを制限 免除申請を開始',
+    body: 'BISの時限的な最終規則が発効し、12月4日の関税導入前のポリシリコンと派生品の買いだめを規制。過去の平均を大幅に超える輸入には禁止措置を設け、8月6日以降に登録した新規輸入者にも数量制限を適用する。免除申請は12月3日まで受け付ける。',
+    source: '米連邦官報 2026-19537',
+    sourceUrl: 'https://www.govinfo.gov/content/pkg/FR-2026-09-24/html/2026-19537.htm',
+    sourceTier: 'primary',
+  },
 ];

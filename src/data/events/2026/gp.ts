@@ -137,4 +137,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://thehill.com/homenews/administration/6095241-xi-joins-trump-washington/',
     sourceTier: 'secondary',
   },
+  {
+    id: 'gp-94', threadId: 'gp', date: '2026-09-24', weight: 2,
+    title: '米中首脳がワシントンで会談 貿易・投資委員会を稼働',
+    body: 'トランプ大統領と習近平国家主席がホワイトハウスで会談。5月に設置で合意した貿易・投資委員会を稼働させ、双方300億ドル分の非機微品に関税優遇を勧告することで一致した。超知能対話の設置と事故連絡経路にも合意。レアアース供給問題は協議を継続する。',
+    source: 'ホワイトハウス・中国外交部',
+    sourceUrl: 'https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/',
+    sourceTier: 'primary',
+  },
 ];
