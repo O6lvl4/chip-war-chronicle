@@ -249,4 +249,28 @@ export const EVENTS_2026_SI: TimelineEvent[] = [
     sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-announces-a-150-billion-share-repurchase-authorization-increase',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-111', threadId: 'si', date: '2026-09-30', weight: 2,
+    title: '新光電気、JDI茂原工場の取得契約 先端パッケージ拠点へ',
+    body: '新光電気はJDI茂原工場の土地・建物・付帯設備を取得する売買契約を締結。同日、取得後に西側エリアをFICTへ譲渡する契約も結んだ。フリップチップ型パッケージの生産体制を強化する計画で、引渡しは2027年3月末、稼働開始は2028年度を予定する。',
+    source: '新光電気 プレスリリース',
+    sourceUrl: 'https://www.shinko.co.jp/news/docs/20260930-01_jp.pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-112', threadId: 'si', date: '2026-10-01', weight: 2,
+    title: 'Applied MaterialsとBesi、先端パッケージ開発の提携を拡大',
+    body: 'Applied MaterialsとBesiは提携拡大を発表し、BesiがEPIC Centerにイノベーションパートナーとして参加。2020年に始めた共同開発を基に、ハイブリッド接合に加え、熱圧着接合、ダイ・オン・パネル構造、光接続などへ研究対象を広げる。',
+    source: 'Applied Materials プレスリリース',
+    sourceUrl: 'https://www.appliedmaterials.com/us/en/newsroom/press-releases/100126-applied-besi-expand-partnership.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-113', threadId: 'si', date: '2026-10-05', weight: 2,
+    title: 'Skyworks、Qorvoとの統合を完了 RF・電源半導体を拡充',
+    body: 'SkyworksはQorvoとの統合完了を発表。Qorvo株主は1株につき現金32.50ドルとSkyworks株0.960株を受け取る。完全希薄化後の持分は旧Skyworks株主が約63%、旧Qorvo株主が約37%。社名とNASDAQの銘柄コードSWKSを維持する。',
+    source: 'Skyworks プレスリリース',
+    sourceUrl: 'https://investors.skyworksinc.com/news-releases/news-release-details/skyworks-completes-combination-qorvo',
+    sourceTier: 'primary',
+  },
 ];

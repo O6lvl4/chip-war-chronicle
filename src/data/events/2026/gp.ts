@@ -153,4 +153,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.mnd.gov.tw/news/clarification/87899',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-96', threadId: 'gp', date: '2026-10-02', weight: 2,
+    title: 'G7、石油備蓄1億バレルの協調放出で合意',
+    body: 'G7首脳はオンライン会議でエネルギー供給の安定化策に合意。既に履行した約束分を考慮し、IEAを通じた1億バレルの協調放出を直ちに開始し、4カ月間で実施すると表明した。最初の20日間は軽油放出を前倒しし、G7間のエネルギー輸出制限を控える方針も再確認した。',
+    source: '欧州理事会 G7首脳共同声明',
+    sourceUrl: 'https://www.consilium.europa.eu/en/press/press-releases/2026/10/02/g7-leaders-statement-on-global-energy-security-and-market-stability/',
+    sourceTier: 'primary',
+  },
 ];
