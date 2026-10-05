@@ -249,4 +249,12 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceUrl: 'https://www.bls.gov/news.release/archives/empsit_10022026.htm',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-114', threadId: 'mm', date: '2026-10-05', weight: 2,
+    title: '日経平均 一時7万円台、終値は1637円高の6万9946円',
+    body: '日経平均は前営業日比1637.40円高、2.40%上昇の6万9946.86円で引けた。午前10時44分に7万72.13円まで上昇。構成銘柄は157銘柄が上昇し68銘柄が下落した。技術セクターの指数押上げ寄与度は1075.12円となった。',
+    source: '日本経済新聞社 日経平均プロフィル',
+    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261005&idx=nk225',
+    sourceTier: 'primary',
+  },
 ];
