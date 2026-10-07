@@ -273,4 +273,12 @@ export const EVENTS_2026_SI: TimelineEvent[] = [
     sourceUrl: 'https://investors.skyworksinc.com/news-releases/news-release-details/skyworks-completes-combination-qorvo',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-114', threadId: 'si', date: '2026-10-06', weight: 1,
+    title: 'Teradyne、Titan HPのバーンイン機能を発表 量産で稼働',
+    body: 'Teradyneが半導体試験装置Titan HPのバーンイン機能強化を発表。実際の負荷を動かしながら各デバイスの接合温度を個別制御し、信頼性試験とシステムレベル試験に対応する。AI・車載向けなどの高電力チップを対象に、提供済みで量産でも稼働しているとした。',
+    source: 'Teradyne プレスリリース',
+    sourceUrl: 'https://investors.teradyne.com/news-events/press-releases/detail/452/teradyne-introduces-titan-hp-platform-with-burn-in-capabilities-for-advanced-ai-data-center-devices',
+    sourceTier: 'primary',
+  },
 ];

@@ -257,4 +257,12 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261005&idx=nk225',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-115', threadId: 'mm', date: '2026-10-06', weight: 1,
+    title: '日経平均 終値7万円台、技術セクターが557円押し上げ',
+    body: '日経平均は前日比737.12円高、1.05%上昇の7万683.98円で引け、終値で7万円台を回復した。高値は7万798.62円。構成銘柄は165銘柄が上昇、55銘柄が下落、5銘柄が横ばいで、技術セクターが指数を556.85円押し上げた。',
+    source: '日本経済新聞社 日経平均プロフィル',
+    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261006&idx=nk225',
+    sourceTier: 'primary',
+  },
 ];
