@@ -169,4 +169,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.whitehouse.gov/presidential-actions/2026/09/streamlining-access-to-government-services-through-america-gov/',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-150', threadId: 'pr', date: '2026-10-02', weight: 1,
+    title: 'BIS、Lambda Researchと輸出違反で和解 制裁金200万ドルは条件付き猶予',
+    body: 'BISがLambda Researchとの和解を公表。Huawei日本法人とSiCarrierへの無許可の光学設計ソフト輸出など66件の違反に民事制裁金200万ドルを科した。支払いは1年間猶予し、研修・監査などの条件を満たせば免除する。',
+    source: 'BIS 命令・和解合意',
+    sourceUrl: 'https://www.bis.gov/media/documents/lambda-research-corporation-10-2-2026.pdf',
+    sourceTier: 'primary',
+  },
 ];
