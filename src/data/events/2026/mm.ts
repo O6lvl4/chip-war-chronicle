@@ -265,4 +265,20 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261006&idx=nk225',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-116', threadId: 'mm', date: '2026-10-08', weight: 2,
+    title: 'Samsung 7〜9月期の営業利益速報107.4兆ウォン',
+    body: 'Samsungが2026年7〜9月期の業績速報を公表。連結売上高は約195兆ウォン、営業利益は約107.4兆ウォンとした。韓国会計基準に基づく推計範囲の中央値で、前年同期の売上高86.06兆ウォン、営業利益12.17兆ウォンを上回る。',
+    source: 'Samsung 業績速報',
+    sourceUrl: 'https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-117', threadId: 'mm', date: '2026-10-08', weight: 2,
+    title: '日経平均993円安で7万円割れ 技術セクターが553円押し下げ',
+    body: '日経平均株価は前日比993.60円安、1.42%下落の6万9042.11円で引けた。技術セクターの下落寄与度は552.94円、情報通信は188.11円。構成銘柄は56銘柄が上昇、165銘柄が下落、4銘柄が横ばいとなり、終値は7万円を下回った。',
+    source: '日本経済新聞社 日経平均プロフィル',
+    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261008&idx=nk225',
+    sourceTier: 'primary',
+  },
 ];

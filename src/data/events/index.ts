@@ -49,6 +49,7 @@ import { EVENTS_2025_AI } from './2025/ai';
 import { EVENTS_2025_MM } from './2025/mm';
 import { EVENTS_2025_JP } from './2025/jp';
 import { EVENTS_2026_SI } from './2026/si';
+import { EVENTS_2026_SI_PART_2 } from './2026/si-part-2';
 import { EVENTS_2026_PR } from './2026/pr';
 import { EVENTS_2026_GP } from './2026/gp';
 import { EVENTS_2026_AI } from './2026/ai';
@@ -106,6 +107,7 @@ export const EVENTS: TimelineEvent[] = [
   ...EVENTS_2025_MM,
   ...EVENTS_2025_JP,
   ...EVENTS_2026_SI,
+  ...EVENTS_2026_SI_PART_2,
   ...EVENTS_2026_PR,
   ...EVENTS_2026_GP,
   ...EVENTS_2026_AI,
