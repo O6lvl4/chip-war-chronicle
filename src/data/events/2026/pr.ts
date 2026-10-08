@@ -177,4 +177,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.bis.gov/media/documents/lambda-research-corporation-10-2-2026.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-151', threadId: 'pr', date: '2026-10-08', weight: 2,
+    title: '米政府、科学研究に60億ドル超の官民施策 AI計算資源も拡充',
+    body: '米政府が科学研究に60億ドル超の官民施策を発表。Genesis Missionの15超の連邦機関向けに11社が計24億ドル分のAIツール・計算利用枠の提供を約束。NSFとエネルギー省はAI科学機器・自律実験室への1億ドル超の投資を発表した。',
+    source: 'White House Fact Sheet',
+    sourceUrl: 'https://www.whitehouse.gov/fact-sheets/2026/10/fact-sheet-trump-administration-announces-the-most-ambitious-set-of-science-initiatives-this-century/',
+    sourceTier: 'primary',
+  },
 ];

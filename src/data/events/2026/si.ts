@@ -281,4 +281,12 @@ export const EVENTS_2026_SI: TimelineEvent[] = [
     sourceUrl: 'https://investors.teradyne.com/news-events/press-releases/detail/452/teradyne-introduces-titan-hp-platform-with-burn-in-capabilities-for-advanced-ai-data-center-devices',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-115', threadId: 'si', date: '2026-10-08', weight: 2,
+    title: 'TSMC 9月売上 前年同月比54.6%増の5118.6億台湾ドル',
+    body: 'TSMCが9月の連結売上高を5118.6億台湾ドルと発表した。前年同月比54.6%増、前月比0.6%減。1〜9月の累計売上高は3兆8987.3億台湾ドルで、前年同期の2兆7629.6億台湾ドルから41.1%増加した。',
+    source: 'TSMC 月次売上発表',
+    sourceUrl: 'https://pr.tsmc.com/english/news/3343',
+    sourceTier: 'primary',
+  },
 ];
