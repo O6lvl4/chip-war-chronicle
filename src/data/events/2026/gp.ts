@@ -161,4 +161,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.consilium.europa.eu/en/press/press-releases/2026/10/02/g7-leaders-statement-on-global-energy-security-and-market-stability/',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-97', threadId: 'gp', date: '2026-10-07', weight: 2,
+    title: '米国・日欧など15経済体、成熟半導体の過剰生産能力への協調対応で声明',
+    body: '米国に加え日本、EU、韓国など14経済体が、構造的な過剰生産能力への対応で閣僚共同声明に署名。自動車、電池、化学品、成熟世代の半導体、太陽光を優先分野に、専用の協議枠組みを設ける方針を示し、12月前の技術会合開催で合意した。',
+    source: '米通商代表部（USTR）・閣僚共同声明',
+    sourceUrl: 'https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/october/fourteen-economies-join-united-states-signing-joint-ministerial-statement-address-global-excess',
+    sourceTier: 'primary',
+  },
 ];
