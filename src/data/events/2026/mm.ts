@@ -281,4 +281,12 @@ export const EVENTS_2026_MM: TimelineEvent[] = [
     sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261008&idx=nk225',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-118', threadId: 'mm', date: '2026-10-09', weight: 2,
+    title: 'Firmus、豪州証券取引所への上場申請を撤回',
+    body: 'Firmusが豪州証券取引所への上場申請を撤回した。株主のMaas Groupが同日朝の同社声明を開示。取締役会は市場の変動と条件を踏まえ、提示条件が事業と長期成長見通しを適切に反映しないと判断した。今後は非公開市場で資金調達を目指し、別の公開・非公開市場の選択肢を検討する。',
+    source: 'Maas Group ASX開示',
+    sourceUrl: 'https://investors.maasgroup.com.au/DownloadFile.axd?file=%2FReport%2FComNews%2F20261009%2F03146611.pdf',
+    sourceTier: 'primary',
+  },
 ];
