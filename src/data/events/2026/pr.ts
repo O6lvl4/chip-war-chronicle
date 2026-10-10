@@ -185,4 +185,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.whitehouse.gov/fact-sheets/2026/10/fact-sheet-trump-administration-announces-the-most-ambitious-set-of-science-initiatives-this-century/',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-152', threadId: 'pr', date: '2026-10-09', weight: 2,
+    title: '米OFAC、ロシア産軽油の取引・輸入を期限付きで許可',
+    body: '米財務省OFACが一般許可135号を発行。対ロ制裁で禁じたロシア産軽油の販売・配送・荷卸し・輸入を、米国への輸入も含め2027年4月7日午前0時1分（米東部夏時間）まで許可した。米金融機関にあるロシア中銀・国民福祉基金・財務省の口座からの引落しは対象外。',
+    source: '米財務省OFAC 一般許可135号',
+    sourceUrl: 'https://ofac.treasury.gov/media/937216/download?inline=',
+    sourceTier: 'primary',
+  },
 ];

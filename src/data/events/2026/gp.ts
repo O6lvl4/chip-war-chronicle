@@ -169,4 +169,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/october/fourteen-economies-join-united-states-signing-joint-ministerial-statement-address-global-excess',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-98', threadId: 'gp', date: '2026-10-09', weight: 2,
+    title: '中欧、貿易協議で16項目の共通認識 輸出管理の指定解除手続き開始を支持',
+    body: '中国とEUは北京での貿易投資協議後、16項目の成果を共同発表。輸出管理対象への指定前に事前通知し、各自の法制度に沿った指定解除手続きの開始を支持した。中国はレアアースと永久磁石の対EU輸出許可を引き続き円滑化し、EUも対中の軍民両用品の重点許可案件で便宜を図る。',
+    source: '中国商務部 中欧貿易投資協議の共同声明・成果一覧',
+    sourceUrl: 'https://www.mofcom.gov.cn/xwfb/bldhd/art/2026/art_870aab913b204c278dc2c42b51174cb1.html',
+    sourceTier: 'primary',
+  },
 ];
