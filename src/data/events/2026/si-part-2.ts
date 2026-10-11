@@ -9,4 +9,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://gf.gcs-web.com/news-releases/news-release-details/globalfoundries-reaches-agreement-establish-us-based-supply',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-117', threadId: 'si', date: '2026-10-09', weight: 2,
+    title: 'Akeanaの半導体IPと開発チームがQualcommに移籍',
+    body: 'RISC-VプロセッサIPを開発するAkeanaのRabin Sugumar氏が、同社のIPとチームがQualcommに加わったと発表。高性能IP群を開発したチームの移籍を公表したが、取引額や契約条件、製品計画は明らかにしていない。',
+    source: 'Akeana Rabin Sugumar氏の発表',
+    sourceUrl: 'https://www.linkedin.com/posts/rabin-sugumar-632b26_happy-to-share-that-the-akeana-ip-and-team-share-7514401095432204288-8BIN/',
+    sourceTier: 'primary',
+  },
 ];
