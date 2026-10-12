@@ -177,4 +177,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.mofcom.gov.cn/xwfb/bldhd/art/2026/art_870aab913b204c278dc2c42b51174cb1.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-99', threadId: 'gp', date: '2026-10-10', weight: 2,
+    title: 'リヤド国際空港が攻撃を受ける サウジ当局は12人死亡と発表',
+    body: 'サウジ民間航空総局は11日、前日のキング・ハーリド国際空港への攻撃で12人が死亡、309人が負傷したと発表した。死者にはサウジ国民4人と米国人1人などが含まれる。負傷者の一部は重体で、空港施設の物的被害は調査中とした。',
+    source: 'サウジ民間航空総局声明・SPA（OANA転載）',
+    sourceUrl: 'https://oananews.org/node/713861',
+    sourceTier: 'primary',
+  },
 ];
