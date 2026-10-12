@@ -193,4 +193,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://ofac.treasury.gov/media/937216/download?inline=',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-153', threadId: 'pr', date: '2026-10-12', weight: 2,
+    title: 'EU、ロシア軍需産業の1569個人・団体に制裁 半導体供給企業も',
+    body: 'EU理事会がロシアの軍需産業に関わる826社と経営者743人の計1569対象を制裁リストに追加。半導体・集積回路・コンピューターなどの部品供給企業を含む。資産を凍結し、資金・経済資源の提供を禁止、個人には渡航禁止も適用する。',
+    source: 'EU理事会',
+    sourceUrl: 'https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/russia-s-war-of-aggression-against-ukraine-eu-agrees-largest-ever-package-of-listings-targeting-almost-1600-individuals-and-entities-in-russia-s-military-industrial-complex/',
+    sourceTier: 'primary',
+  },
 ];
