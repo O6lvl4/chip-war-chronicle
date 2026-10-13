@@ -33,4 +33,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.globenewswire.com/news-release/2026/10/12/3379221/0/en/formfactor-and-teradyne-announce-strategic-collaboration-to-accelerate-next-generation-semiconductor-testing.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-120', threadId: 'si', date: '2026-10-13', weight: 2,
+    title: 'TowerとSemtech、SiGe製造能力の確保で複数年契約を拡大',
+    body: 'TowerとSemtechが複数年契約の拡大を発表。SemtechはAIデータセンター向け光接続部品の需要に対応するため専用SiGe製造能力の確保に投資する。対象は米国・イスラエル・日本の工場で、銅線・光接続製品の供給と共同技術ロードマップを支える。',
+    source: 'Tower Semiconductor 公式発表',
+    sourceUrl: 'https://ir.towersemi.com/news-releases/news-release-details/tower-semiconductor-and-semtech-expand-sige-partnership-scale',
+    sourceTier: 'primary',
+  },
 ];

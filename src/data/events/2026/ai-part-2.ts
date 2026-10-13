@@ -209,4 +209,12 @@ export const EVENTS_2026_AI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://bitdeer.gcs-web.com/news-releases/news-release-details/bitdeer-ai-expands-malaysia-campus-new-60mw-a103-facility',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-178', threadId: 'ai', date: '2026-10-12', weight: 2,
+    title: 'Meta、Muse WonderとWonder Fullを提供開始 Prometheusで学習',
+    body: 'MetaはMuse WonderをAPIとMuse Codeで、Wonder FullをMuse Code加入者向けに提供開始。GW級のPrometheusデータセンターで学習した。会話をまたぐ記憶機能と長時間の作業継続機能を搭載し、両モデルの文脈長は100万トークン。',
+    source: 'Meta 公式研究ブログ・モデル仕様',
+    sourceUrl: 'https://research.meta.ai/blog/muse-wonder',
+    sourceTier: 'primary',
+  },
 ];
