@@ -201,4 +201,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/russia-s-war-of-aggression-against-ukraine-eu-agrees-largest-ever-package-of-listings-targeting-almost-1600-individuals-and-entities-in-russia-s-military-industrial-complex/',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-154', threadId: 'pr', date: '2026-10-13', weight: 2,
+    title: 'FCC、規制対象企業の論理回路部品を使う機器の認証禁止を施行',
+    body: 'FCCの最終規則が発効。Covered List掲載企業の論理回路部品を組み込む機器について、その企業が完成品を製造した場合にも禁止対象となる新規認証を禁じた。集積回路などを対象とし、既存の認証済み機器は適用外。ソフトウェアとファームウェアは対象に含めない。',
+    source: '米連邦官報 FCC 26-50（2026-18535）',
+    sourceUrl: 'https://www.govinfo.gov/content/pkg/FR-2026-09-11/html/2026-18535.htm',
+    sourceTier: 'primary',
+  },
 ];
