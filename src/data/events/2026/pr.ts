@@ -217,4 +217,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://gf.com/news-and-events/news/globalfoundries-selected-to-operate-two-new-semiconductor-fabs-in-new-york-under-landmark-us-japan-initiative/',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-156', threadId: 'pr', date: '2026-10-16', weight: 2,
+    title: '中国、AIなど40技術の輸出前登録を即日導入 輸出規制案を意見公募',
+    body: '商務部と科技部は技術輸出目録の改定案を公表。AI23項目、バイオ医薬5項目、太陽光12項目の計40技術を対象に11月15日まで意見を募る。同日から対象技術の輸出前登録を義務化。オープンソースや論文で既に公共領域に入った技術は対象外とした。',
+    source: '中国商務部・科技部 公告2026年第48号',
+    sourceUrl: 'https://www.mofcom.gov.cn/zcfb/dwmygl/art/2026/art_61446ab4beee4f63973d4d0ab3097648.html',
+    sourceTier: 'primary',
+  },
 ];

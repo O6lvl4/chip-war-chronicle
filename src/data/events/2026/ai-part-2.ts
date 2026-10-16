@@ -265,4 +265,20 @@ export const EVENTS_2026_AI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-185', threadId: 'ai', date: '2026-10-16', weight: 2,
+    title: 'Reflection、Beamの重みをApache 2.0で公開 3種の精度形式に対応',
+    body: 'ReflectionがBeamの重みをApache 2.0で公開。総5010億・稼働230億パラメータのMoEで、100万トークンの文脈長に対応する。BF16・FP8・NVFP4版と投機的デコード用モデルを配布し、自社APIの公開ベータも開始した。',
+    source: 'Reflection / Hugging Face モデルカード',
+    sourceUrl: 'https://huggingface.co/reflection/Beam-1.0-501B-A23B',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-186', threadId: 'ai', date: '2026-10-16', weight: 2,
+    title: 'Mercedes-BenzとNVIDIA、自動運転の戦略提携を拡大',
+    body: 'Mercedes-BenzとNVIDIAが次世代の運転支援・自動運転システムを共同開発する提携拡大を発表。MB.OSにHyperionの車載演算・センサー構成、Alpamayo Stackの運転ソフト、Halosの安全システムを組み合わせる。',
+    source: 'NVIDIA プレスリリース',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/mercedes-benz-and-nvidia-expand-strategic-partnership-to-advance-safe-highly-automated-driving-in-the-next-decade',
+    sourceTier: 'primary',
+  },
 ];

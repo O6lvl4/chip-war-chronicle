@@ -49,4 +49,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-and-semiconductor-leaders-advance-ai-across-chip-design-and-manufacturing-for-ai-defined-labs',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-122', threadId: 'si', date: '2026-10-16', weight: 2,
+    title: 'SK hynix、CXL 3.2対応256GBメモリと共有メモリの実証を公表',
+    body: 'OCP Global Summitでの展示内容を公表。第2世代CMM-DDR5は容量256GB、帯域80GB/sで、同社によると前世代比2倍超の帯域と約30%の電力効率改善。NAVER CloudとのKVキャッシュ共有などはPoC段階の検証として示した。',
+    source: 'SK hynix Newsroom',
+    sourceUrl: 'https://news.skhynix.com/en/ocp-global-summit-2026/',
+    sourceTier: 'primary',
+  },
 ];
