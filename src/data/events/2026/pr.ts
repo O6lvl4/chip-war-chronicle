@@ -209,4 +209,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.govinfo.gov/content/pkg/FR-2026-09-11/html/2026-18535.htm',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-155', threadId: 'pr', date: '2026-10-14', weight: 2,
+    title: '日米投資枠組みでGFをNY新工場2棟の運営者に選定 最大210億ドル',
+    body: 'GlobalFoundriesは日米投資枠組みで、NY州マルタの新工場2棟の運営者に選定されたと発表。日本の資金は最大210億ドル。米商務省とはCHIPS支援9.55億ドルの再配分に合意し、別契約で約4%分の株式を同省に提供するとした。',
+    source: 'GlobalFoundries プレスリリース',
+    sourceUrl: 'https://gf.com/news-and-events/news/globalfoundries-selected-to-operate-two-new-semiconductor-fabs-in-new-york-under-landmark-us-japan-initiative/',
+    sourceTier: 'primary',
+  },
 ];

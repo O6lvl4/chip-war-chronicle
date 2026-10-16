@@ -41,4 +41,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://ir.towersemi.com/news-releases/news-release-details/tower-semiconductor-and-semtech-expand-sige-partnership-scale',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-121', threadId: 'si', date: '2026-10-14', weight: 2,
+    title: 'NVIDIA、半導体製造向け原子シミュレーションのcuPotentialを発表',
+    body: 'NVIDIAは原子・分子間相互作用の計算を支援するCUDA-XライブラリcuPotentialの早期アクセス提供を発表。Synopsysなどが半導体材料シミュレーションに採用する。Lam ResearchのNanoVDB対応SEMulator3Dは年内公開を予定。',
+    source: 'NVIDIA プレスリリース',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-and-semiconductor-leaders-advance-ai-across-chip-design-and-manufacturing-for-ai-defined-labs',
+    sourceTier: 'primary',
+  },
 ];
