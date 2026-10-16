@@ -97,4 +97,12 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www.cao.go.jp/cybersecurity/pdf/sekousetsumei.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'jp-64', threadId: 'jp', date: '2026-10-16', weight: 2,
+    title: '特定タンカー法改正案を閣議決定 原油・LNGなどの再保険支援対象を拡大へ',
+    body: '政府は特定タンカー法の改正案を閣議決定。外国政府等が再保険の提供を停止する場合にも船主責任保険を維持できるよう、政府が再保険相当部分の交付金を支給する対象の拡大を盛り込んだ。原油、液化天然ガス、石油製品の安定供給を図る。',
+    source: '国土交通省 井林大臣会見要旨',
+    sourceUrl: 'https://www.mlit.go.jp/report/interview/daijin261016.html',
+    sourceTier: 'primary',
+  },
 ];

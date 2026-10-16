@@ -185,4 +185,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://oananews.org/node/713861',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-100', threadId: 'gp', date: '2026-10-14', weight: 2,
+    title: 'ホルムズ海峡でシンガポール船籍2隻が被弾 1隻沈没と海事当局発表',
+    body: 'シンガポール海事港湾庁は、同国船籍のコンテナ船2隻が13日と14日にホルムズ海峡で不明の飛翔体に被弾したと発表。GFS PRIDEは火災後に沈没し21人が退避。GFS GISELLEは船体を損傷したが自力で安全な錨地へ到着し、22人は無事だった。',
+    source: 'シンガポール海事港湾庁（MPA）',
+    sourceUrl: 'https://www.mpa.gov.sg/media-centre/details/two-singapore-registered-vessels-struck-in-strait-of-hormuz',
+    sourceTier: 'primary',
+  },
 ];

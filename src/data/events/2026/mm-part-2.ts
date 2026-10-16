@@ -33,4 +33,20 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.sec.gov/Archives/edgar/data/1046179/000104617926000726/a3q26e_withguidancexfinal.htm',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-123', threadId: 'mm', date: '2026-10-16', weight: 2,
+    title: '米9月鉱工業生産0.7%増 7〜9月期の半導体生産は年率28.4%増',
+    body: 'FRBが9月の鉱工業生産を公表。前月比0.7%増、前年同月比2.2%増で、製造業は前月比0.3%増となった。7〜9月期の半導体・関連電子部品生産は年率28.4%増。設備稼働率は全産業で76.9%、製造業で75.9%だった。',
+    source: 'FRB G.17',
+    sourceUrl: 'https://www.federalreserve.gov/releases/g17/current/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-124', threadId: 'mm', date: '2026-10-16', weight: 2,
+    title: '日経平均898円高で6万5000円台回復 技術が489円押し上げ',
+    body: '日経平均は前日比898.34円高の6万5324.29円で終了し、上昇率は1.39%となった。技術セクターの寄与度は489.43円、情報通信は150.41円。構成225銘柄のうち194銘柄が上昇、29銘柄が下落し、2銘柄は変わらずだった。',
+    source: '日本経済新聞社 日次サマリー',
+    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary',
+    sourceTier: 'primary',
+  },
 ];
