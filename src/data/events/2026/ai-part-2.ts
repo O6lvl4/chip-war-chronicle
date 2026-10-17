@@ -281,4 +281,12 @@ export const EVENTS_2026_AI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://nvidianews.nvidia.com/news/mercedes-benz-and-nvidia-expand-strategic-partnership-to-advance-safe-highly-automated-driving-in-the-next-decade',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-188', threadId: 'ai', date: '2026-10-16', weight: 2,
+    title: 'NVIDIA、Dory1.0-4Bの重み公開 推論時の反復回数を可変に',
+    body: 'NVIDIAは40億パラメータのDory1.0-4BをOpenMDW 1.1で公開した。共有層の反復回数を推論時に選べ、最終反復のKVキャッシュのみを保存する設定では反復を増やしても容量を一定に保つ。文脈長は25万6000トークンで、BF16・MXFP8・NVFP4版を用意した。',
+    source: 'NVIDIA Hugging Faceモデルカード',
+    sourceUrl: 'https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16',
+    sourceTier: 'primary',
+  },
 ];
