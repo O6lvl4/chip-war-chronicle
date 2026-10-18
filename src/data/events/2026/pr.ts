@@ -225,4 +225,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.mofcom.gov.cn/zcfb/dwmygl/art/2026/art_61446ab4beee4f63973d4d0ab3097648.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-157', threadId: 'pr', date: '2026-10-16', weight: 2,
+    title: '米、対ロ制裁法の追加関税と主要制裁を適用免除 原油・ガス購入国も対象',
+    body: 'トランプ大統領がGraham Act実施令に署名。ロシア製品への500%、同国産原油・ガスの上位5輸入国などへの100%追加関税を規定する一方、関税と主要制裁の適用を免除した。免除は大統領などが追加対応を必要と判断するまで続き、従来の大統領令による制裁は維持する。',
+    source: 'ホワイトハウス 大統領令',
+    sourceUrl: 'https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/',
+    sourceTier: 'primary',
+  },
 ];

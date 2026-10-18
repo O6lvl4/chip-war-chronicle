@@ -266,6 +266,14 @@ export const EVENTS_2026_AI_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-189', threadId: 'ai', date: '2026-10-15', weight: 2,
+    title: 'StepFun、Step 5の効率化技術を公表 KVキャッシュ実効容量を8〜12倍に',
+    body: 'StepFunはStep 5 Previewの技術を公表。同社によると、Sparse GQAで8トークン単位のブロック化によりインデクサとtop-k選択の計算コストを8分の1に削減。専門家並列化、CPUへのKV退避、低精度化の併用でKVキャッシュの実効容量を8〜12倍に拡大した。',
+    source: 'StepFun 技術ブログ',
+    sourceUrl: 'https://platform.stepfun.ai/blog/inside-step-5-preview',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-185', threadId: 'ai', date: '2026-10-16', weight: 2,
     title: 'Reflection、Beamの重みをApache 2.0で公開 3種の精度形式に対応',
     body: 'ReflectionがBeamの重みをApache 2.0で公開。総5010億・稼働230億パラメータのMoEで、100万トークンの文脈長に対応する。BF16・FP8・NVFP4版と投機的デコード用モデルを配布し、自社APIの公開ベータも開始した。',
@@ -279,14 +287,6 @@ export const EVENTS_2026_AI_PART_2: TimelineEvent[] = [
     body: 'Mercedes-BenzとNVIDIAが次世代の運転支援・自動運転システムを共同開発する提携拡大を発表。MB.OSにHyperionの車載演算・センサー構成、Alpamayo Stackの運転ソフト、Halosの安全システムを組み合わせる。',
     source: 'NVIDIA プレスリリース',
     sourceUrl: 'https://nvidianews.nvidia.com/news/mercedes-benz-and-nvidia-expand-strategic-partnership-to-advance-safe-highly-automated-driving-in-the-next-decade',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'ai-188', threadId: 'ai', date: '2026-10-16', weight: 2,
-    title: 'NVIDIA、Dory1.0-4Bの重み公開 推論時の反復回数を可変に',
-    body: 'NVIDIAは40億パラメータのDory1.0-4BをOpenMDW 1.1で公開した。共有層の反復回数を推論時に選べ、最終反復のKVキャッシュのみを保存する設定では反復を増やしても容量を一定に保つ。文脈長は25万6000トークンで、BF16・MXFP8・NVFP4版を用意した。',
-    source: 'NVIDIA Hugging Faceモデルカード',
-    sourceUrl: 'https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16',
     sourceTier: 'primary',
   },
 ];
