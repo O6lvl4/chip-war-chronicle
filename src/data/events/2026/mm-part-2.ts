@@ -49,4 +49,12 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-125', threadId: 'mm', date: '2026-10-19', weight: 1,
+    title: '日経平均407円安で6万5000円割れ 技術が275円押し下げ',
+    body: '日経平均は前営業日比407.59円安の6万4916.70円で終了し、下落率は0.62%となった。技術セクターの寄与度はマイナス275.02円、情報通信はマイナス79.76円。構成225銘柄のうち111銘柄が上昇、108銘柄が下落し、6銘柄は変わらずだった。',
+    source: '日本経済新聞社 日次サマリー',
+    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?idx=nk225&date=2026-10-19',
+    sourceTier: 'primary',
+  },
 ];

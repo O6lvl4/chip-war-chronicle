@@ -193,4 +193,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.mpa.gov.sg/media-centre/details/two-singapore-registered-vessels-struck-in-strait-of-hormuz',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-101', threadId: 'gp', date: '2026-10-18', weight: 2,
+    title: 'JMIC、ペルシャ湾の脅威水準を引き上げ サウジ沖でタンカー2隻に攻撃',
+    body: '合同海事情報センターは18日付の報告でペルシャ湾の脅威水準をSubstantialに引き上げた。16日にサウジのジュバイル沖でタンカー2隻が攻撃され、1隻は乗員が退避。18日にはUAEのホールファカン沖で曳船が被弾し、乗員1人が軽傷を負ったと確認した。',
+    source: '合同海事情報センター（JMIC）Update 106',
+    sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/update-106-jmic-advisory-note-18-october.pdf?rev=86f67da1821f4dcdb4e27868b6679729',
+    sourceTier: 'primary',
+  },
 ];
