@@ -57,4 +57,20 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://news.skhynix.com/en/ocp-global-summit-2026/',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-123', threadId: 'si', date: '2026-10-19', weight: 1,
+    title: 'Data I/O、V-TEKとA&J Programmingを約2300万ドルで買収へ',
+    body: 'Data I/Oは半導体の搬送・包装装置を手掛けるV-TEKと、デバイス書き込みサービスのA&J Programmingの買収契約を発表。対価は現金と自社株で約2300万ドル。うち約300万ドルは株式で支払い、通常の完了条件を満たせば同週中の買収完了を予定する。',
+    source: 'Data I/O プレスリリース',
+    sourceUrl: 'https://www.globenewswire.com/news-release/2026/10/19/3383407/0/en/data-i-o-signs-definitive-agreement-to-acquire-v-tek-and-a-j-programming.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-124', threadId: 'si', date: '2026-10-19', weight: 2,
+    title: 'Amkor、光州工場の増設に着工 2031年までに3兆ウォン投資へ',
+    body: 'Amkorは韓国・光州工場の増設起工式を開催。6月に発表した投資計画について、先端パッケージ需要の増加に対応して規模を拡大し、実施時期を前倒しすると発表した。2026〜2031年に計3兆ウォンを投資し、約2000人の雇用を計画する。',
+    source: '韓国産業通商部 発表',
+    sourceUrl: 'https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785593',
+    sourceTier: 'primary',
+  },
 ];
