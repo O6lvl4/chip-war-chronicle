@@ -234,14 +234,6 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'pr-158', threadId: 'pr', date: '2026-10-19', weight: 1,
-    title: '中国、両用品輸出の税関審査を改定 原則15営業日の判断期限',
-    body: '中国商務部と海関総署は公告第52号を即日施行。両用品に該当するか疑義のある貨物は、税関と商務部が資料受領後それぞれ15営業日以内に判断する。検査期間や重大・困難案件は期限の対象外とし、同一申告内の無関係な貨物は分離して通関できるとした。',
-    source: '中国商務部・海関総署 公告2026年第52号',
-    sourceUrl: 'https://www.mofcom.gov.cn/zcfb/dwmygl/art/2026/art_f4727f0ca11a43bdb1a573b6bff6efe6.html',
-    sourceTier: 'primary',
-  },
-  {
     id: 'pr-159', threadId: 'pr', date: '2026-10-19', weight: 2,
     title: '韓国、半導体協力企業向け2兆ウォンの貿易金融を開始',
     body: '韓国産業通商部は半導体向け貿易金融の開始を発表。SK hynixと4銀行が計1000億ウォンを拠出し、韓国貿易保険公社の保証で2兆ウォンを供給する。対象はSK hynixの推薦協力企業で、3年間の全額保証、最大2.5ポイントの金利優遇、保証料支援を設けた。',
@@ -263,6 +255,14 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     body: 'ドイツ経済・エネルギー省と研究・技術・宇宙省はNVIDIAと共同意向書に署名。産業データを使うPhysical AIモデル開発を進め、NemotronやCosmosを基にした専門的な公開モデルで協力する。Industry 4.0の枠組みで研究機関と中小企業の参加も掲げた。',
     source: 'ドイツ連邦政府 広報発表189',
     sourceUrl: 'https://www.bundesregierung.de/breg-de/aktuelles/bundesregierung-staerkt-entwicklung-und-anwendung-industrieller-ki-ueber-zusammenarbeit-mit-internationalen-partnern-2457620',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-158', threadId: 'pr', date: '2026-10-19', weight: 1,
+    title: '中国、両用品輸出の税関審査を改定 原則15営業日の判断期限',
+    body: '中国商務部と海関総署は公告第52号を即日施行。両用品の疑義がある貨物は、税関が全資料受領後15営業日以内に判断か商務部への照会を行い、同部は15営業日以内に鑑別する。検査期間や重大・困難案件は除外し、無関係な貨物の分離通関を認めた。',
+    source: '中国商務部・海関総署 公告2026年第52号',
+    sourceUrl: 'https://www.mofcom.gov.cn/zcfb/dwmygl/art/2026/art_f4727f0ca11a43bdb1a573b6bff6efe6.html',
     sourceTier: 'primary',
   },
 ];
