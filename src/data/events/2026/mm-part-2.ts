@@ -73,4 +73,20 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261020&idx=nk225',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-128', threadId: 'mm', date: '2026-10-21', weight: 2,
+    title: 'Lam Research、7〜9月期売上82.19億ドル 前四半期比22%増',
+    body: '9月27日終了四半期の売上は82.19418億ドルで前四半期比22%増。GAAP純利益は27.5億ドル、希薄化後EPSは2.19ドル、粗利益率は52.3%だった。同社は売上・利益・EPSが過去最高となったと発表した。',
+    source: 'Lam Research 決算発表',
+    sourceUrl: 'https://investor.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27%2C-2026',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-129', threadId: 'mm', date: '2026-10-21', weight: 2,
+    title: 'TI、7〜9月期売上61億ドル 前年比28%増 データセンター向け約95%増',
+    body: 'Texas Instrumentsの第3四半期売上は61億ドルで前年同期比28%増、前四半期比11%増。純利益は24億ドル、EPSは2.62ドル。用途別では産業向け売上が前年同期比40%超増、データセンター向けが約95%増となった。',
+    source: 'Texas Instruments 決算説明会資料',
+    sourceUrl: 'https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b',
+    sourceTier: 'primary',
+  },
 ];
