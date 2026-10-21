@@ -49,4 +49,5 @@ export const LINKS_2020: Link[] = [
   { from: 'si-70', to: 'si-29', why: '7nm遅延がSwan退任とGelsingerのIDM 2.0を招いた' },
   { from: 'si-70', to: 'si-5', why: 'Intel製造不振が同年Apple M1でのx86離れを後押し' },
   { from: 'si-69', to: 'si-36', why: 'EUV DRAM先行がHBM世代競争の技術基盤に' },
+  { from: 'jp-38', to: 'pr-162', why: 'ポスト5G基金で設けた研究開発支援枠組みに基づき、光電融合や露光装置など先端半導体の実施予定先を選定した。' },
 ];
