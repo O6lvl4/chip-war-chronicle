@@ -60,7 +60,7 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
   {
     id: 'ai-195', threadId: 'ai', date: '2026-10-20', weight: 2,
     title: 'Mistral、音声モデルVoxtral 3と音声エージェントSDKを提供開始',
-    body: 'Mistralは音声モデル群Voxtral 3と音声エージェントSDKを提供開始。文字起こしは50以上、音声生成は35以上の言語に対応する。Mini版の文字起こしは40億パラメータで毎分0.0035ドル。自社APIと自社環境への導入に対応する。',
+    body: 'Mistralは音声モデル群Voxtral 3と音声エージェントSDKを提供開始。文字起こしは50以上、音声生成は35以上の言語に対応する。Mini版のバッチ文字起こしは40億パラメータで毎分0.0035ドル。自社APIと自社環境への導入に対応する。',
     source: 'Mistral AI 公式発表',
     sourceUrl: 'https://mistral.ai/news/voxtral-3/',
     sourceTier: 'primary',

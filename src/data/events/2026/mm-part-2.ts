@@ -58,19 +58,19 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'mm-126', threadId: 'mm', date: '2026-10-20', weight: 2,
-    title: '日経平均841円安 技術と情報通信が計744円押し下げ',
-    body: '日経平均は前営業日比841.28円安の6万4075.42円で終了し、下落率は1.30%となった。技術セクターの寄与度はマイナス517.60円、情報通信はマイナス227.15円。構成225銘柄のうち77銘柄が上昇、144銘柄が下落し、4銘柄は変わらずだった。',
-    source: '日本経済新聞社 日次サマリー',
-    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261020&idx=nk225',
-    sourceTier: 'primary',
-  },
-  {
     id: 'mm-127', threadId: 'mm', date: '2026-10-20', weight: 2,
     title: 'Supermicro、7〜9月期売上速報185億〜195億ドル AI需要で従来予想超え',
     body: 'Supermicroが7〜9月期の決算速報を公表。売上高を185億〜195億ドルとし、AI基盤への需要増で従来予想の145億〜155億ドルを上回った。売上総利益率は12.0〜12.5%。未監査の暫定値で、11月3日に正式な決算発表を予定する。',
     source: 'Supermicro 決算速報',
     sourceUrl: 'https://ir.supermicro.com/news/news-details/2026/Supermicro-Provides-First-Quarter-of-Fiscal-Year-2027-Preliminary-Business-Update/default.aspx',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-126', threadId: 'mm', date: '2026-10-20', weight: 2,
+    title: '日経平均841円安 技術と情報通信が約745円押し下げ',
+    body: '日経平均は前営業日比841.28円安の6万4075.42円で終了し、下落率は1.30%となった。技術セクターの寄与度はマイナス517.60円、情報通信はマイナス227.15円。構成225銘柄のうち77銘柄が上昇、144銘柄が下落し、4銘柄は変わらずだった。',
+    source: '日本経済新聞社 日次サマリー',
+    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261020&idx=nk225',
     sourceTier: 'primary',
   },
 ];
