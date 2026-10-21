@@ -65,4 +65,28 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://mistral.ai/news/voxtral-3/',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-196', threadId: 'ai', date: '2026-10-21', weight: 2,
+    title: 'Google Cloud、Rubin搭載A5Xの11月一般提供を発表',
+    body: 'Google CloudはVera Rubin NVL72搭載のA5Xを11月に一般提供すると発表。Virgo Networkで単一拠点8万基、複数拠点96万基までGPUを拡張できる構成を示し、欧州・中東・アフリカの地域提供も拡大する。',
+    source: 'Google Cloud 公式ブログ',
+    sourceUrl: 'https://cloud.google.com/blog/topics/ai-infrastructure/google-cloud-infrastructure-at-nvidia-gtc-berlin-2026',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-197', threadId: 'ai', date: '2026-10-21', weight: 2,
+    title: 'Recursive、Flintの重み公開 ローカル端末向け398億パラメータ',
+    body: 'RecursiveはFlintの重みをApache 2.0で公開。総398億・稼働25億パラメータのMoEで、BF16版はH200かB300の1基で動作する。INT4・NVFP4版も配布し、最適化エンジンではM4 Proで毎秒125トークン超と公表した。',
+    source: 'Recursive Hugging Faceモデルカード',
+    sourceUrl: 'https://huggingface.co/RecursiveSI/flint',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-198', threadId: 'ai', date: '2026-10-21', weight: 2,
+    title: 'NVIDIA、コンテナ型AI工場DSX PODを発表 2027年初め納入へ',
+    body: 'NVIDIAはVera Rubinをコンテナに統合するAI工場の参照設計DSX PODを発表。電力・冷却・通信設備を工場で組み込み検証し、準備済み敷地への導入を6か月から最短14日へ短縮するとした。提携各社は2027年初めに納入予定。',
+    source: 'NVIDIA 公式発表',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment',
+    sourceTier: 'primary',
+  },
 ];

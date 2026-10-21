@@ -81,4 +81,20 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://investors.micron.com/news/press-release/2026/Micron-Invests-in-New-York-Critical-Minerals-Processing-With-Indium-Corporation/default.aspx',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-126', threadId: 'si', date: '2026-10-21', weight: 2,
+    title: 'NVIDIA、基板・先端パッケージ・試験の供給能力拡張計画を発表',
+    body: 'IBIDEN・Samsung Electro-Mechanics・Unimicronとの契約で基板能力を3年で計2.5倍に拡張する計画。KYECの米国新施設には11億ドルを前払いし、Amkorは2028年末までに先端パッケージ能力を300%超増やす計画を示した。',
+    source: 'NVIDIA 公式発表',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-127', threadId: 'si', date: '2026-10-21', weight: 1,
+    title: '豊田通商、研磨粒子を使わないCMP材料の米ChEmpowerに出資',
+    body: '豊田通商は、半導体製造向けに研磨粒子を使わないCMP薬液・研磨パッドを開発する米ChEmpowerへのSAFE方式による出資を発表。日本の半導体メーカーへの製品供給と、製造廃液からのレアメタル回収・再資源化を進める方針を示した。',
+    source: '豊田通商 公式発表',
+    sourceUrl: 'https://www.toyota-tsusho.com/english/press/detail/261021_006948.html',
+    sourceTier: 'primary',
+  },
 ];
