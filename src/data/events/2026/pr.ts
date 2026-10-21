@@ -265,4 +265,20 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.mofcom.gov.cn/zcfb/dwmygl/art/2026/art_f4727f0ca11a43bdb1a573b6bff6efe6.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-162', threadId: 'pr', date: '2026-10-20', weight: 2,
+    title: 'NEDO、光チップレット・光電融合xPUなど先端半導体5課題の実施先を決定',
+    body: 'NEDOが先端半導体の5研究開発課題の実施予定先を決定。光チップレットはNTT系など4社、光電融合xPUはPFN・Tenstorrent、AI基盤はSambaNova Japan、露光装置はニコン、医療画像処理はLSTCを選定。高歪みウエハ向け露光装置は応募がなく採択なしとした。',
+    source: 'NEDO 2026年10月20日公募結果・実施体制決定',
+    sourceUrl: 'https://www.nedo.go.jp/koubo/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-163', threadId: 'pr', date: '2026-10-20', weight: 1,
+    title: '政府、AI・デジタル改革推進会議を設置 旧会議の検討事項を継承',
+    body: '政府はAI・デジタル改革推進会議の開催を閣議決定。官房長官と担当大臣を議長とし、規制・制度の見直し、AI・デジタル基盤の検討、社会実装を政府横断で進める。デジタル庁が庶務を担い、旧デジタル行財政改革会議の検討事項を引き継ぐ。',
+    source: 'デジタル庁 AI・デジタル改革推進会議',
+    sourceUrl: 'https://www.digital.go.jp/councils/ai_digital',
+    sourceTier: 'primary',
+  },
 ];

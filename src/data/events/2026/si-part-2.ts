@@ -73,4 +73,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785593',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-125', threadId: 'si', date: '2026-10-20', weight: 2,
+    title: 'Micron、米Indiumに投資 ニューヨークで重要鉱物の精製拡張へ',
+    body: 'MicronはIndium Corporationへの投資を発表。ニューヨーク州ロームの重要鉱物精製・高純度材料製造の拡張を資金面で支援する。7月公表の最大30億ドルの米国供給網投資計画の一環で、両社は高純度鉱物の長期供給契約を結ぶ予定とした。',
+    source: 'Micron プレスリリース',
+    sourceUrl: 'https://investors.micron.com/news/press-release/2026/Micron-Invests-in-New-York-Critical-Minerals-Processing-With-Indium-Corporation/default.aspx',
+    sourceTier: 'primary',
+  },
 ];
