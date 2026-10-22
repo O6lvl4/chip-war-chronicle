@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
   {
+    id: 'ai-186', threadId: 'ai', date: '2026-10-16', weight: 2,
+    title: 'Mercedes-BenzとNVIDIA、自動運転の戦略提携を拡大',
+    body: 'Mercedes-BenzとNVIDIAが次世代の運転支援・自動運転システムを共同開発する提携拡大を発表。MB.OSにHyperionの車載演算・センサー構成、Alpamayo Stackの運転ソフト、Halosの安全システムを組み合わせる。',
+    source: 'NVIDIA プレスリリース',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/mercedes-benz-and-nvidia-expand-strategic-partnership-to-advance-safe-highly-automated-driving-in-the-next-decade',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-188', threadId: 'ai', date: '2026-10-16', weight: 2,
     title: 'NVIDIA、Dory1.0-4Bの重み公開 推論時の反復回数を可変に',
     body: 'NVIDIAは40億パラメータのDory1.0-4BをOpenMDW 1.1で公開した。共有層の反復回数を推論時に選べ、最終反復のKVキャッシュのみを保存する設定では反復を増やしても容量を一定に保つ。文脈長は25万6000トークンで、BF16・MXFP8・NVFP4版を用意した。',
@@ -66,6 +74,14 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-201', threadId: 'ai', date: '2026-10-20', weight: 2,
+    title: 'Amazon、2027年に独AWS拠点へ48億ユーロ投資する計画を発表',
+    body: 'Amazonは2027年のドイツ投資計画を発表。総額160億ユーロ超のうち48億ユーロをAWSフランクフルトリージョンのクラウド・AI基盤拡張に充てる予定。全体には物流、衛星通信、映像制作なども含まれ、160億ユーロ全額がデータセンター向けではない。',
+    source: 'Amazon ドイツ公式発表',
+    sourceUrl: 'https://press.aboutamazon.com/de/2026/10/invest-in-germany-summit-amazon-kuendigt-16-milliarden-euro-investitionen-fuer-2027-in-deutschland-an',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-196', threadId: 'ai', date: '2026-10-21', weight: 2,
     title: 'Google Cloud、Rubin搭載A5Xの11月一般提供を発表',
     body: 'Google CloudはVera Rubin NVL72搭載のA5Xを11月に一般提供すると発表。Virgo Networkで単一拠点8万基、複数拠点96万基までGPUを拡張できる構成を示し、欧州・中東・アフリカの地域提供も拡大する。',
@@ -87,6 +103,22 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     body: 'NVIDIAはVera Rubinをコンテナに統合するAI工場の参照設計DSX PODを発表。電力・冷却・通信設備を工場で組み込み検証し、準備済み敷地への導入を6か月から最短14日へ短縮するとした。提携各社は2027年初めに納入予定。',
     source: 'NVIDIA 公式発表',
     sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-199', threadId: 'ai', date: '2026-10-22', weight: 2,
+    title: 'Nebius、Citiから35億ドルの融資枠 データセンター開発とGPU調達へ',
+    body: 'NebiusはCitiが提供する35億ドルの優先担保付き融資枠を契約したと発表。満期は364日で、当初金利はTerm SOFRに年2.75%を加算する。資金はデータセンター開発、GPU調達、一般事業目的に充てる。設備の完成や融資枠全額の実行を発表したものではない。',
+    source: 'Nebius プレスリリース',
+    sourceUrl: 'https://nebius.com/newsroom/nebius-secures-3-5-billion-financing-facility-with-citi',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-200', threadId: 'ai', date: '2026-10-22', weight: 1,
+    title: 'NVIDIA、AI工場の監視基盤Minervaを発表 GPUと処理負荷を横断分析',
+    body: 'NVIDIAはGPU、ネットワーク、ストレージ、処理ジョブの監視情報を統合するAIOps基盤Minervaを発表。動的な知識グラフと機械学習で異常や障害原因を分析する。IRENは利用中で、IBM、Jio、Lambda、Teslaなどは導入を計画している。',
+    source: 'NVIDIA 公式ブログ',
+    sourceUrl: 'https://blogs.nvidia.com/blog/minerva-platform-infrastructure/',
     sourceTier: 'primary',
   },
 ];
