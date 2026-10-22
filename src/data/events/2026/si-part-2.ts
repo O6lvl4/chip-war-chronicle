@@ -97,4 +97,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.toyota-tsusho.com/english/press/detail/261021_006948.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-128', threadId: 'si', date: '2026-10-22', weight: 2,
+    title: 'ルネサス、RX初の22nm・MRAM搭載マイコンを量産開始',
+    body: 'ルネサスは32ビットマイコンRX74MとRX74Nを発売し、量産を開始した。RXファミリ初の22nmプロセスと1MBのMRAMを採用し、最大600MHzで動作する。RX74MはEtherCAT、TSN対応ギガビットEthernet、CAN-FDを統合した。',
+    source: 'ルネサス プレスリリース',
+    sourceUrl: 'https://www.renesas.com/ja/about/newsroom/renesas-launches-rx74m-and-rx74n-flagship-32-bit-mcus-first-rx-family-built-22nm-process-and',
+    sourceTier: 'primary',
+  },
 ];

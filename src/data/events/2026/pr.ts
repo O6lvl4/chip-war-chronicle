@@ -281,4 +281,12 @@ export const EVENTS_2026_PR: TimelineEvent[] = [
     sourceUrl: 'https://www.digital.go.jp/councils/ai_digital',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-164', threadId: 'pr', date: '2026-10-22', weight: 2,
+    title: '米商務省、電力半導体など4社と最大3.89億ドルの研究支援に向け意向書',
+    body: '米商務省はCHIPS法に基づく研究開発支援で4社と意向書を締結。Helionに最大1.75億ドル、Commonwealth Fusion Systemsに8500万ドル、Verticalに7300万ドル、Sibelcoに5600万ドルを予定。最終交付の条件に政府の議決権なし少数持分取得を含む。',
+    source: '米商務省・NIST 発表',
+    sourceUrl: 'https://www.nist.gov/news-events/news/2026/10/department-commerce-announces-letters-intent-4-companies-389-million-rd',
+    sourceTier: 'primary',
+  },
 ];

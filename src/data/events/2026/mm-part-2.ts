@@ -89,4 +89,20 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-130', threadId: 'mm', date: '2026-10-22', weight: 2,
+    title: '日経平均1713円安 技術セクターが1270円押し下げ',
+    body: '日経平均株価は前日比1713円40銭安、2.65%下落の6万2907円84銭で引けた。技術セクターが1270円27銭、情報通信が237円90銭押し下げた。構成銘柄は81銘柄が上昇、141銘柄が下落、3銘柄が横ばいとなり、終値が当日の安値だった。',
+    source: '日本経済新聞社 日経平均プロフィル',
+    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261022&idx=nk225',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-131', threadId: 'mm', date: '2026-10-22', weight: 2,
+    title: 'WD、四半期売上43.81億ドル 前年比55%増',
+    body: 'Western Digitalは10月2日終了の2027年度第1四半期決算を発表した。売上高は43.81億ドルで前年同期比55%増、GAAP営業利益は20.46億ドルで158%増となった。営業キャッシュフローは16億ドル、フリーキャッシュフローは13.8億ドルだった。',
+    source: 'Western Digital 決算発表',
+    sourceUrl: 'https://investor.wdc.com/news-releases/news-release-details/wd-reports-fiscal-first-quarter-2027-financial-results',
+    sourceTier: 'primary',
+  },
 ];
