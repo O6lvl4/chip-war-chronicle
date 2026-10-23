@@ -121,4 +121,20 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://blogs.nvidia.com/blog/minerva-platform-infrastructure/',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-203', threadId: 'ai', date: '2026-10-23', weight: 2,
+    title: 'MiniMax、M3.1 Flashの重み公開 総数4280億・稼働230億パラメータ',
+    body: 'MiniMaxがM3.1 Flashの重みをMiniMax Community Licenseで公開。総数約4280億、稼働230億パラメータのMoEで、画像・動画入力と最大100万トークンに対応。全層の疎な注意機構、量子化対応学習、DSpark投機的復号を採用した。',
+    source: 'MiniMax Hugging Faceモデルカード',
+    sourceUrl: 'https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-204', threadId: 'ai', date: '2026-10-23', weight: 2,
+    title: 'NVIDIA、Nemotron 3.5 Bolt E4Bの重み公開 約4GBで動く端末向けモデル',
+    body: 'NVIDIAがNemotron 3.5 Bolt E4Bの重みをOpenMDW-1.1で公開。Gemma 4 E4Bを追加学習した約80億パラメータのモデルで、4ビットGGUF版とBF16版を提供。最大64Kの文脈とツール利用に対応し、対象処理を約4GBで実行すると公表した。',
+    source: 'NVIDIA Hugging Faceモデルカード',
+    sourceUrl: 'https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB',
+    sourceTier: 'primary',
+  },
 ];

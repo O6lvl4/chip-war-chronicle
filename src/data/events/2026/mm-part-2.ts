@@ -105,4 +105,12 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://investor.wdc.com/news-releases/news-release-details/wd-reports-fiscal-first-quarter-2027-financial-results',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-132', threadId: 'mm', date: '2026-10-23', weight: 2,
+    title: 'Solidigm、IPOの検討を終了 米国工場の資金調達は代替策を検討',
+    body: 'SK hynixは、Solidigmが市場環境と株価動向を踏まえ、上場前資金調達とIPOの検討を終了すると発表した。AI向けメモリー需要に対応する米国の生産能力拡大の必要性は変わらず、投資時期・規模・資金調達方法を引き続き検討する。',
+    source: 'SK hynix 公式説明',
+    sourceUrl: 'https://news.skhynix.com/en/fact-12/',
+    sourceTier: 'primary',
+  },
 ];
