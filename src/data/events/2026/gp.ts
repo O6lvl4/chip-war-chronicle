@@ -201,4 +201,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/update-106-jmic-advisory-note-18-october.pdf?rev=86f67da1821f4dcdb4e27868b6679729',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-102', threadId: 'gp', date: '2026-10-21', weight: 2,
+    title: '中露首相会談、AI共同研究・標準化協力を共同声明に明記',
+    body: '李強首相とミシュスチン首相はサンクトペテルブルクで第31回定期会談を開き、共同声明に署名した。AI共同研究の支援、専門家委員会の運営規程策定、2027年の中国でのAI国際学術会議開催で合意。AI・石油ガスなどの標準化協力行動計画も盛り込んだ。',
+    source: '中国外交部 共同声明（10月22日公表）',
+    sourceUrl: 'https://www.mfa.gov.cn/zyxw/202610/t20261022_12044858.shtml',
+    sourceTier: 'primary',
+  },
 ];
