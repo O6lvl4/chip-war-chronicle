@@ -137,4 +137,12 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-205', threadId: 'ai', date: '2026-10-24', weight: 2,
+    title: 'Moonshot、Kimi K3.1 Proを提供開始 重みは11月4日までに公開予定',
+    body: 'Moonshot AIがKimi K3.1 Proと高速版をKimi・Kimi Code・APIで提供開始。K3を追加学習した3兆パラメータ級モデルで、100万トークンの文脈に対応する。完全な重みは11月4日までの公開予定とし、今回の提供開始とは区別した。',
+    source: 'Moonshot AI 公式技術ブログ',
+    sourceUrl: 'https://www.kimi.com/en/blog/kimi-k3-1-pro',
+    sourceTier: 'primary',
+  },
 ];
