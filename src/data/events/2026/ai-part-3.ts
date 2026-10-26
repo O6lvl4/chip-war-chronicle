@@ -145,4 +145,20 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://www.kimi.com/en/blog/kimi-k3-1-pro',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-206', threadId: 'ai', date: '2026-10-26', weight: 2,
+    title: 'Cadence、チップ・システム設計特化AIモデル群Maestroを発表',
+    body: 'Cadenceは設計分野に特化したAIモデル群Maestroを発表。事後学習済みLLMや判断モデルを、AIエージェントとEDA・システム設計ツールに統合する。クラウドと顧客管理のオンプレミス環境に対応し、初期モデルは2026年10〜12月期の選定された早期アクセス顧客向けとした。',
+    source: 'Cadence 公式発表',
+    sourceUrl: 'https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-introduces-maestro-a-domain-specialized-ai-model.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-207', threadId: 'ai', date: '2026-10-26', weight: 2,
+    title: 'Forum EdgeとFireworks、9440万ドルのB300計算容量契約',
+    body: 'Forum Edge AIはFireworksと、ダラスの既存データセンターでB300 GPU容量を36カ月予約する確定契約を締結。CPU管理ノード料金を含む総額は約9440万ドルで、前払金を受領した。GPU設置は12月下旬〜翌1月上旬を見込む。',
+    source: 'Forum Markets 公式発表',
+    sourceUrl: 'https://ir.forum-markets.com/news-events/press-releases/detail/130/forum-edge-ai-announces-94-4-million-definitive-ai-cloud-services-compute-agreement-with-fireworks',
+    sourceTier: 'primary',
+  },
 ];
