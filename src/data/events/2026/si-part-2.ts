@@ -105,4 +105,20 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.renesas.com/ja/about/newsroom/renesas-launches-rx74m-and-rx74n-flagship-32-bit-mcus-first-rx-family-built-22nm-process-and',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-129', threadId: 'si', date: '2026-10-26', weight: 2,
+    title: 'Applied Materials、Besi持分を約20%へ引き上げる株式購入契約',
+    body: 'Applied Materialsは先端パッケージ分野の長期協業を支えるため、Besiの持分を約20%へ引き上げる株式購入契約を発表した。株式の引渡しは米HSR法の待機期間終了または解除が条件。取締役派遣や20%超の追加取得は現時点で意図しない。',
+    source: 'Applied Materials IR',
+    sourceUrl: 'https://ir.appliedmaterials.com/node/29806/pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-130', threadId: 'si', date: '2026-10-26', weight: 2,
+    title: 'VolkswagenとNXP、次世代車載半導体の戦略提携に合意',
+    body: 'VolkswagenとNXPは戦略提携を発表。RV Techが開発する将来のゾーン型車載アーキテクチャの共通部品に、NXPのS32K5マイコンを選定した。複数ブランド・車種で採用し供給網の安定性を高める方針で、最初の搭載車は2027年を予定する。',
+    source: 'Volkswagen Group 公式発表',
+    sourceUrl: 'https://www.volkswagen-group.com/en/press-releases/volkswagen-group-strengthens-its-strategic-semiconductor-ecosystem-through-partnership-with-nxp-20761',
+    sourceTier: 'primary',
+  },
 ];

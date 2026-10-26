@@ -113,4 +113,28 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://news.skhynix.com/en/fact-12/',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-133', threadId: 'mm', date: '2026-10-26', weight: 2,
+    title: 'Cadence、7〜9月期売上16.33億ドル 前年比22%増',
+    body: 'Cadenceは2026年7〜9月期決算を発表。売上高は前年同期の13.39億ドルから16.33億ドルへ22%増加し、期末受注残は過去最高の82億ドルとなった。GAAP営業利益率は26.2%、希薄化後1株利益は1.05ドル。',
+    source: 'Cadence IR',
+    sourceUrl: 'https://investor.cadence.com/news/news-details/2026/Cadence-Reports-Third-Quarter-2026-Financial-Results/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-134', threadId: 'mm', date: '2026-10-26', weight: 2,
+    title: 'Amkor、7〜9月期売上19.91億ドル コンピューティング向けは過去最高',
+    body: 'Amkorは2026年7〜9月期決算を発表。売上高19.91億ドル、営業利益2.25億ドル、純利益1.91億ドル、希薄化後1株利益0.76ドルだった。通信向けの弱さが続く一方、コンピューティングと自動車・産業向けの売上高は過去最高となった。',
+    source: 'Amkor IR 決算発表',
+    sourceUrl: 'https://ir.amkor.com/static-files/f3bab1a5-97b1-42fe-a1d8-c2f293d2cef2',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-135', threadId: 'mm', date: '2026-10-26', weight: 2,
+    title: 'Rambus、7〜9月期売上2.18億ドル 前年比22%増で過去最高',
+    body: 'Rambusは2026年7〜9月期決算を発表。売上高は前年同期比22%増の2億1830万ドル、製品売上高は1億1430万ドルとなり、ともに過去最高を更新した。GAAP希薄化後1株利益は0.69ドル、営業キャッシュフローは1億250万ドルだった。',
+    source: 'Rambus IR',
+    sourceUrl: 'https://investor.rambus.com/press-releases/press-release-details/2026/Rambus-Reports-Third-Quarter-2026-Financial-Results/default.aspx',
+    sourceTier: 'primary',
+  },
 ];
