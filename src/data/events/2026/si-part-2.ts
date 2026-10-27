@@ -121,4 +121,20 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.volkswagen-group.com/en/press-releases/volkswagen-group-strengthens-its-strategic-semiconductor-ecosystem-through-partnership-with-nxp-20761',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-131', threadId: 'si', date: '2026-10-26', weight: 2,
+    title: 'Intel、量子計算ソフトのClassiqを買収へ 最終契約を締結',
+    body: 'Intelは量子計算ソフトウェア企業Classiqの買収で最終契約を締結したと発表。量子アルゴリズム合成基盤を自社のシリコン・スピン量子ビット技術と組み合わせる。規制承認などを条件に2027年前半の完了を見込み、当面は別会社として運営する。',
+    source: 'Intel公式発表',
+    sourceUrl: 'https://www.intel.com/content/www/us/en/newsroom/news/corporate/intel-classiq-accelerate-scalable-quantum-computing.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-132', threadId: 'si', date: '2026-10-27', weight: 2,
+    title: 'Infineon、300mm GaN量産設備に11億ユーロ投資へ',
+    body: 'Infineonは、オーストリアのフィラッハ拠点に300mmウエハー対応GaNパワー半導体の量産設備を設けると発表。既存クリーンルームに2034年までに約11億ユーロを投資し、2027年末までの生産開始を計画する。',
+    source: 'Infineon公式発表',
+    sourceUrl: 'https://www.infineon.com/press-release/2026/infpr202610-021',
+    sourceTier: 'primary',
+  },
 ];

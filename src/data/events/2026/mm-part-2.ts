@@ -137,4 +137,28 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://investor.rambus.com/press-releases/press-release-details/2026/Rambus-Reports-Third-Quarter-2026-Financial-Results/default.aspx',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-136', threadId: 'mm', date: '2026-10-26', weight: 2,
+    title: 'Anthropic、IPOに向けS-1を公開提出 株数・価格は未定',
+    body: 'AnthropicはIPOに向けたS-1登録届出書を米SECへ提出したと発表。Nasdaq Global Select Marketへの上場と銘柄コードANTを予定する。募集株数と価格帯は未定で、届出の効力発生前には株式を販売できない。',
+    source: 'Anthropic公式発表・SEC届出書',
+    sourceUrl: 'https://www.anthropic.com/news/s1-sec',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-137', threadId: 'mm', date: '2026-10-27', weight: 2,
+    title: 'NXP、7〜9月期売上37.86億ドル 前年比19%増',
+    body: 'NXPは9月27日までの第3四半期売上高37.86億ドルを発表。前年同期比19%、前四半期比8%増となった。GAAP営業利益率は32.4%、希薄化後EPSは3.48ドル。取締役会は既存枠に加え50億ドルの自社株買い枠を承認した。',
+    source: 'NXP決算発表',
+    sourceUrl: 'https://investors.nxp.com/node/24956',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-138', threadId: 'mm', date: '2026-10-27', weight: 2,
+    title: 'Teradyne、7〜9月期売上13.06億ドル 前年比70%増',
+    body: 'Teradyneは第3四半期売上高13.06億ドルを発表し、前年同期比70%増となった。半導体試験部門は10.72億ドル、製品試験は1.38億ドル、ロボティクスは9600万ドル。GAAP純利益は3.424億ドル、希薄化後EPSは2.17ドル。',
+    source: 'Teradyne決算発表',
+    sourceUrl: 'https://investors.teradyne.com/news-events/press-releases/detail/455/teradyne-reports-third-quarter-2026-results',
+    sourceTier: 'primary',
+  },
 ];
