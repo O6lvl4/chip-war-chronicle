@@ -137,4 +137,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.infineon.com/press-release/2026/infpr202610-021',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-133', threadId: 'si', date: '2026-10-28', weight: 2,
+    title: 'Altera、FPGA新系列Agilex 2Xを発表 試作シリコンは2027年後半予定',
+    body: 'Alteraは4つのデバイス群からなるFPGA系列Agilex 2Xを発表し、最初の製品群をAgilex 27とした。AIテンソルDSPや最大256Gbpsの接続に対応。早期利用者向けソフト支援は11月中旬、試作シリコンは2027年後半を予定する。',
+    source: 'Altera 発表',
+    sourceUrl: 'https://www.altera.com/newsroom/agilex-2x',
+    sourceTier: 'primary',
+  },
 ];
