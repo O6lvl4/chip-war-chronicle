@@ -25,4 +25,12 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://m.korea.kr/briefing/pressReleaseView.do?newsId=156786328&pWise=mSub&pWiseSub=C5',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-168', threadId: 'pr', date: '2026-10-28', weight: 2,
+    title: '英国、AI分野に7億ポンド超の予算措置 国産半導体と計算基盤を支援',
+    body: '英政府は2026年予算でAI分野に7億ポンド超の施策を発表。AI Security Instituteに1.2億ポンド、Sovereign AI Unitに1.4億ポンドを追加する。AIハードウェアには2000万ポンドを充て、英国製チップの公共計算基盤への導入も支援する。',
+    source: '英国財務省 2026年予算',
+    sourceUrl: 'https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html',
+    sourceTier: 'primary',
+  },
 ];

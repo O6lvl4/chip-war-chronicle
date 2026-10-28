@@ -193,4 +193,28 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-212', threadId: 'ai', date: '2026-10-28', weight: 2,
+    title: 'NVIDIA、Nemotron 3.5 Transcribeの重み公開 40言語の音声に対応',
+    body: 'NVIDIAは音声モデルNemotron 3.5 Transcribeの重みをOpenMDW-1.1で公開。稼働約43億パラメータで40言語と最長1時間の録音に対応し、話者付き文字起こしや単語単位の時刻情報を出力する。BF16・FP8・NVFP4版を提供した。',
+    source: 'NVIDIA モデルカード',
+    sourceUrl: 'https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-213', threadId: 'ai', date: '2026-10-28', weight: 2,
+    title: 'L&T Vyoma.AI、チェンナイで52MWのAI対応データセンターを起工',
+    body: 'L&T傘下Vyoma.AIはチェンナイで52MWのAI対応データセンターを起工。高密度AI処理向けにチップ直接液冷を採用する計画。敷地内では30MW施設が稼働しており、150MVAの電力基盤を確保。全国で250MW超への拡張を目指す。',
+    source: 'Larsen & Toubro 発表',
+    sourceUrl: 'https://www.larsentoubro.com/pressreleases/2026/2026-10-28-vyomaai-breaks-ground-on-52-mw-ai-ready-data-center-in-chennai',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-214', threadId: 'ai', date: '2026-10-28', weight: 2,
+    title: 'Google、Gemini 4 Carbonを発表 サイバー防御担当者から段階提供へ',
+    body: 'GoogleはGemini 4 Carbonを発表。米政府の公開前モデル試験に参加し、同週から一部のサイバー防御担当者へ提供を始める方針を示した。一般提供日は未定で、導入時料金は100万トークン当たり入力2ドル、出力10ドルとした。',
+    source: 'Google公式ブログ',
+    sourceUrl: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/',
+    sourceTier: 'primary',
+  },
 ];
