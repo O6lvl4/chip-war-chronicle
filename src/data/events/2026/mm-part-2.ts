@@ -162,14 +162,6 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'mm-139', threadId: 'mm', date: '2026-10-28', weight: 2,
-    title: 'FRB、政策金利3.75〜4%を維持 2委員は0.25%利上げを支持',
-    body: 'FOMCは賛成10、反対2でFF金利の誘導目標を3.75〜4%に据え置いた。声明は経済活動の力強い拡大と高止まりするインフレを指摘し、銀行準備を潤沢に保つ方針を継続。Cook、Hammack両委員は0.25ポイントの利上げを求め反対した。',
-    source: 'FRB FOMC声明',
-    sourceUrl: 'https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm',
-    sourceTier: 'primary',
-  },
-  {
     id: 'mm-140', threadId: 'mm', date: '2026-10-28', weight: 2,
     title: 'SK hynix、四半期売上が初の100兆ウォン超 HBM4販売が拡大',
     body: 'SK hynixの7〜9月期売上は104.6155兆ウォン、営業利益83.3338兆ウォン、純利益39.7756兆ウォンとなった。四半期売上は初めて100兆ウォンを超え、営業利益率は80%。HBM4と高付加価値サーバー製品の販売が拡大した。',
@@ -215,6 +207,14 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     body: 'AlphabetのPichai CEOは7〜9月期決算説明で、全社売上の前年同期比25%増とGoogle Cloud売上の103%増を公表。AI基盤とソリューションがCloud成長の主因と説明した。自社モデルAPIの処理量は毎分約320億トークンで前四半期比40%増とした。',
     source: 'Google CEO決算説明',
     sourceUrl: 'https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-139', threadId: 'mm', date: '2026-10-28', weight: 2,
+    title: 'FRB、政策金利3.75〜4%を維持 2委員は0.25ポイント利上げを支持',
+    body: 'FOMCは賛成10、反対2でFF金利の誘導目標を3.75〜4%に据え置いた。声明は経済活動の力強い拡大と高止まりするインフレを指摘し、銀行準備を潤沢に保つ方針を継続。Cook、Hammack両委員は0.25ポイントの利上げを求め反対した。',
+    source: 'FRB FOMC声明',
+    sourceUrl: 'https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm',
     sourceTier: 'primary',
   },
 ];
