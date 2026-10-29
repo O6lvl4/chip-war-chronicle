@@ -209,4 +209,20 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.mfa.gov.cn/zyxw/202610/t20261022_12044858.shtml',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-103', threadId: 'gp', date: '2026-10-23', weight: 2,
+    title: 'ホルムズ海峡でタンカーが被弾し航行不能 UKMTOが遅延報告を確認',
+    body: 'ホルムズ海峡を外向きに航行していたタンカーが23日8時39分UTC、正体不明の飛翔体を受け航行不能となった。英国海事貿易機関は26日に確認済みの遅延報告として公表。乗組員の無事が報告され、損害評価や環境への影響の報告はなかった。',
+    source: 'UKMTO Warning 182-26',
+    sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/20261026-ukmto_warning-182-26.pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-104', threadId: 'gp', date: '2026-10-29', weight: 2,
+    title: 'ホルムズ海峡で出航中のタンカーが被弾 UKMTOが公表',
+    body: '英国海事貿易機関は、29日16時UTCにホルムズ海峡から出る航行を終えようとしていたタンカーが、正体不明の飛翔体を受けたと公表。船会社の保安責任者から報告を受けた。発表時点で乗組員の負傷や環境への影響の報告はなく、当局が調査している。',
+    source: 'UKMTO Warning 186-26',
+    sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/20261029-ukmto_warning-186-26.pdf',
+    sourceTier: 'primary',
+  },
 ];

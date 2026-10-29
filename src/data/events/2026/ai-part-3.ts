@@ -194,6 +194,14 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-215', threadId: 'ai', date: '2026-10-27', weight: 2,
+    title: 'Liquid AI、LFM3の重み公開 テキスト版は4ビットで約1GB',
+    body: 'Liquid AIは小型モデル群LFM3の重みを公開した。17億パラメータのテキスト版は4ビット量子化で約1GBに収まり、256Kトークンの文脈に対応する。画像・音声・複合入力・判断用を含む約20億パラメータ級6モデルを共通基盤から構築した。',
+    source: 'Liquid AI / Hugging Face モデルカード',
+    sourceUrl: 'https://huggingface.co/LiquidAI/LFM3-1.7B',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-212', threadId: 'ai', date: '2026-10-28', weight: 2,
     title: 'NVIDIA、Nemotron 3.5 Transcribeの重み公開 40言語の音声に対応',
     body: 'NVIDIAは音声モデルNemotron 3.5 Transcribeの重みをOpenMDW-1.1で公開。稼働約43億パラメータで40言語と最長1時間の録音に対応し、話者付き文字起こしや単語単位の時刻情報を出力する。BF16・FP8・NVFP4版を提供した。',
@@ -215,6 +223,14 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     body: 'GoogleはGemini 4 Carbonを発表。米政府の公開前モデル試験に参加し、同週から一部のサイバー防御担当者へ提供を始める方針を示した。一般提供日は未定で、導入時料金は100万トークン当たり入力2ドル、出力10ドルとした。',
     source: 'Google公式ブログ',
     sourceUrl: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-216', threadId: 'ai', date: '2026-10-29', weight: 2,
+    title: 'Cohere、シリーズEの初回募集完了 最大70億カナダドルを目標',
+    body: 'CohereはシリーズE資金調達の初回募集完了を発表した。総額は最大70億カナダドルを目標とし、達成時の評価額は357億カナダドル。Schwarz Group傘下企業が主導し、カナダ政府やNVIDIAも参加する。資金はモデル開発と長期計算基盤に充てる。',
+    source: 'Cohere 発表（PR Newswire配信）',
+    sourceUrl: 'https://www.prnewswire.com/news-releases/cohere-announces-series-e-fundraise-targeting-cad-7-billion-to-meet-surging-global-demand-for-secure-sovereign-ai-302923951.html',
     sourceTier: 'primary',
   },
 ];

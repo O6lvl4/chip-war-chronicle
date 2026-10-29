@@ -145,4 +145,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.altera.com/newsroom/agilex-2x',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-134', threadId: 'si', date: '2026-10-29', weight: 2,
+    title: 'FuriosaAI、6.2億ドル調達 RNGD増産と次世代AIチップ開発へ',
+    body: 'FuriosaAIはシリーズDで6億2000万ドルを調達し、調達後評価額は約29億ドルとなった。資金は推論アクセラレータRNGDの生産拡大、ソフトウェア基盤強化、第3世代AIチップの開発に充てる。海外投資家の出資額は合計1億1000万ドルだった。',
+    source: 'FuriosaAI 発表（Business Wire配信）',
+    sourceUrl: 'https://www.sttinfo.fi/tiedote/72454478/furiosaai-secures-dollar620-million-series-d-to-meet-surging-enterprise-ai-inference-demand-and-accelerate-next-gen-silicon?lang=en&publisherId=58763726',
+    sourceTier: 'primary',
+  },
 ];
