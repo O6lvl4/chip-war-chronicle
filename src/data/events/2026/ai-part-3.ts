@@ -233,4 +233,12 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://www.prnewswire.com/news-releases/cohere-announces-series-e-fundraise-targeting-cad-7-billion-to-meet-surging-global-demand-for-secure-sovereign-ai-302923951.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-217', threadId: 'ai', date: '2026-10-29', weight: 2,
+    title: 'Mistral Large 4の重み公開 モデル提供事業は別契約',
+    body: 'Mistralは公開プレビュー後に改良したLarge 4の重みを公開。総1兆、埋め込み・出力層を含む稼働520億パラメータのMoEで、100万トークンの文脈長に対応する。独自のMEOライセンスを採用し、モデルをサービスとして提供する事業には別途商用契約を求める。',
+    source: 'Mistral AI / Hugging Face モデルカード',
+    sourceUrl: 'https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B',
+    sourceTier: 'primary',
+  },
 ];

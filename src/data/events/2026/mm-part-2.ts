@@ -281,4 +281,12 @@ export const EVENTS_2026_MM_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-154', threadId: 'mm', date: '2026-10-30', weight: 2,
+    title: '日銀、政策金利1.25%維持 ETF売却を年8600億円へ',
+    body: '日銀は賛成8・反対1で政策金利を1.25%程度に据え置いた。保有ETFの年間売却ペースは簿価ベースで3300億円から8600億円へ拡大すると全員一致で決定し、2027年1月から実施する。高田委員による1.5%への利上げ提案は否決された。',
+    source: '日本銀行 金融政策決定会合',
+    sourceUrl: 'https://www.boj.or.jp/mopo/mpmdeci/mpr_2026/k261030a.pdf',
+    sourceTier: 'primary',
+  },
 ];
