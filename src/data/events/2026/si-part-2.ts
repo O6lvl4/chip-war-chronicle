@@ -153,4 +153,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.sttinfo.fi/tiedote/72454478/furiosaai-secures-dollar620-million-series-d-to-meet-surging-enterprise-ai-inference-demand-and-accelerate-next-gen-silicon?lang=en&publisherId=58763726',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-135', threadId: 'si', date: '2026-10-30', weight: 2,
+    title: 'キオクシア、岩手子会社の吸収合併を決議 2027年4月予定',
+    body: 'キオクシアHDは、傘下のキオクシアがキオクシア岩手を吸収合併すると発表。取締役会は10月30日に決議し、効力発生日は2027年4月1日を予定する。最先端フラッシュメモリの製造力強化が目的で、グループ内再編のため株式や金銭の交付はない。',
+    source: 'キオクシアHD 適時開示',
+    sourceUrl: 'https://ssl4.eir-parts.net/doc/285A/tdnet/2902679/00.pdf',
+    sourceTier: 'primary',
+  },
 ];

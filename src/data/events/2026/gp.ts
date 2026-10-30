@@ -225,4 +225,12 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/20261029-ukmto_warning-186-26.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-105', threadId: 'gp', date: '2026-10-30', weight: 1,
+    title: '日本、カザフスタンの重要鉱物協力に4.86億円 UNDPと書簡交換',
+    body: '日本政府はカザフスタンのレアメタル・レアアース鉱物供給網構築に向け、UNDPとの間で4.86億円の無償資金協力に署名。採掘・加工の法的枠組みと政策立案を技術支援し、鉱床の環境監視とデジタルデータ管理の試行事業を実施する計画。',
+    source: '外務省 報道発表',
+    sourceUrl: 'https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04396.html',
+    sourceTier: 'primary',
+  },
 ];
