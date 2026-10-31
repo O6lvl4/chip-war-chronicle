@@ -105,4 +105,12 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www.mlit.go.jp/report/interview/daijin261016.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'jp-65', threadId: 'jp', date: '2026-10-23', weight: 1,
+    title: '法人の実質的支配者の届出義務化法案を閣議決定',
+    body: '政府は法人等の実質的支配者に係る情報の把握等に関する法律案と関連整備法案を閣議決定。全ての法人に実質的支配者情報の把握・届出を義務付け、正確かつ最新の情報を記録した公簿を整備する内容。マネーロンダリングや経済安全保障への対応を目的とする。',
+    source: '内閣府 小野田大臣記者会見',
+    sourceUrl: 'https://www.cao.go.jp/minister/2609_k_onoda/kaiken/20261023.html',
+    sourceTier: 'primary',
+  },
 ];
