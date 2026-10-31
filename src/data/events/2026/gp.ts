@@ -226,11 +226,27 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'gp-106', threadId: 'gp', date: '2026-10-29', weight: 2,
+    title: '米・フィンランド、先端半導体・AI・量子の技術協力覚書に署名',
+    body: '米国とフィンランドは技術繁栄協定の覚書を公表。先端半導体、AI・通信、量子、原子力などの協力分野を定めた。量子分野では半導体工程企業等の商用展開を規制調和と投資で支援し、ハードウェアからモデルまで信頼できる技術基盤の開発・輸出を促進する方針。',
+    source: 'White House 技術協力覚書',
+    sourceUrl: 'https://www.whitehouse.gov/releases/2026/10/memorandum-of-understanding-between-the-government-of-the-united-states-of-america-and-the-government-of-finland-regarding-the-technology-prosperity-deal/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-105', threadId: 'gp', date: '2026-10-30', weight: 1,
     title: '日本、カザフスタンの重要鉱物協力に4.86億円 UNDPと書簡交換',
     body: '日本政府はカザフスタンのレアメタル・レアアース鉱物供給網構築に向け、UNDPとの間で4.86億円の無償資金協力に署名。採掘・加工の法的枠組みと政策立案を技術支援し、鉱床の環境監視とデジタルデータ管理の試行事業を実施する計画。',
     source: '外務省 報道発表',
     sourceUrl: 'https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04396.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-107', threadId: 'gp', date: '2026-10-31', weight: 2,
+    title: '日米豪印、半導体・AI供給網のボトルネック特定へ新たな取組',
+    body: '日米豪印の外相はアトランタで会合し、先端半導体とAIハードウェアの供給網のボトルネックを事前に特定する新たな取組の開始を発表。インド太平洋で信頼できるAIへのアクセスを支えるため、8500万ドル超の技術・資金支援を拠出する意向も示した。',
+    source: '外務省 日米豪印共同プレスリリース',
+    sourceUrl: 'https://www.mofa.go.jp/mofaj/files/101110376.pdf',
     sourceTier: 'primary',
   },
 ];
