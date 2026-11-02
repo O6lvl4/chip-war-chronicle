@@ -241,4 +241,28 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-218', threadId: 'ai', date: '2026-10-29', weight: 2,
+    title: 'KDDI、ロンドンで約470億円の用地取得 AI対応DC建設へ',
+    body: 'KDDIは欧州子会社がロンドンの既存データセンター隣接用地を約470億円で取得し、受電容量65MVAを確保したと発表。稼働中拠点との合計容量は約1.8倍になる。取得用地には高性能GPUサーバーに対応する新たなデータセンターを建設する予定。',
+    source: 'KDDI ニュースリリース',
+    sourceUrl: 'https://newsroom.kddi.com/news/detail/kddi_nr-1222_4792.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-219', threadId: 'ai', date: '2026-10-30', weight: 2,
+    title: 'OpenAI、GPT-Rosalind-6を研究者向け審査制で提供',
+    body: 'OpenAIは生命科学研究向けGPT-Rosalind-6 Researchの提供を公表した。GPT-6 Astraと同じ重みを使い、追加学習は行っていない。利用は科学者・研究機関・企業などの審査制で、申請時に用途・安全管理・ガバナンスを確認する。',
+    source: 'OpenAI システムカード追補',
+    sourceUrl: 'https://deploymentsafety.openai.com/gpt-rosalind-6',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-220', threadId: 'ai', date: '2026-11-02', weight: 2,
+    title: 'XMax、韓国のB300計算基盤契約を発表 480GPUの利用開始',
+    body: 'XMaxはDSHとの5年契約を発表し、韓国kt cloudの計算基盤をAI推論に利用する。同社向けサービスは10月29日にB300 GPU480基で開始し、512基へ拡張する予定。長期契約は取締役会承認や11月17日までの保証提出などが条件となる。',
+    source: 'XMax 公式プレスリリース',
+    sourceUrl: 'https://www.globenewswire.com/news-release/2026/11/02/3393088/37029/en/XMax-Announces-AI-Infrastructure-Services-Agreement-Expects-Over-US-100-Million-in-Revenue-Over-the-Next-Five-Years.html',
+    sourceTier: 'primary',
+  },
 ];

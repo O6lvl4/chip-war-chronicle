@@ -242,6 +242,14 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'gp-108', threadId: 'gp', date: '2026-10-30', weight: 2,
+    title: 'EUとカナダ、半導体・AI・重要鉱物の協力拡大を首脳声明に',
+    body: 'EUとカナダはモントリオールでの首脳会合で、半導体・重要鉱物の供給網やAI計算基盤で協力を深める共同声明を採択した。デジタル貿易協定の実質交渉妥結と、カナダの欧州高性能計算共同事業への参加を公表。将来の経済安全保障分野の協力拡大も掲げた。',
+    source: '欧州理事会 EU・カナダ首脳共同声明',
+    sourceUrl: 'https://www.consilium.europa.eu/media/0znlxsox/30102026can-eu-joint-statement-en-rev1.pdf',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-107', threadId: 'gp', date: '2026-10-31', weight: 2,
     title: '日米豪印、半導体・AI供給網のボトルネック特定へ新たな取組',
     body: '日米豪印の外相はアトランタで会合し、先端半導体とAIハードウェアの供給網のボトルネックを事前に特定する新たな取組の開始を発表。インド太平洋で信頼できるAIへのアクセスを支えるため、8500万ドル超の技術・資金支援を拠出する意向も示した。',
