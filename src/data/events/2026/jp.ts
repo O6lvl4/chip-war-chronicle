@@ -113,4 +113,12 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www.cao.go.jp/minister/2609_k_onoda/kaiken/20261023.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'jp-66', threadId: 'jp', date: '2026-10-30', weight: 1,
+    title: '政府、燃料油補助に予備費1兆1481億円の使用を閣議決定',
+    body: '政府は燃料油価格の激変緩和基金を確保するため、中東情勢等対応予備費1兆1481億円の使用を閣議決定。12月までの対応経費を措置する。ガソリン補助の基準価格は10〜11月の1リットル170円から12月は175円とし、春先に向け毎月5円ずつ引き上げる方針を示した。',
+    source: '財務省 片山財務大臣記者会見',
+    sourceUrl: 'https://www.mof.go.jp/public_relations/conference/my20261030.html',
+    sourceTier: 'primary',
+  },
 ];

@@ -161,4 +161,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://ssl4.eir-parts.net/doc/285A/tdnet/2902679/00.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-136', threadId: 'si', date: '2026-11-02', weight: 2,
+    title: 'Marvell、Lumentum買収で合意 企業価値1150億ドルの株式交換',
+    body: 'MarvellとLumentumが全株式交換による買収の最終契約を発表。Lumentum株1株にMarvell株4.5株を割り当て、取引上の企業価値は1150億ドル。株主・規制当局の承認などを条件に、2028年前半の完了を見込む。',
+    source: 'Marvell 公式発表',
+    sourceUrl: 'https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity',
+    sourceTier: 'primary',
+  },
 ];
