@@ -265,4 +265,28 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://www.globenewswire.com/news-release/2026/11/02/3393088/37029/en/XMax-Announces-AI-Infrastructure-Services-Agreement-Expects-Over-US-100-Million-in-Revenue-Over-the-Next-Five-Years.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-221', threadId: 'ai', date: '2026-11-02', weight: 2,
+    title: '東北大とアイシン、32MBのMRAMを搭載した16nm AI SoCを開発',
+    body: '東北大学とアイシンは32MBのSTT-MRAMを内蔵する16nmのAI SoCを開発した。OSとモデルの重みを保持し、外部DRAM・SSDを不要にした。OS起動は65.7ミリ秒、物体検出は1フレーム50.7mJで、従来比50分の1の消費エネルギーと公表した。',
+    source: '東北大学 研究成果発表',
+    sourceUrl: 'https://www.tohoku.ac.jp/japanese/2026/11/press20261102-03-emram.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-222', threadId: 'ai', date: '2026-11-02', weight: 2,
+    title: 'OpenAI、電力需給に合わせ計算施設の需要を減らす全国プログラムを発表',
+    body: 'OpenAIはGrid Protectorsを開始し、米国の計算施設で電力逼迫時に需要を減らす仕組みを電力会社などと整備すると発表。開発中のジョージア州施設では最大1000MWの需要調整を契約に含め、同社が必要な電力・基盤整備費用を全額負担するとした。',
+    source: 'OpenAI 公式発表',
+    sourceUrl: 'https://openai.com/index/grid-protectors-program/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-223', threadId: 'ai', date: '2026-11-03', weight: 2,
+    title: 'DraxとBrookfield、英国のGW級データセンター開発で提携',
+    body: 'Drax、Brookfield、Radiantは英国のDrax発電所でGW級データセンターを共同開発する提携を発表。総投資は200億ポンド超を想定し、第1期は最大100MW、2028年1〜3月の稼働を目指す。実施は許認可、系統承認、入居者確保などを条件とする。',
+    source: 'Drax 公式発表',
+    sourceUrl: 'https://www.drax.com/news/drax-brookfield-and-radiant-announce-20bn-partnership-to-deliver-gw-scale-data-centre-capacity-at-drax-power-station/',
+    sourceTier: 'primary',
+  },
 ];

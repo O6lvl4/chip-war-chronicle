@@ -33,4 +33,20 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-169', threadId: 'pr', date: '2026-10-28', weight: 2,
+    title: '米国、ロボット・産業機械の輸入調整へ232条に基づく交渉を指示',
+    body: 'トランプ大統領は、ロボット・産業機械と部品の輸入に関する232条布告に署名した。商務長官と米通商代表に貿易相手との協定交渉と180日以内の進捗報告を指示。交渉の状況や結果に応じ、関税・数量制限や米国内投資を促す措置を検討するとした。',
+    source: '米ホワイトハウス 大統領布告',
+    sourceUrl: 'https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-robotics-industrial-machinery-and-their-parts-and-components-into-the-united-states/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-170', threadId: 'pr', date: '2026-10-30', weight: 2,
+    title: '中国、両用品輸出管理の調査・法執行規則案を意見公募',
+    body: '中国商務部は、輸出管理法と両用品輸出管理条例に基づく「両用品輸出管理調査執行弁法」の草案を公表し、意見募集を開始した。輸出管理の法執行業務を規範化するもので、募集期限は11月29日。草案と起草説明を添付し、電子メール・ファクス・郵送で意見を受け付ける。',
+    source: '中国商務部 産業安全・輸出入管理局',
+    sourceUrl: 'https://aqygzj.mofcom.gov.cn/zhxx/art/2026/art_426eb88f2a27400694987f4d8e078473.html',
+    sourceTier: 'primary',
+  },
 ];
