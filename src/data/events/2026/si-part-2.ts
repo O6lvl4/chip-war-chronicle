@@ -169,4 +169,20 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-137', threadId: 'si', date: '2026-11-02', weight: 1,
+    title: 'Penguin、DDR5-12800対応のSMART Modular MRDIMMを発表',
+    body: 'Penguin SolutionsはAIデータセンター向けにDDR5-12800対応のSMART Modular MRDIMMを発表。2つの物理ランクを1つの論理ランクに多重化する構造を採用し、信号品質やタイミングを確認する独自のZefr試験を選択可能とした。',
+    source: 'Penguin Solutions プレスリリース',
+    sourceUrl: 'https://ir.penguinsolutions.com/news/news-details/2026/Penguin-Solutions-Introduces-High-Bandwidth-SMART-Modular-MRDIMMs-for-Next-Generation-AI-Data-Centers/default.aspx',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-138', threadId: 'si', date: '2026-11-03', weight: 2,
+    title: 'TowerとInnolight、近接光接続NPOの初期生産と300mm製品のテープアウトを公表',
+    body: 'TowerとInnolightは近接光接続NPOでの協業進展を発表。Innolight初のNPO製品が米カリフォルニア工場のPH18Mシリコンフォトニクス工程で初期生産に入った。並行して次世代向けの複数製品をTowerの300mm基盤でテープアウトした。',
+    source: 'Tower Semiconductor プレスリリース',
+    sourceUrl: 'https://towersemi.com/2026/11/03/11032026/',
+    sourceTier: 'primary',
+  },
 ];

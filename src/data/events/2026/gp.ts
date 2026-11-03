@@ -218,6 +218,14 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'gp-109', threadId: 'gp', date: '2026-10-28', weight: 2,
+    title: '日独首脳、重要鉱物の供給網強化とAIハイレベル対話で合意',
+    body: '高市首相とメルツ独首相が東京で会談し、先端技術と経済安全保障の協力に関する共同宣言を発出した。重要鉱物の供給源多角化・代替供給源開発や重要技術の保護で協力することで一致。日独AIハイレベル対話の立上げを歓迎し、AIサミットの日本開催に向けた連携も確認した。',
+    source: '外務省 日独首脳会談',
+    sourceUrl: 'https://www.mofa.go.jp/mofaj/erp/erp_2/de/pageit_000001_03282.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-104', threadId: 'gp', date: '2026-10-29', weight: 2,
     title: 'ホルムズ海峡で出航中のタンカーが被弾 UKMTOが公表',
     body: '英国海事貿易機関は、29日16時UTCにホルムズ海峡から出る航行を終えようとしていたタンカーが、正体不明の飛翔体を受けたと公表。船会社の保安責任者から報告を受けた。発表時点で乗組員の負傷や環境への影響の報告はなく、当局が調査している。',

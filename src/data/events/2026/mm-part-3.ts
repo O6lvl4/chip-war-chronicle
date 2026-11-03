@@ -10,6 +10,14 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'mm-159', threadId: 'mm', date: '2026-10-30', weight: 2,
+    title: '東京エレクトロン、4〜9月期売上41.3%増 AI向け設備投資が拡大',
+    body: '東京エレクトロンの2027年3月期上期売上高は1兆6674.55億円、営業利益は前年同期比67.2%増の5067.76億円。AI向け半導体の設備投資が増加した。通期売上高3兆7000億円、営業利益1兆1690億円の予想も公表した。',
+    source: '東京エレクトロン 決算短信',
+    sourceUrl: 'https://www.tel.com/ir/library/report/i61j9u00000000gf-att/fy27q2tanshin-e.pdf',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-156', threadId: 'mm', date: '2026-11-02', weight: 2,
     title: 'onsemi、7〜9月期売上11%増 AIデータセンター向けは175%増',
     body: 'onsemiの2026年7〜9月期売上高は17.223億ドルで前年同期比11%増。GAAP粗利益率は41.4%、営業利益率は22.0%となった。AIデータセンター向け売上は前年同期比175%増、前四半期比39%増と公表した。',
@@ -32,5 +40,21 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     source: 'ISM 製造業PMI報告',
     sourceUrl: 'https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/',
     sourceTier: 'secondary',
+  },
+  {
+    id: 'mm-160', threadId: 'mm', date: '2026-11-02', weight: 2,
+    title: 'Tower、7〜9月期売上33%増の5.26億ドル 高速接続向け需要が拡大',
+    body: 'Tower Semiconductorは7〜9月期の売上高が前年同期比33%増の5.26億ドル、売上総利益が92%増の1.79億ドルだったと発表。営業キャッシュフローは1.85億ドル。SiPho・SiGeの需要拡大を報告し、10〜12月期売上高は6億ドル前後を見込む。',
+    source: 'Tower Semiconductor 決算発表',
+    sourceUrl: 'https://towersemi.com/2026/11/02/11022026/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-161', threadId: 'mm', date: '2026-11-03', weight: 2,
+    title: 'AMD、7〜9月期売上45%増 データセンター部門は97%増',
+    body: 'AMDの7〜9月期売上高は前年同期比45%増の133.77億ドル、純利益は95%増の24.28億ドル。データセンター部門売上高は約85億ドルで97%増となり、EPYC需要とInstinct MI450の投入が寄与。組み込み部門も29%増収だった。',
+    source: 'AMD 決算発表',
+    sourceUrl: 'https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results',
+    sourceTier: 'primary',
   },
 ];
