@@ -35,7 +35,7 @@ node scripts/data-status.mjs
 - https://www.bis.gov/news-updates
 - https://www.federalreserve.gov/newsevents/pressreleases/ (FOMC)
 - https://www.boj.or.jp/mopo/mpmdeci/state_2026/index.htm
-- https://pr.tsmc.com/english/news
+- https://pr.tsmc.com/english/latest-news
 - https://www.meti.go.jp/press/ ・ https://www.mof.go.jp/
 - https://www.whitehouse.gov/fact-sheets/
 - https://www.anthropic.com/news ・ https://nvidianews.nvidia.com ・ https://ir.amd.com ・ https://www.intc.com
@@ -129,7 +129,25 @@ JS
 
 出来事を別の系列へ移すときは、id が系列名を含むので振り直しとリンクの張り替えが要る。手でやらず、`scripts/remove-events.mjs` で消して `insert-events.mjs` で入れ直し、`add-links.mjs` でリンクを張り直す。
 
-出典URLは必ず WebFetch で開いて日付と中身を確認する。403 が返るサイト（METI・TSMC など bot を弾くもの）は `curl -sS -o /dev/null -w '%{http_code}' -L -A 'Mozilla/5.0' <url>` で存在だけ確認し、内容は検索結果で裏を取る。
+出典URLは必ず開き、公式本文と発表日を確認する。検索結果の抜粋、HTTP 200、RSS一覧だけでは本文の確認済み扱いにしない。
+
+### 取得できない情報源の扱い
+
+- 403・認証要求はアクセス制限として記録し、そのURLへの反復試行、代理取得サービス、認証やアクセス制御の回避を行わない。発行元が別途公開している公式資料・RSS・公開APIがあれば、その資料自体を確認する。
+- 404、リダイレクトループ、XML/PDFの読取非対応、本文が空のJavaScriptページは分けて記録する。404は公式トップのリンクから正しいURLを探し、HTMLが200でも本文を取得できなければ未確認とする。
+- RSSは候補発見に使い、記事本文・個別発表日を別途確認する。フィード生成日時を発表日に使わない。RSSに項目が少ないことは調査期間の網羅性を保証しない。
+- 各実行の調査記録・PR説明に、情報源、対象期間、確認日時、実際に開いたURL、本文と日付の確認可否、エラーを残す。「確認済み・新情報なし・取得失敗」を区別し、失敗や部分取得で既存データを消したり確認済み期間を進めたりしない。
+- 次回は各系列の最終収録日翌日からの点検に加え、前回確認期間と少なくとも7日重ねて訂正・遅延掲載を確認する。未解消の取得失敗期間は引き継ぎ、再確認できるまで変更なしとしない。
+- 公式本文まで確認できない候補は投入せず、取得できた他の情報源の更新を続ける。
+
+### 確認済みの収集入口（2026-11-03）
+
+| 情報源 | 入口と確認方法 | 制限・注意 |
+|---|---|---|
+| TSMC | [Latest News](https://pr.tsmc.com/english/latest-news) から個別記事へ進み、本文の Issued on を確認する。確認例: [2026-10-15の決算発表](https://pr.tsmc.com/english/news/3346) | 旧入口 `/english/news` は使用しない。個別記事は `/english/news/<id>` なので、パス全体を機械的に置換しない。 |
+| FCC | [公式ニュースRSS](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/News_Release) は公開XMLとして取得する。XML非対応の読取エラーをHTTP 403と混同しない。 | 検証時は1項目のみで個別発表日なし。channel pubDateは生成日時。本文リンク・公式添付PDFは403のままなので、ニュース本文の取得回復とは扱わない。 |
+| 経済産業省 | [報道発表](https://www.meti.go.jp/press/) を基本入口として残す。公式RSSも本文を確認するまでは候補発見用。 | 検証時は `/press/`・`/rss/`・`/ml_index_release_atom.xml` が403。利用可能な代替本文は未検証。検索結果だけで採用しない。 |
+
 
 ## 4. 投入
 
