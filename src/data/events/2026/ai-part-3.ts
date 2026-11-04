@@ -202,6 +202,14 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-225', threadId: 'ai', date: '2026-10-27', weight: 1,
+    title: 'KDDI、大阪堺のAI推論環境拡充を発表 2027年度にRubin導入へ',
+    body: 'KDDIは大阪堺データセンターで12月からGemmaなどの公開モデルと顧客独自モデルに対応すると発表。機密データを国内で管理する推論環境を拡充する。2027年度にはコンテナ型設備を整備し、NVIDIA HGX Rubin NVL8を導入する計画も公表した。',
+    source: 'KDDI 公式発表',
+    sourceUrl: 'https://newsroom.kddi.com/news/detail/kddi_nr-1211_4785.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-212', threadId: 'ai', date: '2026-10-28', weight: 2,
     title: 'NVIDIA、Nemotron 3.5 Transcribeの重み公開 40言語の音声に対応',
     body: 'NVIDIAは音声モデルNemotron 3.5 Transcribeの重みをOpenMDW-1.1で公開。稼働約43億パラメータで40言語と最長1時間の録音に対応し、話者付き文字起こしや単語単位の時刻情報を出力する。BF16・FP8・NVFP4版を提供した。',
@@ -279,14 +287,6 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     body: 'OpenAIはGrid Protectorsを開始し、米国の計算施設で電力逼迫時に需要を減らす仕組みを電力会社などと整備すると発表。開発中のジョージア州施設では最大1000MWの需要調整を契約に含め、同社が必要な電力・基盤整備費用を全額負担するとした。',
     source: 'OpenAI 公式発表',
     sourceUrl: 'https://openai.com/index/grid-protectors-program/',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'ai-223', threadId: 'ai', date: '2026-11-03', weight: 2,
-    title: 'DraxとBrookfield、英国のGW級データセンター開発で提携',
-    body: 'Drax、Brookfield、Radiantは英国のDrax発電所でGW級データセンターを共同開発する提携を発表。総投資は200億ポンド超を想定し、第1期は最大100MW、2028年1〜3月の稼働を目指す。実施は許認可、系統承認、入居者確保などを条件とする。',
-    source: 'Drax 公式発表',
-    sourceUrl: 'https://www.drax.com/news/drax-brookfield-and-radiant-announce-20bn-partnership-to-deliver-gw-scale-data-centre-capacity-at-drax-power-station/',
     sourceTier: 'primary',
   },
 ];

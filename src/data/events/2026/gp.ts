@@ -265,4 +265,20 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceUrl: 'https://www.mofa.go.jp/mofaj/files/101110376.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-110', threadId: 'gp', date: '2026-11-01', weight: 2,
+    title: 'サウジ東方でタンカーに飛翔体2発 UKMTOが船長の報告を公表',
+    body: '英国海事貿易機関は、1日23時47分UTCにサウジのラス・アルカフジ東方72海里で、南東へ航行するタンカーの左舷に正体不明の飛翔体2発が命中したとの船長の報告を公表。乗組員全員が確認され、発表時点で環境への影響の報告はなく、当局が調査している。',
+    source: 'UKMTO Warning 192-26',
+    sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/20261102-ukmto_warning-192-26.pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-111', threadId: 'gp', date: '2026-11-03', weight: 1,
+    title: '日本、マダガスカルの重要鉱物分析に3億円 書簡を交換',
+    body: '日本とマダガスカルはアンタナナリボで、鉱物分析機材に3億円を供与する無償資金協力の書簡に署名・交換した。黒鉛やニッケルなどの資源評価に向け、蛍光X線分析装置やX線回折装置等を整備する。外務省は翌4日に公表した。',
+    source: '外務省 報道発表（11月4日）',
+    sourceUrl: 'https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04414.html',
+    sourceTier: 'primary',
+  },
 ];
