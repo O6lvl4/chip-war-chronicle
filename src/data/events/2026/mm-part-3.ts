@@ -58,14 +58,6 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'mm-162', threadId: 'mm', date: '2026-11-04', weight: 2,
-    title: 'GlobalFoundries、7〜9月期売上13%増 IFRS最終損益は赤字',
-    body: 'GlobalFoundriesの7〜9月期売上高は前年同期比13%増の18.99億ドル、IFRS営業利益は2.30億ドル。米政府への株式発行に伴う4.41億ドルの非現金費用を計上し、最終損益は2.70億ドルの赤字。非IFRS純利益は2.98億ドルだった。',
-    source: 'GlobalFoundries 決算発表',
-    sourceUrl: 'https://investors.gf.com/news-releases/news-release-details/globalfoundries-reports-third-quarter-2026-financial-results',
-    sourceTier: 'primary',
-  },
-  {
     id: 'mm-163', threadId: 'mm', date: '2026-11-04', weight: 2,
     title: 'Arm、7〜9月期売上27%増 データセンターのロイヤルティー倍増',
     body: 'Armの2027年3月期第2四半期売上高は前年同期比27%増の14.43億ドル。ライセンス等収入は50%増の7.73億ドル、ロイヤルティーは8%増の6.70億ドルとなり、データセンター向けは倍増した。GAAP純利益は1.30億ドルだった。',
@@ -87,6 +79,14 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     body: '日経平均の終値は前営業日比893.23円安の6万2188.63円、下落率は1.42%。取引時間中の安値は6万30.10円で、前営業日終値から3051.76円下落した。始値は6万2973.16円、高値は6万3105.47円だった。',
     source: '日本経済新聞社 日経平均ヒストリカルデータ',
     sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/data/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-162', threadId: 'mm', date: '2026-11-04', weight: 2,
+    title: 'GlobalFoundries、7〜9月期売上13%増 IFRS最終損益は赤字',
+    body: 'GlobalFoundriesの7〜9月期暫定決算は、売上高が前年同期比13%増の18.99億ドル、IFRS営業利益は2.30億ドル。米政府への株式発行に伴う4.41億ドルの非現金費用を計上し、最終損益は2.70億ドルの赤字。非IFRS純利益は2.98億ドルだった。',
+    source: 'GlobalFoundries 決算発表',
+    sourceUrl: 'https://investors.gf.com/news-releases/news-release-details/globalfoundries-reports-third-quarter-2026-financial-results',
     sourceTier: 'primary',
   },
 ];
