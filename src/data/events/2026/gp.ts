@@ -269,7 +269,7 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     id: 'gp-110', threadId: 'gp', date: '2026-11-01', weight: 2,
     title: 'サウジ東方でタンカーに飛翔体2発 UKMTOが船長の報告を公表',
     body: '英国海事貿易機関は、1日23時47分UTCにサウジのラス・アルカフジ東方72海里で、南東へ航行するタンカーの左舷に正体不明の飛翔体2発が命中したとの船長の報告を公表。乗組員全員が確認され、発表時点で環境への影響の報告はなく、当局が調査している。',
-    source: 'UKMTO Warning 192-26（11月2日公表）',
+    source: 'UKMTO Warning 192-26',
     sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/20261102-ukmto_warning-192-26.pdf',
     sourceTier: 'primary',
   },
