@@ -162,6 +162,22 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-139', threadId: 'si', date: '2026-10-30', weight: 2,
+    title: 'TDK、TMRセンサの量産体制へ1000億円 新潟・小千谷に投資',
+    body: 'TDKは新潟県小千谷市の信濃川テクノ工場に約1000億円を投じ、高性能TMR磁気センサの開発と量産体制を強化すると発表。フィジカルAIや次世代パワー半導体向けの省スペース・低消費電力・高速応答製品を対象とし、2029年中の稼働開始を予定する。',
+    source: 'TDK 公式発表',
+    sourceUrl: 'https://www.tdk.com/ja/news_center/press/20261030_01.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-140', threadId: 'si', date: '2026-10-30', weight: 2,
+    title: 'パナソニック、AIサーバー用材料・部品と半導体材料開発に920億円',
+    body: 'パナソニック インダストリーはAI関連事業に約920億円を投資すると発表。蘇州・アユタヤの基板材料増産に670億円、宇治・バタムのGPU電源用コンデンサ増産に170億円を充てる。四日市南工場には80億円で次世代半導体材料の研究開発施設を建設する。',
+    source: 'パナソニック インダストリー 公式発表',
+    sourceUrl: 'https://news.panasonic.com/jp/press/jn261030-3',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-136', threadId: 'si', date: '2026-11-02', weight: 2,
     title: 'Marvell、Lumentum買収で合意 企業価値1150億ドルの株式交換',
     body: 'MarvellとLumentumが全株式交換による買収の最終契約を発表。Lumentum株1株にMarvell株4.5株を割り当て、取引上の企業価値は1150億ドル。株主・規制当局の承認などを条件に、2028年前半の完了を見込む。',
