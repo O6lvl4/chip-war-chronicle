@@ -89,4 +89,28 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://investors.gf.com/news-releases/news-release-details/globalfoundries-reports-third-quarter-2026-financial-results',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-166', threadId: 'mm', date: '2026-11-05', weight: 2,
+    title: 'Microchip、7〜9月期売上42.2%増 産業機器・データセンター需要が拡大',
+    body: 'Microchipの2027年度第2四半期売上高は前年同期比42.2%増の16.215億ドル、GAAP営業利益は4.645億ドルとなった。産業機器・データセンター向けが伸長。PCIe Gen 6スイッチとリタイマーの設計採用は6月末の12件から24件に増えた。',
+    source: 'Microchip 決算発表',
+    sourceUrl: 'https://ir.microchip.com/news-events/press-releases/detail/1426/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-year-2027',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-167', threadId: 'mm', date: '2026-11-05', weight: 2,
+    title: 'ニコン、4〜9月期の精機売上29.7%増 ArFドライ露光装置などが寄与',
+    body: 'ニコンの2026年4〜9月期の精機事業売上高は前年同期比29.7%増の906億円、営業利益は136.9%増の72億円。FPD・ArFドライ露光装置やサービス収入が伸びた。連結売上高は3346.58億円、営業利益は89.04億円となり黒字転換した。',
+    source: 'ニコン 2027年3月期第2四半期決算説明資料',
+    sourceUrl: 'https://www.nikon.com/content/dam/web-assets/nikoncom/company/local/global/en/ir/ir_library/result/pdf/2027/27second_2_e.pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-168', threadId: 'mm', date: '2026-11-05', weight: 2,
+    title: 'ローム、4〜9月期営業利益128.5%増 通期予想も上方修正',
+    body: 'ロームの2026年4〜9月期売上高は前年同期比14.4%増の2794.83億円、営業利益は128.5%増の174.87億円。車載・産機・サーバー向け増収と減価償却費減少が寄与した。通期予想を売上5500億円、営業利益500億円へ修正した。',
+    source: 'ローム 2027年3月期第2四半期決算短信',
+    sourceUrl: 'https://fscdn.rohm.com/jp/financial/financial-report/2609_financialresults_jp.pdf',
+    sourceTier: 'primary',
+  },
 ];

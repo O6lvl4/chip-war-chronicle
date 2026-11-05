@@ -210,6 +210,14 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-229', threadId: 'ai', date: '2026-10-27', weight: 2,
+    title: 'NAVER、Brookfieldと90億ドルのAI計算基盤契約を締結',
+    body: 'NAVERはBrookfieldと90億ドルの計算基盤契約を締結したと発表。Brookfieldが特別目的会社を通じGPUやデータセンターを取得し、NAVER Cloudへ計算資源を提供する。2027年前半に55MWで稼働し、2028年に200MWへ拡大する計画。',
+    source: 'NAVER 公式発表',
+    sourceUrl: 'https://www.navercorp.com/en/media/pressReleasesDetail?seq=10034796',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-212', threadId: 'ai', date: '2026-10-28', weight: 2,
     title: 'NVIDIA、Nemotron 3.5 Transcribeの重み公開 40言語の音声に対応',
     body: 'NVIDIAは音声モデルNemotron 3.5 Transcribeの重みをOpenMDW-1.1で公開。稼働約43億パラメータで40言語と最長1時間の録音に対応し、話者付き文字起こしや単語単位の時刻情報を出力する。BF16・FP8・NVFP4版を提供した。',
@@ -279,14 +287,6 @@ export const EVENTS_2026_AI_PART_3: TimelineEvent[] = [
     body: '東北大学とアイシンは32MBのSTT-MRAMを内蔵する16nmのAI SoCを開発した。OSとモデルの重みを保持し、外部DRAM・SSDを不要にした。OS起動は65.7ミリ秒、物体検出は1フレーム50.7mJで、従来比50分の1の消費エネルギーと公表した。',
     source: '東北大学 研究成果発表',
     sourceUrl: 'https://www.tohoku.ac.jp/japanese/2026/11/press20261102-03-emram.html',
-    sourceTier: 'primary',
-  },
-  {
-    id: 'ai-222', threadId: 'ai', date: '2026-11-02', weight: 2,
-    title: 'OpenAI、電力需給に合わせ計算施設の需要を減らす全国プログラムを発表',
-    body: 'OpenAIはGrid Protectorsを開始し、米国の計算施設で電力逼迫時に需要を減らす仕組みを電力会社などと整備すると発表。開発中のジョージア州施設では最大1000MWの需要調整を契約に含め、同社が必要な電力・基盤整備費用を全額負担するとした。',
-    source: 'OpenAI 公式発表',
-    sourceUrl: 'https://openai.com/index/grid-protectors-program/',
     sourceTier: 'primary',
   },
 ];

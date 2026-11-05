@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2026_AI_PART_4: TimelineEvent[] = [
   {
+    id: 'ai-222', threadId: 'ai', date: '2026-11-02', weight: 2,
+    title: 'OpenAI、電力需給に合わせ計算施設の需要を減らす全国プログラムを発表',
+    body: 'OpenAIはGrid Protectorsを開始し、米国の計算施設で電力逼迫時に需要を減らす仕組みを電力会社などと整備すると発表。開発中のジョージア州施設では最大1000MWの需要調整を契約に含め、同社が必要な電力・基盤整備費用を全額負担するとした。',
+    source: 'OpenAI 公式発表',
+    sourceUrl: 'https://openai.com/index/grid-protectors-program/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-223', threadId: 'ai', date: '2026-11-03', weight: 2,
     title: 'DraxとBrookfield、英国のGW級データセンター開発で提携',
     body: 'Drax、Brookfield、Radiantは英国のDrax発電所でGW級データセンターを共同開発する提携を発表。総投資は200億ポンド超を想定し、第1期は最大100MW、2028年1〜3月の稼働を目指す。実施は許認可、系統承認、入居者確保などを条件とする。',
@@ -39,6 +47,38 @@ export const EVENTS_2026_AI_PART_4: TimelineEvent[] = [
     body: 'TeraWulfはケンタッキー州Justified拠点の約190億ドルのAnthropic賃貸契約を支える融資で、Googleとの信用補完契約締結を発表。Fluorとはデータセンター3棟の設計・調達・建設契約を結び、2027年末から2028年4〜6月の段階稼働を予定する。',
     source: 'TeraWulf 公式発表',
     sourceUrl: 'https://investors.terawulf.com/news-events/press-releases/detail/148/terawulf-secures-google-credit-backstop-for-project-financing-in-support-of-19-billion-anthropic-lease-executes-definitive-fluor-epc-agreement',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-230', threadId: 'ai', date: '2026-11-04', weight: 2,
+    title: 'OpenAI、Images 2.6を提供開始 画像生成を50%高速化',
+    body: 'OpenAIはImages 2.6をChatGPT・Codex・APIで提供開始。画像生成を従来比50%高速化し、GIF作成に対応した。APIにはFlareとSunburstの2モデルを用意し、画像上の指示による編集やSVG出力、処理の複雑さを調整する設定を追加した。',
+    source: 'OpenAI 公式発表',
+    sourceUrl: 'https://openai.com/index/introducing-images-2-6/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-231', threadId: 'ai', date: '2026-11-04', weight: 2,
+    title: 'Ricursive、Ripple-65Bの重み公開 DGX Sparkで実行可能',
+    body: 'Ricursiveは650億パラメータの密なモデルRipple-65B PreviewをApache 2.0で公開。12兆トークンで事前学習し、100万トークンの文脈に対応する。BF16の指示・基盤モデルとNVFP4版を提供し、量子化版はDGX Spark上で実行できる。',
+    source: 'Ricursive Intelligence Hugging Faceモデルカード',
+    sourceUrl: 'https://huggingface.co/ricursiveAI/Ripple-65B-Preview',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-232', threadId: 'ai', date: '2026-11-05', weight: 2,
+    title: 'OpenAI、GPT-6 Cyberを承認済み利用者へ限定提供',
+    body: 'OpenAIはGPT-6 Cyberを発表し、Daybreak Redの一部承認済み利用者にAPIとCodexで提供開始。脆弱性の発見・検証・修正向けに学習し、ExploitGymでは48.5%を記録した。同社の準備枠組みではサイバー能力をCriticalに分類した。',
+    source: 'OpenAI 公式発表',
+    sourceUrl: 'https://openai.com/index/introducing-gpt-6-cyber/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-233', threadId: 'ai', date: '2026-11-05', weight: 2,
+    title: 'Google、Gemini Omni 1.2 Flashを一般提供 15秒動画に対応',
+    body: 'Googleは動画生成モデルGemini Omni 1.2 FlashをGemini APIと法人向けサービスで一般提供開始。生成・編集できる動画を最大10秒から15秒へ延長し、会話形式の追加編集に対応した。720pの料金は前版比30%安い1秒0.07ドルとした。',
+    source: 'Google 公式ブログ',
+    sourceUrl: 'https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/',
     sourceTier: 'primary',
   },
 ];

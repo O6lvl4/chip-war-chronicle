@@ -258,6 +258,14 @@ export const EVENTS_2026_GP: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'gp-112', threadId: 'gp', date: '2026-10-30', weight: 2,
+    title: '中国とスイス、FTA改定議定書に署名 AI協力とソースコード保護を追加',
+    body: '中国とスイスは北京で自由貿易協定の改定議定書に署名した。デジタル貿易章を新設し、電子送信への不課税、AI協力、ソースコード保護を盛り込んだ。双方の約300品目で関税を追加削減し、最終的に貿易額の99％超を無関税化する。発効には両国の国内手続きが必要。',
+    source: '中国商務部 FTA改定議定書の解説',
+    sourceUrl: 'https://www.mofcom.gov.cn/xwfb/sjfzrfb/art/2026/art_3c8f2bafe5544a4ab8914f63cc07c450.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-107', threadId: 'gp', date: '2026-10-31', weight: 2,
     title: '日米豪印、半導体・AI供給網のボトルネック特定へ新たな取組',
     body: '日米豪印の外相はアトランタで会合し、先端半導体とAIハードウェアの供給網のボトルネックを事前に特定する新たな取組の開始を発表。インド太平洋で信頼できるAIへのアクセスを支えるため、8500万ドル超の技術・資金支援を拠出する意向も示した。',
