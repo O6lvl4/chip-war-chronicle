@@ -178,6 +178,14 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-141', threadId: 'si', date: '2026-11-01', weight: 2,
+    title: 'Aramco、HUMAINの49%取得を完了 AI資産と26億ドルを拠出',
+    body: 'PIFとAramcoはHUMAINの持分取得取引の完了を発表。Aramcoが全額出資子会社を通じ49%を取得し、PIFは51%を維持する。AramcoはAI・計算・デジタル資産に加え、2026年に約99億サウジリヤル（26億ドル）の現金を拠出する。',
+    source: 'Aramco 公式発表',
+    sourceUrl: 'https://www.aramco.com/en/news-media/news/2026/pif-and-aramco-close-humain-transaction-to-accelerate-humains-global-growth',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-136', threadId: 'si', date: '2026-11-02', weight: 2,
     title: 'Marvell、Lumentum買収で合意 企業価値1150億ドルの株式交換',
     body: 'MarvellとLumentumが全株式交換による買収の最終契約を発表。Lumentum株1株にMarvell株4.5株を割り当て、取引上の企業価値は1150億ドル。株主・規制当局の承認などを条件に、2028年前半の完了を見込む。',
