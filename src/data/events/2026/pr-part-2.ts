@@ -26,6 +26,14 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-171', threadId: 'pr', date: '2026-10-26', weight: 1,
+    title: '中国、営業秘密侵害を行う外国主体への貿易・投資制限案を公表',
+    body: '中国商務部は「中国の営業秘密保護特別規定」の草案を公表し、11月24日まで意見を募集。国家の主権・安全・発展利益を害するか現実の脅威となる営業秘密侵害を行う外国主体に、貿易・投資の制限や罰金などを科す内容。今回の公表は施行ではない。',
+    source: '中国商務部 条約法律司・規定草案',
+    sourceUrl: 'https://tfs.mofcom.gov.cn/lfzqyj/art/2026/art_db6a858a9d4e4ec0a3dbeece659c324d.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-168', threadId: 'pr', date: '2026-10-28', weight: 2,
     title: '英国、AI分野に7億ポンド超の予算措置 国産半導体と計算基盤を支援',
     body: '英政府は2026年予算でAI分野に7億ポンド超の施策を発表。AI Security Instituteに1.2億ポンド、Sovereign AI Unitに1.4億ポンドを追加する。AIハードウェアには2000万ポンドを充て、英国製チップの公共計算基盤への導入も支援する。',
