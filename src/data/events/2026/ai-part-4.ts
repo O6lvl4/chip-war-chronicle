@@ -10,6 +10,14 @@ export const EVENTS_2026_AI_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-234', threadId: 'ai', date: '2026-11-02', weight: 2,
+    title: 'LongCat-2.5のAPI提供開始 画像理解と100万トークンの文脈に対応',
+    body: 'LongCatは画像理解とコーディングに対応するLongCat-2.5のAPI提供を開始。文脈長は104万8576トークン、最大出力は26万2144トークンとした。複数段階の推論やツール利用を備え、Claude CodeやCodexなどから利用できる。',
+    source: 'LongCat 公式API変更履歴・仕様',
+    sourceUrl: 'https://longcat.ai/platform/docs/ChangeLog.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-223', threadId: 'ai', date: '2026-11-03', weight: 2,
     title: 'DraxとBrookfield、英国のGW級データセンター開発で提携',
     body: 'Drax、Brookfield、Radiantは英国のDrax発電所でGW級データセンターを共同開発する提携を発表。総投資は200億ポンド超を想定し、第1期は最大100MW、2028年1〜3月の稼働を目指す。実施は許認可、系統承認、入居者確保などを条件とする。',
@@ -66,6 +74,22 @@ export const EVENTS_2026_AI_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-235', threadId: 'ai', date: '2026-11-04', weight: 2,
+    title: 'Tencent、Hy4を提供開始 画像理解とコンピューター操作を追加',
+    body: 'TencentはHy4をTokenHub、WorkBuddy、CodeBuddyなどで提供開始。画像理解とコンピューター操作を新たに搭載し、入力100万トークン6元、出力18元の標準料金を維持した。モデルの重みとシステムカードは後日公開するとした。',
+    source: 'Tencent 公式発表',
+    sourceUrl: 'https://www.tencent.com/zh-hk/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-236', threadId: 'ai', date: '2026-11-04', weight: 2,
+    title: 'Riot、AI研究所と910MWの土地賃貸契約 15年間で約280億ドル',
+    body: 'Riotはテキサス州Corsicana拠点の910MWを対象に、大手AI研究所との15年間の電力付き土地賃貸契約を発表。初期契約総額は約280億ドル。2027年9月から2028年7月に3段階で引き渡し、計算設備は借り手が調達・運営する。',
+    source: 'Riot Platforms 公式発表',
+    sourceUrl: 'https://www.riotplatforms.com/riot-platforms-reports-third-quarter-2026-financial-results-and-strategic-highlights/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-232', threadId: 'ai', date: '2026-11-05', weight: 2,
     title: 'OpenAI、GPT-6 Cyberを承認済み利用者へ限定提供',
     body: 'OpenAIはGPT-6 Cyberを発表し、Daybreak Redの一部承認済み利用者にAPIとCodexで提供開始。脆弱性の発見・検証・修正向けに学習し、ExploitGymでは48.5%を記録した。同社の準備枠組みではサイバー能力をCriticalに分類した。',
@@ -79,6 +103,14 @@ export const EVENTS_2026_AI_PART_4: TimelineEvent[] = [
     body: 'Googleは動画生成モデルGemini Omni 1.2 FlashをGemini APIと法人向けサービスで一般提供開始。生成・編集できる動画を最大10秒から15秒へ延長し、会話形式の追加編集に対応した。720pの料金は前版比30%安い1秒0.07ドルとした。',
     source: 'Google 公式ブログ',
     sourceUrl: 'https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-237', threadId: 'ai', date: '2026-11-05', weight: 2,
+    title: 'Google、ワイオミング州のデータセンターに170億ドル投資へ',
+    body: 'Googleはワイオミング州初のデータセンターに170億ドルを投資すると発表。AEPとの契約には702MWの燃料電池とCO2回収・貯留設備を含む。Tallgrassなども電力を供給し、施設は空冷を採用。Googleが電力と成長に伴う基盤整備の費用を負担する。',
+    source: 'Google 公式ブログ',
+    sourceUrl: 'https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/',
     sourceTier: 'primary',
   },
 ];

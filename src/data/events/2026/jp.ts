@@ -121,4 +121,12 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www.mof.go.jp/public_relations/conference/my20261030.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'jp-67', threadId: 'jp', date: '2026-11-06', weight: 1,
+    title: '政府、AIによる脆弱性点検などサイバー対策に予備費100億円を閣議決定',
+    body: '政府はサイバーセキュリティ対策の強化に総額100億円の予備費使用を閣議決定。政府機関等の重要システムでAIを用いた脆弱性点検に20億円、警察の資機材整備などに41億円、デジタル庁のシステム強化に38億円を措置した。',
+    source: '財務省 片山財務大臣記者会見',
+    sourceUrl: 'https://www.mof.go.jp/public_relations/conference/my20261106.html',
+    sourceTier: 'primary',
+  },
 ];
