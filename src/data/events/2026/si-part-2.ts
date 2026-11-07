@@ -178,6 +178,14 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-145', threadId: 'si', date: '2026-10-30', weight: 2,
+    title: 'TOTO、先端半導体向けセラミック部材の生産設備を増強',
+    body: 'TOTOは半導体製造装置向けの静電チャックなどを生産する福岡県豊前市の新工場に約600億円を投資し、2029年度上期の稼働を計画。大分県中津市にも約110億円を投じ、2028年度中の生産開始を目指す。中津への投資は既発表計画の一部に当たる。',
+    source: 'TOTO 公式発表',
+    sourceUrl: 'https://jp.toto.com/assets/files/261030_%E3%82%BB%E3%83%A9%E3%83%9F%E3%83%83%E3%82%AF%E4%BA%8B%E6%A5%AD%E3%81%AE%E6%8A%95%E8%B3%87%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%88%E8%B1%8A%E5%89%8D_%E4%B8%AD%E6%B4%A5%EF%BC%89.pdf',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-141', threadId: 'si', date: '2026-11-01', weight: 2,
     title: 'Aramco、HUMAINの49%取得を完了 AI資産と26億ドルを拠出',
     body: 'PIFとAramcoはHUMAINの持分取得取引の完了を発表。Aramcoが全額出資子会社を通じ49%を取得し、PIFは51%を維持する。AramcoはAI・計算・デジタル資産に加え、2026年に約99億サウジリヤル（26億ドル）の現金を拠出する。',
