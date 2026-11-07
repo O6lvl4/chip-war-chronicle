@@ -50,6 +50,14 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'mm-174', threadId: 'mm', date: '2026-11-02', weight: 2,
+    title: 'Lumentum、四半期売上136.5%増 光回路スイッチなどが成長',
+    body: '2026年9月26日までの四半期売上は12.626億ドルで前年同期比136.5%増、前期比25.5%増。GAAP営業利益率は28.5%、純利益は3.603億ドル。ポンプレーザーと光回路スイッチが成長を牽引し、部品とシステムの両事業が増収となった。',
+    source: 'Lumentum 決算発表',
+    sourceUrl: 'https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-161', threadId: 'mm', date: '2026-11-03', weight: 2,
     title: 'AMD、7〜9月期売上45%増 データセンター部門は97%増',
     body: 'AMDの7〜9月期売上高は前年同期比45%増の133.77億ドル、純利益は95%増の24.28億ドル。データセンター部門売上高は約85億ドルで97%増となり、EPYC需要とInstinct MI450の投入が寄与。組み込み部門も29%増収だった。',
@@ -87,6 +95,22 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     body: 'GlobalFoundriesの7〜9月期暫定決算は、売上高が前年同期比13%増の18.99億ドル、IFRS営業利益は2.30億ドル。米政府への株式発行に伴う4.41億ドルの非現金費用を計上し、最終損益は2.70億ドルの赤字。非IFRS純利益は2.98億ドルだった。',
     source: 'GlobalFoundries 決算発表',
     sourceUrl: 'https://investors.gf.com/news-releases/news-release-details/globalfoundries-reports-third-quarter-2026-financial-results',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-175', threadId: 'mm', date: '2026-11-04', weight: 2,
+    title: 'Coherent、7〜9月期売上49.9%増の23.7億ドル',
+    body: '2027年度第1四半期の売上は23.7億ドルで前年同期比49.9%増、前期比15.9%増。GAAP粗利益率は39.1%、純利益は3.85億ドルとなった。同社はAIデータセンターの銅から光接続への移行を背景に、光技術と製造規模を活用すると説明した。',
+    source: 'Coherent 決算発表',
+    sourceUrl: 'https://ir.coherent.com/news-releases/news-release-details/coherent-corp-reports-first-quarter-fiscal-2027-results',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-176', threadId: 'mm', date: '2026-11-04', weight: 2,
+    title: '世界シリコンウェーハ出荷、7〜9月期は前年同期比13.4%増',
+    body: 'SEMIは7〜9月期の世界シリコンウェーハ出荷面積が37.56億平方インチとなり、前年同期比13.4%、前期比5.1%増えたと発表。AI関連需要が先端ロジック・メモリから電源・光部品へ拡大し、産業向け需要や先端パッケージも出荷を支えたと説明した。',
+    source: 'SEMI 四半期ウェーハ出荷統計',
+    sourceUrl: 'https://www.semi.org/en/semi-press-release/worldwide-silicon-wafer-shipments-increase-13.4-percent-year-on-year-in-q3-2026-semi-reports',
     sourceTier: 'primary',
   },
   {
@@ -138,6 +162,14 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'mm-177', threadId: 'mm', date: '2026-11-05', weight: 2,
+    title: 'ACM Research、7〜9月期売上36.6%増 先端パッケージ向けなど拡大',
+    body: '7〜9月期売上は前年同期比36.6%増の3.677億ドル、出荷額は30.6%増の3.435億ドル。電解めっきや先端パッケージ関連装置などが増収に寄与した。GAAP営業利益は5550万ドル、純利益は投資評価損などの影響で150万ドルとなった。',
+    source: 'ACM Research 決算発表',
+    sourceUrl: 'https://ir.acmr.com/news-releases/news-release-details/acm-research-reports-third-quarter-2026-results',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-169', threadId: 'mm', date: '2026-11-06', weight: 2,
     title: '日経平均3643円安の5万7434円 下落幅は歴代3位',
     body: '日経平均は前日比3643円13銭（5.96%）安の5万7434円77銭で引け、下落幅は歴代3位となった。安値は5万6745円81銭。225銘柄中222銘柄が下落し、技術セクターが1254円77銭、情報通信が535円19銭押し下げた。',
@@ -151,6 +183,14 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     body: '米労働統計局が10月の雇用統計を発表。非農業部門の雇用者数は前月比16万5000人増、失業率は4.1%。製造業は1万9000人増え、うちコンピューター・電子製品は7000人増加した。8・9月分は計8万4000人上方修正された。',
     source: '米労働統計局 2026年10月雇用統計',
     sourceUrl: 'https://www.bls.gov/news.release/archives/empsit_11062026.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-178', threadId: 'mm', date: '2026-11-06', weight: 2,
+    title: 'Phison、7〜9月期売上374.6%増 AI関連製品が過半に',
+    body: '7〜9月期連結売上は860.76億台湾ドルで前年同期比374.6%増、営業利益は328.98億台湾ドル。企業向けSSDやAIサーバーなどのAI関連製品が売上の過半を占めた。併せて公表した10月売上は315.30億台湾ドルで前年同月比346%増となった。',
+    source: 'Phison 決算・月次売上発表',
+    sourceUrl: 'https://www.phison.com/wp-content/uploads/2026/11/20261106_PHISON-8299_3Q26-Consolidated-Financial-Report-Announcement_Eng_Official.pdf',
     sourceTier: 'primary',
   },
 ];

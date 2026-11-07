@@ -57,4 +57,12 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://aqygzj.mofcom.gov.cn/zhxx/art/2026/art_426eb88f2a27400694987f4d8e078473.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-172', threadId: 'pr', date: '2026-11-05', weight: 2,
+    title: '米BIS、関連企業への輸出規制拡張の停止を2027年1月まで延長へ',
+    body: 'BISは、規制対象企業の関連企業へエンドユーザー規制を広げる規則の停止を、2027年1月10日まで延長する最終規則を事前公開した。従来の停止期限は11月9日。官報掲載と効力発生は同日を予定しており、公表時点では延長措置は未発効。',
+    source: '米連邦官報 公開審査文書（BIS）',
+    sourceUrl: 'https://public-inspection.federalregister.gov/2026-22793.pdf',
+    sourceTier: 'primary',
+  },
 ];

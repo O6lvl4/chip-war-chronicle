@@ -113,4 +113,20 @@ export const EVENTS_2026_AI_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-238', threadId: 'ai', date: '2026-11-05', weight: 2,
+    title: 'Thinking Machines、Inkling 2 SmallをTinkerで提供開始',
+    body: 'Thinking Machines Labは画像入力に対応するInkling 2 SmallをTinkerで提供開始。総パラメータ5940億、推論時の活性170億のMoEモデルで、微調整と推論に利用できる。重みは当初非公開で、安全性評価後の翌週公開を予定する。',
+    source: 'Thinking Machines Lab 公式発表',
+    sourceUrl: 'https://thinkingmachines.ai/news/inkling-2-small/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-239', threadId: 'ai', date: '2026-11-06', weight: 2,
+    title: 'Equinix、シンガポールにAI対応データセンターSG6を開設',
+    body: 'Equinixはシンガポールで6番目のIBXデータセンターSG6を開設。初期投資は約2億9000万ドルで、第1段階は8MW、約1550ラックを提供する。AI・高性能計算向けに液冷へ対応し、全面整備時には最大20MWまで拡張する計画。',
+    source: 'Equinix 公式発表',
+    sourceUrl: 'https://investor.equinix.com/news-events/press-releases/detail/1130/equinix-opens-sg6-in-singapore-expanding-ai-ready-capacity',
+    sourceTier: 'primary',
+  },
 ];
