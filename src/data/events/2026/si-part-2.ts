@@ -241,4 +241,20 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://investor.analog.com/news-releases/news-release-details/analog-devices-completes-acquisition-alif-semiconductor',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-146', threadId: 'si', date: '2026-11-05', weight: 1,
+    title: 'Forge Nano、保護膜メーカーHZOの買収を完了',
+    body: '半導体装置・先端材料のForge Nanoは、電子機器向け保護膜を手掛けるHZOの買収完了を発表。原子層堆積技術に、米国・メキシコ・ベトナムの量産コーティング拠点を加え、半導体から完成電子機器まで表面処理事業を広げる。',
+    source: 'Forge Nano 公式発表（SEC添付資料）',
+    sourceUrl: 'https://www.sec.gov/Archives/edgar/data/2101833/000095014226002954/eh260851461_ex9901.htm',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-147', threadId: 'si', date: '2026-11-08', weight: 2,
+    title: 'NVIDIA取締役会、CEOを巡る報道受け独立調査を開始',
+    body: 'NVIDIA取締役会は、CEOが外国情報活動の標的になったとの報道を受け、独立調査を始めると発表。独立取締役の委員会が外部弁護士と調査を監督する。国家安全保障や同社機密の侵害を疑う理由はないとしつつ、入手可能な情報を検証する。',
+    source: 'NVIDIA 取締役会声明',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors',
+    sourceTier: 'primary',
+  },
 ];

@@ -122,6 +122,14 @@ export const EVENTS_2026_AI_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-240', threadId: 'ai', date: '2026-11-05', weight: 1,
+    title: 'PFN、PLaMo 3 Translateの4サイズをオープンウェイト公開',
+    body: 'Preferred Networksは翻訳特化モデルPLaMo 3 Translateを公開。0.8B・2B・8B・31Bの4サイズで53言語に対応し、スマートフォンや社内サーバーでのオフライン実行を可能にする。利用条件付きの独自ライセンスでモデル重みを提供する。',
+    source: 'Preferred Networks 公式発表',
+    sourceUrl: 'https://www.preferred.jp/ja/news/pr20261105',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-239', threadId: 'ai', date: '2026-11-06', weight: 2,
     title: 'Equinix、シンガポールにAI対応データセンターSG6を開設',
     body: 'Equinixはシンガポールで6番目のIBXデータセンターSG6を開設。初期投資は約2億9000万ドルで、第1段階は8MW、約1550ラックを提供する。AI・高性能計算向けに液冷へ対応し、全面整備時には最大20MWまで拡張する計画。',
