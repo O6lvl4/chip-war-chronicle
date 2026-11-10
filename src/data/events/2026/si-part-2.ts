@@ -242,6 +242,14 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-148', threadId: 'si', date: '2026-11-04', weight: 1,
+    title: 'Penguin、Cree LEDをTransomへ売却する最終契約を発表',
+    body: 'Penguin SolutionsはLED事業のCree LEDをTransom Capital Groupへ現金で売却する最終契約を発表。通常の完了条件を満たせば2027年1〜3月の完了を見込む。AIデータセンター基盤とメモリへの経営資源集中を進める。',
+    source: 'Penguin Solutions 公式発表',
+    sourceUrl: 'https://ir.penguinsolutions.com/news/news-details/2026/Penguin-Solutions-Announces-Agreement-to-Sell-Cree-LED-to-Transom-Capital-Group/default.aspx',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-146', threadId: 'si', date: '2026-11-05', weight: 1,
     title: 'Forge Nano、保護膜メーカーHZOの買収を完了',
     body: '半導体装置・先端材料のForge Nanoは、電子機器向け保護膜を手掛けるHZOの買収完了を発表。原子層堆積技術に、米国・メキシコ・ベトナムの量産コーティング拠点を加え、半導体から完成電子機器まで表面処理事業を広げる。',
@@ -250,11 +258,27 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-149', threadId: 'si', date: '2026-11-05', weight: 1,
+    title: 'JX金属、高純度硫酸銅の生産能力を約50%増強へ',
+    body: 'JX金属は半導体製造や配線基板の銅めっきに用いる高純度硫酸銅Upinorgの生産ラインを茨城事業所の日立地区に増設すると発表。能力を2026年度上期比で約50%増やし、2027年度下期から段階的に稼働を始める計画。生成AI向け先端半導体の需要拡大に対応する。',
+    source: 'JX金属 公式発表',
+    sourceUrl: 'https://www.jx-nmm.com/english/newsrelease/fy2026/20261105_02.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-147', threadId: 'si', date: '2026-11-08', weight: 2,
     title: 'NVIDIA取締役会、CEOを巡る報道受け独立調査を開始',
     body: 'NVIDIA取締役会は、CEOが外国情報活動の標的になったとの報道を受け、独立調査を始めると発表。独立取締役の委員会が外部弁護士と調査を監督する。国家安全保障や同社機密の侵害を疑う理由はないとしつつ、入手可能な情報を検証する。',
     source: 'NVIDIA 取締役会声明',
     sourceUrl: 'https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-150', threadId: 'si', date: '2026-11-09', weight: 1,
+    title: 'JX金属とオキサイド、結晶材料・光技術で資本業務提携',
+    body: 'JX金属とオキサイドは資本業務提携契約を締結。JX金属は第三者割当増資を約27.5億円で引き受け、出資後の持分を7.12%とする予定。結晶材料の量産技術と光単結晶・レーザー技術を組み合わせ、光通信、光電融合、半導体、量子分野で開発と事業化を進める。',
+    source: 'JX金属・オキサイド 公式発表',
+    sourceUrl: 'https://www.jx-nmm.com/english/newsrelease/fy2026/20261109_11.html',
     sourceTier: 'primary',
   },
 ];

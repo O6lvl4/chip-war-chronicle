@@ -129,4 +129,12 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www.mof.go.jp/public_relations/conference/my20261106.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'jp-68', threadId: 'jp', date: '2026-11-06', weight: 1,
+    title: '政府、中東での海上自衛隊の情報収集など3活動を1年延長',
+    body: '政府は国家安全保障会議と閣議で、ソマリア沖・アデン湾の海賊対処、中東地域の情報収集、シナイ半島の多国籍部隊・監視団への司令部要員派遣を各1年延長した。防衛相は原油輸入を支える中東海域で、日本関係船舶の安全確保を続ける必要性を説明した。',
+    source: '防衛省 小泉防衛大臣閣議後会見',
+    sourceUrl: 'https://www.mod.go.jp/j/press/kisha/2026/1106a.html',
+    sourceTier: 'primary',
+  },
 ];
