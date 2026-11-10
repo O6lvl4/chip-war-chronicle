@@ -66,6 +66,14 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'mm-180', threadId: 'mm', date: '2026-11-03', weight: 2,
+    title: '世界半導体売上、7〜9月期は前期比24.1%増の5177億ドル',
+    body: 'SIAがWSTS集計の世界半導体売上を公表。2026年7〜9月期は前期比24.1%増の5177億ドル、9月は前年同月比146.8%増の1726億ドルとなった。月次値は3カ月移動平均。9月は全主要地域で前年を上回り、日本は73.4%増だった。',
+    source: 'SIA 世界半導体売上発表',
+    sourceUrl: 'https://www.semiconductors.org/global-semiconductor-sales-increase-24-1-from-q2-2026-to-q3-2026/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-163', threadId: 'mm', date: '2026-11-04', weight: 2,
     title: 'Arm、7〜9月期売上27%増 データセンターのロイヤルティー倍増',
     body: 'Armの2027年3月期第2四半期売上高は前年同期比27%増の14.43億ドル。ライセンス等収入は50%増の7.73億ドル、ロイヤルティーは8%増の6.70億ドルとなり、データセンター向けは倍増した。GAAP純利益は1.30億ドルだった。',
@@ -111,6 +119,14 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     body: 'SEMIは7〜9月期の世界シリコンウェーハ出荷面積が37.56億平方インチとなり、前年同期比13.4%、前期比5.1%増えたと発表。AI関連需要が先端ロジック・メモリから電源・光部品へ拡大し、産業向け需要や先端パッケージも出荷を支えたと説明した。',
     source: 'SEMI 四半期ウェーハ出荷統計',
     sourceUrl: 'https://www.semi.org/en/semi-press-release/worldwide-silicon-wafer-shipments-increase-13.4-percent-year-on-year-in-q3-2026-semi-reports',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-181', threadId: 'mm', date: '2026-11-04', weight: 2,
+    title: 'Siltronic、7〜9月期売上18.3%増 ウエハー出荷面積が拡大',
+    body: 'Siltronicの2026年7〜9月期売上高は前年同期比18.3%増、前期比10.5%増の3.554億ユーロ。300mm・200mmウエハーの販売面積増加が寄与した。EBITDAは8130万ユーロ、同利益率は22.9%。一方、最終損失は5500万ユーロとなった。',
+    source: 'Siltronic 2026年第3四半期決算発表',
+    sourceUrl: 'https://www.siltronic.com/fileadmin/investorrelations/2026/Q3/20261104_Siltronic_slightly_raises_sales_guidance_for_2026_-_higher_demand_drives_volume_development_in_Q3_2026.pdf',
     sourceTier: 'primary',
   },
   {
@@ -191,6 +207,14 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     body: '7〜9月期連結売上は860.76億台湾ドルで前年同期比374.6%増、営業利益は328.98億台湾ドル。企業向けSSDやAIサーバーなどのAI関連製品が売上の過半を占めた。併せて公表した10月売上は315.30億台湾ドルで前年同月比346%増となった。',
     source: 'Phison 決算・月次売上発表',
     sourceUrl: 'https://www.phison.com/wp-content/uploads/2026/11/20261106_PHISON-8299_3Q26-Consolidated-Financial-Report-Announcement_Eng_Official.pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-179', threadId: 'mm', date: '2026-11-09', weight: 2,
+    title: 'JX金属、4〜9月期の半導体材料営業利益90%増 AI向け販売が拡大',
+    body: 'JX金属の2026年4〜9月期の半導体材料部門売上高は前年同期比33%増の1109億円、営業利益は90%増の361億円。AIデータセンター需要による主要製品の販売増と価格改善が寄与した。連結売上高は5315億円、営業利益は1508億円となった。',
+    source: 'JX金属 2027年3月期第2四半期決算説明資料',
+    sourceUrl: 'https://contents.xj-storage.jp/xcontents/AS82809/302b21b2/fad8/45b1/a6b7/35dd77769701/140120261109568775.pdf',
     sourceTier: 'primary',
   },
 ];
