@@ -17,4 +17,12 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://aqygzj.mofcom.gov.cn/gzdt/art/2026/art_9383949cd87443c78b2a936df4ac3317.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-115', threadId: 'gp', date: '2026-11-09', weight: 2,
+    title: '日越首脳、レアアース供給網の協力推進を確認',
+    body: '日本とベトナムの首脳が東京で約50分間会談し、共同ビジョン声明を発出した。供給網の強靱化に向け、レアアースを含む重要鉱物の具体的な協力推進を確認。AIの共同研究・人材育成等の進展を歓迎し、日本企業が参画するLNG・ガス火力発電の早期実現で一致した。',
+    source: '外務省 日越首脳会談',
+    sourceUrl: 'https://www.mofa.go.jp/mofaj/s_sa/sea1/vn/pageit_000001_00016.html',
+    sourceTier: 'primary',
+  },
 ];

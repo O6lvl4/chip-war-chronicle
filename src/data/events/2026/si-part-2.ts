@@ -281,4 +281,12 @@ export const EVENTS_2026_SI_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.jx-nmm.com/english/newsrelease/fy2026/20261109_11.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-151', threadId: 'si', date: '2026-11-09', weight: 2,
+    title: 'Infineon、300mm SiCウエハーで動作するパワー半導体を初形成',
+    body: 'Infineonはオーストリアのフィラッハ工場で、既存のシリコン製造設備を使い300mm SiCウエハー上に動作するパワー半導体を形成したと発表。200mm比で1枚当たりのチップ数は2.3倍。ドレスデンでは300mm対応の結晶分離技術も実証した。',
+    source: 'Infineon 発表',
+    sourceUrl: 'https://www.infineon.com/press-release/2026/infpr202611-028',
+    sourceTier: 'primary',
+  },
 ];
