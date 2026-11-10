@@ -105,4 +105,12 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.mofcom.gov.cn/syxwfb/art/2026/art_4bc4aaa99b4e41feb6030ec59018d212.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-178', threadId: 'pr', date: '2026-11-09', weight: 1,
+    title: 'JST、日越の半導体共同研究6件を採択 研究人材育成も支援',
+    body: 'JSTはベトナム科学技術省と共同で公募したNEXUSの半導体分野の国際共同研究について、16件の応募から6件を採択したと発表した。両国の専門家による評価と両機関の協議で決定し、研究人材育成も支援する。研究実施期間は3.5年間、42か月を予定する。',
+    source: 'JST 採択発表',
+    sourceUrl: 'https://www.jst.go.jp/pr/info/info1885/index.html',
+    sourceTier: 'primary',
+  },
 ];
