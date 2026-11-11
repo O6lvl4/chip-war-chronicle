@@ -265,4 +265,28 @@ export const EVENTS_2026_MM_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://www.anthropic.com/news/roadshow-launch',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-188', threadId: 'mm', date: '2026-11-10', weight: 1,
+    title: 'ChipMOS、7〜9月期売上36.7%増で過去最高 メモリ需要が拡大',
+    body: '半導体後工程のChipMOSは7〜9月期売上が前年同期比36.7%増の84.01億台湾ドルと発表。粗利益率は12.4%から21.7%に上昇し、純利益は13.23億台湾ドルとなった。AI需要の持続と産業市場の回復が増収を支えたと説明した。',
+    source: 'ChipMOS',
+    sourceUrl: 'https://www.chipmos.com/upfiles/ADUpload/english/en_ir_lawsaid_3861062329.pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-189', threadId: 'mm', date: '2026-11-10', weight: 1,
+    title: 'Elmos、7〜9月期売上18.4%増 調整後EBIT利益率は24.6%',
+    body: '車載向け半導体のElmosは7〜9月期売上が前年同期比18.4%増の1.667億ユーロと発表。評価損益などを調整したoperating EBITは29.2%増の4100万ユーロで、売上比24.6%。通期売上成長率12%±2ポイントの見通しを維持した。',
+    source: 'Elmos',
+    sourceUrl: 'https://www.elmos.com/english/about-elmos/investor/financial-news/news/elmos-continues-profitable-growth-and-strong-cash-generation-in-the-third-quarter-of-2026.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-190', threadId: 'mm', date: '2026-11-11', weight: 1,
+    title: 'Valens、7〜9月期売上2191万ドル 車載向けは790万ドル',
+    body: '接続半導体のValensは7〜9月期売上2191万ドル、前年同期1734万ドルからの増収を発表。車載向けは410万ドルから790万ドルに拡大し、全体の約35%を占めた。GAAP純損失は550万ドル。通期売上7800万〜8100万ドルの予想を維持した。',
+    source: 'Valens Semiconductor（公式発表）',
+    sourceUrl: 'https://www.prnewswire.com/news-releases/valens-semiconductor-reports-strong-third-quarter-2026-results-302936347.html',
+    sourceTier: 'primary',
+  },
 ];

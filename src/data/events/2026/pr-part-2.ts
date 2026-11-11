@@ -113,4 +113,20 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.jst.go.jp/pr/info/info1885/index.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-179', threadId: 'pr', date: '2026-11-09', weight: 2,
+    title: '経産省、先端半導体などの研究開発基準案を意見公募',
+    body: '経産省は改正産業技術力強化法の政省令・告示案の意見募集を開始した。半導体では2nm世代以下のロジック、積層メモリやHBM、化合物半導体、光半導体、先端実装などの研究開発基準を示した。募集期限は12月8日。',
+    source: '経済産業省 e-Govパブリック・コメント',
+    sourceUrl: 'https://public-comment.e-gov.go.jp/servlet/Public?CLASSNAME=PCMMSTDETAIL&Mode=0&id=595320046',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-180', threadId: 'pr', date: '2026-11-10', weight: 1,
+    title: 'UPWARDSとenSET、日米の半導体人材育成で共同枠組みを発表',
+    body: '日米11大学などが参加するUPWARDSと文科省の半導体人材育成事業enSETは、東北大学での合同会議で共同枠組みを発表した。産業連携型カリキュラムの共同開発、クリーンルーム等の共同利用、実践教育の拡充など6分野で連携を強化する。',
+    source: '東北大学 プレスリリース',
+    sourceUrl: 'https://www.tohoku.ac.jp/japanese/2026/11/press20261111-00-UPWARDS.html',
+    sourceTier: 'primary',
+  },
 ];
