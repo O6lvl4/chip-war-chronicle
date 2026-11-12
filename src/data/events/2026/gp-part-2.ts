@@ -18,6 +18,22 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'gp-119', threadId: 'gp', date: '2026-11-07', weight: 2,
+    title: '米軍、オマーン湾でばら積み船HUDAを航行不能に JMICが報告',
+    body: 'JMICは、米中央軍が7日にオマーン湾でばら積み船HUDAを航行不能にしたと報告。米中央軍によると、同船は警告を無視して封鎖突破を試み、乗員を対象区画から退避させた後、航空機が船尾へ精密弾を発射した。UKMTOへの初報時点で乗員・船体の被害は不明。',
+    source: 'JMIC Advisory Update 112（11月8日、UKMTO 198-26）',
+    sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_112_08-nov.pdf',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-120', threadId: 'gp', date: '2026-11-07', weight: 2,
+    title: 'ホルムズ海峡を出るタンカーに不明の飛翔体 JMICが報告',
+    body: 'JMICは8日、ホルムズ海峡を出るタンカーが7日に正体不明の飛翔体に被弾したと報告した。UKMTOの警報200-26に基づく記載で、乗組員は全員無事で所在を確認済み。発表時点で環境への影響の報告はない。加害主体は特定していない。',
+    source: 'JMIC Advisory Update 112（11月8日、UKMTO 200-26）',
+    sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_112_08-nov.pdf',
+    sourceTier: 'primary',
+  },
+  {
     id: 'gp-115', threadId: 'gp', date: '2026-11-09', weight: 2,
     title: '日越首脳、レアアース供給網の協力推進を確認',
     body: '日本とベトナムの首脳が東京で約50分間会談し、共同ビジョン声明を発出した。供給網の強靱化に向け、レアアースを含む重要鉱物の具体的な協力推進を確認。AIの共同研究・人材育成等の進展を歓迎し、日本企業が参画するLNG・ガス火力発電の早期実現で一致した。',

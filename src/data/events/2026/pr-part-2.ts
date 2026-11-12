@@ -122,6 +122,14 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-181', threadId: 'pr', date: '2026-11-09', weight: 1,
+    title: '中国、米11主体への「信頼できないエンティティー」措置停止を2か月延長へ',
+    body: '中国商務部は、2025年4月に米国の11主体を対象とした「信頼できないエンティティー」措置について、11月10日から停止を2か月延長すると発表。第8回米中経済貿易協議の合意を踏まえた措置で、中国企業は取引を申請でき、条件を満たす申請を審査・許可する。',
+    source: '中国商務部 報道官談話（2026年11月9日16時）',
+    sourceUrl: 'https://www.mofcom.gov.cn/xwfb/xwfyrth/art/2026/art_137cb86f6deb442c963c906c2ca97e79.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-180', threadId: 'pr', date: '2026-11-10', weight: 1,
     title: 'UPWARDSとenSET、日米の半導体人材育成で共同枠組みを発表',
     body: '日米11大学などが参加するUPWARDSと文科省の半導体人材育成事業enSETは、東北大学での合同会議で共同枠組みを発表した。産業連携型カリキュラムの共同開発、クリーンルーム等の共同利用、実践教育の拡充など6分野で連携を強化する。',

@@ -257,4 +257,28 @@ export const EVENTS_2026_AI_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://www.torus.co/news/torus-launches-modular-ai-infrastructure-foundry',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-256', threadId: 'ai', date: '2026-11-11', weight: 2,
+    title: 'Googleが分類判断向けGemini Decisions APIを発表',
+    body: 'GoogleはGemini Decision 1を使うDecisions APIを発表。最大25万6000トークンのマルチモーダル入力に対し、最大1000の独立した質問をまとめて処理し、文章ではなく選択肢の確率を返す。入力100万トークン当たり0.10ドルで出力料金はない。',
+    source: 'Google',
+    sourceUrl: 'https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-257', threadId: 'ai', date: '2026-11-11', weight: 2,
+    title: 'AlibabaがQwen4-Max-Previewを期間限定提供',
+    body: 'Alibaba CloudはQwen4-Max-Previewを11月11～25日の期間限定で提供。テキスト・画像・動画入力と100万トークンのコンテキスト、ツール呼び出しに対応する。Token Plan契約者向けで従量課金には非対応。プレビュー終了後は提供を停止する。',
+    source: 'Alibaba Cloud',
+    sourceUrl: 'https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-258', threadId: 'ai', date: '2026-11-11', weight: 2,
+    title: 'RunwayがロボットモデルPraxis-1の重みと実行コードを公開',
+    body: 'Runwayは映像と行動を扱う27BのMoEモデルPraxis-1の重み、推論・微調整コードをApache 2.0で公開。H100やB200に加えRTX 5090、Jetson Thor等に対応する。公式Hugging FaceでDROID版の重みファイルとライセンスを確認できる。',
+    source: 'Runway / Hugging Face',
+    sourceUrl: 'https://runway.com/news/company-news/praxis-1-is-now-available',
+    sourceTier: 'primary',
+  },
 ];
