@@ -41,4 +41,28 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://www.gov.uk/government/news/sovereign-ai-and-british-business-bank-invest-in-british-firm-developing-the-next-generation-of-ai-hardware',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-157', threadId: 'si', date: '2026-11-12', weight: 3,
+    title: 'NVIDIAのJensen Huang氏辞任 暫定CEOにCFOのKress氏',
+    body: 'NVIDIAはJensen Huang氏が社長・CEO・取締役を即時辞任したと発表。CFOのColette Kress氏がCFO兼務で暫定CEOに就任し、社内外から後任を探す。Harvey C. Jones氏を初の取締役会会長に任命した。',
+    source: 'NVIDIA',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-158', threadId: 'si', date: '2026-11-12', weight: 2,
+    title: 'SamsungがHBM包装工場と先端半導体基板の大型投資に着工',
+    body: '韓国産業通商部はSamsungの忠清圏投資の起工を発表。Samsung電子は温陽拠点でHBM専用パッケージング工場に6兆ウォン、Samsung電機は世宗でGPU・CPU向け先端半導体基板の生産ライン拡張に8兆ウォンを投じる。',
+    source: '韓国産業通商部',
+    sourceUrl: 'https://www.motir.go.kr/attach/down/095a2dda9c864e1d90d751f7668a1117/b90811c42526813cdc439ef4ae5134b3',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-159', threadId: 'si', date: '2026-11-12', weight: 2,
+    title: 'VishayとKaynesがインドの半導体後工程合弁で条件合意',
+    body: 'Vishay子会社とKaynesはインドでウエハ後処理・組立・検査・包装を担う合弁会社の拘束力ある基本条件書に署名。Vishayは5640万ドルを出資し49％、Kaynesが51％を保有する計画。最終契約と当局承認等を条件とする。',
+    source: 'Vishay',
+    sourceUrl: 'https://ir.vishay.com/node/21881/html',
+    sourceTier: 'primary',
+  },
 ];
