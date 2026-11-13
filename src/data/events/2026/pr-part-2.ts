@@ -130,11 +130,27 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'pr-182', threadId: 'pr', date: '2026-11-09', weight: 1,
+    title: '中国、韓華海洋の米子会社5社への反制措置停止を2か月延長',
+    body: '中国商務部は中米経済貿易協議の合意を受け、韓華海洋の米国関連子会社5社への反制措置の停止を、北京時間11月10日からさらに2か月延長すると発表した。2025年商務部令第6号に基づく措置が対象で、2026年第4号令として公布した。',
+    source: '中国商務部 2026年第4号令',
+    sourceUrl: 'https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_41f0892910554f57af175883b35ca360.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'pr-180', threadId: 'pr', date: '2026-11-10', weight: 1,
     title: 'UPWARDSとenSET、日米の半導体人材育成で共同枠組みを発表',
     body: '日米11大学などが参加するUPWARDSと文科省の半導体人材育成事業enSETは、東北大学での合同会議で共同枠組みを発表した。産業連携型カリキュラムの共同開発、クリーンルーム等の共同利用、実践教育の拡充など6分野で連携を強化する。',
     source: '東北大学 プレスリリース',
     sourceUrl: 'https://www.tohoku.ac.jp/japanese/2026/11/press20261111-00-UPWARDS.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-183', threadId: 'pr', date: '2026-11-12', weight: 2,
+    title: '米議員、NVIDIAの対中輸出許可と半導体関税の調査で記録保全を要求',
+    body: '米上院財政委員会のWyden議員と下院歳入委員会のNeal議員は、NVIDIA製AI半導体の対中輸出許可と関税措置に関する調査を開始すると表明。商務長官に、232条調査、輸出許可の審査・承認、NVIDIAなどとの連絡について記録保全を求めた。',
+    source: '米上院財政委員会 Wyden・Neal議員書簡',
+    sourceUrl: 'https://www.finance.senate.gov/wp-content/uploads/2026/11/11122026wydenneallettertolutnickonnvidia.pdf',
     sourceTier: 'primary',
   },
 ];

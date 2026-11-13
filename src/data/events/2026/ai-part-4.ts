@@ -234,6 +234,14 @@ export const EVENTS_2026_AI_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-259', threadId: 'ai', date: '2026-11-10', weight: 2,
+    title: 'RackspaceとTogether AI、GB300を使う推論基盤の複数年契約を発表',
+    body: 'RackspaceとTogether AIは、NVIDIA GB300 NVL72とSpectrum-X Ethernetを使う専用推論基盤の複数年契約を発表した。導入は条件充足を前提に2027年を予定。企業向け共同販売の検討については、別途、法的拘束力のない意向書を締結した。',
+    source: 'Rackspace 公式発表',
+    sourceUrl: 'https://ir.rackspace.com/node/13806/pdf',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-253', threadId: 'ai', date: '2026-11-11', weight: 1,
     title: 'Google、AlphaGenome 2を提供開始 1億超の細胞情報でDNA変異を予測',
     body: 'Google DeepMindはDNA配列モデルAlphaGenome 2を発表。68組織の1億超の細胞情報で学習し、細胞の種類や状態ごとにDNA変異の影響を予測する。非商用研究向けAPIを同日提供し、商用研究には限定プレビューを開始した。',
