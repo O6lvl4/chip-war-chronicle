@@ -65,4 +65,12 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.mofa.go.jp/mofaj/files/101116783.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-121', threadId: 'gp', date: '2026-11-12', weight: 2,
+    title: '日米、海洋鉱物資源開発の共同声明 製錬・加工と探査技術で協力',
+    body: '日米両政府は富山市で11月11〜12日に開催した第2回作業部会に合わせ、海洋鉱物資源開発の共同声明を発出した。産業界の商業連携と製錬・加工能力の確保、深海探査や環境評価の情報交換、共同研究・技術実証、民間投資を促す規制面での協力を掲げた。',
+    source: '外務省 日米海洋鉱物資源開発に関する共同声明',
+    sourceUrl: 'https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04462.html',
+    sourceTier: 'primary',
+  },
 ];
