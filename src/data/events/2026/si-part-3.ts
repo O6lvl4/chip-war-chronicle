@@ -18,6 +18,14 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-162', threadId: 'si', date: '2026-11-10', weight: 2,
+    title: 'Siemens、組み込みソフトのデバッグ企業Lauterbachを買収へ',
+    body: 'Siemensは組み込みソフトウェア向けデバッグ・トレース技術を持つLauterbachの買収契約を発表。半導体のハードウェア支援検証とソフトウェアのデバッグをつなぐ設計・検証基盤を拡充する。取引完了は規制当局の承認などを条件に2027年上期を予定。',
+    source: 'Siemens 発表',
+    sourceUrl: 'https://press.siemens.com/global/en/pressrelease/siemens-expand-portfolio-semiconductor-design-and-verification-planned-acquisition',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-154', threadId: 'si', date: '2026-11-11', weight: 1,
     title: 'JX金属、台湾のガラス基板開発で配線・貫通電極形成を公表',
     body: 'JX金属は台湾ITRIのHi-CHIPによるガラス基板開発で、同社のターゲットによるシード層形成とタツタ電線の導電性ペーストによる貫通電極の充填・導通形成を公表した。成果は10月21日のIMPACTで発表済みで、量産開始の発表ではない。',
@@ -63,6 +71,22 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     body: 'Vishay子会社とKaynesはインドでウエハ後処理・組立・検査・包装を担う合弁会社の拘束力ある基本条件書に署名。Vishayは5640万ドルを出資し49％、Kaynesが51％を保有する計画。最終契約と当局承認等を条件とする。',
     source: 'Vishay',
     sourceUrl: 'https://ir.vishay.com/node/21881/html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-161', threadId: 'si', date: '2026-11-12', weight: 2,
+    title: '日東電工、半導体用次世代基板の事業化へシャープ工場資産を取得契約',
+    body: '日東電工は半導体チップ実装用の次世代薄型基板の事業化に向け、三重県にあるシャープの土地・建物などを222億円で取得する契約を締結した。独自の薄層化・回路形成技術を活用する計画で、資産の引き渡しは2026年12月24日を予定する。',
+    source: '日東電工 発表',
+    sourceUrl: 'https://www-origin.nitto.com/us/en/press/2026/1112.jsp',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-160', threadId: 'si', date: '2026-11-13', weight: 2,
+    title: 'GF、NY州マルタで新300mm工場を着工 初期投資約100億ドル',
+    body: 'GlobalFoundriesは日米投資枠組みに基づくニューヨーク州マルタの新300mm工場を着工。初期投資は約100億ドル、州の支援は5.7億ドルとした。稼働開始は2029年を予定し、既存拠点に隣接して米国内の半導体製造能力を拡張する。',
+    source: 'GlobalFoundries 発表',
+    sourceUrl: 'https://gf.com/news-and-events/news/globalfoundries-breaks-ground-on-first-new-semiconductor-fab-under-landmark-us-japan-initiative/',
     sourceTier: 'primary',
   },
 ];

@@ -10,6 +10,14 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'mm-198', threadId: 'mm', date: '2026-11-11', weight: 1,
+    title: 'ノートPCのQ3出荷は前期比15.8%減 メモリ調達計画の見直し進む',
+    body: 'TrendForceは2026年7〜9月のノートPC出荷が前期比15.8%減少したと公表。メモリ価格上昇を見越した前倒し調達・生産の一方、販売価格上昇で需要が鈍り完成品在庫が増えたと分析した。一部メーカーは2027年の製品構成やメモリ調達計画を見直している。',
+    source: 'TrendForce 調査',
+    sourceUrl: 'https://www.trendforce.com/presscenter/news/20261111-13303.html',
+    sourceTier: 'secondary',
+  },
+  {
     id: 'mm-192', threadId: 'mm', date: '2026-11-12', weight: 2,
     title: 'Applied Materials、四半期売上53%増の104.1億ドル 通期も過去最高',
     body: 'Applied Materialsが10月25日終了の第4四半期・通期決算を発表。四半期売上は前年同期比53%増の104.1億ドル、GAAP営業利益は36.6億ドル。通期売上は21%増の344.5億ドルとなり、四半期・通期とも過去最高を更新した。',
