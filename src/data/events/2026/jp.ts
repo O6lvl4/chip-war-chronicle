@@ -137,4 +137,12 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www.mod.go.jp/j/press/kisha/2026/1106a.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'jp-69', threadId: 'jp', date: '2026-11-13', weight: 1,
+    title: '政府、電気・ガス支援などに予備費約6519億円の使用を閣議決定',
+    body: '政府は2026年度の中東情勢等対応予備費から約6519億円を使用すると閣議決定した。内訳は内閣府の生活者・事業者支援1300億円、経産省の電気・ガス料金負担軽減支援約5219億円。使用後の同予備費残額は約840億円となる。',
+    source: '財務省 予備費使用 閣議決定',
+    sourceUrl: 'https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/r81113kakugikettei.pdf',
+    sourceTier: 'primary',
+  },
 ];

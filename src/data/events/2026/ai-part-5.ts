@@ -25,4 +25,20 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceUrl: 'https://www.intc.com/news-events/press-releases/detail/1787/intel-radixark-collaborate-to-advance-open-ai-inference-on',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-263', threadId: 'ai', date: '2026-11-12', weight: 2,
+    title: 'Axelera、データセンター推論向けTitaniaを発表 量産は2027年予定',
+    body: 'Axelera AIはデータセンター推論向けのTitaniaアーキテクチャを発表した。チップレット構成を採用し、空冷4Uの参照サーバーを設計する。量産開始は2027年第3四半期を予定しており、発表時点で出荷済みとはしていない。',
+    source: 'Axelera AI 発表',
+    sourceUrl: 'https://axelera.ai/news/axelera-ai-unveils-titania-architecture-hpc-class-ai-responsiveness-without-liquid-cooled-racks-targeting-110b-underserved-market',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-264', threadId: 'ai', date: '2026-11-13', weight: 2,
+    title: 'GMO、B300設備取得計画を約261億円から約65億円へ変更',
+    body: 'GMOインターネットは北海道石狩市のGPUサーバーとデータセンター付帯設備の取得計画を変更した。NVIDIA B300搭載サーバーを最大116台から20台へ、予定取得額を約261億円から65億円へ縮小。次世代GPUへの投資額は本開示に含めない。',
+    source: 'GMOインターネット 適時開示',
+    sourceUrl: 'https://internet.gmo/ir/pdf/irlibrary/gmointernet_j_disclose_20261113_02.pdf',
+    sourceTier: 'primary',
+  },
 ];
