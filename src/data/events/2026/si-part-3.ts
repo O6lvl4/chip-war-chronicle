@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
   {
+    id: 'si-163', threadId: 'si', date: '2026-11-09', weight: 2,
+    title: '三井化学とDBJ、JSRの全普通株式取得へ契約 半導体材料事業を統合',
+    body: 'JSRは、JICキャピタル側が保有する全普通株式を三井化学と日本政策投資銀行へ譲渡する契約の締結を発表。実行後はDBJの株式を無議決権優先株式に転換し、三井化学が議決権の100%を保有する予定。実行には競争法などの承認が必要となる。',
+    source: 'JSR 株主の異動に関するお知らせ',
+    sourceUrl: 'https://www.jsr.co.jp/news/2026/20261109.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-152', threadId: 'si', date: '2026-11-10', weight: 2,
     title: 'TSMC、先端工程・パッケージなどに409億ドルの資本支出を承認',
     body: 'TSMC取締役会は約409.267億ドルの資本支出を承認した。先端工程、先端パッケージ、成熟・特殊工程の能力増強や更新、工場建設、2027年の研究開発設備などが対象。半導体産業と関連分野へ戦略投資する会社の設立にも最大5億ドルを承認した。',
