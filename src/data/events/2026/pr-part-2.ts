@@ -153,4 +153,12 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.finance.senate.gov/wp-content/uploads/2026/11/11122026wydenneallettertolutnickonnvidia.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-184', threadId: 'pr', date: '2026-11-13', weight: 2,
+    title: 'マレーシア、Megaspeed関連のAI半導体再輸出を税関と確認',
+    body: 'マレーシア投資貿易産業省は、Megaspeedと現地関連会社Speedmatrixを問題なしと認定した事実はないと声明を発表。税関と、持ち込まれたAI半導体が他国へ再輸出されたか、法令に従っていたかを確認している。米国・シンガポール当局とも協力する。',
+    source: 'マレーシア投資貿易産業省 声明',
+    sourceUrl: 'https://www.miti.gov.my/miti/resources/Speech/MEDIA_STATEMENT_13112026.pdf',
+    sourceTier: 'primary',
+  },
 ];

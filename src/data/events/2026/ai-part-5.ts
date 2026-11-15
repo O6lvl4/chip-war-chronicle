@@ -2,6 +2,14 @@ import type { TimelineEvent } from '../../../types';
 
 export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
   {
+    id: 'ai-266', threadId: 'ai', date: '2026-11-11', weight: 2,
+    title: 'ダイキン、NVIDIAのAI基盤向け60MW冷却設計モデルを発表',
+    body: 'ダイキンの米国子会社は、Vera Rubin NVL72を中核とするNVIDIA DSX向けにD60-Wを発表。60MWのIT負荷を6ユニットで支え、92%を液冷、8%を空冷で処理する標準設計モデル。自社CDUとドライクーラーは開発中で、2027年下半期の提供を目指す。',
+    source: 'ダイキン工業 ニュースリリース',
+    sourceUrl: 'https://www.daikin.co.jp/-/media/89DA8BC89A7E4A1E835D02F878882003.ashx',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-260', threadId: 'ai', date: '2026-11-12', weight: 2,
     title: 'Google、Gemini 4 Hydrogenを提供開始 100万トークンの文脈に対応',
     body: 'GoogleはGemini 4 Hydrogenを発表し、API、AI Studio、Geminiアプリ、検索などで展開を開始した。100万トークンの文脈全体で入力100万トークン1.50ドル、出力7.50ドル。思考設定はlow・medium・high・xhighの4段階を用意する。',
@@ -31,6 +39,14 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     body: 'Axelera AIはデータセンター推論向けのTitaniaアーキテクチャを発表した。チップレット構成を採用し、空冷4Uの参照サーバーを設計する。量産開始は2027年第3四半期を予定しており、発表時点で出荷済みとはしていない。',
     source: 'Axelera AI 発表',
     sourceUrl: 'https://axelera.ai/news/axelera-ai-unveils-titania-architecture-hpc-class-ai-responsiveness-without-liquid-cooled-racks-targeting-110b-underserved-market',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-265', threadId: 'ai', date: '2026-11-12', weight: 2,
+    title: 'AMD、裏面からの物理攻撃検知を組み込むVersal TRを発表',
+    body: 'AMDはAI Enginesを搭載するVersal TRの3製品を発表。演算ダイへ保護ダイを接合し、指定された裏面攻撃を検知、保護ダイの改変や除去時には起動を阻止する。試作品は2027年後半、量産は2028年前半の予定で、あらゆる改ざんへの耐性を保証するものではない。',
+    source: 'AMD Newsroom',
+    sourceUrl: 'https://newsroom.amd.com/news/amd-advances-built-in-protection-physical-attacks-security-critical-systems/',
     sourceTier: 'primary',
   },
   {
