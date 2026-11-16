@@ -161,4 +161,20 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.miti.gov.my/miti/resources/Speech/MEDIA_STATEMENT_13112026.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-185', threadId: 'pr', date: '2026-11-13', weight: 2,
+    title: '米商務省、Atom Computingに最大1億ドルのCHIPS研究開発助成を確定',
+    body: '米商務省は中性原子量子計算企業Atom Computingとの最終助成契約を発表した。CHIPS法に基づく最大1億ドルで、数万量子ビットの操作・制御・選択に必要な半導体関連技術、ハードウェアとシステム統合、性能検証の研究開発を支援する。',
+    source: '米商務省・NIST',
+    sourceUrl: 'https://www.nist.gov/news-events/news/2026/11/department-commerce-announces-finalization-chips-rd-award-atom-computing',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-186', threadId: 'pr', date: '2026-11-16', weight: 2,
+    title: '米BIS、第三国データセンター経由の高度計算への遠隔アクセスを規制する規則を発表',
+    body: '米BISは第三国のデータセンターを通じた規制回避に対処する暫定最終規則を公表した。懸念国企業向けの大規模計算提供と、マレーシアなど5か国への先端半導体輸出に許可要件を設ける内容。公開原文の発効日は官報掲載日とされ、日付は未記入。',
+    source: '米商務省BIS',
+    sourceUrl: 'https://www.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology',
+    sourceTier: 'primary',
+  },
 ];

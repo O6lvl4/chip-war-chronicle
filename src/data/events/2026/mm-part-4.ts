@@ -65,4 +65,12 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://www.bls.gov/news.release/ppi.htm',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-199', threadId: 'mm', date: '2026-11-16', weight: 2,
+    title: '日本の7〜9月期実質GDP、年率0.1%減 民間設備投資は前期比1.6%増',
+    body: '内閣府が7〜9月期GDPの1次速報を公表。季節調整済み実質GDPは前期比年率0.1%減となった。民間最終消費支出は前期比0.3%減、民間企業設備は1.6%増。国内需要の寄与度はプラス0.6ポイント、純輸出はマイナス0.6ポイントだった。',
+    source: '内閣府 2026年7〜9月期GDP1次速報',
+    sourceUrl: 'https://www.esri.cao.go.jp/en/sna/data/sokuhou/files/2026/qe263/pdf/gaiyou2631_e.pdf',
+    sourceTier: 'primary',
+  },
 ];

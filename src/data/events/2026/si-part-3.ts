@@ -34,6 +34,14 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-164', threadId: 'si', date: '2026-11-10', weight: 2,
+    title: '三井金属、マレーシア銅箔新工場に1900億円 2031年4月から順次稼働へ',
+    body: '三井金属はAI・半導体向け銅箔の安定供給を目的に、マレーシアで新工場を建設する方針を決議。投資額は約1900億円で、極薄銅箔MicroThinと高周波基板用VSPの設備などを整備する。2031年4月から順次稼働を予定する。',
+    source: '三井金属 適時開示',
+    sourceUrl: 'https://www.mitsui-kinzoku.com/LinkClick.aspx?fileticket=g/1XYEdOfgg%3D&mid=1060&tabid=159',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-154', threadId: 'si', date: '2026-11-11', weight: 1,
     title: 'JX金属、台湾のガラス基板開発で配線・貫通電極形成を公表',
     body: 'JX金属は台湾ITRIのHi-CHIPによるガラス基板開発で、同社のターゲットによるシード層形成とタツタ電線の導電性ペーストによる貫通電極の充填・導通形成を公表した。成果は10月21日のIMPACTで発表済みで、量産開始の発表ではない。',
@@ -95,6 +103,14 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     body: 'GlobalFoundriesは日米投資枠組みに基づくニューヨーク州マルタの新300mm工場を着工。初期投資は約100億ドル、州の支援は5.7億ドルとした。稼働開始は2029年を予定し、既存拠点に隣接して米国内の半導体製造能力を拡張する。',
     source: 'GlobalFoundries 発表',
     sourceUrl: 'https://gf.com/news-and-events/news/globalfoundries-breaks-ground-on-first-new-semiconductor-fab-under-landmark-us-japan-initiative/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-165', threadId: 'si', date: '2026-11-16', weight: 2,
+    title: 'MarvellとPenguin、CXL拡張と光接続による共有メモリの共同開発を発表',
+    body: 'MarvellとPenguin Solutionsがメモリ拡張の協業を発表。既存DDR4を再利用するCXL増設カードと、複数ラックで共有する光接続メモリを開発する。カードは2026年末までの顧客導入、光接続サーバーは2027年後半の試作提供を予定する。',
+    source: 'Marvell 公式発表',
+    sourceUrl: 'https://www.marvell.com/company/newsroom/marvell-penguin-solutions-data-center-ai-memory-inference.html',
     sourceTier: 'primary',
   },
 ];

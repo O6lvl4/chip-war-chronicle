@@ -73,4 +73,12 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04462.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-122', threadId: 'gp', date: '2026-11-13', weight: 2,
+    title: '日本、フィリピンに700億円の緊急支援借款 半導体など供給網の安定化を支援',
+    body: '日比両政府はマニラで700億円の円借款の書簡を交換。外務省が16日に発表した。「パワー・アジア」の下、エネルギー供給と価格高騰への緊急対策を支援する。同省はフィリピンの半導体後工程シェアを世界の10％と説明。年利2.70％、償還15年。',
+    source: '外務省',
+    sourceUrl: 'https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04440.html',
+    sourceTier: 'primary',
+  },
 ];

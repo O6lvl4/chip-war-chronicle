@@ -57,4 +57,28 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceUrl: 'https://internet.gmo/ir/pdf/irlibrary/gmointernet_j_disclose_20261113_02.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-267', threadId: 'ai', date: '2026-11-16', weight: 2,
+    title: 'NVIDIA、Rubin HPC GPUを発表 5万超のCUDAコアと第7世代NVLink',
+    body: 'NVIDIAはSC26で科学・工学向けGPUのRubin HPCを発表。1基に5万超のCUDAコアを備え、疎なデータの処理と第7世代NVLinkによるGPU間接続を強化する。シミュレーションやデータ解析を対象とし、提供開始は2028年を予定する。',
+    source: 'NVIDIA 公式発表',
+    sourceUrl: 'https://blogs.nvidia.com/blog/rubin-hpc/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-268', threadId: 'ai', date: '2026-11-16', weight: 2,
+    title: 'NVIDIA、192基のVera CPUを組み合わせたHPCラックを発表',
+    body: 'NVIDIAはVera CPUを192基、メモリ約300TBとストレージ1PBを組み合わせる液冷HPCラックを発表。Quantum-X800 InfiniBandで接続し、Dell・HPE・Lenovo・Supermicroから2027年初め以降の提供を予定する。',
+    source: 'NVIDIA 公式発表',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-expands-vera-cpu-platform-to-accelerate-scientific-discovery',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-269', threadId: 'ai', date: '2026-11-16', weight: 2,
+    title: 'NVIDIA、DGX Sparkを4台接続するHPC開発キットを発売',
+    body: 'NVIDIAはSC26でDGX Spark HPC Developer Kitを発表し、販売を開始した。4台をリング状に直結し、合計512GBのメモリと20TBのNVMeストレージを備える。科学計算向けHPC SDKの導入手順書は後日公開予定とした。',
+    source: 'NVIDIA 公式発表',
+    sourceUrl: 'https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/',
+    sourceTier: 'primary',
+  },
 ];
