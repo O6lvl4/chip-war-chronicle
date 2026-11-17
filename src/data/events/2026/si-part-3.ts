@@ -113,4 +113,12 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://www.marvell.com/company/newsroom/marvell-penguin-solutions-data-center-ai-memory-inference.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-166', threadId: 'si', date: '2026-11-17', weight: 2,
+    title: 'ACM Research、米オレゴンに研究開発・製造施設を開設 1億ドル超の投資計画の一環',
+    body: 'ACM Researchはオレゴン州ヒルズボロで研究開発・製造施設を開設したと発表。米国に1億ドル超を投資する計画の第1段階に当たる。施設は4万平方フィートで、生産区画2万4000平方フィートと実演ラボを備え、洗浄・電気めっき装置の評価にも対応する。',
+    source: 'ACM Research 発表',
+    sourceUrl: 'https://ir.acmr.com/node/13521/pdf',
+    sourceTier: 'primary',
+  },
 ];
