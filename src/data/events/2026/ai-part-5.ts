@@ -81,4 +81,20 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceUrl: 'https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-270', threadId: 'ai', date: '2026-11-16', weight: 2,
+    title: 'AMD、ORNLのLuxを科学研究者向けに開放 MI355Xを搭載',
+    body: 'AMDは米オークリッジ国立研究所のLuxスーパーコンピューターが科学研究者向けに利用可能になったと発表。HPEが構築し、EPYC CPU、Instinct MI355X GPU、PensandoネットワークとROCmを搭載。Genesis Missionの核融合設計や材料開発などに利用する。',
+    source: 'AMD 発表',
+    sourceUrl: 'https://newsroom.amd.com/news/amd-powered-lux-supercomputer-opens-scientific-users/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-271', threadId: 'ai', date: '2026-11-16', weight: 2,
+    title: 'Alibaba、Qwen4-Maxを正式提供 2.4兆パラメータ・100万トークン文脈',
+    body: 'AlibabaはQwen4-MaxをQwenCloudのToken PlanとAPIなどで提供開始。総2.4兆パラメータのMoEで、1トークン当たり710億を活性化し、画像入力と100万トークンの文脈に対応する。Qwen4系列の小型オープンウェイトモデルは今後公開予定とし、公開済みとはしていない。',
+    source: 'Alibaba Cloud 発表',
+    sourceUrl: 'https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max?_p_lc=1',
+    sourceTier: 'primary',
+  },
 ];

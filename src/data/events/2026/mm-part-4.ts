@@ -73,4 +73,20 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://www.esri.cao.go.jp/en/sna/data/sokuhou/files/2026/qe263/pdf/gaiyou2631_e.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-200', threadId: 'mm', date: '2026-11-17', weight: 2,
+    title: 'NVIDIA、四半期売上1158億ドル 前年比103%増',
+    body: 'NVIDIAは10月25日終了の2027会計年度第3四半期決算を発表。売上高は1158億ドルで前年同期比103%増、前期比20%増。データセンター売上高は1076億ドルで前年同期比110%増となった。GAAP粗利益率は74.8%、希薄化後1株利益は2.70ドル。',
+    source: 'NVIDIA 決算発表',
+    sourceUrl: 'https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-201', threadId: 'mm', date: '2026-11-17', weight: 2,
+    title: '米10月鉱工業生産、前月比0.4%減 製造業生産は0.3%増',
+    body: 'FRBは10月の鉱工業生産が前月比0.4%減、前年同月比2.1%増と発表。製造業生産は前月比0.3%増だった一方、自動車・同部品を除く製造業は0.1%減。鉱業は0.8%減、公益事業は4.3%減となり、全体の設備稼働率は76.4%に低下した。',
+    source: 'FRB G.17 統計発表',
+    sourceUrl: 'https://www.federalreserve.gov/releases/g17/Current/',
+    sourceTier: 'primary',
+  },
 ];
