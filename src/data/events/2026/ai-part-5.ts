@@ -97,4 +97,12 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceUrl: 'https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max?_p_lc=1',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-272', threadId: 'ai', date: '2026-11-17', weight: 2,
+    title: 'OpenAI、GPT-6.2 AstraとSolを提供 API単価を据え置き・引き下げ',
+    body: 'OpenAIはGPT-6.2 AstraとSolをChatGPT Work、Codex、APIで提供開始。Astraの標準API料金は100万トークン当たり入力8ドル、出力40ドルと従来比20％減。Solは入力2ドル、出力10ドルを維持し、業務文書作成やコード編集の改善を発表した。',
+    source: 'OpenAI公式発表',
+    sourceUrl: 'https://openai.com/index/introducing-gpt-6-2-astra-sol/',
+    sourceTier: 'primary',
+  },
 ];
