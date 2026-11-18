@@ -81,4 +81,12 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.mofa.go.jp/mofaj/press/release/pressit_000001_04440.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-123', threadId: 'gp', date: '2026-11-17', weight: 2,
+    title: '日米豪印首脳、重要供給網とAI協力を確認 官民フォーラムを来年開催へ',
+    body: '日米豪印首脳はマニラで会合を開き、恣意的な輸出規制を含む経済的威圧への懸念と重要供給網の確保を表明。AIへのアクセス・普及を支援する共同事業の重要性を確認し、初のビジネス・リーダーズ・フォーラムを2027年早期に開催すると発表した。',
+    source: '外務省 日米豪印共同プレスリリース',
+    sourceUrl: 'https://www.mofa.go.jp/mofaj/files/101120335.pdf',
+    sourceTier: 'primary',
+  },
 ];

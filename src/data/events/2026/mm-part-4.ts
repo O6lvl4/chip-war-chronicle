@@ -89,4 +89,12 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://www.federalreserve.gov/releases/g17/Current/',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-202', threadId: 'mm', date: '2026-11-18', weight: 2,
+    title: '日本10月輸出、過去最高の11.77兆円 貿易収支は4765億円の赤字',
+    body: '財務省が発表した10月の貿易統計速報では、輸出額が前年同月比20.5％増の11兆7688億円となり過去最高を記録。自動車や半導体等電子部品が増加に寄与した。輸入額は21.6％増の12兆2453億円で、貿易収支は4765億円の赤字となり、赤字は6か月連続。',
+    source: '財務省 貿易統計速報',
+    sourceUrl: 'https://www.customs.go.jp/toukei/shinbun/trade-st/gaiyo2026_10.pdf',
+    sourceTier: 'primary',
+  },
 ];
