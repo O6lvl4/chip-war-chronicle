@@ -172,9 +172,9 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
   {
     id: 'pr-186', threadId: 'pr', date: '2026-11-16', weight: 2,
     title: '米BIS、第三国データセンター経由の高度計算への遠隔アクセスを規制する規則を発表',
-    body: '米BISは第三国のデータセンターを通じた規制回避に対処する暫定最終規則を公表した。懸念国企業向けの大規模計算提供と、マレーシアなど5か国への先端半導体輸出に許可要件を設ける内容。公開原文の発効日は官報掲載日とされ、日付は未記入。',
-    source: '米商務省BIS',
-    sourceUrl: 'https://www.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology',
+    body: '米BISは第三国のデータセンターを通じた規制回避に対処する暫定最終規則を公表した。懸念国企業向けの大規模計算提供と、マレーシアなど5か国への先端半導体輸出に許可要件を設ける内容。11月19日の官報公示で同日発効と確認された。',
+    source: '米商務省BIS / Federal Register',
+    sourceUrl: 'https://www.federalregister.gov/documents/2026/11/19/2026-23529/addressing-remote-access-to-advanced-semiconductors',
     sourceTier: 'primary',
   },
 ];
