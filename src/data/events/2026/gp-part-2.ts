@@ -89,4 +89,12 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.mofa.go.jp/mofaj/files/101120335.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-124', threadId: 'gp', date: '2026-11-19', weight: 2,
+    title: 'APEC首脳会議、供給網強靱化とデジタル貿易を議論',
+    body: '中国・深圳でAPEC首脳会議を開催。高市首相は自由で公正な貿易・投資と供給網安定化を訴え、多くの首脳がAI・デジタル活用の重要性に言及した。貿易デジタル化協力枠組（2027〜2030年）やデジタル・新興技術に関する声明などが発出された。',
+    source: '外務省',
+    sourceUrl: 'https://www.mofa.go.jp/mofaj/ecm/apec/pageit_000001_03339.html',
+    sourceTier: 'primary',
+  },
 ];

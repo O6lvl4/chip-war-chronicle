@@ -121,4 +121,20 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://ir.acmr.com/node/13521/pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-167', threadId: 'si', date: '2026-11-17', weight: 2,
+    title: 'NVIDIA、基板・先端パッケージの長期供給契約を拡大',
+    body: 'NVIDIAはKinsusやSPILなどとの供給契約拡大を発表。KinsusはNVIDIA向けABF基板能力を現状の3.5倍超へ拡大し、2027年後半の生産開始、2028年第3四半期の増強を計画する。SPILにも数十億ドルを拠出し、2029年半ばまでの専用パッケージ能力増強を支える。',
+    source: 'NVIDIA',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/nvidia-expands-commitments-with-supply-chain-partners-to-support-ai-infrastructure-buildout',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-168', threadId: 'si', date: '2026-11-18', weight: 2,
+    title: 'ADEKA、鹿島に先端ロジック向けALD材料設備を新設へ',
+    body: 'ADEKAは鹿島化学品工場に先端半導体向けALD材料の生産設備を新設すると発表。新材料の顧客評価用少量供給から台湾などでの本格量産につなぐ体制を構築する。2028年4月完工、同年8月営業運転開始を予定し、投資金額と延床面積は非公表。',
+    source: 'ADEKA',
+    sourceUrl: 'https://www.adeka.co.jp/news/pdf/261118.pdf',
+    sourceTier: 'primary',
+  },
 ];

@@ -105,4 +105,20 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceUrl: 'https://openai.com/index/introducing-gpt-6-2-astra-sol/',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-273', threadId: 'ai', date: '2026-11-18', weight: 2,
+    title: 'NVIDIA RTX Sparkの小型Windowsデスクトップが発売',
+    body: 'NVIDIAはASUS、Dell、MSIのRTX Spark小型デスクトップが発売されたと発表。20コアGrace CPUとBlackwell RTX GPU、最大128GBの統合メモリを備え、ローカルAIやモデル微調整を対象とする。Acer、GIGABYTE、HP、Microsoftの製品は今後投入予定。',
+    source: 'NVIDIA',
+    sourceUrl: 'https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-274', threadId: 'ai', date: '2026-11-18', weight: 2,
+    title: 'Google、Genie 4をProject Genieの対象Ultra会員へ提供開始',
+    body: 'Googleは対話型世界モデルGenie 4をProject Genieの対象Google AI Ultra会員へ提供開始。探索中の自然言語指示による環境変更とリアルタイム音声に対応し、制作エージェントと作品共有ギャラリーも導入した。AI Pro会員は待機リストへの登録が可能。',
+    source: 'Google',
+    sourceUrl: 'https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/',
+    sourceTier: 'primary',
+  },
 ];
