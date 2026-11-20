@@ -121,4 +121,28 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceUrl: 'https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-275', threadId: 'ai', date: '2026-11-18', weight: 2,
+    title: 'Google、Gemini 4 Neonを提供開始 100万トークンの文脈に対応',
+    body: 'GoogleはGemini 4 Neonを発表し、有料のGemini APIやアプリなどへの展開を開始した。最大100万トークンの文脈を扱い、API料金は100万トークン当たり入力3ドル、出力15ドル、キャッシュ済み入力0.15ドルと公表した。',
+    source: 'Google',
+    sourceUrl: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-276', threadId: 'ai', date: '2026-11-19', weight: 2,
+    title: 'Google、宇宙でのTPU実証に向けBlue Originと打上げ契約',
+    body: 'GoogleとBlue Originは、宇宙でのAI計算を実証するProject Suncatcher向けの打上げ契約を発表した。Blue OriginのNew GlennでTPUを積んだ実証衛星を太陽同期軌道へ運ぶ計画で、打上げは2029年第1四半期を予定する。',
+    source: 'Blue Origin',
+    sourceUrl: 'https://www.blueorigin.com/news/google-selects-new-glenn-for-project-suncatcher',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-277', threadId: 'ai', date: '2026-11-20', weight: 2,
+    title: 'イオレとソフトバンク、AI向けGPUリソースの相互販売で合意',
+    body: 'イオレとソフトバンクは、AIデータセンターとGPUリソースの相互販売に向けた協業に合意。イオレはソフトバンクのGPUサーバーと、NVIDIA HGX B200を使うクラウド基盤の販売を開始した。反対方向の販売は協議段階で、契約額や供給容量は公表していない。',
+    source: 'イオレ',
+    sourceUrl: 'https://ai-infra.eole.co.jp/news/softbank-gpu-mutual-sales/',
+    sourceTier: 'primary',
+  },
 ];
