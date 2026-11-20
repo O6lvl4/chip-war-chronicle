@@ -123,4 +123,5 @@ export const LINKS_2026: Link[] = [
   { from: 'si-112', to: 'si-129', why: '先端パッケージ開発で拡大したBesiとの長期協業を支えるため、Applied Materialsが資本参加を約20%へ増やす契約を結んだ。' },
   { from: 'gp-94', to: 'pr-175', why: '中国の関税公告は、ワシントンでの米中首脳会談の合意を実施するため追加関税停止を延長すると明記した。' },
   { from: 'pr-155', to: 'si-160', why: '日米投資枠組みに基づく運営者選定を受け、マルタの新工場着工に進んだ' },
+  { from: 'ai-246', to: 'mm-204', why: 'TSMCの出資承認を受け、子会社TSMC PartnersがAnthropicのIPOと同時に行われた私募に参加した。' },
 ];

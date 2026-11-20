@@ -177,4 +177,12 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.federalregister.gov/documents/2026/11/19/2026-23529/addressing-remote-access-to-advanced-semiconductors',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-187', threadId: 'pr', date: '2026-11-17', weight: 2,
+    title: '欧州委、半導体供給を支える国家補助の承認が20件超と発表',
+    body: '欧州委員会は、欧州半導体法の供給安定化の柱で初の種類となる半導体関連施設への国家補助の承認が20件を超え、関連する官民投資が累計330億ユーロを超えたと発表。対象にはウエハー、先端パッケージ、試験・組立、高機能材料、パワー半導体が含まれる。',
+    source: '欧州委員会',
+    sourceUrl: 'https://digital-strategy.ec.europa.eu/en/news/commission-marks-more-20-investments-boost-semiconductor-supply',
+    sourceTier: 'primary',
+  },
 ];
