@@ -137,4 +137,20 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://indexes.nikkei.co.jp/en/nkave/statistics',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-208', threadId: 'mm', date: '2026-11-20', weight: 2,
+    title: 'SOX指数10.73%安、終値8408.59',
+    body: 'フィラデルフィア半導体株指数（SOX）は8408.59で引け、前日比1011.13ポイント（10.73%）下落した。指数を算出するNasdaqの日次データで確認。同日に日本市場で取引された日経平均とは別の市場・指数の値。',
+    source: 'Nasdaq Global Indexes SOX',
+    sourceUrl: 'https://indexes.nasdaq.com/Index/History/SOX',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-209', threadId: 'mm', date: '2026-11-22', weight: 2,
+    title: '韓国、米株安を受けて緊急会合　株式市場安定基金の準備に着手',
+    body: '韓国の財政経済部、中央銀行、金融当局は米株安の国内影響を点検。AI事業の収益性・資金調達や半導体輸出管理をリスクに挙げた。株式市場安定基金は発動せず準備に着手し、自己株式の買付注文上限を11月24日から3か月緩和する方針を示した。',
+    source: '韓国財政経済部ほか 共同発表',
+    sourceUrl: 'https://www.korea.kr/common/download.do?fileId=198594230&tblKey=GMN',
+    sourceTier: 'primary',
+  },
 ];

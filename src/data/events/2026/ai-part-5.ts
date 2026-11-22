@@ -153,4 +153,12 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceUrl: 'https://ai-infra.eole.co.jp/news/softbank-gpu-mutual-sales/',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-279', threadId: 'ai', date: '2026-11-20', weight: 2,
+    title: 'SpaceXのVera Rubin調達向け440億ドル規模の債券発行条件が決定',
+    body: 'ApolloとGoldman Sachsは、SpaceXの地上計算基盤向けにNVIDIA Vera Rubin GPUと関連機器を購入するため、約440億ドルの優先・劣後債の発行条件を決定したと発表。リースは機器引き渡しに合わせ、2027年上期に始まる見通しとした。',
+    source: 'Apollo Global Management 公式発表',
+    sourceUrl: 'https://ir.apollo.com/news-events/press-releases/detail/662/apollo-and-goldman-sachs-announce-pricing-of-44-billion',
+    sourceTier: 'primary',
+  },
 ];
