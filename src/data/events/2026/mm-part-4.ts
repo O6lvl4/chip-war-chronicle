@@ -98,6 +98,14 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'mm-207', threadId: 'mm', date: '2026-11-18', weight: 2,
+    title: '米FOMC議事要旨、AI投資に伴う物価・資金調達リスクを議論',
+    body: '米連邦準備制度が10月27〜28日のFOMC議事要旨を公表した。多くの参加者がAI設備投資を物価上振れの要因とみなし、大半が関連債務の急増を指摘。金利据え置きを支持した参加者の多くは、AI投資需要の持続性や資金調達環境を見極める必要も挙げた。',
+    source: '米連邦準備制度 11月18日公表の議事要旨',
+    sourceUrl: 'https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm',
+    sourceTier: 'primary',
+  },
+  {
     id: 'mm-203', threadId: 'mm', date: '2026-11-19', weight: 2,
     title: 'アリババ、7〜9月期のAIクラウド・計算事業売上53%増',
     body: 'アリババは7〜9月期決算を発表し、AIクラウド・計算事業の売上高は前年同期比53%増の609.73億元、外部顧客向け売上高は64%増とした。同部門の調整後EBITAは121%増の88.38億元。AI関連製品の売上は13四半期連続で3桁成長した。',

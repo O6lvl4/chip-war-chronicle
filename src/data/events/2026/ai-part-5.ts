@@ -138,6 +138,14 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-278', threadId: 'ai', date: '2026-11-19', weight: 2,
+    title: 'NVIDIAとMicrosoft、AzureでVera Rubin搭載VMの利用を拡大',
+    body: 'NVIDIAはIgniteに合わせ、Vera Rubin NVL72搭載システムがAzureのデータセンターで稼働し、同システムを使う仮想マシンのプレビューへのアクセスを拡大すると発表した。ラック規模の機密計算対応も共同で進める。',
+    source: 'NVIDIA Blog 11月19日発表',
+    sourceUrl: 'https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-277', threadId: 'ai', date: '2026-11-20', weight: 2,
     title: 'イオレとソフトバンク、AI向けGPUリソースの相互販売で合意',
     body: 'イオレとソフトバンクは、AIデータセンターとGPUリソースの相互販売に向けた協業に合意。イオレはソフトバンクのGPUサーバーと、NVIDIA HGX B200を使うクラウド基盤の販売を開始した。反対方向の販売は協議段階で、契約額や供給容量は公表していない。',
