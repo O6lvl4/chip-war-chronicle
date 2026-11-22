@@ -106,6 +106,14 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-175', threadId: 'si', date: '2026-11-13', weight: 2,
+    title: 'AMD、World Labsの買収を完了',
+    body: 'AMDは空間知能モデルを研究するWorld Labsの買収を11月13日に完了した。11月16日提出の米証券取引委員会向け書類によると、旧株主にAMDの普通株式1497万8322株を発行した。9月26日に買収の最終契約を締結していた。',
+    source: 'AMD 11月16日提出 Form 8-K/A',
+    sourceUrl: 'https://ir.amd.com/financial-information/sec-filings/content/0001193125-26-462340/d105780d8ka.htm',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-165', threadId: 'si', date: '2026-11-16', weight: 2,
     title: 'MarvellとPenguin、CXL拡張と光接続による共有メモリの共同開発を発表',
     body: 'MarvellとPenguin Solutionsがメモリ拡張の協業を発表。既存DDR4を再利用するCXL増設カードと、複数ラックで共有する光接続メモリを開発する。カードは2026年末までの顧客導入、光接続サーバーは2027年後半の試作提供を予定する。',
@@ -162,6 +170,14 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-176', threadId: 'si', date: '2026-11-18', weight: 2,
+    title: 'Microsoft、Azure自社チップにIntelのEMIBを採用へ',
+    body: 'IntelはMicrosoftとの長期協業を拡大した。MicrosoftはAzureの自社設計半導体にIntelの先端パッケージ技術EMIBを採用すると表明した最初の企業。次世代サーバー向けDiamond Rapidsを含むXeonの複数年供給枠も契約で確認した。',
+    source: 'Intel Newsroom 11月18日発表',
+    sourceUrl: 'https://www.intel.com/content/www/us/en/newsroom/news/corporate/microsoft-azure-infrastructure-collaboration.html',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-172', threadId: 'si', date: '2026-11-19', weight: 2,
     title: '日月光傘下、高雄で先端半導体テスト拠点を起工 2489億台湾ドルを投資',
     body: '日月光投控（ASE）傘下の台湾福雷電子は、高雄・仁武産業園区のJ区画で先端半導体のテスト拠点を起工した。高雄市によると同区画への投資は2489億台湾ドル。4月に着工したK区画とは別で、AI・高性能計算向けテストの能力と自動化を強化する。',
@@ -183,6 +199,14 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     body: 'Samsung Electronicsは、DRAMやHBMの開発を担当してきたSang Joon Hwang氏をメモリ事業部門の責任者に、Sangyeun Cho氏をシステムLSI部門の責任者に起用すると発表。半導体を担うDS部門のCTOにはJong Myeong Lee氏を起用する。',
     source: 'Samsung Electronics',
     sourceUrl: 'https://news.samsung.com/global/samsung-electronics-announces-new-leadership-5',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-177', threadId: 'si', date: '2026-11-20', weight: 2,
+    title: 'SK hynix、CXLへのKVキャッシュ退避をLLM推論環境で検証',
+    body: 'SK hynixはSK Telecomと、言語モデルの推論途中の計算結果を保存するKVキャッシュの一部をCXL共有メモリへ退避する手法を実際の推論環境で検証したと公表した。再利用が近いデータはHBMやDRAMに残す構成で、SC26では検証結果を映像で展示した。',
+    source: 'SK hynix Newsroom 11月20日展示報告',
+    sourceUrl: 'https://news.skhynix.com/en/sc26-ai-hpc-exhibition/',
     sourceTier: 'primary',
   },
 ];
