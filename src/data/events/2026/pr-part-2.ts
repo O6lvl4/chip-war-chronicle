@@ -185,4 +185,12 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://digital-strategy.ec.europa.eu/en/news/commission-marks-more-20-investments-boost-semiconductor-supply',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-188', threadId: 'pr', date: '2026-11-18', weight: 1,
+    title: '米議会諮問委、対中先端AIチップ輸出に供給能力の証明を提言',
+    body: '米中経済安全保障調査委員会は年次報告で、対中先端AI半導体の輸出・再輸出・国内移転に、米国向けの先端半導体製造・AI能力を圧迫しないとの輸出者証明を求める法改正を議会に提言した。監査可能な配分データのBIS提出も提案した。',
+    source: '米中経済安全保障調査委員会 年次報告第8章',
+    sourceUrl: 'https://www.uscc.gov/annual-report/2026/chapter-8-silicon-to-sovereignty-chinas-bid-to-control-the-ai-tech-stack',
+    sourceTier: 'primary',
+  },
 ];

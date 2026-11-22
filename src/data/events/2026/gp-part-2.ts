@@ -129,4 +129,12 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.mofa.go.jp/mofaj/la_c/sa/cl/pageite_000001_00006.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-129', threadId: 'gp', date: '2026-11-20', weight: 2,
+    title: '豪中首脳会談、AIの安全性・ガバナンスに関する対話設置で合意',
+    body: 'オーストラリアのアルバニージー首相と中国の李強首相は北京で年次首脳会談を開催。21日公表の豪州側共同声明によると、AIの安全性・ガバナンス・活用に関する対話の設置で合意し、市場原則に基づくエネルギー・資源貿易継続の重要性も確認した。',
+    source: 'オーストラリア首相府 共同声明',
+    sourceUrl: 'https://www.pm.gov.au/media/statement-joint-outcomes-australia-china-annual-leaders-meeting-0',
+    sourceTier: 'primary',
+  },
 ];

@@ -125,4 +125,5 @@ export const LINKS_2026: Link[] = [
   { from: 'pr-155', to: 'si-160', why: '日米投資枠組みに基づく運営者選定を受け、マルタの新工場着工に進んだ' },
   { from: 'ai-246', to: 'mm-204', why: 'TSMCの出資承認を受け、子会社TSMC PartnersがAnthropicのIPOと同時に行われた私募に参加した。' },
   { from: 'si-108', to: 'si-175', why: 'AMDがWorld Labsと締結した買収契約に基づき、旧株主にAMD株を発行して買収を完了した。' },
+  { from: 'jp-24', to: 'jp-70', why: '5月に成立した令和8年法律第29号の施行により、中小機構に産業用地整備の貸付・助言等の業務が追加された。' },
 ];

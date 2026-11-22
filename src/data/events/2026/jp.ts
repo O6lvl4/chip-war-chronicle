@@ -145,4 +145,12 @@ export const EVENTS_2026_JP: TimelineEvent[] = [
     sourceUrl: 'https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/r81113kakugikettei.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'jp-70', threadId: 'jp', date: '2026-11-20', weight: 1,
+    title: '改正産業競争力強化法等が施行、産業用地整備の貸付・助言を開始',
+    body: '令和8年法律第29号の施行に伴い、中小機構が、地域未来投資促進法に基づく承認を受けて産業用地を整備する自治体や土地開発公社への貸付・助言を開始。貸付は対象経費の80%以内で審査がある。事業費上昇に対応する債務保証も拡充した。',
+    source: '中小企業基盤整備機構 公式発表',
+    sourceUrl: 'https://www.smrj.go.jp/press/2026/qsktgp000000jwn2-att/20261120_press02.pdf',
+    sourceTier: 'primary',
+  },
 ];
