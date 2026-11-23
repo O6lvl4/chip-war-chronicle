@@ -98,6 +98,14 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'ai-282', threadId: 'ai', date: '2026-11-16', weight: 2,
+    title: 'OpenAI、TensorWaveとAMD搭載の457MW計算基盤を6年契約',
+    body: 'TensorWaveはOpenAI向けに米国内の複数拠点で専用IT容量457MWを提供する6年契約を発表。AMD Instinct MI455XとHeliosを採用する。既存のOpenAI・AMD提携を具体化するもので、一部の稼働は2027年上期、全面展開は2028年初めの予定。',
+    source: 'TensorWave',
+    sourceUrl: 'https://www.businesswire.com/news/home/20261116130015/en/',
+    sourceTier: 'primary',
+  },
+  {
     id: 'ai-272', threadId: 'ai', date: '2026-11-17', weight: 2,
     title: 'OpenAI、GPT-6.2 AstraとSolを提供 API単価を据え置き・引き下げ',
     body: 'OpenAIはGPT-6.2 AstraとSolをChatGPT Work、Codex、APIで提供開始。Astraの標準API料金は100万トークン当たり入力8ドル、出力40ドルと従来比20％減。Solは入力2ドル、出力10ドルを維持し、業務文書作成やコード編集の改善を発表した。',
@@ -159,6 +167,22 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     body: 'ApolloとGoldman Sachsは、SpaceXの地上計算基盤向けにNVIDIA Vera Rubin GPUと関連機器を購入するため、約440億ドルの優先・劣後債の発行条件を決定したと発表。リースは機器引き渡しに合わせ、2027年上期に始まる見通しとした。',
     source: 'Apollo Global Management 公式発表',
     sourceUrl: 'https://ir.apollo.com/news-events/press-releases/detail/662/apollo-and-goldman-sachs-announce-pricing-of-44-billion',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-280', threadId: 'ai', date: '2026-11-22', weight: 2,
+    title: 'Sarvam、1050億パラメータモデルの提供・重み公開を発表',
+    body: 'Sarvamは1050億パラメータ、推論時の稼働103億のMoEモデルを発表し、APIを新モデルへ切り替えた。Apache 2.0の重みを公開し、約65GBのNVFP4量子化版をRTX PRO 6000 Blackwell Max-Q 1基で動かせると説明した。',
+    source: 'Sarvam AI',
+    sourceUrl: 'https://www.sarvam.ai/blogs/sarvam-105b-1711',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-281', threadId: 'ai', date: '2026-11-23', weight: 2,
+    title: 'L&T傘下、チェンナイでNVIDIA B300を追加配備する複数年契約',
+    body: 'L&T傘下のLTN Computeが、推論基盤事業者向けにインド・チェンナイでNVIDIA B300を追加配備する複数年契約を受注。追加台数は公表せず、GPU1万基のクラスター計画の一部とした。第1期の設計容量は250MW。',
+    source: 'Larsen & Toubro',
+    sourceUrl: 'https://www.larsentoubro.com/pressreleases/2026/2026-11-23-larsen-toubro-secures-large-order-for-deploying-ai-cluster',
     sourceTier: 'primary',
   },
 ];

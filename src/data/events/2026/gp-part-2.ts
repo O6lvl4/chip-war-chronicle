@@ -137,4 +137,20 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.pm.gov.au/media/statement-joint-outcomes-australia-china-annual-leaders-meeting-0',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-130', threadId: 'gp', date: '2026-11-20', endDate: '2026-11-21', weight: 2,
+    title: 'ホルムズ海峡を出るタンカー3隻が相次いで被弾',
+    body: '海事情報機関JMICが11月22日、20〜21日にホルムズ海峡から出るタンカー3隻が不明の飛翔体に被弾したと報告。3隻とも乗組員の死傷は報告されていない。攻撃主体は確認されておらず、一部の環境影響も不明。',
+    source: 'JMIC／UKMTO',
+    sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_116_22-nov.pdf?rev=7d2a81d10d1d467cbe75f405f2392f59',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'gp-131', threadId: 'gp', date: '2026-11-21', weight: 1,
+    title: '台湾国防部、中国軍の共同戦備警戒活動を確認',
+    body: '台湾国防部は台湾周辺で中国軍機延べ21機が活動し、うち15機が台湾海峡の中間線を越えたと発表した。中国海軍の艦艇も加わった共同戦備警戒活動と説明したもので、台湾軍は監視を続け、対応する戦力を運用した。',
+    source: '台湾国防部',
+    sourceUrl: 'https://www.mnd.gov.tw/en/Publication/88327',
+    sourceTier: 'primary',
+  },
 ];
