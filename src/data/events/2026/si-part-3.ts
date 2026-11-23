@@ -186,6 +186,14 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
+    id: 'si-178', threadId: 'si', date: '2026-11-19', weight: 2,
+    title: 'Micron、シンガポールのHBM後工程工場に最初の製造装置を搬入',
+    body: 'MicronはシンガポールのHBM向け先端パッケージ工場のクリーンルームに最初の製造装置を搬入したと発表。2025年に公表した約70億ドルの投資計画の一環であり、今回の発表は追加投資や量産開始ではない。初期生産は2027年初めを見込む。',
+    source: 'Micron（JTC掲載）',
+    sourceUrl: 'https://www.jtc.gov.sg/about-jtc/news-and-stories/industry-news/micron-marks-first-tool-move-in-at-singapore-hbm-advanced-packaging-facility',
+    sourceTier: 'primary',
+  },
+  {
     id: 'si-173', threadId: 'si', date: '2026-11-20', weight: 2,
     title: 'SK hynix、キオクシア株の間接保有比率が約14.1%となる見込み',
     body: 'SK hynixは、旧東芝メモリへの出資に関する転換社債を行使し、投資用会社の株式を取得すると開示した。ベイン関連会社からの株式追加取得も完了すれば、キオクシアHD株式の間接保有比率は約14.1%となる見込み。転換による取得は12月4日を予定する。',
@@ -207,6 +215,22 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     body: 'SK hynixはSK Telecomと、言語モデルの推論途中の計算結果を保存するKVキャッシュの一部をCXL共有メモリへ退避する手法を実際の推論環境で検証したと公表した。再利用が近いデータはHBMやDRAMに残す構成で、SC26では検証結果を映像で展示した。',
     source: 'SK hynix Newsroom 11月20日展示報告',
     sourceUrl: 'https://news.skhynix.com/en/sc26-ai-hpc-exhibition/',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-179', threadId: 'si', date: '2026-11-20', weight: 2,
+    title: 'KLA、シンガポールで半導体装置の新製造棟22Bを開所',
+    body: 'KLAがシンガポール・アンモキオに約21万平方フィートの製造棟22Bを開所。既存の22Aと合わせた拠点規模は約42万平方フィートとなる。さらなる拡張も検討するが、用地の手続きと関係当局の承認が前提。',
+    source: 'KLA（JTC掲載）',
+    sourceUrl: 'https://www.jtc.gov.sg/about-jtc/news-and-stories/industry-news/kla-celebrates-building-22b-opening-in-singapore-and-outlines-plans-for-further-expansion',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-180', threadId: 'si', date: '2026-11-23', weight: 2,
+    title: 'NVIDIA、Jensen Huang氏がCEO・社長・取締役に復帰',
+    body: 'NVIDIA取締役会はJensen Huang氏の社長・CEO・取締役への即時復帰を全会一致で決めた。11月12日の辞任を受けCFO兼暫定CEOを務めたColette Kress氏はCFOを継続し、Harvey C. Jones氏も会長に留任する。',
+    source: 'NVIDIA IR',
+    sourceUrl: 'https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx',
     sourceTier: 'primary',
   },
 ];

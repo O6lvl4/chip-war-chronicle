@@ -193,4 +193,20 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.uscc.gov/annual-report/2026/chapter-8-silicon-to-sovereignty-chinas-bid-to-control-the-ai-tech-stack',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-189', threadId: 'pr', date: '2026-11-20', weight: 1,
+    title: '財政審、AI・半導体の大型案件に段階的な民間資金投入を提言',
+    body: '財政制度等審議会が2027年度予算編成に向けた建議を提出。AI・半導体の大型案件では民間の関与を確認し、資金を段階的に投入することや、透明性のある進捗管理、補助金に限らず出資・融資も選ぶことを提言した。予算決定ではない。',
+    source: '財務省・財政制度等審議会',
+    sourceUrl: 'https://www.mof.go.jp/about_mof/councils/fiscal_system_council/sub-of_fiscal_system/report/zaiseia20261120/02.pdf#page=5',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-190', threadId: 'pr', date: '2026-11-23', weight: 2,
+    title: '米BIS、東南アジア7事業体のEntity List追加規則を公開閲覧に',
+    body: '米連邦官報局がBISの最終規則文書を公開閲覧に供した。先端計算品の迂回リスクを理由に、マレーシアとシンガポール各3、タイ1の事業体を追加し、米輸出管理規則の対象全品目で許可を求め、原則不許可とする内容。正式掲載は11月25日の予定。',
+    source: '米連邦官報・BIS',
+    sourceUrl: 'https://www.federalregister.gov/public-inspection/2026-23999/additions-to-the-entity-list',
+    sourceTier: 'primary',
+  },
 ];

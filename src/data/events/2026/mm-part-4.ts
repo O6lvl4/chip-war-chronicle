@@ -153,4 +153,12 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://www.korea.kr/common/download.do?fileId=198594230&tblKey=GMN',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-210', threadId: 'mm', date: '2026-11-23', weight: 2,
+    title: '韓国、11月1〜20日の半導体輸出が385億ドルで同期間最高',
+    body: '韓国関税庁の速報では11月1〜20日の輸出総額は774億ドルと前年同期比101.5%増。うち半導体は385億ドルで同期間の過去最高となった。年初からの全品目の輸出総額は初めて1兆ドルを超えた。',
+    source: '韓国関税庁',
+    sourceUrl: 'https://customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10184283&nttSnUrl=5b141dccc13a13335fe32982d23af29d',
+    sourceTier: 'primary',
+  },
 ];
