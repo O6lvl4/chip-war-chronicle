@@ -209,4 +209,12 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.federalregister.gov/public-inspection/2026-23999/additions-to-the-entity-list',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-191', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    title: '米商務省、DiraqへのCHIPS研究助成を最終契約 最大3800万ドル',
+    body: '米商務省はCHIPS法に基づきDiraq Holdingsとの最大3800万ドルの研究開発助成契約に署名したと発表。誤り耐性を持つシリコンスピン量子計算機の大規模化に向け、量子論理ユニット、量子ビット配列、制御技術の研究を支援する。',
+    source: '米NIST・商務省',
+    sourceUrl: 'https://www.nist.gov/news-events/news/2026/11/department-commerce-announces-finalization-chips-rd-award-diraq',
+    sourceTier: 'primary',
+  },
 ];
