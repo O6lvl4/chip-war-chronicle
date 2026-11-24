@@ -185,4 +185,12 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceUrl: 'https://www.larsentoubro.com/pressreleases/2026/2026-11-23-larsen-toubro-secures-large-order-for-deploying-ai-cluster',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-283', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    title: 'AOI、光トランシーバーとレーザーで最低22億ドルの供給契約',
+    body: 'Applied Optoelectronicsは既存の大手クラウド顧客と複数年契約を締結したと発表。顧客は2027年に800G光トランシーバー約15億ドル、2028〜29年にレーザーダイオード約7億ドルの最低購入を約束。期間は2026年12月から2030年12月まで。',
+    source: 'Applied Optoelectronics IR',
+    sourceUrl: 'https://investors.ao-inc.com/2026-11-24-AOI-Announces-Multi-Year-Long-Term-Agreement-with-Tier-1-Hyperscale-Datacenter-Customer',
+    sourceTier: 'primary',
+  },
 ];

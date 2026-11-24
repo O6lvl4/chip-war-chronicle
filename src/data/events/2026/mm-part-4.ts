@@ -161,4 +161,28 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10184283&nttSnUrl=5b141dccc13a13335fe32982d23af29d',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-211', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    title: 'Analog Devices、四半期売上43.7億ドル 通期も過去最高',
+    body: 'Analog Devicesが10月31日までの2026年度第4四半期決算を発表。売上高は43.7億ドルで、データセンターと産業向けが前年同期比の増収を牽引した。通期売上高は前年比38％増の152億ドル、営業キャッシュフローは62億ドルだった。',
+    source: 'Analog Devices IR',
+    sourceUrl: 'https://analogdevices.gcs-web.com/news-releases/news-release-details/analog-devices-reports-record-fourth-quarter-and-fiscal-2026',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-212', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    title: 'Dell、四半期売上549億ドル AI向けサーバーは220億ドル',
+    body: 'Dellは2027年度第3四半期の売上高が前年同期比103％増の549億ドルと発表。AI向けサーバー売上高は291％増の220億ドルだった。同四半期のAI関連受注額は602億ドル、期末受注残は1323億ドルで、いずれも売上とは別の指標。',
+    source: 'Dell Technologies IR',
+    sourceUrl: 'https://investors.delltechnologies.com/news-events/press-releases/detail/1665/dell-technologies-delivers-third-quarter-fiscal-2027-financial-results',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'mm-213', threadId: 'undefined', date: '2026-11-24', weight: 1,
+    title: 'HPの四半期PC部門、増収の一方で出荷台数29％減',
+    body: 'HPの2026年度第4四半期売上高は前年同期比9.3％増の160億ドル。PCを中心とするパーソナルシステムズ部門の売上高は14％増の118億ドルだが、台数は29％減った。部門売上高は法人向けが23％増、消費者向けが7％減だった。',
+    source: 'HP公式決算発表',
+    sourceUrl: 'https://www.hp.com/us-en/newsroom/press-releases/2026/hp-inc-reports-fiscal-2026-full-year-and-fourth-quarter-results.html',
+    sourceTier: 'primary',
+  },
 ];
