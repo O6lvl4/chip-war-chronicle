@@ -185,4 +185,12 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://www.hp.com/us-en/newsroom/press-releases/2026/hp-inc-reports-fiscal-2026-full-year-and-fourth-quarter-results.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-214', threadId: 'undefined', date: '2026-11-25', weight: 2,
+    title: '米10月PCE物価、前年比3.8%上昇 コアは3.3%上昇',
+    body: '米経済分析局によると、10月の個人消費支出（PCE）物価指数は前月比0.3%、前年同月比3.8%上昇。食品・エネルギーを除くコア指数は前月比0.3%、前年同月比3.3%上昇した。',
+    source: '米経済分析局 PCE発表資料',
+    sourceUrl: 'https://bea.gov/sites/default/files/2026-11/pi1026.pdf',
+    sourceTier: 'primary',
+  },
 ];

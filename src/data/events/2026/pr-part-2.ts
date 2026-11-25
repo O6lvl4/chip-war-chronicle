@@ -217,4 +217,20 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.nist.gov/news-events/news/2026/11/department-commerce-announces-finalization-chips-rd-award-diraq',
     sourceTier: 'primary',
   },
+  {
+    id: 'pr-193', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    title: '中国、ガリウムなどの対米輸出制限の一部停止を2027年1月まで延長へ',
+    body: '中国商務部は、対米両用品輸出規制を定めた2024年第46号公告の第2項の停止を、11月28日から2027年1月27日まで継続すると公表。対象はガリウム・ゲルマニウム・アンチモン・超硬材料の原則不許可や黒鉛の用途審査強化。米国の軍事ユーザー・軍事用途への輸出禁止を定める第1項は対象外。',
+    source: '中国商務部 公告',
+    sourceUrl: 'https://www.mofcom.gov.cn/zcfb/dwmygl/art/2026/art_1bb17d2be5de433283d33f213f0824ef.html',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'pr-192', threadId: 'undefined', date: '2026-11-25', weight: 2,
+    title: '米USTR、製造業の過剰供給を巡る14件の通商調査で追加関税案を公表',
+    body: '米通商代表部は通商法301条に基づく14件の調査で、各経済圏の措置が米国の通商に負担を与えると認定。日本・EU・中国などに対する追加関税案を示した。日本案は最恵国税率と既存の301条関税を差し引いて最大15%で、一部品目は除外案。公聴会は2027年1月25日予定で、関税の発動決定ではない。',
+    source: '米通商代表部 発表',
+    sourceUrl: 'https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural',
+    sourceTier: 'primary',
+  },
 ];

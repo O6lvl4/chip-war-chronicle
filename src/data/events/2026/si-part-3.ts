@@ -233,4 +233,20 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-181', threadId: 'undefined', date: '2026-11-25', weight: 2,
+    title: 'ams OSRAMとSamsung Display、超小型microLEDで提携 2.1億ユーロの出資も発表',
+    body: '両社はディスプレイ向け超小型microLEDの共同開発・事業化で提携。ams OSRAMはマレーシアのKulim 2工場で生産能力の一部を確保し、Samsung Displayは共同開発に資金を出すほか、ams OSRAMの新株を2.1億ユーロで引き受ける。量産は技術・商業上の条件を満たした場合の計画。',
+    source: 'ams OSRAM 適時開示',
+    sourceUrl: 'https://ams-osram.com/documents/d/ams-osram/ad-hoc_2026_en_ams-osram-strategic-sdc-partnership',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'si-182', threadId: 'undefined', date: '2026-11-25', weight: 2,
+    title: 'キオクシア、第3世代XL-FLASHの試作を発表 平均読み出し遅延3μs',
+    body: '第3世代のXL-FLASH試作は、CMOS回路とメモリセルアレイを直接貼り合わせる構造を採用。ビット密度は第2世代比で約70%高く、平均読み出し遅延は同社測定で3マイクロ秒。機能評価用サンプルは一部の顧客に2027年3月出荷予定。',
+    source: 'キオクシア 欧州法人発表',
+    sourceUrl: 'https://europe.kioxia.com/content/dam/kioxia/en-europe/business/news/2026/asset/KIE_PR_20261125-1_EN.pdf',
+    sourceTier: 'primary',
+  },
 ];
