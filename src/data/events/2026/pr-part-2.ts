@@ -204,13 +204,13 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
   {
     id: 'pr-190', threadId: 'pr', date: '2026-11-23', weight: 2,
     title: '米BIS、東南アジア7事業体のEntity List追加規則を公開閲覧に',
-    body: '米連邦官報局がBISの最終規則文書を公開閲覧に供した。先端計算品の迂回リスクを理由に、マレーシアとシンガポール各3、タイ1の事業体を追加し、米輸出管理規則の対象全品目で許可を求め、原則不許可とする内容。正式掲載は11月25日の予定。',
+    body: '米連邦官報局がBISの最終規則文書を公開閲覧に供した。先端計算品の迂回リスクを理由に、マレーシアとシンガポール各3、タイ1の事業体を追加し、米輸出管理規則の対象全品目で許可を求め、原則不許可とする内容。規則は11月23日付で発効し、11月25日に連邦官報へ正式掲載された。',
     source: '米連邦官報・BIS',
-    sourceUrl: 'https://www.federalregister.gov/public-inspection/2026-23999/additions-to-the-entity-list',
+    sourceUrl: 'https://www.govinfo.gov/content/pkg/FR-2026-11-25/html/2026-23999.htm',
     sourceTier: 'primary',
   },
   {
-    id: 'pr-191', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    id: 'pr-191', threadId: 'pr', date: '2026-11-24', weight: 2,
     title: '米商務省、DiraqへのCHIPS研究助成を最終契約 最大3800万ドル',
     body: '米商務省はCHIPS法に基づきDiraq Holdingsとの最大3800万ドルの研究開発助成契約に署名したと発表。誤り耐性を持つシリコンスピン量子計算機の大規模化に向け、量子論理ユニット、量子ビット配列、制御技術の研究を支援する。',
     source: '米NIST・商務省',
@@ -218,7 +218,7 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'pr-193', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    id: 'pr-193', threadId: 'pr', date: '2026-11-24', weight: 2,
     title: '中国、ガリウムなどの対米輸出制限の一部停止を2027年1月まで延長へ',
     body: '中国商務部は、対米両用品輸出規制を定めた2024年第46号公告の第2項の停止を、11月28日から2027年1月27日まで継続すると公表。対象はガリウム・ゲルマニウム・アンチモン・超硬材料の原則不許可や黒鉛の用途審査強化。米国の軍事ユーザー・軍事用途への輸出禁止を定める第1項は対象外。',
     source: '中国商務部 公告',
@@ -226,7 +226,7 @@ export const EVENTS_2026_PR_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'pr-192', threadId: 'undefined', date: '2026-11-25', weight: 2,
+    id: 'pr-192', threadId: 'pr', date: '2026-11-25', weight: 2,
     title: '米USTR、製造業の過剰供給を巡る14件の通商調査で追加関税案を公表',
     body: '米通商代表部は通商法301条に基づく14件の調査で、各経済圏の措置が米国の通商に負担を与えると認定。日本・EU・中国などに対する追加関税案を示した。日本案は最恵国税率と既存の301条関税を差し引いて最大15%で、一部品目は除外案。公聴会は2027年1月25日予定で、関税の発動決定ではない。',
     source: '米通商代表部 発表',

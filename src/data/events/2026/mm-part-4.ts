@@ -162,7 +162,7 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'mm-211', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    id: 'mm-211', threadId: 'mm', date: '2026-11-24', weight: 2,
     title: 'Analog Devices、四半期売上43.7億ドル 通期も過去最高',
     body: 'Analog Devicesが10月31日までの2026年度第4四半期決算を発表。売上高は43.7億ドルで、データセンターと産業向けが前年同期比の増収を牽引した。通期売上高は前年比38％増の152億ドル、営業キャッシュフローは62億ドルだった。',
     source: 'Analog Devices IR',
@@ -170,7 +170,7 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'mm-212', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    id: 'mm-212', threadId: 'mm', date: '2026-11-24', weight: 2,
     title: 'Dell、四半期売上549億ドル AI向けサーバーは220億ドル',
     body: 'Dellは2027年度第3四半期の売上高が前年同期比103％増の549億ドルと発表。AI向けサーバー売上高は291％増の220億ドルだった。同四半期のAI関連受注額は602億ドル、期末受注残は1323億ドルで、いずれも売上とは別の指標。',
     source: 'Dell Technologies IR',
@@ -178,7 +178,7 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'mm-213', threadId: 'undefined', date: '2026-11-24', weight: 1,
+    id: 'mm-213', threadId: 'mm', date: '2026-11-24', weight: 1,
     title: 'HPの四半期PC部門、増収の一方で出荷台数29％減',
     body: 'HPの2026年度第4四半期売上高は前年同期比9.3％増の160億ドル。PCを中心とするパーソナルシステムズ部門の売上高は14％増の118億ドルだが、台数は29％減った。部門売上高は法人向けが23％増、消費者向けが7％減だった。',
     source: 'HP公式決算発表',
@@ -186,7 +186,7 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'mm-214', threadId: 'undefined', date: '2026-11-25', weight: 2,
+    id: 'mm-214', threadId: 'mm', date: '2026-11-25', weight: 2,
     title: '米10月PCE物価、前年比3.8%上昇 コアは3.3%上昇',
     body: '米経済分析局によると、10月の個人消費支出（PCE）物価指数は前月比0.3%、前年同月比3.8%上昇。食品・エネルギーを除くコア指数は前月比0.3%、前年同月比3.3%上昇した。',
     source: '米経済分析局 PCE発表資料',
