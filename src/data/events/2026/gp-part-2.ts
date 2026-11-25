@@ -154,7 +154,7 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'gp-132', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    id: 'gp-132', threadId: 'gp', date: '2026-11-24', weight: 2,
     title: '日ブラジル、初のAI協力対話を東京で開催',
     body: '日ブラジル両政府は6月の首脳会談での一致を受け、東京で初のAI協力対話を開いた。外務省によると、両国は先端AIの安全性を議論し、大規模言語モデルやインフラ、AIガバナンス、人材育成、共同研究に関する協力事例を紹介した。',
     source: '外務省公式発表',

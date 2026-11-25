@@ -186,11 +186,27 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceTier: 'primary',
   },
   {
-    id: 'ai-283', threadId: 'undefined', date: '2026-11-24', weight: 2,
+    id: 'ai-284', threadId: 'ai', date: '2026-11-23', weight: 2,
+    title: 'Baidu、ERNIE 5.5 Flash Previewの重みを公開',
+    body: 'Baiduが11月11日にAPI提供を始めたERNIE 5.5 Flash Previewの重みを、Apache 2.0で公開した。総2800億・稼働140億パラメータで、100万トークンの文脈に対応。公開されたHugging Faceリポジトリには推論用の重みファイルがある。',
+    source: 'Baidu 公式モデルカード',
+    sourceUrl: 'https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-283', threadId: 'ai', date: '2026-11-24', weight: 2,
     title: 'AOI、光トランシーバーとレーザーで最低22億ドルの供給契約',
     body: 'Applied Optoelectronicsは既存の大手クラウド顧客と複数年契約を締結したと発表。顧客は2027年に800G光トランシーバー約15億ドル、2028〜29年にレーザーダイオード約7億ドルの最低購入を約束。期間は2026年12月から2030年12月まで。',
     source: 'Applied Optoelectronics IR',
     sourceUrl: 'https://investors.ao-inc.com/2026-11-24-AOI-Announces-Multi-Year-Long-Term-Agreement-with-Tier-1-Hyperscale-Datacenter-Customer',
+    sourceTier: 'primary',
+  },
+  {
+    id: 'ai-285', threadId: 'ai', date: '2026-11-24', weight: 2,
+    title: 'PrismML、Ternary Bonsai 2.5 27Bの重み公開 モデル容量5.9GB',
+    body: 'PrismMLがQwen3.8 27BをベースとするTernary Bonsai 2.5 27Bを発表。前版と同じ5.9GBのモデル容量を保ちつつ、同社評価ではコード作業や複数ターンのツール利用で改善した。Apache 2.0でGGUFなどの重みを公開した。',
+    source: 'PrismML 公式発表',
+    sourceUrl: 'https://prismml.com/news/bonsai-2-5-27b',
     sourceTier: 'primary',
   },
 ];
