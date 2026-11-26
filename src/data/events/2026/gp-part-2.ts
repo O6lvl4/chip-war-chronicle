@@ -161,4 +161,12 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.mofa.go.jp/press/release/pressite_000001_02871.html',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-133', threadId: 'gp', date: '2026-11-26', weight: 2,
+    title: 'JMIC、ホルムズ海峡で22日にタンカー3隻が約17分間に被弾と報告',
+    body: '合同海事情報センターは、11月22日にホルムズ海峡を東航中のタンカー3隻が約17分間に不明の飛翔体に被弾したと報告。各船は航行を継続し、全乗組員の所在は確認された。船体被害と環境影響は不明。25日には海峡から出る別のタンカー1隻の被弾も報告した。',
+    source: 'JMIC Advisory Update 117／UKMTO（11月26日）',
+    sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_117_26-nov.pdf',
+    sourceTier: 'primary',
+  },
 ];

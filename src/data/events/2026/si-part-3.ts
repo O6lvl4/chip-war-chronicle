@@ -249,4 +249,12 @@ export const EVENTS_2026_SI_PART_3: TimelineEvent[] = [
     sourceUrl: 'https://europe.kioxia.com/content/dam/kioxia/en-europe/business/news/2026/asset/KIE_PR_20261125-1_EN.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'si-183', threadId: 'si', date: '2026-11-25', weight: 2,
+    title: 'キオクシアとNVIDIA、SSDでGPUの実効メモリを拡張する実証',
+    body: 'キオクシアはNVIDIAのStorage-Next向けにSSDを使う概念実証を発表。GB200 NVL72の18ノードに7.68TBのXD8 SSDを計144台搭載し、約1.1PBの生容量を構成した。2兆個の512バイトベクトルを扱う可能性を検証するもので、HBM自体の増量や商用提供ではない。',
+    source: 'KIOXIA America 公式発表（日本版は11月26日）',
+    sourceUrl: 'https://americas.kioxia.com/en-us/business/news/2026/ssd-20261125-1.html',
+    sourceTier: 'primary',
+  },
 ];

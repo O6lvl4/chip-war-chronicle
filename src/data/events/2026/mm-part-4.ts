@@ -193,4 +193,12 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://bea.gov/sites/default/files/2026-11/pi1026.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-215', threadId: 'mm', date: '2026-11-26', weight: 2,
+    title: '韓国銀行、政策金利を3.25%に引き上げ',
+    body: '韓国銀行の金融通貨委員会は政策金利を3.00%から3.25%へ0.25ポイント引き上げた。国内景気の改善、物価上昇率が目標を上回る見通し、金融安定上のリスクを理由とした。会見ではAI需要を背景とする半導体輸出の強さにも言及した。',
+    source: '韓国銀行 金融政策決定・総裁会見冒頭発言',
+    sourceUrl: 'https://www.bok.or.kr/eng/bbs/E0000634/view.do?depth=400423&menuNo=400423&nttId=11067086&programType=newsDataEng&relate=Y',
+    sourceTier: 'primary',
+  },
 ];
