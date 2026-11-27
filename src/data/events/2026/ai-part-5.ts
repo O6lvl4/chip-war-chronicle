@@ -209,4 +209,12 @@ export const EVENTS_2026_AI_PART_5: TimelineEvent[] = [
     sourceUrl: 'https://prismml.com/news/bonsai-2-5-27b',
     sourceTier: 'primary',
   },
+  {
+    id: 'ai-286', threadId: 'ai', date: '2026-11-24', weight: 2,
+    title: 'Together AI、中断可能なGPU計算をオンデマンドの半額で一般提供',
+    body: 'Together AIは、GPUクラスタで中断可能な計算枠の一般提供を発表した。オンデマンド料金の一律50％で時間未満の単位で課金する。KubernetesとSlurmに対応し、ノードの回収時には処理を退避するための5分間を設ける。',
+    source: 'Together AI 公式ブログ',
+    sourceUrl: 'https://www.together.ai/blog/introducing-preemptible-compute-the-same-compute-half-the-price',
+    sourceTier: 'primary',
+  },
 ];
