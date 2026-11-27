@@ -201,4 +201,12 @@ export const EVENTS_2026_MM_PART_4: TimelineEvent[] = [
     sourceUrl: 'https://www.bok.or.kr/eng/bbs/E0000634/view.do?depth=400423&menuNo=400423&nttId=11067086&programType=newsDataEng&relate=Y',
     sourceTier: 'primary',
   },
+  {
+    id: 'mm-216', threadId: 'mm', date: '2026-11-27', weight: 2,
+    title: '日経平均1211.95円高、技術セクターが971.56円押し上げ',
+    body: '日経平均株価は前日比1211.95円（2.11％）高の5万8711.11円で取引を終えた。指数算出元の日本経済新聞社によると、技術セクターの寄与はプラス971.56円で全セクター中最大。構成銘柄は160銘柄が上昇した。',
+    source: '日経平均プロフィル 日次サマリー',
+    sourceUrl: 'https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261127&idx=nk225',
+    sourceTier: 'primary',
+  },
 ];

@@ -169,4 +169,12 @@ export const EVENTS_2026_GP_PART_2: TimelineEvent[] = [
     sourceUrl: 'https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_117_26-nov.pdf',
     sourceTier: 'primary',
   },
+  {
+    id: 'gp-134', threadId: 'gp', date: '2026-11-27', weight: 1,
+    title: '台湾国防部、中国軍機など延べ30機の活動と26機の中間線越えを公表',
+    body: '台湾国防部は27日、中国軍の戦闘機や無人機などが延べ30機出動し、うち26機が台湾海峡の中間線またはその延長線を越えたと発表した。中国海軍艦艇も参加した共同戦備警戒活動と説明し、台湾軍は周辺の海空域で監視と対応を行った。',
+    source: '台湾国防部',
+    sourceUrl: 'https://www.mnd.gov.tw/en/Publication/88360',
+    sourceTier: 'primary',
+  },
 ];
